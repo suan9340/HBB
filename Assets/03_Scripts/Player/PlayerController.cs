@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody myrigid;
+    public MeshRenderer material;
     private bool isJump = false;
 
     [Header("MoveSpeed")]
@@ -15,7 +16,15 @@ public class PlayerController : MonoBehaviour
     [Header("JumpPower")]
     public float jumpPower = 2f;
 
+    [Header("Enemey Bound Power")]
+    public float bouncePower;
 
+    [Header("Player Life")]
+    public float playerLife;
+
+    private bool isDamaged = false;
+
+    private readonly WaitForSeconds damageSpriteTime = new WaitForSeconds(0.1f);
     private void Start()
     {
         myrigid = GetComponent<Rigidbody>();
@@ -23,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isDamaged) return;
+
         PlayerMove();
         PlayerJump();
     }
@@ -74,11 +85,44 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Player Damaged from Enemy
+    /// </summary>
+    private IEnumerator Damaged(Vector3 _targetPos)
+    {
+        if (isDamaged) yield break;
+        isDamaged = true;
+
+        playerLife--;
+
+        int _dirc = transform.position.x - _targetPos.x > 0 ? 1 : -1;
+        myrigid.AddForce(new Vector3(_dirc, 1f, 0f) * bouncePower, ForceMode.Impulse);
+
+        Material materials = GetComponent<MeshRenderer>().material;
+
+        for (int i = 0; i < 3; i++)
+        {
+            materials.color = new Color(1f, 1f, 1f, 0.3f);
+            yield return damageSpriteTime;
+            materials.color = new Color(1f, 1f, 1f, 1f);
+            yield return damageSpriteTime;
+        }
+
+        isDamaged = false;
+        yield break;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Floor"))
         {
             isJump = false;
+
+        }
+
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            StartCoroutine(Damaged(collision.transform.position));
         }
     }
 }
