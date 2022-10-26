@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody myrigid;
-    public MeshRenderer material;
+    public Material material;
     private bool isJump = false;
 
     [Header("MoveSpeed")]
@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
         _newDir.x += _ho * Time.deltaTime * moveSpeed;
         _newDir.z = 0f;
-
 
         PlayerRotation(_ho);
         transform.position = _newDir;
@@ -98,17 +97,6 @@ public class PlayerController : MonoBehaviour
         int _dirc = transform.position.x - _targetPos.x > 0 ? 1 : -1;
         myrigid.AddForce(new Vector3(_dirc, 1f, 0f) * bouncePower, ForceMode.Impulse);
 
-        Material materials = GetComponent<MeshRenderer>().material;
-
-        for (int i = 0; i < 3; i++)
-        {
-            materials.color = new Color(1f, 1f, 1f, 0.3f);
-            yield return damageSpriteTime;
-            materials.color = new Color(1f, 1f, 1f, 1f);
-            yield return damageSpriteTime;
-        }
-
-        isDamaged = false;
         yield break;
     }
 
@@ -117,7 +105,7 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Floor"))
         {
             isJump = false;
-
+            isDamaged = false;
         }
 
         if (collision.collider.CompareTag("Enemy"))
