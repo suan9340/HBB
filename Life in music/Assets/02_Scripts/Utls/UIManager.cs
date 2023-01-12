@@ -65,14 +65,15 @@ public class UIManager : MonoSingleTon<UIManager>
             if (isReadyRhythm == false)
             {
                 isReadyRhythm = true;
-                readyRhythmAnimator.SetBool("OnEnter", true);
+                readyRhythmAnimator.SetBool("OnReady", true);
             }
             else
             {
                 isReadyRhythm = false;
-                readyRhythmAnimator.SetBool("OnEnter", false);
+                readyRhythmAnimator.SetBool("OnReady", false);
             }
         }
     }
 
+    
 }

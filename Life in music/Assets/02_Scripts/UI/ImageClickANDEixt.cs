@@ -7,12 +7,12 @@ public class ImageClickANDEixt : ImageSizeInterface
     , IPointerClickHandler
     , IPointerExitHandler
 {
-    public  void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         ImageSizeBig();
     }
 
-    public  void OnPointerExit(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
     {
         ImageSizeSmall();
     }

@@ -32,7 +32,7 @@ public class ImageSizeInterface : MonoBehaviour
         }
 
         SetScale(transform.localScale);
-        transform.localScale += sizeVec;
+        transform.localScale += sizeVec; 
     }
 
     protected void ImageSizeSmall()
