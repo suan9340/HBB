@@ -17,7 +17,7 @@ public class UIManager : MonoSingleTon<UIManager>
 
     private void Start()
     {
-        //EventManager.StartListening("hi", ReadyRhythm);
+        EventManager.StartListening("hi", ReadyRhythm);
     }
 
     private void Update()
