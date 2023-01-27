@@ -22,4 +22,12 @@ public static class DefineManager
         Rock,
         Seaweed,
     }
+
+    public enum GameState
+    {
+        Playing,
+        Setting,
+        Menu,
+        Reythming,
+    }
 }

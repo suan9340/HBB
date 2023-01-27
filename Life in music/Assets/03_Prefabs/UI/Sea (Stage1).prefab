@@ -49,10 +49,9 @@ GameObject:
   - component: {fileID: 6692571270131705003}
   - component: {fileID: 6692571270131705001}
   - component: {fileID: 6692571270131705002}
-  - component: {fileID: 6692571270131705000}
-  - component: {fileID: 7160976931324901562}
+  - component: {fileID: 628733549}
   m_Layer: 6
-  m_Name: "Image (\uC870\uAC1C)"
+  m_Name: Image (Shellfish)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +115,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6692571270131705000
+--- !u!114 &628733549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,23 +124,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6692571270131704996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f82f926527c014ab1582d151092c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e7d4f7242f1d409713b6df79de880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sizeVec: {x: 0.1, y: 0.1, z: 0.1}
---- !u!114 &7160976931324901562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6692571270131704996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0042a03f341d042b2434e4410575ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentType: 1
+  effectAudio: {fileID: 0}
+  clip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
 --- !u!1 &6692571270400791402
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,10 +334,9 @@ GameObject:
   - component: {fileID: 6692571271462982247}
   - component: {fileID: 6692571271462982245}
   - component: {fileID: 6692571271462982246}
-  - component: {fileID: 6692571271462982244}
-  - component: {fileID: 8779846735241442357}
+  - component: {fileID: 826731416}
   m_Layer: 6
-  m_Name: "Image (\uBBF8\uC5ED)"
+  m_Name: Image (Seaweed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +400,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6692571271462982244
+--- !u!114 &826731416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,23 +409,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6692571271462982240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f82f926527c014ab1582d151092c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e7d4f7242f1d409713b6df79de880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sizeVec: {x: 0.1, y: 0.1, z: 0.1}
---- !u!114 &8779846735241442357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6692571271462982240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0042a03f341d042b2434e4410575ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentType: 4
+  effectAudio: {fileID: 0}
+  clip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
 --- !u!1 &6692571271622466932
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,10 +541,9 @@ GameObject:
   - component: {fileID: 6692571271933665667}
   - component: {fileID: 6692571271933665665}
   - component: {fileID: 6692571271933665666}
-  - component: {fileID: 6692571271933665664}
-  - component: {fileID: 5557978116207584287}
+  - component: {fileID: 1508170806}
   m_Layer: 6
-  m_Name: "Image (\uBD88\uAC00\uC0AC\uB9AC)"
+  m_Name: Image (Starfish)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,7 +607,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6692571271933665664
+--- !u!114 &1508170806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -641,23 +616,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6692571271933665692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f82f926527c014ab1582d151092c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e7d4f7242f1d409713b6df79de880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sizeVec: {x: 0.1, y: 0.1, z: 0.1}
---- !u!114 &5557978116207584287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6692571271933665692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0042a03f341d042b2434e4410575ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentType: 0
+  effectAudio: {fileID: 0}
+  clip: {fileID: 8300000, guid: 1ac0d036ae355484f9549f48a1e5ebaf, type: 3}
 --- !u!1 &6692571271959236216
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,10 +633,9 @@ GameObject:
   - component: {fileID: 6692571271959236223}
   - component: {fileID: 6692571271959236221}
   - component: {fileID: 6692571271959236222}
-  - component: {fileID: 6692571271959236220}
-  - component: {fileID: 1067848233387023996}
+  - component: {fileID: 615140124}
   m_Layer: 6
-  m_Name: "Image (\uB3CC\uBA69\uC774)"
+  m_Name: Image (Rock)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,7 +699,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6692571271959236220
+--- !u!114 &615140124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -745,23 +708,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6692571271959236216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f82f926527c014ab1582d151092c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e7d4f7242f1d409713b6df79de880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sizeVec: {x: 0.1, y: 0.1, z: 0.1}
---- !u!114 &1067848233387023996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6692571271959236216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0042a03f341d042b2434e4410575ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentType: 3
+  effectAudio: {fileID: 0}
+  clip: {fileID: 8300000, guid: 9f3fc8bcec70af4488e4f586f8300f5e, type: 3}
 --- !u!1 &6692571272056016450
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,10 +725,9 @@ GameObject:
   - component: {fileID: 6692571272056016449}
   - component: {fileID: 6692571272056016455}
   - component: {fileID: 6692571272056016448}
-  - component: {fileID: 6692571272056016454}
-  - component: {fileID: 4886692761029542677}
+  - component: {fileID: 561334756}
   m_Layer: 6
-  m_Name: "Image (\uC18C\uB77C\uACE0\uB3D9)"
+  m_Name: Image (Conch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,7 +791,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6692571272056016454
+--- !u!114 &561334756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -849,20 +800,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6692571272056016450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f82f926527c014ab1582d151092c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e7d4f7242f1d409713b6df79de880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sizeVec: {x: 0.1, y: 0.1, z: 0.1}
---- !u!114 &4886692761029542677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6692571272056016450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0042a03f341d042b2434e4410575ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentType: 2
+  effectAudio: {fileID: 0}
+  clip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}

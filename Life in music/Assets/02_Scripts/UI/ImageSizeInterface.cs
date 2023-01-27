@@ -14,7 +14,7 @@ public class ImageSizeInterface : MonoBehaviour
     public AudioSource effectAudio = null;
     public AudioClip clip = null;
 
-    protected void Start()
+    protected  void Start()
     {
         SetScale(transform.localScale);
     }

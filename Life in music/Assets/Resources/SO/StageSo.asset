@@ -16,9 +16,22 @@ MonoBehaviour:
   - stageNames: 0
     instrument: 5
     currentFindInstrament: 0
+    instrumentsNames:
+    - name: Seaweed
+      isClear: 0
+    - name: Starfish
+      isClear: 0
+    - name: Rock
+      isClear: 0
+    - name: Conch
+      isClear: 0
+    - name: Shellfish
+      isClear: 0
   - stageNames: 1
     instrument: 0
     currentFindInstrament: 0
+    instrumentsNames: []
   - stageNames: 2
     instrument: 0
     currentFindInstrament: 0
+    instrumentsNames: []

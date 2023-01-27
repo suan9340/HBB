@@ -20,4 +20,15 @@ public class StageInfo
 
     [Header("Number of Instruments found by Users")]
     public int currentFindInstrament = 0;
+
+    [Header("Instruments Idx and checking Clear")]
+    public List<InstrumentsName> instrumentsNames = new List<InstrumentsName>();
 }
+
+[System.Serializable]
+public class InstrumentsName
+{
+    public string name;
+    public bool isClear;
+}
+

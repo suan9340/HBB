@@ -17,17 +17,9 @@ public class UIManager : MonoSingleTon<UIManager>
 
     private void Start()
     {
-        EventManager.StartListening("hi", ReadyRhythm);
+        EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           
-            ReadyRhythm();
-        }
-    }
     public void OnclickAudioUI()
     {
         if (audioUIAnimator == null)
@@ -75,5 +67,5 @@ public class UIManager : MonoSingleTon<UIManager>
         }
     }
 
-    
+
 }
