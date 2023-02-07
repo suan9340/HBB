@@ -6,4 +6,5 @@ public static class ConstantManager
 {
     // EventManager
     public static string START_RHYTHM = "StartRhythm";
+    public static string SHELLFISH_MUSIC = "ShellfishMusic";
 }
