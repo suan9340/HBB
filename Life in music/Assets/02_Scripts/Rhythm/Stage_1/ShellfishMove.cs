@@ -15,23 +15,26 @@ public class ShellfishMove : MonoBehaviour
     public bool isup = false;
     public bool isdown = false;
 
+    [Header("NoteAnimation")]
+    public Animator noteAnimation = null;
+
     private RectTransform rect;
 
     private void Start()
     {
         rect = GetComponent<RectTransform>();
+        noteAnimation = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (isleft)
         {
-
-
             if (rect.anchoredPosition.x <= targetpos)
             {
                 isleft = false;
                 rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                AddList(gameObject);
             }
             else
             {
@@ -48,6 +51,7 @@ public class ShellfishMove : MonoBehaviour
             {
                 isright = false;
                 rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                AddList(gameObject);
             }
             else
             {
@@ -65,6 +69,7 @@ public class ShellfishMove : MonoBehaviour
             {
                 isup = false;
                 rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                AddList(gameObject);
             }
             else
             {
@@ -82,6 +87,7 @@ public class ShellfishMove : MonoBehaviour
             {
                 isdown = false;
                 rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                AddList(gameObject);
             }
             else
             {
@@ -91,5 +97,15 @@ public class ShellfishMove : MonoBehaviour
 
 
         }
+    }
+
+    private void AddList(GameObject _obj)
+    {
+        EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
+    }
+
+    public void ShellfishDown()
+    {
+        noteAnimation.SetTrigger("isDown");
     }
 }
