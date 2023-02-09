@@ -26,23 +26,70 @@ public class ShellfishMove : MonoBehaviour
     {
         if (isleft)
         {
-            if (rect.position.x < targetpos) isleft = false;
-            rect.position += new Vector3(-1, 0, 0) * moveSpeed * Time.deltaTime;
+
+
+            if (rect.anchoredPosition.x <= targetpos)
+            {
+                isleft = false;
+                rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+            }
+            else
+            {
+                rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+            }
+
+
         }
         else if (isright)
         {
-            if (rect.position.x > targetpos) isright = false;
-            rect.position += new Vector3(1, 0, 0) * moveSpeed * Time.deltaTime;
+
+
+            if (rect.anchoredPosition.x >= targetpos)
+            {
+                isright = false;
+                rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+            }
+            else
+            {
+                rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+            }
+
+
+
         }
         else if (isup)
         {
-            if (rect.position.y > targetpos) isup = false;
-            rect.position += new Vector3(0, 1, 0) * moveSpeed * Time.deltaTime;
+
+
+            if (rect.anchoredPosition.y >= targetpos)
+            {
+                isup = false;
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+            }
+            else
+            {
+                rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
+            }
+
+
+
         }
         else if (isdown)
         {
-            if (rect.position.y < targetpos) isdown = false;
-            rect.position += new Vector3(0, -1, 0) * moveSpeed * Time.deltaTime;
+
+
+            if (rect.anchoredPosition.y <= targetpos)
+            {
+                isdown = false;
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+            }
+            else
+            {
+                rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
+            }
+
+
+
         }
     }
 }
