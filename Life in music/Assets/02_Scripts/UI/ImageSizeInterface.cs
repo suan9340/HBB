@@ -14,9 +14,19 @@ public class ImageSizeInterface : MonoBehaviour
     public AudioSource effectAudio = null;
     public AudioClip clip = null;
 
-    protected  void Start()
+    protected virtual void Start()
     {
         SetScale(transform.localScale);
+        CheckAudioComponents();
+    }
+
+    protected void CheckAudioComponents()
+    {
+        if(effectAudio == null && clip != null)
+        {
+            var _effectobj = GameObject.Find("SoundManager");
+            effectAudio = _effectobj.transform.GetChild(0).GetComponent<AudioSource>();
+        }
     }
 
     #region Images_Fuction
@@ -32,7 +42,7 @@ public class ImageSizeInterface : MonoBehaviour
         }
 
         SetScale(transform.localScale);
-        transform.localScale += sizeVec; 
+        transform.localScale += sizeVec;
     }
 
     protected void ImageSizeSmall()

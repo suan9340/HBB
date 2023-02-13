@@ -14,7 +14,7 @@ public static class DefineManager
     }
 
 
-    public enum SeaInst
+    public enum Stage_01_Inst
     {
         Starfish,
         Shellfish,
@@ -28,6 +28,6 @@ public static class DefineManager
         Playing,
         Setting,
         Menu,
-        Reythming,
+        Rhythm,
     }
 }

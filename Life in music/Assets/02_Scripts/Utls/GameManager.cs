@@ -10,4 +10,9 @@ public class GameManager : MonoSingleTon<GameManager>
     {
         gameState = _gameState;
     }
+
+    public DefineManager.GameState GetGameState()
+    {
+        return gameState;
+    }
 }

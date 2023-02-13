@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class ConstantManager
 {
+    // Tag
+    public static string TAG_RHYTHMCANVAS = "RhythmCanvas";
+
     // EventManager
     public static string START_RHYTHM = "StartRhythm";
 
