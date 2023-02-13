@@ -58,30 +58,47 @@ public class ClickInstruments : ImageSizeInterface
             case DefineManager.Stage_01_Inst.Shellfish:
 
                 _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Shellfish)");
-                _instante = Instantiate(_loadObj);
-                _instante.transform.SetParent(rhythmCanvas.transform, false);
+                InstantiateRhythm(_instante, _loadObj);
 
                 break;
 
 
             case DefineManager.Stage_01_Inst.Starfish:
 
+                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Starfish)");
+                InstantiateRhythm(_instante, _loadObj);
+
                 break;
 
 
             case DefineManager.Stage_01_Inst.Seaweed:
+
+                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Seaweed)");
+                InstantiateRhythm(_instante, _loadObj);
 
                 break;
 
 
             case DefineManager.Stage_01_Inst.Rock:
 
+                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Rock)");
+                InstantiateRhythm(_instante, _loadObj);
+
                 break;
 
 
-            case DefineManager.Stage_01_Inst.conch:
+            case DefineManager.Stage_01_Inst.Conch:
+
+                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Conch)");
+                InstantiateRhythm(_instante, _loadObj);
 
                 break;
         }
+    }
+
+    private void InstantiateRhythm(GameObject _instobj, GameObject _loadobj)
+    {
+        _instobj = Instantiate(_loadobj);
+        _instobj.transform.SetParent(rhythmCanvas.transform, false);
     }
 }

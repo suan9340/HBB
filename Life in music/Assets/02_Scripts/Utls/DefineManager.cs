@@ -18,7 +18,7 @@ public static class DefineManager
     {
         Starfish,
         Shellfish,
-        conch,
+        Conch,
         Rock,
         Seaweed,
     }
