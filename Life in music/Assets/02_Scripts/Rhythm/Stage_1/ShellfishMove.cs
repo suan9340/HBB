@@ -17,6 +17,7 @@ public class ShellfishMove : MonoBehaviour
 
     [Header("NoteAnimation")]
     public Animator noteAnimation = null;
+    public bool isFirst = false;
 
     private RectTransform rect;
 
@@ -101,6 +102,10 @@ public class ShellfishMove : MonoBehaviour
 
     private void AddList(GameObject _obj)
     {
+        if (isFirst)
+        {
+            EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+        }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
     }
 

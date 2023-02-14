@@ -13,8 +13,10 @@ public class ShellFishRhythm : RhythmMusicBase
 
 
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager.StartListening(ConstantManager.START_RHYTHM, StartShellFishMusic);
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddShellFishList);
     }

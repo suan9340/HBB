@@ -9,8 +9,13 @@ public class RhythmMusicBase : MonoBehaviour
     public AudioSource audioSource = null;
     public AudioClip clip = null;
 
-    private void Start()
+    protected virtual void Start()
     {
+        if (audioSource == null)
+        {
+            audioSource = GameObject.Find("AudioSource (Rhythm)").GetComponent<AudioSource>();
+        }
+
         audioSource.clip = clip;
     }
 
