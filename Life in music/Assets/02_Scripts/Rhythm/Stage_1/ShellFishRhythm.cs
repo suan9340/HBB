@@ -11,7 +11,11 @@ public class ShellFishRhythm : RhythmMusicBase
     [Space(20)]
     public List<GameObject> shellfishnoteObj = new List<GameObject>();
 
+    [Header("ShellfishNotePos List")]
+    public List<GameObject> posList = new List<GameObject>();
 
+    [Header("Note Obj")]
+    public List<GameObject> noteObj = new List<GameObject>();
 
     protected override void Start()
     {
@@ -19,6 +23,13 @@ public class ShellFishRhythm : RhythmMusicBase
 
         EventManager.StartListening(ConstantManager.START_RHYTHM, StartShellFishMusic);
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddShellFishList);
+
+        RhythmManager.Instance.AddRhythmSO(ConstantManager.SO_STAGE01_SHELLFISH);
+
+        RhythmManager.Instance.AddRhythmPosList(posList[0], noteObj[0]);
+        RhythmManager.Instance.AddRhythmPosList(posList[1], noteObj[1]);
+        RhythmManager.Instance.AddRhythmPosList(posList[2], noteObj[2]);
+        RhythmManager.Instance.AddRhythmPosList(posList[3], noteObj[3]);
     }
     private void Update()
     {

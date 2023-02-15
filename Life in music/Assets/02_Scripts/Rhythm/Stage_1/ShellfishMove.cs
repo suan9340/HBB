@@ -20,6 +20,17 @@ public class ShellfishMove : MonoBehaviour
     public bool isFirst = false;
 
     private RectTransform rect;
+    private Transform trn;
+    private Canvas canvas;
+
+    private void OnEnable()
+    {
+        //canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+        //trn = GetComponent<Transform>();
+
+        //if (!isFirst)
+        //    trn.SetParent(canvas.transform, false);
+    }
 
     private void Start()
     {
@@ -104,7 +115,7 @@ public class ShellfishMove : MonoBehaviour
     {
         if (isFirst)
         {
-            EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+            RhythmManager.Instance.StartMusic();
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
     }

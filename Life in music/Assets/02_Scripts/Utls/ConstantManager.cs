@@ -13,4 +13,7 @@ public static class ConstantManager
     // Stage_01_Shellfish
     public static string SHELLFISH_MUSIC = "ShellfishMusic";
     public static string SHELLFISHLIST_ADD = "ShellfishListAdd";
+
+    // RhythmSOName
+    public static string SO_STAGE01_SHELLFISH = "Stage01_Shellfish";
 }

@@ -9,7 +9,7 @@ using UnityEditor;
 
 public class RhythmData : ScriptableObject
 {
-    public const int BeatPerSec = 4;
+    //public const int BeatPerSec = 4;
 
     [Serializable]
     public class BeatOnOff
@@ -34,13 +34,19 @@ public class RhythmData : ScriptableObject
         public string name;
         public AudioClip AudioClip;
         public int Bpm = 60;
-        public int BeatCount = 4;
+        public int BeatTrnCount = 4;
+        public int BestPerSec = 3;
 
         public List<BeatOnOff> NoteList = new();
     }
 
-    public MyData data;
+    public MyData myData;
 
+    public static bool CheckLoadData(string fileName)
+    {
+        var _saveName = LoadCombineString(fileName);
+        return false;
+    }
 
     public static MyData LoadData(string fileName)
     {
@@ -53,7 +59,7 @@ public class RhythmData : ScriptableObject
         }
 
         Debug.Log($"Sucessful Load data: {_saveName}");
-        return rhythmData.data;
+        return rhythmData.myData;
     }
 
 
@@ -63,7 +69,7 @@ public class RhythmData : ScriptableObject
         var instance = CreateInstance<RhythmData>();
         var _saveName = CreateCombineString(assetPathName);
 
-        instance.data = myData;
+        instance.myData = myData;
 
         AssetDatabase.CreateAsset(instance, _saveName);
         AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(instance));

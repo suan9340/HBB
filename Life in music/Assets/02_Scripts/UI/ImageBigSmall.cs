@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ImageBigSmall : ImageSizeInterface
 {
-    public static readonly WaitForSeconds imageSpeed = new WaitForSeconds(0.5f);
+    public static readonly WaitForSeconds imageSpeed = new WaitForSeconds(0.3f);
 
     private Coroutine imageCoroutine;
 
@@ -36,7 +36,7 @@ public class ImageBigSmall : ImageSizeInterface
     {
         yield return null;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             ImageSizeBig();
 
