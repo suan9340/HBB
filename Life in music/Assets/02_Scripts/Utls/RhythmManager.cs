@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RhythmManager : MonoBehaviour
@@ -6,6 +7,9 @@ public class RhythmManager : MonoBehaviour
     public Vector3 pos;
     public float gap = 1;
 
+    [Space(20)]
+    [Header("Rhythm Position List")]
+    public List<GameObject> list = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +42,7 @@ public class RhythmManager : MonoBehaviour
             _hitCheck = false;
             if (_data.NoteList.Count <= _currentIndex)
             {
-                Debug.LogWarning("?�악??종료?�었??!");
+                Debug.LogWarning("End");
             }
             else
             {

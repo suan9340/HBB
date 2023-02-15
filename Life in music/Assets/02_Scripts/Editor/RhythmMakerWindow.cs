@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class RhythmMaker : EditorWindow
 {
+    private int curBpm;
+    private int curNote = 4;
+    private string curName;
+
+
+
     [MenuItem("RhythmMaker/Rhythm maker")]
+
     public static void Open()
     {
         var win = GetWindow<RhythmMaker>("Rhythm Maker windows");
@@ -35,15 +42,15 @@ public class RhythmMaker : EditorWindow
 
     private readonly string[] _bpmList =
     {
-        "60", "100", "140"
+        "60", "100","110","120","140"
     };
 
     private readonly int[] _bpmIndexList =
     {
-        0, 1, 2,
+        0, 1, 2, 3, 4
     };
 
-    private int _curBpm;
+
 
 
     private readonly string[] _noteCountList =
@@ -57,59 +64,81 @@ public class RhythmMaker : EditorWindow
     };
 
 
-    private int curNote = 4;
 
-    private const int musicPlayTimeSec = 60; 
+
+    private const int musicPlayTimeSec = 60;
 
     private void LeftMenus()
     {
         EditorGUILayout.BeginVertical();
-        GUILayout.Box("Settings", GUILayout.ExpandWidth(true));
-
-        // audio clip
-        EditorGUI.BeginChangeCheck();
-        myData.AudioClip =
-            EditorGUILayout.ObjectField("Audio clip", myData.AudioClip, typeof(AudioClip), false) as AudioClip;
-        if (EditorGUI.EndChangeCheck())
         {
-            CalculateNoteCount();
-        }
+            GUILayout.Box("Settings", GUILayout.ExpandWidth(true));
 
-        // bpm
-        EditorGUI.BeginChangeCheck();
-        _curBpm = EditorGUILayout.IntPopup("BPM", _curBpm, _bpmList, _bpmIndexList);
-        if (EditorGUI.EndChangeCheck())
-        {
-            if (int.TryParse(_bpmList[_curBpm], out var value))
+
+            // Name
+            EditorGUI.BeginChangeCheck();
+            curName = EditorGUILayout.TextField("Name", curName);
+
+            if (EditorGUI.EndChangeCheck())
             {
-                myData.Bpm = value;
-                Debug.Log($"BPM : {_bpmList[_curBpm]}");
+                myData.name = curName;
+                Debug.Log($"curName: {myData.name}");
+                CalculateNoteCount();
             }
 
-            CalculateNoteCount();
+
+
+            // Audio clip
+            EditorGUI.BeginChangeCheck();
+            myData.AudioClip =
+                EditorGUILayout.ObjectField("Audio clip", myData.AudioClip, typeof(AudioClip), false) as AudioClip;
+            if (EditorGUI.EndChangeCheck())
+            {
+                CalculateNoteCount();
+            }
+
+
+
+            // Bpm
+            EditorGUI.BeginChangeCheck();
+            curBpm = EditorGUILayout.IntPopup("BPM", curBpm, _bpmList, _bpmIndexList);
+            if (EditorGUI.EndChangeCheck())
+            {
+                if (int.TryParse(_bpmList[curBpm], out var value))
+                {
+                    myData.Bpm = value;
+                    Debug.Log($"BPM : {_bpmList[curBpm]}");
+                }
+
+                CalculateNoteCount();
+            }
+
+
+
+
+            // Note count
+            EditorGUI.BeginChangeCheck();
+            curNote = EditorGUILayout.IntPopup("Note Count", curNote, _noteCountList, _noteCountIndexList);
+            if (EditorGUI.EndChangeCheck())
+            {
+                myData.BeatCount = curNote;
+                Debug.Log($"curNote: {curNote.ToString()}");
+                CalculateNoteCount();
+            }
+
+
+
+            // Save and Load
+            if (GUILayout.Button("Save"))
+            {
+                RhythmData.CreateAssetData("Assets/Resources/SO/RhythmSO/data1.asset", myData);
+            }
+
+            if (GUILayout.Button("Load"))
+            {
+                myData = RhythmData.LoadData("SO/RhythmSO/data1");
+            }
         }
-
-        // note count
-        EditorGUI.BeginChangeCheck();
-        curNote = EditorGUILayout.IntPopup("Note Count", curNote, _noteCountList, _noteCountIndexList);
-        if (EditorGUI.EndChangeCheck())
-        {
-            myData.BeatCount = curNote;
-            Debug.Log($"curNote: {curNote.ToString()}");
-            CalculateNoteCount();
-        }
-
-        if (GUILayout.Button("Save"))
-        {
-            RhythmData.CreateAssetData("Assets/Resources/SO/RhythmSO/data1.asset", myData);
-        }
-
-        if (GUILayout.Button("Load"))
-        {
-            myData = RhythmData.LoadData("SO/RhythmSO/data1");
-        }
-
-
         EditorGUILayout.EndVertical();
     }
 
