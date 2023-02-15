@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138f0f8ef2cbf324c9c4eaf0bc1c6fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteObject: {fileID: 0}
+  noteObject: {fileID: 1176026485}
   pos: {x: 0, y: 0, z: 0}
   gap: 1
   list: []
@@ -1995,6 +1995,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1176026485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3159428380356491028, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 8590688049176621566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1247790380
 GameObject:
   m_ObjectHideFlags: 0

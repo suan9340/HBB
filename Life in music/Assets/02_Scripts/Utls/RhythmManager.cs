@@ -11,7 +11,12 @@ public class RhythmManager : MonoBehaviour
     [Header("Rhythm Position List")]
     public List<GameObject> list = new List<GameObject>();
 
-    // Start is called before the first frame update
+    private RhythmData.MyData _data;
+    private int _currentIndex = -5;
+    private float _tick;
+    private bool _hitCheck;
+    private float _beatPerSec;
+
     void Start()
     {
         _data = RhythmData.LoadData("data1");
@@ -19,13 +24,6 @@ public class RhythmManager : MonoBehaviour
         _beatPerSec = 1f / RhythmData.BeatPerSec;
     }
 
-    private RhythmData.MyData _data;
-    private int _currentIndex = -5;
-    private float _tick;
-    private bool _hitCheck;
-    private float _beatPerSec;
-
-    // Update is called once per frame
     void Update()
     {
         _tick += Time.deltaTime;

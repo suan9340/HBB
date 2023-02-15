@@ -131,12 +131,13 @@ public class RhythmMaker : EditorWindow
             // Save and Load
             if (GUILayout.Button("Save"))
             {
-                RhythmData.CreateAssetData("Assets/Resources/SO/RhythmSO/data1.asset", myData);
+                //RhythmData.CreateAssetData("Assets/Resources/SO/RhythmSO/data1.asset", myData);
+                RhythmData.CreateAssetData("data1.asset", myData);
             }
 
             if (GUILayout.Button("Load"))
             {
-                myData = RhythmData.LoadData("SO/RhythmSO/data1");
+                myData = RhythmData.LoadData("data1");
             }
         }
         EditorGUILayout.EndVertical();

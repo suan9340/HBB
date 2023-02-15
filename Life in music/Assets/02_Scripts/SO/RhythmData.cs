@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -8,10 +9,8 @@ using UnityEditor;
 
 public class RhythmData : ScriptableObject
 {
-    // ?ÅÏàò ?†Ïñ∏
-    public const int BeatPerSec = 4; 
+    public const int BeatPerSec = 4;
 
-    
     [Serializable]
     public class BeatOnOff
     {
@@ -45,27 +44,46 @@ public class RhythmData : ScriptableObject
 
     public static MyData LoadData(string fileName)
     {
-        var rhythmData = Resources.Load<RhythmData>(fileName);
+        var _saveName = LoadCombineString(fileName);
+        var rhythmData = Resources.Load<RhythmData>(_saveName);
         if (rhythmData == null)
         {
-            Debug.LogError($"Missing data : {fileName}");
+            Debug.LogError($"Missing data : {_saveName}");
             return null;
         }
-       
+
+        Debug.Log($"Sucessful Load data: {_saveName}");
         return rhythmData.data;
     }
-    
-    
+
+
 #if UNITY_EDITOR
     public static void CreateAssetData(string assetPathName, MyData myData)
     {
         var instance = CreateInstance<RhythmData>();
+        var _saveName = CreateCombineString(assetPathName);
 
         instance.data = myData;
 
-        AssetDatabase.CreateAsset(instance, assetPathName);
+        AssetDatabase.CreateAsset(instance, _saveName);
         AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(instance));
         AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
     }
 #endif
+
+    private static string CreateCombineString(string _filename)
+    {
+        var _path = "Assets/Resources/SO/RhythmSO/";
+        var _saveName = Path.Combine(_path, _filename);
+
+        return _saveName;
+    }
+
+    private static string LoadCombineString(string _filename)
+    {
+        var _path = "SO/RHythmSO/";
+        var _saveName = Path.Combine(_path, _filename);
+
+        return _saveName;
+    }
 }
