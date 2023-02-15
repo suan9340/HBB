@@ -75,6 +75,7 @@ public class RhythmData : ScriptableObject
     {
         var _path = "Assets/Resources/SO/RhythmSO/";
         var _saveName = Path.Combine(_path, _filename);
+        Debug.Log(_saveName);
 
         return _saveName;
     }

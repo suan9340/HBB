@@ -82,7 +82,6 @@ public class RhythmMaker : EditorWindow
             if (EditorGUI.EndChangeCheck())
             {
                 myData.name = curName;
-                Debug.Log($"curName: {myData.name}");
                 CalculateNoteCount();
             }
 
@@ -131,8 +130,12 @@ public class RhythmMaker : EditorWindow
             // Save and Load
             if (GUILayout.Button("Save"))
             {
-                //RhythmData.CreateAssetData("Assets/Resources/SO/RhythmSO/data1.asset", myData);
-                RhythmData.CreateAssetData("data1.asset", myData);
+                if (curName == null)
+                {
+                    Debug.LogError($"curName is null!!!");
+                    return;
+                }
+                RhythmData.CreateAssetData(curName + ".asset", myData);
             }
 
             if (GUILayout.Button("Load"))
