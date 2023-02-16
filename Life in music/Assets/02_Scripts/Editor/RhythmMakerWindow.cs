@@ -12,6 +12,8 @@ public class RhythmMaker : EditorWindow
     private int curNote = 4;
     private int curNoteBestPerSec = 3;
     private string curLoadName;
+    private int musicPlayTimeSec = 60;
+
 
     [MenuItem("RhythmMaker/Rhythm maker")]
 
@@ -77,13 +79,13 @@ public class RhythmMaker : EditorWindow
         1, 2, 3, 4, 5, 6
     };
 
-    private const int musicPlayTimeSec = 60;
+
 
     private void LeftMenus()
     {
         EditorGUILayout.BeginVertical();
         {
-            GUILayout.Box("Settings", GUILayout.ExpandWidth(true));
+            GUILayout.Box("-------- Basic Settings --------", GUILayout.ExpandWidth(true));
 
 
             // Name
@@ -93,21 +95,17 @@ public class RhythmMaker : EditorWindow
             if (EditorGUI.EndChangeCheck())
             {
                 myData.name = curName;
-                CalculateNoteCount();
             }
-
 
 
             // Audio clip
             EditorGUI.BeginChangeCheck();
             myData.AudioClip =
                 EditorGUILayout.ObjectField("Audio clip", myData.AudioClip, typeof(AudioClip), false) as AudioClip;
-            if (EditorGUI.EndChangeCheck())
-            {
-                CalculateNoteCount();
-            }
 
 
+
+            GUILayout.Box("-------- Music Settings --------", GUILayout.ExpandWidth(true));
 
             // Bpm
             EditorGUI.BeginChangeCheck();
@@ -119,10 +117,14 @@ public class RhythmMaker : EditorWindow
                     myData.Bpm = value;
                     Debug.Log($"BPM : {_bpmList[curBpm]}");
                 }
-
-                CalculateNoteCount();
             }
 
+            EditorGUI.BeginChangeCheck();
+            musicPlayTimeSec = EditorGUILayout.IntField("MusicPlayTime", musicPlayTimeSec);
+            if (EditorGUI.EndChangeCheck())
+            {
+                myData.MusicPlayTime = musicPlayTimeSec;
+            }
 
 
 
@@ -133,7 +135,6 @@ public class RhythmMaker : EditorWindow
             {
                 myData.BeatTrnCount = curNote;
                 Debug.Log($"curNote: {curNote.ToString()}");
-                CalculateNoteCount();
             }
 
 
@@ -144,8 +145,15 @@ public class RhythmMaker : EditorWindow
             if (EditorGUI.EndChangeCheck())
             {
                 myData.BestPerSec = curNoteBestPerSec;
-                CalculateNoteCount();
             }
+
+            GUILayout.Box("-------- Save and Load --------", GUILayout.ExpandWidth(true));
+
+
+
+            // Load Name
+            curLoadName = EditorGUILayout.TextField("LoadName", curLoadName);
+
 
 
             // Save 
@@ -158,10 +166,6 @@ public class RhythmMaker : EditorWindow
                 }
                 RhythmData.CreateAssetData(curName + ".asset", myData);
             }
-
-
-            // Load Name
-            curLoadName = EditorGUILayout.TextField("LoadName", curLoadName);
 
 
 
@@ -179,6 +183,11 @@ public class RhythmMaker : EditorWindow
             }
 
 
+            GUILayout.Box("-------- Make Notes -------- ", GUILayout.ExpandWidth(true));
+            if(GUILayout.Button("MakeNotes"))
+            {
+                CalculateNoteCount();
+            }
 
         }
         EditorGUILayout.EndVertical();
