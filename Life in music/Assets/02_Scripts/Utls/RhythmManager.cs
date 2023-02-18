@@ -54,7 +54,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
                     if (isFirst)
                     {
                         isFirst = false;
-                        var _obj2 = Instantiate(objList[1]);
+                        var _obj2 = Instantiate(objList[i]);
                         _obj2.transform.SetParent(posList[i].transform, false);
                     }
                     else
@@ -62,9 +62,11 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
                         var _obj = Instantiate(objList[i]);
                         _obj.transform.SetParent(posList[i].transform, false);
                     }
+                    Debug.Log(i);
+                    Debug.Log(isFirst);
 
                 }
-                Debug.Log(currentTime);
+                //Debug.Log(currentTime);
             }
             currentIndex++;
             currentTime -= 60f / (data.Bpm * data.BestPerSec);
