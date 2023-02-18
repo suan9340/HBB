@@ -38,6 +38,7 @@ public class NoteManager : MonoSingleTon<NoteManager>
 
         if (currentTime >= 60d / bpm)
         {
+            Debug.Log(currentTime);
             metronomeAudio.PlayOneShot(metronomClip);
             currentTime -= 60d / bpm;
 

@@ -196,8 +196,11 @@ MonoBehaviour:
     Bpm: 60
     BeatTrnCount: 4
     BestPerSec: 0
+    MusicPlayTime: 60
     NoteList: []
   tick: 0
+  a: {fileID: 977749544}
+  bb: {fileID: 8300000, guid: a3263e266476eee48ab4b0063a94a87d, type: 3}
 --- !u!4 &20157923
 Transform:
   m_ObjectHideFlags: 0

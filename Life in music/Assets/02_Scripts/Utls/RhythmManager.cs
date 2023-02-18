@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 public class RhythmManager : MonoSingleTon<RhythmManager>
@@ -21,9 +22,17 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     private int currentIndex = 0;
     public float tick;
     private bool _hitCheck = false;
-    private float beatPerSec;
+    private float beatPerSec = 0;
 
     private bool isFirst = true;
+
+    [Space(40)]
+    public AudioSource a;
+    public AudioClip bb;
+
+
+
+    private float currentTime = 0f;
 
     private void Update()
     {
@@ -32,48 +41,36 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
             return;
         }
 
+        currentTime += Time.deltaTime;
 
-        tick += Time.deltaTime;
-        if (tick >= beatPerSec)
+        if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
-            tick -= beatPerSec;
-            currentIndex++;
-            if (currentIndex >= 0)
-                _hitCheck = true;
-        }
+            for (int i = 0; i < data.BeatTrnCount; i++)
+            {
+                var _hit = data.NoteList[currentIndex][i];
 
-        if (_hitCheck)
-        {
-            _hitCheck = false;
-            if (data.NoteList.Count <= currentIndex)
-            {
-                Debug.LogWarning("End");
-            }
-            else
-            {
-                for (int i = 0; i < data.BeatTrnCount; i++)
+                if (_hit)
                 {
-                    var hit = data.NoteList[currentIndex][i];
-                    if (hit)
+                    if (isFirst)
                     {
-                        if (isFirst)
-                        {
-                            isFirst = false;
-                            var _obj2 = Instantiate(objList[1]);
-                            _obj2.transform.SetParent(posList[i].transform, false);
-                        }
-                        else
-                        {
-                            var _obj = Instantiate(objList[i]);
-                            _obj.transform.SetParent(posList[i].transform, false);
-                        }
-                        //pos = posList[i].transform.position;
-                        //pos.x = i * gap;
-
+                        isFirst = false;
+                        var _obj2 = Instantiate(objList[1]);
+                        _obj2.transform.SetParent(posList[i].transform, false);
                     }
+                    else
+                    {
+                        var _obj = Instantiate(objList[i]);
+                        _obj.transform.SetParent(posList[i].transform, false);
+                    }
+
                 }
+                Debug.Log(currentTime);
             }
+            currentIndex++;
+            currentTime -= 60f / (data.Bpm * data.BestPerSec);
         }
+
+
     }
 
     public void AddRhythmSO(string _name)

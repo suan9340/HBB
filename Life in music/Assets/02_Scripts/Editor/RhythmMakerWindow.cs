@@ -85,6 +85,7 @@ public class RhythmMaker : EditorWindow
     {
         EditorGUILayout.BeginVertical();
         {
+
             GUILayout.Box("-------- Basic Settings --------", GUILayout.ExpandWidth(true));
 
 
@@ -147,9 +148,20 @@ public class RhythmMaker : EditorWindow
                 myData.BestPerSec = curNoteBestPerSec;
             }
 
+
+
+
+
+            GUILayout.Box("-------- Make Notes -------- ", GUILayout.ExpandWidth(true));
+            if (GUILayout.Button("MakeNotes"))
+            {
+                CalculateNoteCount();
+            }
+
+
+
+
             GUILayout.Box("-------- Save and Load --------", GUILayout.ExpandWidth(true));
-
-
 
             // Load Name
             curLoadName = EditorGUILayout.TextField("LoadName", curLoadName);
@@ -183,11 +195,7 @@ public class RhythmMaker : EditorWindow
             }
 
 
-            GUILayout.Box("-------- Make Notes -------- ", GUILayout.ExpandWidth(true));
-            if(GUILayout.Button("MakeNotes"))
-            {
-                CalculateNoteCount();
-            }
+
 
         }
         EditorGUILayout.EndVertical();
