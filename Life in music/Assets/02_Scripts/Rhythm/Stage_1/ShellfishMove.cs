@@ -118,6 +118,7 @@ public class ShellfishMove : MonoBehaviour
             RhythmManager.Instance.StartMusic();
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
+        UIManager.Instance.RhythmNoteEffect();
     }
 
     public void ShellfishDown()

@@ -7,7 +7,7 @@ public static class ConstantManager
     // Tag
     public static string TAG_RHYTHMCANVAS = "RhythmCanvas";
 
-    // EventManager
+    // UIManager
     public static string START_RHYTHM = "StartRhythm";
 
     // Stage_01_Shellfish

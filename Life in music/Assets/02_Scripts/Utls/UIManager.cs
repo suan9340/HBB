@@ -15,6 +15,12 @@ public class UIManager : MonoSingleTon<UIManager>
     public Animator readyRhythmAnimator = null;
     private bool isReadyRhythm = false;
 
+
+    [Space(10)]
+    [Header("RhythmEffectImage")]
+    public Image rhythmEffectImage = null;
+
+    private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.3f);
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
@@ -67,5 +73,16 @@ public class UIManager : MonoSingleTon<UIManager>
         }
     }
 
-
+    public void RhythmNoteEffect()
+    {
+        StartCoroutine(EffectNoteCoroutine());
+    }
+    
+    private IEnumerator EffectNoteCoroutine()
+    {
+        rhythmEffectImage.enabled = true;
+        yield return rhythmEffectSec;
+        rhythmEffectImage.enabled = false;
+        yield break;
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using System.Globalization;
+using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 
 public class RhythmManager : MonoSingleTon<RhythmManager>
 {
@@ -17,30 +18,30 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     public List<GameObject> objList = new List<GameObject>();
 
     public RhythmData.MyData data;
-    private bool isData = false;
 
     private int currentIndex = 0;
-    public float tick;
-    private bool _hitCheck = false;
+
+    private float currentTime = 0f;
     private float beatPerSec = 0;
 
     private bool isFirst = true;
-
-    [Space(40)]
-    public AudioSource a;
-    public AudioClip bb;
-
-
-
-    private float currentTime = 0f;
+    private bool isRhythm = false;
 
     private void Update()
     {
-        if (isData == false)
+        if (isRhythm == false)
         {
             return;
         }
+        else
+        {
+            CheckNoteANDInstantiate();
+        }
 
+    }
+
+    private void CheckNoteANDInstantiate()
+    {
         currentTime += Time.deltaTime;
 
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
@@ -54,7 +55,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
                     if (isFirst)
                     {
                         isFirst = false;
-                        var _obj2 = Instantiate(objList[i]);
+                        var _obj2 = Instantiate(objList[objList.Count - 1]);
                         _obj2.transform.SetParent(posList[i].transform, false);
                     }
                     else
@@ -62,38 +63,34 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
                         var _obj = Instantiate(objList[i]);
                         _obj.transform.SetParent(posList[i].transform, false);
                     }
-                    Debug.Log(i);
-                    Debug.Log(isFirst);
-
                 }
                 //Debug.Log(currentTime);
             }
             currentIndex++;
             currentTime -= 60f / (data.Bpm * data.BestPerSec);
         }
-
-
     }
 
-    public void AddRhythmSO(string _name)
+
+    public void ReadyRhythm(string _name)
     {
         data = RhythmData.LoadData(_name);
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;
-        isData = true;
+
+        Invoke(nameof(StartRhythmGame), 1.4f);
     }
 
     public void StartRhythmGame()
     {
-
-        Debug.Log("qwe");
+        isRhythm = true;
     }
 
     public void StopRhythm()
     {
-        isData = false;
+        isRhythm = false;
+
         currentIndex = -5;
-        tick = 0;
 
         data.name = null;
         data.AudioClip = null;
@@ -108,9 +105,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         audioSource.clip = null;
     }
 
-    public void AddRhythmPosList(GameObject _trbobj, GameObject _obj)
+    public void SettingRhythmPosition(GameObject _trbobj)
     {
         posList.Add(_trbobj);
+    }
+
+    public void SettingRhythmObject(GameObject _obj)
+    {
         objList.Add(_obj);
     }
 
@@ -123,4 +124,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     {
         audioSource.Stop();
     }
+
+
+   
 }
