@@ -190,7 +190,6 @@ MonoBehaviour:
   audioSource: {fileID: 977749544}
   posList: []
   objList: []
-  rhythmEffectImage: {fileID: 2029017801}
   data:
     name: 
     AudioClip: {fileID: 0}
@@ -213,6 +212,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &124642307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124642309}
+  - component: {fileID: 124642308}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &124642308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124642307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad411008b4fd24ebab62b486f3917e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &124642309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124642307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4294834, y: -17.799202, z: 93.226135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &218493734 stripped
 RectTransform:
@@ -1626,7 +1669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioUIAnimator: {fileID: 1340863857}
   readyRhythmAnimator: {fileID: 648776719}
-  rhythmEffectImage: {fileID: 0}
+  rhythmEffectImage: {fileID: 2029017801}
 --- !u!224 &849564080 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8978774796052041411, guid: 577b628c255eb0b418fd2f77a6513480,

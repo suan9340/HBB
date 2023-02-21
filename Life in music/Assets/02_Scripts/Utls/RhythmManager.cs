@@ -46,30 +46,36 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
-            for (int i = 0; i < data.BeatTrnCount; i++)
+            var listBool = data.NoteList[currentIndex];                        
+            if (isFirst)
             {
-                var _hit = data.NoteList[currentIndex][i];
-
-                if (_hit)
-                {
-                    if (isFirst)
-                    {
-                        isFirst = false;
-                        var _obj2 = Instantiate(objList[objList.Count - 1]);
-                        _obj2.transform.SetParent(posList[i].transform, false);
-                    }
-                    else
-                    {
-                        var _obj = Instantiate(objList[i]);
-                        _obj.transform.SetParent(posList[i].transform, false);
-                    }
-                }
-                //Debug.Log(currentTime);
+                EventManager<List<bool>>.TriggerEvent(ConstantManager.FIRST_BEAT, listBool.beatFlag);
+            }
+            else
+            {
+                EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
             }
             currentIndex++;
             currentTime -= 60f / (data.Bpm * data.BestPerSec);
         }
     }
+
+    //private void InstantiateFirstNote(bool isFirst, int _index)
+    //{
+    //    if (isFirst)
+    //    {
+    //        isFirst = false;
+    //        var _obj2 = Instantiate(objList[objList.Count - 1]);
+    //        _obj2.transform.SetParent(posList[_index].transform, false);
+    //    }
+    //    else
+    //    {
+    //        var _obj = Instantiate(objList[_index]);
+    //        _obj.transform.SetParent(posList[_index].transform, false);
+    //    }
+
+    //}
+
 
 
     public void ReadyRhythm(string _name)
@@ -126,5 +132,5 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     }
 
 
-   
+
 }

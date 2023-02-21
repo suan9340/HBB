@@ -38,7 +38,8 @@ public class ShellfishMove : MonoBehaviour
         noteAnimation = GetComponent<Animator>();
     }
 
-    private void Update()
+  
+    private void MoveShell()
     {
         if (isleft)
         {
