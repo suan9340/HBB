@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NoteGen : MonoBehaviour
 {
+    // todo 나중에 스크립터블 오브젝트로 옮길 코드
+    public DefineManager.Stage_01_MoveType moveType;
+
     private IGen igen = new ShellGen();
     private void Start()
     {

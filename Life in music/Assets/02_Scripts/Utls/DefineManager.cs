@@ -30,4 +30,13 @@ public static class DefineManager
         Menu,
         Rhythm,
     }
+
+    public enum Stage_01_MoveType
+    {
+        StarfishMove,
+        ShellfishMove,
+        ConchMove,
+        RockMove,
+        SeaweedMove,
+    }
 }

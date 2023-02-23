@@ -5,15 +5,42 @@ using DG.Tweening;
 
 public class ShellfishMove : MonoBehaviour
 {
+    #region Interface
+    public enum Direction
+    {
+        left,
+        right,
+        up,
+        down,
+    }
+    public static void Add(Direction _dir)
+    {
+        var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
+
+        if (_obj != null)
+        {
+            var _inst = Instantiate(_obj);
+            _inst.dir = _dir;
+        }
+        else
+        {
+            Debug.LogError("ShellfishNote NULL");
+        }
+    }
+
+    public static void Remove()
+    {
+        // 자동삭제
+    }
+    #endregion
+
     public float targetpos;
     public float moveSpeed = 1f;
 
     [Space(10)]
     [Header("Check")]
-    public bool isleft = false;
-    public bool isright = false;
-    public bool isup = false;
-    public bool isdown = false;
+    private Direction dir;
+    private bool isStop = false;
 
     [Header("NoteAnimation")]
     public Animator noteAnimation = null;
@@ -38,80 +65,80 @@ public class ShellfishMove : MonoBehaviour
         noteAnimation = GetComponent<Animator>();
     }
 
-  
+    private void Update()
+    {
+        MoveShell();
+    }
+
     private void MoveShell()
     {
-        if (isleft)
+        if (isStop) return;
+
+        switch (dir)
         {
-            if (rect.anchoredPosition.x <= targetpos)
-            {
-                isleft = false;
-                rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                AddList(gameObject);
-            }
-            else
-            {
-                rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
-            }
+            case Direction.left:
 
+                if (rect.anchoredPosition.x <= targetpos)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                }
 
-        }
-        else if (isright)
-        {
-
-
-            if (rect.anchoredPosition.x >= targetpos)
-            {
-                isright = false;
-                rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                AddList(gameObject);
-            }
-            else
-            {
-                rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
-            }
+                break;
 
 
 
-        }
-        else if (isup)
-        {
-
-
-            if (rect.anchoredPosition.y >= targetpos)
-            {
-                isup = false;
-                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                AddList(gameObject);
-            }
-            else
-            {
-                rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
-            }
+            case Direction.right:
+                if (rect.anchoredPosition.x >= targetpos)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+                }
+                break;
 
 
 
-        }
-        else if (isdown)
-        {
-
-
-            if (rect.anchoredPosition.y <= targetpos)
-            {
-                isdown = false;
-                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                AddList(gameObject);
-            }
-            else
-            {
-                rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
-            }
+            case Direction.down:
+                if (rect.anchoredPosition.y <= targetpos)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
+                }
+                break;
 
 
 
+            case Direction.up:
+                if (rect.anchoredPosition.y >= targetpos)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
+                }
+                break;
         }
     }
 
+    // todo 관리자가 들고있어야하는거 ShellfishRhythm
     private void AddList(GameObject _obj)
     {
         if (isFirst)
