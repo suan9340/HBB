@@ -15,17 +15,47 @@ public class ShellfishMove : MonoBehaviour
     }
     public static void Add(Direction _dir)
     {
-        var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
+        //if (canvas == null)
+        //{
+        //    canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+        //}
 
-        if (_obj != null)
-        {
-            var _inst = Instantiate(_obj);
-            _inst.dir = _dir;
-        }
-        else
-        {
-            Debug.LogError("ShellfishNote NULL");
-        }
+        //var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
+
+        //if (_obj != null)
+        //{
+        //    var _inst = Instantiate(_obj, canvas.transform);
+        //    _inst.dir = _dir;
+
+        //    switch (_dir)
+        //    {
+        //        case Direction.left:
+        //            _inst.transform.position = new Vector3(1100f, 0f, 0f);
+        //            break;
+
+
+        //        case Direction.right:
+        //            _inst.transform.position = new Vector3(-1100f, 0f, 0f);
+
+        //            break;
+
+
+        //        case Direction.up:
+        //            _inst.transform.position = new Vector3(0f, -1100f, 0f);
+        //            break;
+
+
+        //        case Direction.down:
+        //            _inst.transform.position = new Vector3(0f, 1100f, 0f);
+        //            break;
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.LogError("ShellfishNote NULL");
+        //}
+
+        Debug.Log("»ý¼º");
     }
 
     public static void Remove()
@@ -48,15 +78,14 @@ public class ShellfishMove : MonoBehaviour
 
     private RectTransform rect;
     private Transform trn;
-    private Canvas canvas;
+    private static Canvas canvas;
 
     private void OnEnable()
     {
-        //canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
         //trn = GetComponent<Transform>();
+        //trn.SetParent(canvas.transform, false);
 
         //if (!isFirst)
-        //    trn.SetParent(canvas.transform, false);
     }
 
     private void Start()
@@ -80,9 +109,9 @@ public class ShellfishMove : MonoBehaviour
 
                 if (rect.anchoredPosition.x <= targetpos)
                 {
-                    isStop = true;
-                    rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                    AddList(gameObject);
+                    //isStop = true;
+                    //rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                    //AddList(gameObject);
                 }
                 else
                 {
@@ -96,9 +125,9 @@ public class ShellfishMove : MonoBehaviour
             case Direction.right:
                 if (rect.anchoredPosition.x >= targetpos)
                 {
-                    isStop = true;
-                    rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                    AddList(gameObject);
+                    //isStop = true;
+                    //rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
+                    //AddList(gameObject);
                 }
                 else
                 {
@@ -111,9 +140,9 @@ public class ShellfishMove : MonoBehaviour
             case Direction.down:
                 if (rect.anchoredPosition.y <= targetpos)
                 {
-                    isStop = true;
-                    rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                    AddList(gameObject);
+                    //isStop = true;
+                    //rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                    //AddList(gameObject);
                 }
                 else
                 {
@@ -126,9 +155,9 @@ public class ShellfishMove : MonoBehaviour
             case Direction.up:
                 if (rect.anchoredPosition.y >= targetpos)
                 {
-                    isStop = true;
-                    rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                    AddList(gameObject);
+                    //isStop = true;
+                    //rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
+                    //AddList(gameObject);
                 }
                 else
                 {

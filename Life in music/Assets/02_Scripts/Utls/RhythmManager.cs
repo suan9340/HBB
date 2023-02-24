@@ -46,9 +46,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
-            var listBool = data.NoteList[currentIndex];                        
+            var listBool = data.NoteList[currentIndex];
             if (isFirst)
             {
+                isFirst = false;
                 EventManager<List<bool>>.TriggerEvent(ConstantManager.FIRST_BEAT, listBool.beatFlag);
             }
             else

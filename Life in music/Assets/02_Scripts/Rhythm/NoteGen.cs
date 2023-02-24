@@ -11,7 +11,7 @@ public class NoteGen : MonoBehaviour
     private void Start()
     {
         EventManager<List<bool>>.StartListening(ConstantManager.BEAT, Gen);
-        EventManager<List<bool>>.StartListening(ConstantManager.FIRST_BEAT, Gen2);
+        EventManager<List<bool>>.StartListening(ConstantManager.FIRST_BEAT, FirstGen2);
     }
     private void Update()
     {
@@ -38,7 +38,7 @@ public class NoteGen : MonoBehaviour
         igen.Gen(list);
     }
 
-    private void Gen2(List<bool> list)
+    private void FirstGen2(List<bool> list)
     {
         igen.Gen(list);
     }
