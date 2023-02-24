@@ -15,47 +15,45 @@ public class ShellfishMove : MonoBehaviour
     }
     public static void Add(Direction _dir)
     {
-        //if (canvas == null)
-        //{
-        //    canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
-        //}
+        if (canvas == null)
+        {
+            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+        }
 
-        //var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
+        var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
 
-        //if (_obj != null)
-        //{
-        //    var _inst = Instantiate(_obj, canvas.transform);
-        //    _inst.dir = _dir;
+        if (_obj != null)
+        {
+            var _inst = Instantiate(_obj, canvas.transform, false);
+            _inst.dir = _dir;
 
-        //    switch (_dir)
-        //    {
-        //        case Direction.left:
-        //            _inst.transform.position = new Vector3(1100f, 0f, 0f);
-        //            break;
-
-
-        //        case Direction.right:
-        //            _inst.transform.position = new Vector3(-1100f, 0f, 0f);
-
-        //            break;
+            switch (_dir)
+            {
+                case Direction.left:
+                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
+                    break;
 
 
-        //        case Direction.up:
-        //            _inst.transform.position = new Vector3(0f, -1100f, 0f);
-        //            break;
+                case Direction.right:
+                    _inst.transform.localPosition = new Vector3(-1100f, 0f, 0f);
+
+                    break;
 
 
-        //        case Direction.down:
-        //            _inst.transform.position = new Vector3(0f, 1100f, 0f);
-        //            break;
-        //    }
-        //}
-        //else
-        //{
-        //    Debug.LogError("ShellfishNote NULL");
-        //}
+                case Direction.up:
+                    _inst.transform.localPosition = new Vector3(0f, -1100f, 0f);
+                    break;
 
-        Debug.Log("»ý¼º");
+
+                case Direction.down:
+                    _inst.transform.localPosition = new Vector3(0f, 1100f, 0f);
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogError("ShellfishNote NULL");
+        }
     }
 
     public static void Remove()
