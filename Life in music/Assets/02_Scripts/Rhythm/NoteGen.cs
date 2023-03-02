@@ -41,5 +41,6 @@ public class NoteGen : MonoBehaviour
     private void FirstGen2(List<bool> list)
     {
         igen.Gen(list);
+        Debug.Log("first");
     }
 }

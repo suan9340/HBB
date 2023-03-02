@@ -14,9 +14,15 @@ public class ShellfishMove : MonoBehaviour
         up,
         down,
     }
-    public static void Add(Direction _dir, float _pos)
+
+    public static float targetpos;
+    public static float _pos = -220f;
+
+    public static void Add(Direction _dir)
     {
-        Debug.Log("wer");
+        _pos += 20;
+        targetpos = _pos;
+
         if (canvas == null)
         {
             canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
@@ -43,21 +49,22 @@ public class ShellfishMove : MonoBehaviour
 
 
                 case Direction.up:
-                    targetpos = _pos;
                     _inst.transform.localPosition = new Vector3(0f, -1100f, 0f);
                     break;
 
 
                 case Direction.down:
-                    targetpos = _pos;
+
                     _inst.transform.localPosition = new Vector3(0f, 1100f, 0f);
                     break;
+
             }
         }
         else
         {
             Debug.LogError("ShellfishNote NULL");
         }
+
 
     }
 
@@ -67,8 +74,9 @@ public class ShellfishMove : MonoBehaviour
     }
     #endregion
 
-    public static float targetpos;
+
     public float moveSpeed = 1f;
+    public float target;
 
     private Direction dir;
     private bool isStop = false;
@@ -86,7 +94,8 @@ public class ShellfishMove : MonoBehaviour
         //trn = GetComponent<Transform>();
         //trn.SetParent(canvas.transform, false);
 
-        //if (!isFirst)
+        //if (!isFirst) 
+        target = targetpos;
     }
 
     private void Start()
@@ -108,15 +117,15 @@ public class ShellfishMove : MonoBehaviour
         {
             case Direction.left:
 
-                rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
-                if (rect.anchoredPosition.x <= targetpos)
+                if (rect.anchoredPosition.x <= 0)
                 {
-                    //isStop = true;
-                    //rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                    //AddList(gameObject);
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
                 }
                 else
                 {
+                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
                 }
 
                 break;
@@ -124,45 +133,45 @@ public class ShellfishMove : MonoBehaviour
 
 
             case Direction.right:
-                rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
-                if (rect.anchoredPosition.x >= targetpos)
+                if (rect.anchoredPosition.x >= 0)
                 {
-                    //isStop = true;
-                    //rect.anchoredPosition = new Vector2(targetpos, rect.anchoredPosition.y);
-                    //AddList(gameObject);
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
                 }
                 else
                 {
+                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
 
 
             case Direction.down:
-                rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
-                if (rect.anchoredPosition.y <= targetpos)
+                if (rect.anchoredPosition.y <= target)
                 {
-                    //isStop = true;
-                    //rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                    //AddList(gameObject);
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
                 }
                 else
                 {
+                    rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
 
 
             case Direction.up:
-                rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
-                if (rect.anchoredPosition.y >= targetpos)
+                if (rect.anchoredPosition.y >= target)
                 {
-                    //isStop = true;
-                    //rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, targetpos);
-                    //AddList(gameObject);
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
                 }
                 else
                 {
+                    rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
                 }
                 break;
         }
@@ -176,7 +185,7 @@ public class ShellfishMove : MonoBehaviour
             RhythmManager.Instance.StartMusic();
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
-        UIManager.Instance.RhythmNoteEffect();
+        //UIManager.Instance.RhythmNoteEffect();
     }
 
     public void ShellfishDown()
