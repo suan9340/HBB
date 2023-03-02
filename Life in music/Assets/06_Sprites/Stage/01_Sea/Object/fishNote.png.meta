@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6e2061d3062cc94096ba7d0ffb07549
+guid: 81766cf332b706b4cbeb47ca0d1cb754
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_0
+      name: fishNote_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 44
-        height: 39
+        x: 2
+        y: 14
+        width: 54
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 745c48efd83d42c43bbcc425b79d4bb8
-      internalID: 1253777842
+      spriteID: 19f6379130a511345bba2cf326885f56
+      internalID: -1993245003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock_1
+      name: fishNote_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 8
-        width: 44
-        height: 39
+        x: 62
+        y: 14
+        width: 54
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540faa301e8adbd42a91f766708b11d0
-      internalID: 968270813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_2
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 8
-        width: 56
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dd95434e1b9e82428286b8d68279030
-      internalID: 1930313005
+      spriteID: 295630124798cb44a94a29980d470a0d
+      internalID: -1913627716
       vertices: []
       indices: 
       edges: []
@@ -170,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ee25b714df1dd6740bca1739bc1af11a
+    spriteID: 6133edefe6718e341b3d45a69e3baa47
     internalID: 0
     vertices: []
     indices: 
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rock_2: 1930313005
-      rock_0: 1253777842
-      rock_1: 968270813
+      fishNote_1: -1913627716
+      fishNote_0: -1993245003
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
