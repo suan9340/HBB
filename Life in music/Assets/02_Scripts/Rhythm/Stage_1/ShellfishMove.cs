@@ -83,6 +83,9 @@ public class ShellfishMove : MonoBehaviour
 
     [Header("NoteAnimation")]
     public Animator noteAnimation = null;
+
+
+    private bool isCheck = true;
     public bool isFirst = false;
 
     private RectTransform rect;
@@ -180,12 +183,14 @@ public class ShellfishMove : MonoBehaviour
     // todo 관리자가 들고있어야하는거 ShellfishRhythm
     private void AddList(GameObject _obj)
     {
+        //UIManager.Instance.RhythmNoteEffect();
+
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
+            isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SHELLFISHLIST_ADD, _obj);
-        //UIManager.Instance.RhythmNoteEffect();
     }
 
     public void ShellfishDown()

@@ -9,13 +9,9 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     //public float gap = 1;
     public AudioSource audioSource;
 
-    [Space(20)]
-    [Header("Rhythm Position List")]
-    public List<GameObject> posList = new List<GameObject>();
-
-    [Space(20)]
-    [Header("Rhythm Object List")]
-    public List<GameObject> objList = new List<GameObject>();
+    //[Space(20)]
+    //[Header("Rhythm Object List")]
+    //public List<GameObject> objList = new List<GameObject>();
 
     public RhythmData.MyData data;
 
@@ -106,21 +102,16 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         data.BestPerSec = 0;
         data.NoteList = null;
 
-        posList.Clear();
-        objList.Clear();
+        //objList.Clear();
 
         audioSource.clip = null;
     }
 
-    public void SettingRhythmPosition(GameObject _trbobj)
-    {
-        posList.Add(_trbobj);
-    }
 
-    public void SettingRhythmObject(GameObject _obj)
-    {
-        objList.Add(_obj);
-    }
+    //public void SettingRhythmObject(GameObject _obj)
+    //{
+    //    objList.Add(_obj);
+    //}
 
     public void StartMusic()
     {
