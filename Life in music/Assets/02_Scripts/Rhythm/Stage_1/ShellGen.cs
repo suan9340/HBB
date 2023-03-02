@@ -4,33 +4,35 @@ using UnityEngine;
 
 public class ShellGen : MonoBehaviour, IGen
 {
+    private float pos = 100f;
     public void Gen(List<bool> list)
     {
         for (int i = 0; i < list.Count; i++)
         {
+            Debug.Log(pos);
             if (list[i])
             {
                 if (i == 0)
                 {
-                    Debug.Log("qw");
-                    ShellfishMove.Add(ShellfishMove.Direction.left);
+                    ShellfishMove.Add(ShellfishMove.Direction.left, pos);
 
                 }
                 if (i == 1)
                 {
-                    ShellfishMove.Add(ShellfishMove.Direction.right);
+                    ShellfishMove.Add(ShellfishMove.Direction.right, pos);
 
                 }
                 if (i == 2)
                 {
-                    ShellfishMove.Add(ShellfishMove.Direction.down);
+                    ShellfishMove.Add(ShellfishMove.Direction.down, pos);
 
                 }
                 if (i == 3)
                 {
-                    ShellfishMove.Add(ShellfishMove.Direction.up);
+                    ShellfishMove.Add(ShellfishMove.Direction.up, pos);
 
                 }
+                pos -= 20f;
             }
         }
     }

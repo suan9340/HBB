@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class ShellfishMove : MonoBehaviour
 {
@@ -13,8 +14,9 @@ public class ShellfishMove : MonoBehaviour
         up,
         down,
     }
-    public static void Add(Direction _dir)
+    public static void Add(Direction _dir, float _pos)
     {
+        Debug.Log("wer");
         if (canvas == null)
         {
             canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
@@ -30,22 +32,24 @@ public class ShellfishMove : MonoBehaviour
             switch (_dir)
             {
                 case Direction.left:
-                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(1100f, _pos, 0f);
                     break;
 
 
                 case Direction.right:
-                    _inst.transform.localPosition = new Vector3(-1100f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(-1100f, _pos, 0f);
 
                     break;
 
 
                 case Direction.up:
+                    targetpos = _pos;
                     _inst.transform.localPosition = new Vector3(0f, -1100f, 0f);
                     break;
 
 
                 case Direction.down:
+                    targetpos = _pos;
                     _inst.transform.localPosition = new Vector3(0f, 1100f, 0f);
                     break;
             }
@@ -54,6 +58,7 @@ public class ShellfishMove : MonoBehaviour
         {
             Debug.LogError("ShellfishNote NULL");
         }
+
     }
 
     public static void Remove()
@@ -62,11 +67,9 @@ public class ShellfishMove : MonoBehaviour
     }
     #endregion
 
-    public float targetpos;
+    public static float targetpos;
     public float moveSpeed = 1f;
 
-    [Space(10)]
-    [Header("Check")]
     private Direction dir;
     private bool isStop = false;
 
@@ -105,6 +108,7 @@ public class ShellfishMove : MonoBehaviour
         {
             case Direction.left:
 
+                rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
                 if (rect.anchoredPosition.x <= targetpos)
                 {
                     //isStop = true;
@@ -113,7 +117,6 @@ public class ShellfishMove : MonoBehaviour
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
                 }
 
                 break;
@@ -121,6 +124,7 @@ public class ShellfishMove : MonoBehaviour
 
 
             case Direction.right:
+                rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
                 if (rect.anchoredPosition.x >= targetpos)
                 {
                     //isStop = true;
@@ -129,13 +133,13 @@ public class ShellfishMove : MonoBehaviour
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
 
 
             case Direction.down:
+                rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
                 if (rect.anchoredPosition.y <= targetpos)
                 {
                     //isStop = true;
@@ -144,13 +148,13 @@ public class ShellfishMove : MonoBehaviour
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
 
 
             case Direction.up:
+                rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
                 if (rect.anchoredPosition.y >= targetpos)
                 {
                     //isStop = true;
@@ -159,7 +163,6 @@ public class ShellfishMove : MonoBehaviour
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
                 }
                 break;
         }
