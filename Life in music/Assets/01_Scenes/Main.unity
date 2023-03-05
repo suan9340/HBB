@@ -3479,12 +3479,12 @@ PrefabInstance:
     - target: {fileID: 5145446170700757133, guid: 20dd13c16d8875f4183816cc5352e3f9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 752
+      value: 1365
       objectReference: {fileID: 0}
     - target: {fileID: 5145446170700757133, guid: 20dd13c16d8875f4183816cc5352e3f9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 5145446170700757133, guid: 20dd13c16d8875f4183816cc5352e3f9,
         type: 3}
@@ -3500,16 +3500,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145446170700757135, guid: 20dd13c16d8875f4183816cc5352e3f9,
-        type: 3}
-      propertyPath: a
-      value: 
-      objectReference: {fileID: 936554073}
-    - target: {fileID: 5145446170700757135, guid: 20dd13c16d8875f4183816cc5352e3f9,
-        type: 3}
-      propertyPath: movespeed
-      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20dd13c16d8875f4183816cc5352e3f9, type: 3}
@@ -3635,16 +3625,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FishNote
-      objectReference: {fileID: 0}
-    - target: {fileID: 8414665646590510374, guid: c49f0e4cb341d244488eb9f97d982853,
-        type: 3}
-      propertyPath: a
-      value: 
-      objectReference: {fileID: 936554073}
-    - target: {fileID: 8414665646590510374, guid: c49f0e4cb341d244488eb9f97d982853,
-        type: 3}
-      propertyPath: movespeed
-      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c49f0e4cb341d244488eb9f97d982853, type: 3}
