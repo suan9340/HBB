@@ -16,107 +16,107 @@ MonoBehaviour:
     name: Stage 01_Rock
     AudioClip: {fileID: 0}
     Bpm: 100
-    BeatTrnCount: 4
+    BeatTrnCount: 2
     BestPerSec: 3
-    MusicPlayTime: 60
+    MusicPlayTime: 20
     NoteList:
-    - beatFlag: 01000000
     - beatFlag: 00010000
     - beatFlag: 00000000
+    - beatFlag: 00000000
     - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000

@@ -5,6 +5,49 @@ using DG.Tweening;
 
 public class RockMove : MonoBehaviour
 {
+    private static Canvas canvas;
+    public static void Add(bool _isTrue)
+    {
+        // isTrue면 돌멩이
+        var _rockobj = Resources.Load<RockMove>("Notes/Stage_01/RockNote");
+        var _fishkobj = Resources.Load<RockMove>("Notes/Stage_01/FishNote");
+
+        if (canvas == null)
+        {
+            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+        }
+
+        if (_rockobj != null && _fishkobj != null)
+        {
+            if (_isTrue)
+            {
+                var _instRock = Instantiate(_rockobj, canvas.transform, false);
+                _instRock.transform.localPosition = new Vector3(1200f, 290f, 0f);
+            }
+            else
+            {
+                var _insFish = Instantiate(_fishkobj, canvas.transform, false);
+                _insFish.transform.localPosition = new Vector3(1200f, 290f, 0f);
+            }
+        }
+        else
+        {
+            Debug.LogError("rockNote OR fishNote NULL");
+        }
+
+        if (_isTrue)
+        {
+
+        }
+    }
+
+
+    // 자동 삭제
+    public static void Remove()
+    {
+
+    }
+
     private Rigidbody2D myrigid;
     private Transform mytrn;
     public float bulletSpeed;

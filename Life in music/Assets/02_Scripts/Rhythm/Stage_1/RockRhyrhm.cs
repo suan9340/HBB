@@ -13,6 +13,8 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
     {
         base.Start();
 
+        NoteGen.Instance.IgenRock();
+
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
