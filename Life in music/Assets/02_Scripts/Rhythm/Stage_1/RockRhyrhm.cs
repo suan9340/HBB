@@ -2,19 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockRhyrhm : RhythmMusicBase, IRhythmMom
+public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 {
 
-    [Header("RockNoteList")]
     [Space(20)]
+    [Header("--- RockNoteList ---")]
     public List<GameObject> rocknoteObj = new List<GameObject>();
 
     protected override void Start()
     {
         base.Start();
+
+        EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
+
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
     }
 
-    public void AddShellFishList(GameObject _obj)
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SetUpRockFish();
+        }
+    }
+
+    public void SetUpRockFish()
+    {
+        var _cnt = rocknoteObj.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+
+
+        var _rockSelect = _cnt - 1;
+        var _obj = rocknoteObj[_rockSelect].gameObject;
+        rocknoteObj.Remove(_obj);
+
+
+        //_obj.GetComponent<ShellfishMove>().ShellfishDown();
+    }
+
+    public void AddNoteList(GameObject _obj)
     {
         rocknoteObj.Add(_obj);
     }

@@ -5,18 +5,17 @@ using DG.Tweening;
 using System.Runtime.InteropServices;
 using System;
 
-public class ShellFishRhythm : RhythmMusicBase, IRhythmMom
+public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
 {
-    [Header("ShellfishNote List")]
     [Space(20)]
+    [Header("--- ShellfishNote List ---")]
     public List<GameObject> shellfishnoteObj = new List<GameObject>();
 
     protected override void Start()
     {
         base.Start();
 
-        EventManager.StartListening(ConstantManager.START_RHYTHM, StartShellFishMusic);
-        EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddShellFishList);
+        EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
     }
@@ -24,14 +23,10 @@ public class ShellFishRhythm : RhythmMusicBase, IRhythmMom
     {
         if (Input.GetMouseButtonDown(0))
         {
-            OnCLickShellScreen();
+            SetUpShellfish();
         }
     }
 
-    public void OnCLickShellScreen()
-    {
-        SetUpShellfish();
-    }
 
     public void SetUpShellfish()
     {
@@ -50,12 +45,8 @@ public class ShellFishRhythm : RhythmMusicBase, IRhythmMom
         shellfishnoteObj.Remove(_obj);
     }
 
-    public void StartShellFishMusic()
-    {
-        StartMusic();
-    }
 
-    public void AddShellFishList(GameObject _obj)
+    public void AddNoteList(GameObject _obj)
     {
         shellfishnoteObj.Add(_obj);
     }

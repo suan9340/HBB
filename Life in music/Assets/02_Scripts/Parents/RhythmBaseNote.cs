@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RhythmMusicBase : MonoBehaviour
+public class RhythmBaseNote : MonoBehaviour
 {
     [Space(10)]
     [Header("Music")]

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IRhythmMom
 {
-    void AddShellFishList(GameObject _obj);
+    void AddNoteList(GameObject _obj);
 }
