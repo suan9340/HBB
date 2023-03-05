@@ -19,5 +19,4 @@ public static class ConstantManager
 
     // RhythmManager
     public static string BEAT = "Beat";
-    public static string FIRST_BEAT = "FirstBeat";
 }

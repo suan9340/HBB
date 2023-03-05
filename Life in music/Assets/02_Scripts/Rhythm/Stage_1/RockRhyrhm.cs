@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockRhyrhm : MonoBehaviour
+public class RockRhyrhm : RhythmMusicBase, IRhythmMom
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [Header("RockNoteList")]
+    [Space(20)]
+    public List<GameObject> rocknoteObj = new List<GameObject>();
+
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddShellFishList(GameObject _obj)
     {
-        
+        rocknoteObj.Add(_obj);
     }
 }

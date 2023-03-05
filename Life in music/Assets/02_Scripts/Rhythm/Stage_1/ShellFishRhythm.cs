@@ -5,17 +5,11 @@ using DG.Tweening;
 using System.Runtime.InteropServices;
 using System;
 
-public class ShellFishRhythm : RhythmMusicBase
-{   
+public class ShellFishRhythm : RhythmMusicBase, IRhythmMom
+{
     [Header("ShellfishNote List")]
     [Space(20)]
     public List<GameObject> shellfishnoteObj = new List<GameObject>();
-
-    [Header("ShellfishNotePos List")]
-    public List<GameObject> posList = new List<GameObject>();
-
-    [Header("Note Obj")]
-    public List<GameObject> noteObj = new List<GameObject>();
 
     protected override void Start()
     {
@@ -61,8 +55,8 @@ public class ShellFishRhythm : RhythmMusicBase
         StartMusic();
     }
 
-    public void AddShellFishList(GameObject _shell)
+    public void AddShellFishList(GameObject _obj)
     {
-        shellfishnoteObj.Add(_shell);
+        shellfishnoteObj.Add(_obj);
     }
 }

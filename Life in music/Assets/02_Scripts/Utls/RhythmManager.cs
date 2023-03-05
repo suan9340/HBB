@@ -20,7 +20,6 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     private float currentTime = 0f;
     private float beatPerSec = 0;
 
-    private bool isFirst = true;
     private bool isRhythm = false;
 
     private void Update()
@@ -43,15 +42,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
             var listBool = data.NoteList[currentIndex];
-            if (isFirst)
-            {
-                isFirst = false;
-                EventManager<List<bool>>.TriggerEvent(ConstantManager.FIRST_BEAT, listBool.beatFlag);
-            }
-            else
-            {
-                EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
-            }
+            EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
             currentIndex++;
             currentTime -= 60f / (data.Bpm * data.BestPerSec);
         }

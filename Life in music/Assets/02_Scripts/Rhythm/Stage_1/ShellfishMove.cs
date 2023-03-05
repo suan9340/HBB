@@ -85,8 +85,7 @@ public class ShellfishMove : MonoBehaviour
     public Animator noteAnimation = null;
 
 
-    private bool isCheck = true;
-    public bool isFirst = false;
+    public static bool isFirst = true;
 
     private RectTransform rect;
     private Transform trn;
@@ -187,6 +186,7 @@ public class ShellfishMove : MonoBehaviour
 
         if (isFirst)
         {
+            Debug.Log("Music");
             RhythmManager.Instance.StartMusic();
             isFirst = false;
         }
