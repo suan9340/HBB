@@ -6,9 +6,15 @@ using System.Drawing;
 
 public class RockMove : MonoBehaviour
 {
+
     private static Canvas canvas;
+    private static int dirnum = 0;
+
+    private static Vector3 leftVec = new Vector3(-1314f, 658f, 0f);
+    private static Vector3 rightVec = new Vector3(1314f, 658f, 0f);
     public static void Add(bool _isTrue)
     {
+
         // isTrue면 돌멩이
         var _rockobj = Resources.Load<RockMove>("Notes/Stage_01/RockNote");
         var _fishkobj = Resources.Load<RockMove>("Notes/Stage_01/FishNote");
@@ -18,17 +24,35 @@ public class RockMove : MonoBehaviour
             canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
         }
 
+
+
         if (_rockobj != null && _fishkobj != null)
         {
             if (_isTrue)
             {
                 var _instRock = Instantiate(_rockobj, canvas.transform, false);
-                _instRock.transform.localPosition = new Vector3(1611f, 703f, 0f);
+
+                if (dirnum < 2)
+                {
+                    _instRock.transform.localPosition = rightVec;
+                }
+                else
+                {
+                    _instRock.transform.localPosition = leftVec;
+                }
             }
             else
             {
                 var _insFish = Instantiate(_fishkobj, canvas.transform, false);
-                _insFish.transform.localPosition = new Vector3(1611f, 703f, 0f);
+
+                if (dirnum < 2)
+                {
+                    _insFish.transform.localPosition = rightVec;
+                }
+                else
+                {
+                    _insFish.transform.localPosition = leftVec;
+                }
             }
         }
         else
@@ -36,14 +60,17 @@ public class RockMove : MonoBehaviour
             Debug.LogError("rockNote OR fishNote NULL");
         }
 
-        if (_isTrue)
-        {
 
+        dirnum++;
+
+        if (dirnum == 4)
+        {
+            dirnum = 0;
         }
+
     }
 
 
-    // 자동 삭제
     public static void Remove()
     {
 
@@ -63,7 +90,6 @@ public class RockMove : MonoBehaviour
     private Animator myanim;
     private Transform mytrn;
 
-
     public float bulletSpeed;
     public static bool isFirst = true;
 
@@ -72,6 +98,9 @@ public class RockMove : MonoBehaviour
         Cashing();
         AddForceObject();
         AddList(gameObject);
+
+
+        Invoke(nameof(DestroyRock), 2f);
     }
 
     private void FixedUpdate()
@@ -118,5 +147,13 @@ public class RockMove : MonoBehaviour
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.ROCK_ADD, _obj);
+    }
+
+    private void DestroyRock()
+    {
+        if (gameObject != null)
+        {
+            Destroy(gameObject);
+        }
     }
 }

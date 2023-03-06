@@ -66,6 +66,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
 
 
+    /// <summary>
+    /// Starting Rhythm Notes
+    /// </summary>
+    /// <param name="_name"></param>
     public void ReadyRhythm(string _name)
     {
         data = RhythmData.LoadData(_name);

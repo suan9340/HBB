@@ -19,6 +19,14 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
     }
+
+    //private void Start()
+    //{
+    //    EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
+
+    //    RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
+
+    //}
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

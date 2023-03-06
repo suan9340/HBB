@@ -39,4 +39,12 @@ public static class DefineManager
         RockMove,
         SeaweedMove,
     }
+
+    public enum SoundManager
+    {
+        Rhythm_Click,
+        Stage_Obj_UI,
+        BGM,
+        Metronom,
+    }
 }

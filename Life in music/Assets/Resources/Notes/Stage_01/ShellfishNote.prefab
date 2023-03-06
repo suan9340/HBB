@@ -129,10 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b054c256c3d8ce4fb4118f9a693510e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetpos: 0
   moveSpeed: 100
+  target: 0
   noteAnimation: {fileID: 0}
-  isFirst: 0
 --- !u!95 &4898486760053045490
 Animator:
   serializedVersion: 4

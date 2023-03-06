@@ -20,7 +20,7 @@ public class UIManager : MonoSingleTon<UIManager>
     [Header("RhythmEffectImage")]
     public Image rhythmEffectImage = null;
 
-    private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.3f);
+    private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
@@ -77,7 +77,7 @@ public class UIManager : MonoSingleTon<UIManager>
     {
         StartCoroutine(EffectNoteCoroutine());
     }
-    
+
     private IEnumerator EffectNoteCoroutine()
     {
         rhythmEffectImage.enabled = true;
