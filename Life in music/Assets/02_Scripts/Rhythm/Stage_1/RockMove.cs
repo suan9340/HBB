@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Drawing;
 
 public class RockMove : MonoBehaviour
 {
@@ -22,12 +23,12 @@ public class RockMove : MonoBehaviour
             if (_isTrue)
             {
                 var _instRock = Instantiate(_rockobj, canvas.transform, false);
-                _instRock.transform.localPosition = new Vector3(1200f, 290f, 0f);
+                _instRock.transform.localPosition = new Vector3(1611f, 703f, 0f);
             }
             else
             {
                 var _insFish = Instantiate(_fishkobj, canvas.transform, false);
-                _insFish.transform.localPosition = new Vector3(1200f, 290f, 0f);
+                _insFish.transform.localPosition = new Vector3(1611f, 703f, 0f);
             }
         }
         else
@@ -48,14 +49,29 @@ public class RockMove : MonoBehaviour
 
     }
 
+
+    public enum Type
+    {
+        rock,
+        fish,
+    }
+
+    public Type type;
+
+
     private Rigidbody2D myrigid;
+    private Animator myanim;
     private Transform mytrn;
+
+
     public float bulletSpeed;
+    public static bool isFirst = true;
 
     private void Start()
     {
         Cashing();
         AddForceObject();
+        AddList(gameObject);
     }
 
     private void FixedUpdate()
@@ -67,6 +83,7 @@ public class RockMove : MonoBehaviour
     {
         myrigid = GetComponent<Rigidbody2D>();
         mytrn = GetComponent<Transform>();
+        myanim = GetComponent<Animator>();
     }
 
     private void AddForceObject()
@@ -78,5 +95,28 @@ public class RockMove : MonoBehaviour
     {
         float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
         mytrn.eulerAngles = new Vector3(0, 0, angle);
+    }
+
+    public void CheckType()
+    {
+        if (type == Type.rock)
+        {
+            Debug.Log("This is rock");
+            myanim.SetTrigger("isClickRock");
+        }
+        else if (type == Type.fish)
+        {
+            Debug.Log("This is Fish");
+        }
+    }
+
+    private void AddList(GameObject _obj)
+    {
+        if (isFirst)
+        {
+            RhythmManager.Instance.StartMusic();
+            isFirst = false;
+        }
+        EventManager<GameObject>.TriggerEvent(ConstantManager.ROCK_ADD, _obj);
     }
 }

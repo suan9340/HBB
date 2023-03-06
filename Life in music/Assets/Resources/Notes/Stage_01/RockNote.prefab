@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721422cab08d65c4cb7eaef6d7e46d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   bulletSpeed: 40
 --- !u!95 &5145446170700757132
 Animator:
@@ -127,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

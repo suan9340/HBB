@@ -28,6 +28,11 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
         }
     }
 
+    private void CheckType()
+    {
+
+    }
+
     public void SetUpRockFish()
     {
         var _cnt = rocknoteObj.Count;
@@ -40,10 +45,10 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 
         var _rockSelect = _cnt - 1;
         var _obj = rocknoteObj[_rockSelect].gameObject;
+
         rocknoteObj.Remove(_obj);
+        _obj.GetComponent<RockMove>().CheckType();
 
-
-        //_obj.GetComponent<ShellfishMove>().ShellfishDown();
     }
 
     public void AddNoteList(GameObject _obj)

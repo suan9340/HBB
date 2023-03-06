@@ -93,10 +93,6 @@ public class ShellfishMove : MonoBehaviour
 
     private void OnEnable()
     {
-        //trn = GetComponent<Transform>();
-        //trn.SetParent(canvas.transform, false);
-
-        //if (!isFirst) 
         target = targetpos;
     }
 
@@ -186,7 +182,6 @@ public class ShellfishMove : MonoBehaviour
 
         if (isFirst)
         {
-            Debug.Log("Music");
             RhythmManager.Instance.StartMusic();
             isFirst = false;
         }
