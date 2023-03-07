@@ -10,8 +10,8 @@ public class RockMove : MonoBehaviour
     private static GameObject mom;
     private static int dirnum = 0;
 
-    private static Vector3 leftVec = new Vector3(-1314f, 658f, 0f);
-    private static Vector3 rightVec = new Vector3(1314f, 658f, 0f);
+    private static Vector3 leftVec = new Vector3(-1314f, 873f, 0f);
+    private static Vector3 rightVec = new Vector3(1314f, 873f, 0f);
     public static void Add(bool _isTrue)
     {
 
@@ -99,7 +99,7 @@ public class RockMove : MonoBehaviour
         AddList(gameObject);
 
 
-        Invoke(nameof(DestroyRock), 2f);
+        Invoke(nameof(DestroyRock), 4f);
     }
 
     private void FixedUpdate()
