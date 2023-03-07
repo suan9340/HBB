@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +13,9 @@ public class ClickInstruments : ImageSizeInterface
 
     [Space(20)]
     public DefineManager.Stage_01_Inst instruments;
+    public int num;
     public Canvas rhythmCanvas;
+    public ScriptableObject a;
 
     protected override void Start()
     {
@@ -29,6 +32,46 @@ public class ClickInstruments : ImageSizeInterface
         }
 
     }
+
+    private void CheckStage()
+    {
+        GameObject _instante = null;
+        GameObject _loadObj = null;
+
+
+        var _stage = GameManager.Instance.GetCurrentStage();
+
+        switch (_stage)
+        {
+            case DefineManager.StageNames.Sea_01:
+                Stage01_SO _so1 = Resources.Load<Stage01_SO>("SO/Stage/Stage1RhythmSO");
+                _loadObj = _so1.infos[num].stageRhythm;
+                InstantiateRhythm(_instante, _loadObj);
+                break;
+
+
+
+            case DefineManager.StageNames.School_02:
+                Stage02_SO _so2 = Resources.Load<Stage02_SO>("SO/Stage/Stage2RhythmSO");
+                _loadObj = _so2.infos[num].stageRhythm;
+                InstantiateRhythm(_instante, _loadObj);
+                break;
+
+
+
+            case DefineManager.StageNames.PlayGround_03:
+
+
+                break;
+
+
+
+            case DefineManager.StageNames.Cafe_04:
+
+                break;
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
@@ -40,7 +83,8 @@ public class ClickInstruments : ImageSizeInterface
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
         instrumetnsObj.SetActive(true);
 
-        CheckInstrumentsAndReadyRyhthm();
+        CheckStage();
+        //CheckInstrumentsAndReadyRyhthm();
     }
 
     public void OnPointerExit(PointerEventData eventData)

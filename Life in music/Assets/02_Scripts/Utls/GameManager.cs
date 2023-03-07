@@ -1,10 +1,31 @@
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class GameManager : MonoSingleTon<GameManager>
 {
     public DefineManager.GameState gameState;
+    public CurrnetstageSO currentStage;
+
+    private void Start()
+    {
+        SettingSO();
+    }
+
+    private void SettingSO()
+    {
+        if (currentStage == null)
+        {
+            currentStage = Resources.Load<CurrnetstageSO>("SO/StageSo");
+        }
+    }
+
+    public DefineManager.StageNames GetCurrentStage()
+    {
+        return currentStage.stageName;
+    }
 
     public void SettingGameState(DefineManager.GameState _gameState)
     {
@@ -14,5 +35,10 @@ public class GameManager : MonoSingleTon<GameManager>
     public DefineManager.GameState GetGameState()
     {
         return gameState;
+    }
+
+    public void SettingCurrentStage(DefineManager.StageNames _stage)
+    {
+        currentStage.stageName = _stage;
     }
 }

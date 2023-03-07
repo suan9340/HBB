@@ -3035,6 +3035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  currentStage: {fileID: 0}
 --- !u!4 &1325411946
 Transform:
   m_ObjectHideFlags: 0
@@ -4624,19 +4625,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8590688048051561366, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
+      propertyPath: num
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590688048051561366, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+        type: 3}
       propertyPath: instrumetnsObj
       value: 
       objectReference: {fileID: 1789814737}
     - target: {fileID: 8590688048073498343, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
+      propertyPath: num
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590688048073498343, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+        type: 3}
       propertyPath: instrumetnsObj
       value: 
       objectReference: {fileID: 1759010395}
+    - target: {fileID: 8590688048139837806, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+        type: 3}
+      propertyPath: num
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590688048409346834, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+        type: 3}
+      propertyPath: num
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8590688048409346834, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
       propertyPath: instrumetnsObj
       value: 
       objectReference: {fileID: 2101702599}
+    - target: {fileID: 8590688048801395900, guid: 3cfa8e24539acb14783b807f38a4e6ed,
+        type: 3}
+      propertyPath: a
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f34f856bf0bb48408c2f42f3cdc0355,
+        type: 2}
     - target: {fileID: 8590688048801395900, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
       propertyPath: instrumetnsObj

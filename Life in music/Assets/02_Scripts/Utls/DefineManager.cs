@@ -10,7 +10,6 @@ public static class DefineManager
         School_02,
         PlayGround_03,
         Cafe_04,
-        NONE,
     }
 
 
@@ -21,6 +20,11 @@ public static class DefineManager
         Conch,
         Rock,
         Seaweed,
+    }
+
+    public enum Stage_02_School
+    {
+
     }
 
     public enum GameState

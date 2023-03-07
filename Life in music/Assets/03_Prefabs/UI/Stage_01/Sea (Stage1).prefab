@@ -32,7 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3159428379189296099}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -94,6 +94,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
   instrumetnsObj: {fileID: 0}
   instruments: 1
+  num: 0
   rhythmCanvas: {fileID: 0}
 --- !u!1 &3159428378951752082
 GameObject:
@@ -161,11 +162,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3159428380238936813}
   - {fileID: 3159428380843297033}
-  - {fileID: 3159428380885624565}
-  - {fileID: 3159428380685166283}
   - {fileID: 3159428378919668769}
+  - {fileID: 3159428380685166283}
+  - {fileID: 3159428380885624565}
+  - {fileID: 3159428380238936813}
   m_Father: {fileID: 3159428380146693617}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -418,7 +419,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3159428379189296099}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -480,6 +481,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
   instrumetnsObj: {fileID: 0}
   instruments: 4
+  num: 0
   rhythmCanvas: {fileID: 0}
 --- !u!1 &3159428380356491028
 GameObject:
@@ -589,7 +591,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3159428379189296099}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -651,6 +653,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}
   instrumetnsObj: {fileID: 3159428380685166280}
   instruments: 2
+  num: 0
   rhythmCanvas: {fileID: 0}
 --- !u!1 &3159428380843297046
 GameObject:
@@ -684,7 +687,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3159428379189296099}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -746,6 +749,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1ac0d036ae355484f9549f48a1e5ebaf, type: 3}
   instrumetnsObj: {fileID: 0}
   instruments: 0
+  num: 0
   rhythmCanvas: {fileID: 0}
 --- !u!1 &3159428380885624562
 GameObject:
@@ -779,7 +783,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3159428379189296099}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -841,4 +845,5 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 9f3fc8bcec70af4488e4f586f8300f5e, type: 3}
   instrumetnsObj: {fileID: 0}
   instruments: 3
+  num: 0
   rhythmCanvas: {fileID: 0}

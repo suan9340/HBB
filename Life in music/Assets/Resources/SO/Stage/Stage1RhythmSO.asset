@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1401f78820a30b4ba6010849bb6579f, type: 3}
+  m_Name: Stage1RhythmSO
+  m_EditorClassIdentifier: 
+  infos:
+  - stage1: 0
+    stageRhythm: {fileID: 6067029285676514292, guid: a34353c05e0276c4d81f50c70a465b90,
+      type: 3}
+  - stage1: 1
+    stageRhythm: {fileID: 8789965736252908555, guid: deb0e6f82d44f0f47996313fdb015d8c,
+      type: 3}
+  - stage1: 2
+    stageRhythm: {fileID: 7313266730966089348, guid: 0f4a8653570d946468edd0d7af1d7d14,
+      type: 3}
+  - stage1: 3
+    stageRhythm: {fileID: 7070486113039074098, guid: 28533a8766a6ae341b086205da20bbc7,
+      type: 3}
+  - stage1: 4
+    stageRhythm: {fileID: 8618916980925076407, guid: b7335ec50102f4a40b885052462b131b,
+      type: 3}
