@@ -43,10 +43,12 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         {
             var listBool = data.NoteList[currentIndex];
 
-            if (listBool == null)
+            if (currentIndex + 3 >= data.NoteList.Count)
             {
+                Debug.Log("ENd!!!!!!");
                 StopRhythm();
                 EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+                return;
             }
 
             EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
@@ -95,7 +97,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     {
         isRhythm = false;
 
-        currentIndex = -5;
+        currentIndex = 0;
 
         data.name = null;
         data.AudioClip = null;
@@ -125,6 +127,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         audioSource.Stop();
     }
 
-
+    private void CheckStopRhythm()
+    {
+        if (currentIndex >= data.NoteList.Count)
+        {
+            StopRhythm();
+            EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+        }
+    }
 
 }
