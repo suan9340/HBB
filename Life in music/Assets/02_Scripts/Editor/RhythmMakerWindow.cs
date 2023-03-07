@@ -125,7 +125,6 @@ public class RhythmMaker : EditorWindow
             if (EditorGUI.EndChangeCheck())
             {
                 myData.MusicPlayTime = musicPlayTimeSec;
-                CalculateNoteCount();
             }
 
 

@@ -89,7 +89,7 @@ public class ClickInstruments : ImageSizeInterface
         instrumetnsObj.SetActive(true);
 
         CheckStage();
-        //CheckInstrumentsAndReadyRyhthm();
+        SoundManager.Instance.StopLoopSource();
     }
 
     public void OnPointerExit(PointerEventData eventData)

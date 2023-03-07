@@ -24,7 +24,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     public void GoGoSound()
     {
-        Debug.Log("werwerweqq");
+        Debug.Log("SoundMusic");
         StopLoopSource();
         PlayLoopSource();
     }

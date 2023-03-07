@@ -52,6 +52,9 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
 
+            Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
+
+
             if (currentIndex >= data.NoteList.Count)
             {
                 Debug.Log("ENd!!!!!!");
@@ -147,7 +150,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         yield return new WaitForSeconds(3f);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
         SoundManager.Instance.CheckYOnAudio(currentStage.clip);
+
+
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+        GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
         yield break;
     }
 }
