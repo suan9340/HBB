@@ -70,6 +70,8 @@ public class ClickInstruments : ImageSizeInterface
 
                 break;
         }
+
+       
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -144,5 +146,6 @@ public class ClickInstruments : ImageSizeInterface
     {
         _instobj = Instantiate(_loadobj);
         _instobj.transform.SetParent(rhythmCanvas.transform, false);
+        RhythmManager.Instance.SettingCurRhythm(_instobj);
     }
 }

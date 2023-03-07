@@ -225,6 +225,7 @@ MonoBehaviour:
     BestPerSec: 0
     MusicPlayTime: 60
     NoteList: []
+  curRhy: {fileID: 0}
 --- !u!4 &20157923
 Transform:
   m_ObjectHideFlags: 0

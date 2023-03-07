@@ -51,8 +51,8 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
 
         _obj.GetComponent<ShellfishMove>().ShellfishDown();
         shellfishnoteObj.Remove(_obj);
-    }
 
+    }
 
     public void AddNoteList(GameObject _obj)
     {

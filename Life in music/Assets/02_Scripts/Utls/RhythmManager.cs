@@ -15,6 +15,11 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public RhythmData.MyData data;
 
+
+    [Space(20)]
+    [Header("Current Rhythm")]
+    public GameObject curRhy;
+
     private int currentIndex = 0;
 
     private float currentTime = 0f;
@@ -43,11 +48,12 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         {
             var listBool = data.NoteList[currentIndex];
 
-            if (currentIndex + 3 >= data.NoteList.Count)
+            if (currentIndex + 1 >= data.NoteList.Count)
             {
                 Debug.Log("ENd!!!!!!");
-                StopRhythm();
-                EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+                isRhythm = false;
+                //StopRhythm();
+                //EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
                 return;
             }
 
@@ -95,6 +101,8 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythm()
     {
+        Destroy(curRhy.gameObject);
+
         isRhythm = false;
 
         currentIndex = 0;
@@ -105,6 +113,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         data.BeatTrnCount = 0;
         data.BestPerSec = 0;
         data.NoteList = null;
+        curRhy = null;
 
         //objList.Clear();
 
@@ -136,4 +145,9 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         }
     }
 
+
+    public void SettingCurRhythm(GameObject _obj)
+    {
+        curRhy = _obj;
+    }
 }

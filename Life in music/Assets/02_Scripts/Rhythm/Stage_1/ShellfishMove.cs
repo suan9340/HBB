@@ -20,19 +20,24 @@ public class ShellfishMove : MonoBehaviour
 
     public static void Add(Direction _dir)
     {
+        if (_pos == -40)
+        {
+            _pos = -220f;
+        }
+
         _pos += 20;
         targetpos = _pos;
 
-        if (canvas == null)
+        if (mom == null)
         {
-            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+            mom = GameObject.Find("Rhythm (Shellfish)(Clone)");
         }
 
         var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/ShellfishNote");
 
         if (_obj != null)
         {
-            var _inst = Instantiate(_obj, canvas.transform, false);
+            var _inst = Instantiate(_obj, mom.transform, false);
             _inst.dir = _dir;
 
             switch (_dir)
@@ -88,8 +93,7 @@ public class ShellfishMove : MonoBehaviour
     public static bool isFirst = true;
 
     private RectTransform rect;
-    private Transform trn;
-    private static Canvas canvas;
+    private static GameObject mom;
 
     private void OnEnable()
     {

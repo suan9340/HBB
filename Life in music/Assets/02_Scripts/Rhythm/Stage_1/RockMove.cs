@@ -7,7 +7,7 @@ using System.Drawing;
 public class RockMove : MonoBehaviour
 {
 
-    private static Canvas canvas;
+    private static GameObject mom;
     private static int dirnum = 0;
 
     private static Vector3 leftVec = new Vector3(-1314f, 658f, 0f);
@@ -19,18 +19,17 @@ public class RockMove : MonoBehaviour
         var _rockobj = Resources.Load<RockMove>("Notes/Stage_01/RockNote");
         var _fishkobj = Resources.Load<RockMove>("Notes/Stage_01/FishNote");
 
-        if (canvas == null)
+        if (mom == null)
         {
-            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+            mom = GameObject.Find("Rhythm (Rock)(Clone)");
         }
-
 
 
         if (_rockobj != null && _fishkobj != null)
         {
             if (_isTrue)
             {
-                var _instRock = Instantiate(_rockobj, canvas.transform, false);
+                var _instRock = Instantiate(_rockobj, mom.transform, false);
 
                 if (dirnum < 2)
                 {
@@ -43,7 +42,7 @@ public class RockMove : MonoBehaviour
             }
             else
             {
-                var _insFish = Instantiate(_fishkobj, canvas.transform, false);
+                var _insFish = Instantiate(_fishkobj, mom.transform, false);
 
                 if (dirnum < 2)
                 {
