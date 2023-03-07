@@ -8,7 +8,6 @@ using UnityEngine;
 public class CurrnetstageSO : ScriptableObject
 {
     public DefineManager.StageNames stageName;
-
-
+    public AudioClip clip;
 }
 

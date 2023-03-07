@@ -9,10 +9,25 @@ public class SoundManager : MonoSingleTon<SoundManager>
     [Header("--- LoopStation Source ---")]
     public List<LoopInfo> loopStationsources = new List<LoopInfo>();
 
+    public List<AudioClip> audioclips = new List<AudioClip>();
 
 
-    private int num = 0;
+    public int num = 0;
 
+
+    private void Start()
+    {
+        GoGoSound();
+        EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+    }
+
+
+    public void GoGoSound()
+    {
+        Debug.Log("werwerweqq");
+        StopLoopSource();
+        PlayLoopSource();
+    }
     public void CheckYOnAudio(AudioClip _clip)
     {
         if (loopStationsources == null)
@@ -21,19 +36,26 @@ public class SoundManager : MonoSingleTon<SoundManager>
             return;
         }
 
+
         var _loop = loopStationsources[num];
 
         if (GetBoolYCheck(_loop))
         {
+            loopStationsources[num].isOn = true;
             _loop.source.clip = _clip;
+            num++;
         }
         else
         {
-
+            GetBoolYCheck(_loop);
         }
-
     }
 
+    /// <summary>
+    /// if false, cant clip, true can clip
+    /// </summary>
+    /// <param name="_info"></param>
+    /// <returns></returns>
     private bool GetBoolYCheck(LoopInfo _info)
     {
         if (_info.isOn)
@@ -53,7 +75,12 @@ public class SoundManager : MonoSingleTon<SoundManager>
         for (int i = 0; i < num; i++)
         {
             var loop = loopStationsources[i];
-            loop.source.Play();
+
+            if (loop.isOn)
+            {
+                Debug.Log($"{i} 개 실행중");
+                loop.source.Play();
+            }
         }
     }
 
@@ -64,6 +91,21 @@ public class SoundManager : MonoSingleTon<SoundManager>
             var loop = loopStationsources[i];
             loop.source.Stop();
         }
+    }
+
+    public void ResetMusic()
+    {
+        for (int i = 0; i < num; i++)
+        {
+            var loop = loopStationsources[i];
+            loop.isOn = false;
+            loop.source.clip = null;
+        }
+    }
+
+    public void CurrentRhythm()
+    {
+
     }
 
 }

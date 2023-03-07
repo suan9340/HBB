@@ -187,6 +187,8 @@ MonoBehaviour:
     isOn: 0
   - source: {fileID: 423021083}
     isOn: 0
+  audioclips: []
+  num: 0
 --- !u!1 &20157921
 GameObject:
   m_ObjectHideFlags: 0
