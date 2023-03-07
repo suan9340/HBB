@@ -37,8 +37,13 @@ public class NoteGen : MonoSingleTon<NoteGen>
         igen.Gen(list);
     }
 
-  public void IgenRock()
+    public void IgenRock()
     {
         igen = new RockGen();
+    }
+
+    public void IgenSeaweed()
+    {
+        igen = new SeaWeedGen();
     }
 }
