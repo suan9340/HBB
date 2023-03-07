@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ad411008b4fd24ebab62b486f3917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveType: 0
+  moveType: 1
 --- !u!4 &124642309
 Transform:
   m_ObjectHideFlags: 0
@@ -2510,7 +2510,7 @@ GameObject:
   - component: {fileID: 977749543}
   - component: {fileID: 977749544}
   m_Layer: 0
-  m_Name: AudioSource (Rhythm_Click_UI)
+  m_Name: AudioSource (Rhythm)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
