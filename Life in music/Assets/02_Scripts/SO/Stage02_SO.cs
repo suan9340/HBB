@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [Serializable]
-[CreateAssetMenu(fileName = "Stage1RhythmSO", menuName = "ScriptableObject/Stage2RhythmSO")]
+[CreateAssetMenu(fileName = "Stage2RhythmSO", menuName = "ScriptableObject/Stage2RhythmSO")]
 
 public class Stage02_SO : ScriptableObject
 {
