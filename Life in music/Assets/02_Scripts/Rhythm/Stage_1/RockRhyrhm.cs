@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 {
@@ -10,8 +11,13 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
     public List<GameObject> rocknoteObj = new List<GameObject>();
 
     [Space(20)]
-    public GameObject rockMOM = null;
+    [Header("--- Crab ---")]
+    public Image crab = null;
+    public List<Sprite> crabSprite = new List<Sprite>();
+    private bool isMoving = false;
 
+
+    private readonly WaitForSeconds crabSec = new WaitForSeconds(0.5f);
     private void Awake()
     {
         NoteGen.Instance.IgenRock();
@@ -33,13 +39,10 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
         if (Input.GetMouseButtonDown(0))
         {
             SetUpRockFish();
+            StartCoroutine(CrabMove());
         }
     }
 
-    private void CheckType()
-    {
-
-    }
 
     public void SetUpRockFish()
     {
@@ -59,6 +62,22 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 
     }
 
+    public IEnumerator CrabMove()
+    {
+        if (isMoving)
+        {
+            yield return null;
+        }
+
+        isMoving = true;
+
+        crab.sprite = crabSprite[0];
+        yield return crabSec;
+        crab.sprite = crabSprite[1];
+
+        isMoving = false;
+    }
+
     public void AddNoteList(GameObject _obj)
     {
         rocknoteObj.Add(_obj);
@@ -66,11 +85,11 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 
     private void SetUpCrab()
     {
-        if (rockMOM == null)
+        if (crab == null)
         {
             Debug.LogError("rockMOM is NULL!!!!");
             return;
         }
-        rockMOM.SetActive(true);
+        crab.gameObject.SetActive(true);
     }
 }

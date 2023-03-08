@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -791477363, guid: 765a87081068ba64a920ac8a5da46536, type: 3}
+  m_Sprite: {fileID: -1656282857, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -156,4 +156,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
   rocknoteObj: []
-  rockMOM: {fileID: 18424074}
+  crab: {fileID: 18424076}
+  crabSprite:
+  - {fileID: 727204705, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
+  - {fileID: -1656282857, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}

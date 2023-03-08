@@ -135,7 +135,7 @@ public class RockMove : MonoBehaviour
     {
         if (type == Type.rock)
         {
-            Debug.Log("This is rock");
+            //Debug.Log("This is rock");
             myanim.SetTrigger("isClickRock");
             StopMoveRock();
         }

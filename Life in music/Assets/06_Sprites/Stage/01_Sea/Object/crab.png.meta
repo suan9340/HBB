@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 765a87081068ba64a920ac8a5da46536
+guid: 13daaa5b2b8bc164a8770b80992308b2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crab_0
+      name: crab 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 72
-        height: 46
+        y: 48
+        width: 73
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53ac765ef5dd16b4085331a17f1e6c90
-      internalID: -1332812311
+      spriteID: 083a3ebd53f21d64e9c9424928dfc462
+      internalID: 727204705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_1
+      name: crab 1_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 2
-        width: 72
-        height: 46
+        x: 0
+        y: 0
+        width: 73
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79fe63f901884374e8c50d5f036bafa6
-      internalID: -791477363
+      spriteID: bc6de8b6779a85f49aceeb55aa25314f
+      internalID: -1656282857
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5172c2d8aea348448b00903fe3d565bb
+    spriteID: dcf0f3ff12546bc40bc3915ce510f997
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crab_0: -1332812311
-      crab_1: -791477363
+      crab 1_0: 727204705
+      crab 1_1: -1656282857
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
