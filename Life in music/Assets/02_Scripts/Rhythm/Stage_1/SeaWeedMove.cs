@@ -19,14 +19,12 @@ public class SeaWeedMove : MonoBehaviour
 
     public static void Add(SeaWeedPos _pos) 
     {
-       
         if (canvas == null) 
         {
             canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
         }
 
-        var _obj = Resources.Load<ShellfishMove>("Notes/Stage_01/SeaWeedNote");
-       
+        var _obj = Resources.Load<SeaWeedMove>("Notes/Stage_01/SeaWeedNote");
 
         if (_obj != null)
         {
@@ -35,13 +33,15 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-
+                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
                     break;
 
                 case SeaWeedPos.two:
+                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
                     break;
 
                 case SeaWeedPos.three:
+                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
                     break;
             }
         }
@@ -88,11 +88,11 @@ public class SeaWeedMove : MonoBehaviour
        
         switch (seaweedPos)
         {
-            case SeaWeedPos.one: 
+            case SeaWeedPos.one:
                 AddList(gameObject);
                 break;
 
-            case SeaWeedPos.two: 
+            case SeaWeedPos.two:
                 AddList(gameObject);
                 break;
 
