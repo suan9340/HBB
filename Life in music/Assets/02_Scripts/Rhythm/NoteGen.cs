@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NoteGen : MonoSingleTon<NoteGen>
@@ -7,7 +8,7 @@ public class NoteGen : MonoSingleTon<NoteGen>
     // todo 나중에 스크립터블 오브젝트로 옮길 코드
     public DefineManager.Stage_01_MoveType moveType;
 
-    private IGen igen = new ShellGen();
+    public IGen igen;
     private void Start()
     {
         EventManager<List<bool>>.StartListening(ConstantManager.BEAT, Gen);
@@ -37,6 +38,12 @@ public class NoteGen : MonoSingleTon<NoteGen>
         igen.Gen(list);
     }
 
+    public void IgenShell()
+    {
+        igen = new ShellGen();
+        Debug.Log(igen);
+    }
+
     public void IgenRock()
     {
         igen = new RockGen();
@@ -51,6 +58,6 @@ public class NoteGen : MonoSingleTon<NoteGen>
 
     public void SettingGen()
     {
-        
+
     }
 }

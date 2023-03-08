@@ -11,6 +11,12 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
     [Header("--- ShellfishNote List ---")]
     public List<GameObject> shellfishnoteObj = new List<GameObject>();
 
+
+    private void Awake()
+    {
+        NoteGen.Instance.IgenShell();
+    }
+
     protected override void Start()
     {
         base.Start();
@@ -30,7 +36,7 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {   
+        {
             SetUpShellfish();
         }
     }

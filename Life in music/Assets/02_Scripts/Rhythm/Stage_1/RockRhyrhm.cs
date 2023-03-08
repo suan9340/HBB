@@ -9,6 +9,11 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
     [Header("--- RockNoteList ---")]
     public List<GameObject> rocknoteObj = new List<GameObject>();
 
+    private void Awake()
+    {
+        NoteGen.Instance.IgenRock();
+    }
+
     protected override void Start()
     {
         NoteGen.Instance.IgenRock();
