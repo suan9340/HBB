@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RockRhyrhm : RhythmBaseNote, IRhythmMom
+public class RockRhyrhm : MonoBehaviour, IRhythmMom
 {
 
     [Space(20)]
@@ -23,9 +23,8 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
         NoteGen.Instance.IgenRock();
     }
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
@@ -59,7 +58,7 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 
         rocknoteObj.Remove(_obj);
 
-     
+
         _obj.GetComponent<RockMove>().CheckType();
 
     }

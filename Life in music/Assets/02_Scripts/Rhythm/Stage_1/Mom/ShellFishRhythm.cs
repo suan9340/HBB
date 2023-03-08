@@ -5,7 +5,7 @@ using DG.Tweening;
 using System.Runtime.InteropServices;
 using System;
 
-public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
+public class ShellFishRhythm : MonoBehaviour, IRhythmMom
 {
     [Space(20)]
     [Header("--- ShellfishNote List ---")]
@@ -17,10 +17,8 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
         NoteGen.Instance.IgenShell();
     }
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);

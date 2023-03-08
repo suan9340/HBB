@@ -16,7 +16,7 @@ MonoBehaviour:
   - stage1: 0
     stageRhythm: {fileID: 6067029285676514292, guid: a34353c05e0276c4d81f50c70a465b90,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: a35af4d777f481a4a877b40b1e80739c, type: 3}
   - stage1: 1
     stageRhythm: {fileID: 8789965736252908555, guid: deb0e6f82d44f0f47996313fdb015d8c,
       type: 3}
@@ -24,7 +24,7 @@ MonoBehaviour:
   - stage1: 2
     stageRhythm: {fileID: 7313266730966089348, guid: 0f4a8653570d946468edd0d7af1d7d14,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
   - stage1: 3
     stageRhythm: {fileID: 7070486113039074098, guid: 28533a8766a6ae341b086205da20bbc7,
       type: 3}
@@ -32,4 +32,4 @@ MonoBehaviour:
   - stage1: 4
     stageRhythm: {fileID: 8618916980925076407, guid: b7335ec50102f4a40b885052462b131b,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
