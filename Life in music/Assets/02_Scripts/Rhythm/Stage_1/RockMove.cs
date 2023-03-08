@@ -29,19 +29,6 @@ public class RockMove : MonoBehaviour
         {
             if (_isTrue)
             {
-                var _instRock = Instantiate(_rockobj, mom.transform, false);
-
-                if (dirnum < 2)
-                {
-                    _instRock.transform.localPosition = rightVec;
-                }
-                else
-                {
-                    _instRock.transform.localPosition = leftVec;
-                }
-            }
-            else
-            {
                 var _insFish = Instantiate(_fishkobj, mom.transform, false);
 
                 if (dirnum < 2)
@@ -52,7 +39,19 @@ public class RockMove : MonoBehaviour
                 {
                     _insFish.transform.localPosition = leftVec;
                 }
+            }
+            else
+            {
+                var _instRock = Instantiate(_rockobj, mom.transform, false);
 
+                if (dirnum < 2)
+                {
+                    _instRock.transform.localPosition = rightVec;
+                }
+                else
+                {
+                    _instRock.transform.localPosition = leftVec;
+                }
             }
         }
         else
@@ -163,9 +162,8 @@ public class RockMove : MonoBehaviour
         if (collision.CompareTag("Crab"))
         {
             AddList(gameObject);
-            Debug.Log("wr");
         }
-       
+
     }
 
 
