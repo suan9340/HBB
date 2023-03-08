@@ -12,9 +12,10 @@ public class SeaWeedRhythm : RhythmBaseNote, IRhythmMom
 
     protected override void Start()
     {
-        base.Start();
-
         NoteGen.Instance.IgenSeaweed();
+
+
+        base.Start();
     }
 
 

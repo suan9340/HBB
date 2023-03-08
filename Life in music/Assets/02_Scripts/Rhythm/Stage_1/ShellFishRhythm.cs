@@ -30,7 +30,7 @@ public class ShellFishRhythm : RhythmBaseNote, IRhythmMom
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {
+        {   
             SetUpShellfish();
         }
     }

@@ -25,4 +25,7 @@ public static class ConstantManager
 
     // SoundManager
     public static string RHYTHM_SOUND_START = "RhythmSound";
+
+    // NoteGen
+    public static string CHANGE_NOTE_GEN = "NoteGenChange";
 }

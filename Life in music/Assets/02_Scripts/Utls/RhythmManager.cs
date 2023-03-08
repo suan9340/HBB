@@ -57,9 +57,9 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
             if (currentIndex >= data.NoteList.Count)
             {
+                StopRhythm();
                 Debug.Log("ENd!!!!!!");
                 isRhythm = false;
-                StopRhythm();
 
                 StartCoroutine(GoHomeYPlayMusic());
                 return;

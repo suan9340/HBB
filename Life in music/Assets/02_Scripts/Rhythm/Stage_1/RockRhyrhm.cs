@@ -11,9 +11,9 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
 
     protected override void Start()
     {
-        base.Start();
-
         NoteGen.Instance.IgenRock();
+
+        base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
