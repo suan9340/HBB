@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - RhythmCanvas
+  - Crab
   layers:
   - Default
   - TransparentFX

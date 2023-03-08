@@ -52,6 +52,7 @@ public class RockMove : MonoBehaviour
                 {
                     _insFish.transform.localPosition = leftVec;
                 }
+
             }
         }
         else
@@ -96,7 +97,7 @@ public class RockMove : MonoBehaviour
     {
         Cashing();
         AddForceObject();
-        AddList(gameObject);
+
 
 
         Invoke(nameof(DestroyRock), 4f);
@@ -156,4 +157,16 @@ public class RockMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Crab"))
+        {
+            AddList(gameObject);
+            Debug.Log("wr");
+        }
+       
+    }
+
+
 }
