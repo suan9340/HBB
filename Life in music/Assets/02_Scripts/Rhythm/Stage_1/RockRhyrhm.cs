@@ -9,6 +9,9 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
     [Header("--- RockNoteList ---")]
     public List<GameObject> rocknoteObj = new List<GameObject>();
 
+    [Space(20)]
+    public GameObject rockMOM = null;
+
     private void Awake()
     {
         NoteGen.Instance.IgenRock();
@@ -21,6 +24,8 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
+
+        Invoke(nameof(SetUpCrab), 1.5f);
     }
 
     private void Update()
@@ -57,5 +62,15 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         rocknoteObj.Add(_obj);
+    }
+
+    private void SetUpCrab()
+    {
+        if (rockMOM == null)
+        {
+            Debug.LogError("rockMOM is NULL!!!!");
+            return;
+        }
+        rockMOM.SetActive(true);
     }
 }

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &18424075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -156,3 +156,4 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
   rocknoteObj: []
+  rockMOM: {fileID: 18424074}
