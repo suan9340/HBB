@@ -9,16 +9,46 @@ public class SeaWeedRhythm : RhythmBaseNote, IRhythmMom
     [Header("--- SeaWweedNote List ---")]
     public List<GameObject> seaWeednoteObj = new List<GameObject>();
 
+    private void Awake()
+    {
+        NoteGen.Instance.IgenSeaweed();
+    }
 
     protected override void Start()
     {
-        NoteGen.Instance.IgenSeaweed();
-
-
         base.Start();
+
+
+        EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
+
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SEAWEED);
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SetUpSeaweed();
+        }
+    }
 
+    public void SetUpSeaweed()
+    {
+        var _cnt = seaWeednoteObj.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+
+
+        var _shellonjSelect = _cnt - 1;
+        var _obj = seaWeednoteObj[_shellonjSelect].gameObject;
+
+       // _obj.GetComponent<SeaWeedMove>().ShellfishDown();
+        seaWeednoteObj.Remove(_obj);
+
+    }
 
     public void AddNoteList(GameObject _obj)
     {
