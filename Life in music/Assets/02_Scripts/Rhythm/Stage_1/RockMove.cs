@@ -86,11 +86,12 @@ public class RockMove : MonoBehaviour
 
 
     private Rigidbody2D myrigid;
-    private Animator myanim;
+    public Animator myanim;
     private Transform mytrn;
 
     public float bulletSpeed;
     public static bool isFirst = true;
+    public bool isStop = false;
 
     private void Start()
     {
@@ -104,6 +105,11 @@ public class RockMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isStop)
+        {
+            return;
+        }
+
         SettiingRotation();
     }
 
@@ -131,10 +137,12 @@ public class RockMove : MonoBehaviour
         {
             Debug.Log("This is rock");
             myanim.SetTrigger("isClickRock");
+            StopMoveRock();
         }
         else if (type == Type.fish)
         {
             Debug.Log("This is Fish");
+            StopMoveRock();
         }
     }
 
@@ -155,6 +163,11 @@ public class RockMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void StopMoveRock()
+    {
+        myrigid.velocity = Vector3.zero;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
