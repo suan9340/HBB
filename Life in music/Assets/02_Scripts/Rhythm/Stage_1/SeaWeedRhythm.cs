@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeaWeedRhythm : RhythmBaseNote, IRhythmMom
+public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
 {
 
     [Space(20)]
@@ -19,10 +19,9 @@ public class SeaWeedRhythm : RhythmBaseNote, IRhythmMom
         NoteGen.Instance.IgenSeaweed();
     }
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
+      //  base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
 

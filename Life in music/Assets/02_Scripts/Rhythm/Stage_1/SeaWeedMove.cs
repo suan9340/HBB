@@ -15,10 +15,13 @@ public class SeaWeedMove : MonoBehaviour
     }
 
     public static float targetpos;
-    public static float _pos = -220f;
+
+    public static float _swPos = -220f;
 
     public static void Add(SeaWeedPos _pos) 
     {
+        _swPos += 20;
+
         if (canvas == null) 
         {
             canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
@@ -33,15 +36,15 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
+                    _inst.transform.localPosition = new Vector3(5, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.two:
-                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
+                    _inst.transform.localPosition = new Vector3(500, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(1100f, 100f, 0f);
+                    _inst.transform.localPosition = new Vector3(0, _swPos, 0f);
                     break;
             }
         }
