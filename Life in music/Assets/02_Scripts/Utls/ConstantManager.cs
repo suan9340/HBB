@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security;
 using UnityEngine;
 
 public static class ConstantManager
@@ -22,4 +23,10 @@ public static class ConstantManager
 
     // RhythmManager
     public static string BEAT = "Beat";
+
+    // SoundManager
+    public static string RHYTHM_SOUND_START = "RhythmSound";
+
+    // NoteGen
+    public static string CHANGE_NOTE_GEN = "NoteGenChange";
 }

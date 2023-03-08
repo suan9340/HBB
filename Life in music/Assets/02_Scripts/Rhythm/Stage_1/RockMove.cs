@@ -7,11 +7,11 @@ using System.Drawing;
 public class RockMove : MonoBehaviour
 {
 
-    private static Canvas canvas;
+    private static GameObject mom;
     private static int dirnum = 0;
 
-    private static Vector3 leftVec = new Vector3(-1314f, 658f, 0f);
-    private static Vector3 rightVec = new Vector3(1314f, 658f, 0f);
+    private static Vector3 leftVec = new Vector3(-1314f, 873f, 0f);
+    private static Vector3 rightVec = new Vector3(1314f, 873f, 0f);
     public static void Add(bool _isTrue)
     {
 
@@ -19,18 +19,17 @@ public class RockMove : MonoBehaviour
         var _rockobj = Resources.Load<RockMove>("Notes/Stage_01/RockNote");
         var _fishkobj = Resources.Load<RockMove>("Notes/Stage_01/FishNote");
 
-        if (canvas == null)
+        if (mom == null)
         {
-            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+            mom = GameObject.Find("Rhythm (Rock)(Clone)");
         }
-
 
 
         if (_rockobj != null && _fishkobj != null)
         {
             if (_isTrue)
             {
-                var _instRock = Instantiate(_rockobj, canvas.transform, false);
+                var _instRock = Instantiate(_rockobj, mom.transform, false);
 
                 if (dirnum < 2)
                 {
@@ -43,7 +42,7 @@ public class RockMove : MonoBehaviour
             }
             else
             {
-                var _insFish = Instantiate(_fishkobj, canvas.transform, false);
+                var _insFish = Instantiate(_fishkobj, mom.transform, false);
 
                 if (dirnum < 2)
                 {
@@ -100,7 +99,7 @@ public class RockMove : MonoBehaviour
         AddList(gameObject);
 
 
-        Invoke(nameof(DestroyRock), 2f);
+        Invoke(nameof(DestroyRock), 4f);
     }
 
     private void FixedUpdate()
@@ -144,6 +143,7 @@ public class RockMove : MonoBehaviour
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
+            EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.ROCK_ADD, _obj);

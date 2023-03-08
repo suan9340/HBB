@@ -18,7 +18,7 @@ public class GameManager : MonoSingleTon<GameManager>
     {
         if (currentStage == null)
         {
-            currentStage = Resources.Load<CurrnetstageSO>("SO/StageSo");
+            currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
         }
     }
 
@@ -40,5 +40,10 @@ public class GameManager : MonoSingleTon<GameManager>
     public void SettingCurrentStage(DefineManager.StageNames _stage)
     {
         currentStage.stageName = _stage;
+    }
+
+    public void SetClip(AudioClip _clip)
+    {
+        currentStage.clip = _clip;
     }
 }

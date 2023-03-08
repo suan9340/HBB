@@ -15,7 +15,6 @@ public class ClickInstruments : ImageSizeInterface
     public DefineManager.Stage_01_Inst instruments;
     public int num;
     public Canvas rhythmCanvas;
-    public ScriptableObject a;
 
     protected override void Start()
     {
@@ -46,7 +45,9 @@ public class ClickInstruments : ImageSizeInterface
             case DefineManager.StageNames.Sea_01:
                 Stage01_SO _so1 = Resources.Load<Stage01_SO>("SO/Stage/Stage1RhythmSO");
                 _loadObj = _so1.infos[num].stageRhythm;
+
                 InstantiateRhythm(_instante, _loadObj);
+                GameManager.Instance.SetClip(_so1.infos[num].clip);
                 break;
 
 
@@ -54,6 +55,7 @@ public class ClickInstruments : ImageSizeInterface
             case DefineManager.StageNames.School_02:
                 Stage02_SO _so2 = Resources.Load<Stage02_SO>("SO/Stage/Stage2RhythmSO");
                 _loadObj = _so2.infos[num].stageRhythm;
+
                 InstantiateRhythm(_instante, _loadObj);
                 break;
 
@@ -70,6 +72,9 @@ public class ClickInstruments : ImageSizeInterface
 
                 break;
         }
+
+
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -84,7 +89,7 @@ public class ClickInstruments : ImageSizeInterface
         instrumetnsObj.SetActive(true);
 
         CheckStage();
-        //CheckInstrumentsAndReadyRyhthm();
+        SoundManager.Instance.StopLoopSource();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -92,57 +97,11 @@ public class ClickInstruments : ImageSizeInterface
         ImageSizeSmall();
     }
 
-    private void CheckInstrumentsAndReadyRyhthm()
-    {
-        GameObject _loadObj = null;
-        GameObject _instante = null;
-
-        switch (instruments)
-        {
-            case DefineManager.Stage_01_Inst.Shellfish:
-
-                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Shellfish)");
-                InstantiateRhythm(_instante, _loadObj);
-
-                break;
-
-
-            case DefineManager.Stage_01_Inst.Starfish:
-
-                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Starfish)");
-                InstantiateRhythm(_instante, _loadObj);
-
-                break;
-
-
-            case DefineManager.Stage_01_Inst.Seaweed:
-
-                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Seaweed)");
-                InstantiateRhythm(_instante, _loadObj);
-
-                break;
-
-
-            case DefineManager.Stage_01_Inst.Rock:
-
-                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Rock)");
-                InstantiateRhythm(_instante, _loadObj);
-
-                break;
-
-
-            case DefineManager.Stage_01_Inst.Conch:
-
-                _loadObj = Resources.Load<GameObject>("Rhythm/Stage_01/Rhythm (Conch)");
-                InstantiateRhythm(_instante, _loadObj);
-
-                break;
-        }
-    }
 
     private void InstantiateRhythm(GameObject _instobj, GameObject _loadobj)
     {
         _instobj = Instantiate(_loadobj);
         _instobj.transform.SetParent(rhythmCanvas.transform, false);
+        RhythmManager.Instance.SettingCurRhythm(_instobj);
     }
 }

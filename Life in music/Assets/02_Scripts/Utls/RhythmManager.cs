@@ -9,11 +9,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     //public float gap = 1;
     public AudioSource audioSource;
 
-    //[Space(20)]
-    //[Header("Rhythm Object List")]
-    //public List<GameObject> objList = new List<GameObject>();
-
     public RhythmData.MyData data;
+    private CurrnetstageSO currentStage;
+
+
+    [Space(20)]
+    [Header("Current Rhythm")]
+    public GameObject curRhy;
 
     private int currentIndex = 0;
 
@@ -21,6 +23,14 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     private float beatPerSec = 0;
 
     private bool isRhythm = false;
+
+    private void Start()
+    {
+        if (currentStage == null)
+        {
+            currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
+        }
+    }
 
     private void Update()
     {
@@ -41,38 +51,28 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
-            var listBool = data.NoteList[currentIndex];
 
-            if (currentIndex + 3 >= data.NoteList.Count)
+            Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
+
+
+            if (currentIndex >= data.NoteList.Count)
             {
-                Debug.Log("ENd!!!!!!");
                 StopRhythm();
-                EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+                Debug.Log("ENd!!!!!!");
+                isRhythm = false;
+
+                StartCoroutine(GoHomeYPlayMusic());
                 return;
             }
-
-            EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
-            currentIndex++;
-            currentTime -= 60f / (data.Bpm * data.BestPerSec);
+            else
+            {
+                var listBool = data.NoteList[currentIndex];
+                EventManager<List<bool>>.TriggerEvent(ConstantManager.BEAT, listBool.beatFlag);
+                currentIndex++;
+                currentTime -= 60f / (data.Bpm * data.BestPerSec);
+            }
         }
     }
-
-    //private void InstantiateFirstNote(bool isFirst, int _index)
-    //{
-    //    if (isFirst)
-    //    {
-    //        isFirst = false;
-    //        var _obj2 = Instantiate(objList[objList.Count - 1]);
-    //        _obj2.transform.SetParent(posList[_index].transform, false);
-    //    }
-    //    else
-    //    {
-    //        var _obj = Instantiate(objList[_index]);
-    //        _obj.transform.SetParent(posList[_index].transform, false);
-    //    }
-
-    //}
-
 
 
     /// <summary>
@@ -95,6 +95,8 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythm()
     {
+        Destroy(curRhy.gameObject);
+
         isRhythm = false;
 
         currentIndex = 0;
@@ -105,6 +107,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         data.BeatTrnCount = 0;
         data.BestPerSec = 0;
         data.NoteList = null;
+        curRhy = null;
 
         //objList.Clear();
 
@@ -136,4 +139,21 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         }
     }
 
+
+    public void SettingCurRhythm(GameObject _obj)
+    {
+        curRhy = _obj;
+    }
+
+    private IEnumerator GoHomeYPlayMusic()
+    {
+        yield return new WaitForSeconds(3f);
+        EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+        SoundManager.Instance.CheckYOnAudio(currentStage.clip);
+
+
+        EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+        GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
+        yield break;
+    }
 }
