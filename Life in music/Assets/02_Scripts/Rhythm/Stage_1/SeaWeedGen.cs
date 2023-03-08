@@ -12,15 +12,17 @@ public class SeaWeedGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
-
+                    SeaWeedMove.Add(SeaWeedMove.SeaWeedPos.one);
                 }
+
                 if (i == 1)
                 {
-
+                    SeaWeedMove.Add(SeaWeedMove.SeaWeedPos.two);
                 }
+
                 if (i == 2)
                 {
-
+                    SeaWeedMove.Add(SeaWeedMove.SeaWeedPos.three);
                 }
             }
         }

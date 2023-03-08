@@ -18,6 +18,7 @@ public static class ConstantManager
     // RhythmSOName
     public static string SO_STAGE01_SHELLFISH = "Stage01_Shellfish";
     public static string SO_STAGE01_Rock = "Stage 01_Rock";
+    public static string SO_STAGE01_SEAWEED = "Stage 01_Seaweed";
 
     // RhythmManager
     public static string BEAT = "Beat";
