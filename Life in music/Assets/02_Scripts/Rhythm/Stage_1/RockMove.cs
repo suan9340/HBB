@@ -97,10 +97,6 @@ public class RockMove : MonoBehaviour
     {
         Cashing();
         AddForceObject();
-
-
-
-        Invoke(nameof(DestroyRock), 4f);
     }
 
     private void FixedUpdate()
@@ -157,13 +153,6 @@ public class RockMove : MonoBehaviour
         EventManager<GameObject>.TriggerEvent(ConstantManager.ROCK_ADD, _obj);
     }
 
-    private void DestroyRock()
-    {
-        if (gameObject != null)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void StopMoveRock()
     {

@@ -58,6 +58,8 @@ public class RockRhyrhm : RhythmBaseNote, IRhythmMom
         var _obj = rocknoteObj[_rockSelect].gameObject;
 
         rocknoteObj.Remove(_obj);
+
+     
         _obj.GetComponent<RockMove>().CheckType();
 
     }

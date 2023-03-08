@@ -52,7 +52,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
 
-            //Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
+            Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
 
 
             if (currentIndex >= data.NoteList.Count)
@@ -101,13 +101,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
         currentIndex = 0;
 
-        data.name = null;
-        data.AudioClip = null;
-        data.Bpm = 0;
-        data.BeatTrnCount = 0;
-        data.BestPerSec = 0;
-        data.NoteList = null;
-        curRhy = null;
+        //data.name = null;
+        //data.AudioClip = null;
+        //data.Bpm = 0;
+        //data.BeatTrnCount = 0;
+        //data.BestPerSec = 0;
+        //data.NoteList = null;
+        //curRhy = null;
 
         //objList.Clear();
 
