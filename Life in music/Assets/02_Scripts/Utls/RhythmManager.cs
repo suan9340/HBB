@@ -59,6 +59,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
             {
                 StopRhythm();
                 Debug.Log("ENd!!!!!!");
+                SoundManager.Instance.StopLoopSource();
                 isRhythm = false;
 
                 StartCoroutine(GoHomeYPlayMusic());
