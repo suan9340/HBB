@@ -66,7 +66,7 @@ public class RhythmMaker : EditorWindow
 
     private readonly int[] _noteCountIndexList =
     {
-        1, 2, 3, 4
+       1, 2, 3, 4
     };
 
     private readonly string[] _noteBestPerSecList =

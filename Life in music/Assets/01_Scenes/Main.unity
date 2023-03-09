@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loopStationsources:
   - source: {fileID: 2105787943}
-    isOn: 0
+    isOn: 1
   - source: {fileID: 1709757973}
     isOn: 0
   - source: {fileID: 526055025}
@@ -188,7 +188,7 @@ MonoBehaviour:
   - source: {fileID: 423021083}
     isOn: 0
   audioclips: []
-  num: 0
+  num: 1
 --- !u!1 &20157921
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,7 +4233,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 12b82946995bd274fa0b978ccd395044, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -12,7 +12,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
     public List<AudioClip> audioclips = new List<AudioClip>();
 
 
-    public int num = 0;
+    public int num = 1;
 
 
     private void Start()
@@ -24,7 +24,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     public void GoGoSound()
     {
-        Debug.Log("SoundMusic");
+        //Debug.Log("SoundMusic");
         StopLoopSource();
         PlayLoopSource();
     }
@@ -78,7 +78,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
             if (loop.isOn)
             {
-                //Debug.Log($"{i} 개 실행중");
+                Debug.Log($"{i} 개 실행중");
                 loop.source.Play();
             }
         }
