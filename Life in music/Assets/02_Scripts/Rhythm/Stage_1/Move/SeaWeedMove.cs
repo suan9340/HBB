@@ -32,19 +32,20 @@ public class SeaWeedMove : MonoBehaviour
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
+            _inst.seaweedPos = _pos;
 
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(-400f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(1100f, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.two:
-                    _inst.transform.localPosition = new Vector3(0f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(-1100f, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(400f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(1100f, _swPos, 0f);
                     break;
             }
         }
@@ -70,6 +71,8 @@ public class SeaWeedMove : MonoBehaviour
     private RectTransform rect;
     private static GameObject mom;
 
+    private bool isStop = false;
+
 
     private void OnEnable()
     {
@@ -86,8 +89,6 @@ public class SeaWeedMove : MonoBehaviour
     private void Update()
     {
         MoveSeaWeed();
-
-        //Debug.Log(seaweedPos);
     }
 
     private void MoveSeaWeed()
@@ -97,18 +98,42 @@ public class SeaWeedMove : MonoBehaviour
         {
 
             case SeaWeedPos.one:
-
-                AddList(gameObject);
+                if (rect.anchoredPosition.x <= 0)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                }
                 break;
 
             case SeaWeedPos.two:
-
-                AddList(gameObject);
+                if (rect.anchoredPosition.x >= 0)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+                }
                 break;
 
             case SeaWeedPos.three:
-
-                AddList(gameObject);
+                if (rect.anchoredPosition.x <= 0)
+                {
+                    isStop = true;
+                    rect.anchoredPosition = new Vector2(0, target);
+                    AddList(gameObject);
+                }
+                else
+                {
+                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                }
                 break;
         }
     }
