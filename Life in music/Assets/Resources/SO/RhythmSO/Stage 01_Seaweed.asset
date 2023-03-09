@@ -17,31 +17,64 @@ MonoBehaviour:
     AudioClip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
     Bpm: 100
     BeatTrnCount: 3
-    BestPerSec: 3
+    BestPerSec: 4
     MusicPlayTime: 20
     NoteList:
-    - beatFlag: 010000
-    - beatFlag: 000000
-    - beatFlag: 000000
     - beatFlag: 000001
+    - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000100
     - beatFlag: 000000
-    - beatFlag: 000000
-    - beatFlag: 000001
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 010000
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
+    - beatFlag: 000100
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000100
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 010000
+    - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000001
     - beatFlag: 000000
     - beatFlag: 000000
-    - beatFlag: 000100
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
+    - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
