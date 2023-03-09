@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData:
     name: Stage 01_Conch
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
     Bpm: 100
     BeatTrnCount: 2
     BestPerSec: 1
