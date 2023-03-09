@@ -18,21 +18,21 @@ public class SeaWeedMove : MonoBehaviour
 
     public static float _swPos = -220f;
 
-    public static void Add(SeaWeedPos _pos) 
+    public static void Add(SeaWeedPos _pos)
     {
         _swPos += 20;
 
-        if (canvas == null) 
+        if (mom == null)
         {
-            canvas = GameObject.FindWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
+            mom = GameObject.Find("Rhythm (Seaweed)(Clone)");
         }
 
         var _obj = Resources.Load<SeaWeedMove>("Notes/Stage_01/SeaWeedNote");
 
         if (_obj != null)
         {
-            var _inst = Instantiate(_obj, canvas.transform, false);
-           
+            var _inst = Instantiate(_obj, mom.transform, false);
+
             switch (_pos)
             {
                 case SeaWeedPos.one:
@@ -57,16 +57,18 @@ public class SeaWeedMove : MonoBehaviour
     #endregion
 
     public float moveSpeed = 1f;
-   
-    public float target; 
+    public float target;
 
-    private SeaWeedPos seaweedPos;
-   
+
     public static bool isFirst = true;
 
+
+    private SeaWeedPos seaweedPos;
+    private bool isAdd = false;
+
+
     private RectTransform rect;
-    
-    private static Canvas canvas;
+    private static GameObject mom;
 
 
     private void OnEnable()
@@ -78,14 +80,14 @@ public class SeaWeedMove : MonoBehaviour
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-      
+
     }
 
     private void Update()
     {
         MoveSeaWeed();
 
-        Debug.Log(seaweedPos);
+        //Debug.Log(seaweedPos);
     }
 
     private void MoveSeaWeed()
@@ -95,26 +97,31 @@ public class SeaWeedMove : MonoBehaviour
         {
 
             case SeaWeedPos.one:
-               
+
                 AddList(gameObject);
                 break;
 
             case SeaWeedPos.two:
-                
+
                 AddList(gameObject);
                 break;
 
             case SeaWeedPos.three:
-                
+
                 AddList(gameObject);
                 break;
         }
-}
+    }
 
-    private void AddList(GameObject _obj) 
+    private void AddList(GameObject _obj)
     {
+        if (isAdd)
+        {
+            return;
+        }
 
-       UIManager.Instance.RhythmNoteEffect();
+        isAdd = true;
+        UIManager.Instance.RhythmNoteEffect();
 
         if (isFirst)
         {
