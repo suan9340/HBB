@@ -14,14 +14,9 @@ public class SeaWeedMove : MonoBehaviour
         three,
     }
 
-    public static float targetpos;
-
-    public static float _swPos = -220f;
 
     public static void Add(SeaWeedPos _pos)
     {
-        _swPos += 20;
-
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Seaweed)(Clone)");
@@ -31,21 +26,21 @@ public class SeaWeedMove : MonoBehaviour
 
         if (_obj != null)
         {
-            var _inst = Instantiate(_obj, mom.transform, false);
+            var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
             _inst.seaweedPos = _pos;
 
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(1100f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.two:
-                    _inst.transform.localPosition = new Vector3(-1100f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(-1100f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(1100f, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
                     break;
             }
         }
@@ -74,12 +69,6 @@ public class SeaWeedMove : MonoBehaviour
     private bool isStop = false;
 
 
-    private void OnEnable()
-    {
-        target = targetpos;
-    }
-
-
     private void Start()
     {
         rect = GetComponent<RectTransform>();
@@ -93,15 +82,16 @@ public class SeaWeedMove : MonoBehaviour
 
     private void MoveSeaWeed()
     {
+        if (isStop) return;
 
         switch (seaweedPos)
         {
 
             case SeaWeedPos.one:
-                if (rect.anchoredPosition.x <= 0)
+                if (rect.anchoredPosition.x <= -366f)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    rect.anchoredPosition = new Vector2(-366f, 0);
                     AddList(gameObject);
                 }
                 else
@@ -114,7 +104,7 @@ public class SeaWeedMove : MonoBehaviour
                 if (rect.anchoredPosition.x >= 0)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    rect.anchoredPosition = new Vector2(0f, 0f);
                     AddList(gameObject);
                 }
                 else
@@ -124,10 +114,10 @@ public class SeaWeedMove : MonoBehaviour
                 break;
 
             case SeaWeedPos.three:
-                if (rect.anchoredPosition.x <= 0)
+                if (rect.anchoredPosition.x <= 366f)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    rect.anchoredPosition = new Vector2(366f, 0f);
                     AddList(gameObject);
                 }
                 else
