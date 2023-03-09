@@ -21,7 +21,7 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
 
     private void Start()
     {
-      //  base.Start();
+        //  base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
 
@@ -52,6 +52,7 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
         var _obj = seaWeednoteObj[_shellonjSelect].gameObject;
 
         // _obj.GetComponent<SeaWeedMove>().ShellfishDown();
+        _obj.GetComponent<SeaWeedMove>().SeaweedUp();
         seaWeednoteObj.Remove(_obj);
 
     }

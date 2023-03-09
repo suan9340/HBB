@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5788474973424442023}
   - component: {fileID: 5788474973424442022}
   - component: {fileID: 5788474973424442024}
+  - component: {fileID: 8367566428520589396}
   m_Layer: 7
   m_Name: SeaWeedNote
   m_TagString: Untagged
@@ -91,4 +92,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 100
   target: 0
-  noteAnimation: {fileID: 0}
+--- !u!95 &8367566428520589396
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788474973424442020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ad3e782a724f143bf4c1b7d4f05120, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

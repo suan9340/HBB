@@ -64,15 +64,17 @@ public class SeaWeedMove : MonoBehaviour
 
 
     private RectTransform rect;
-    private static GameObject mom;
+    private Animator myanim = null;
 
+
+    private static GameObject mom;
     private bool isStop = false;
 
 
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-
+        myanim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -146,6 +148,11 @@ public class SeaWeedMove : MonoBehaviour
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SEAWEED_ADD, _obj);
 
+    }
+
+    public void SeaweedUp()
+    {
+        myanim.SetTrigger("isSeaweedFishClick");
     }
 
 }
