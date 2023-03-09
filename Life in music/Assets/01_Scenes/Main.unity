@@ -2705,6 +2705,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983176190}
   m_CullTransparentMesh: 1
+--- !u!1 &995417985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 797171049957211712, guid: f97328d59030a654cb7c86fdfe12c6c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 797171051121503455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1088823229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,6 +4331,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 797171049957211712, guid: f97328d59030a654cb7c86fdfe12c6c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 797171050903740409, guid: f97328d59030a654cb7c86fdfe12c6c1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4556,19 +4567,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8590688048051561366, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
-      propertyPath: num
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590688048051561366, guid: 3cfa8e24539acb14783b807f38a4e6ed,
-        type: 3}
       propertyPath: instrumetnsObj
       value: 
       objectReference: {fileID: 1789814737}
-    - target: {fileID: 8590688048073498343, guid: 3cfa8e24539acb14783b807f38a4e6ed,
-        type: 3}
-      propertyPath: num
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8590688048073498343, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
       propertyPath: instrumetnsObj
@@ -4576,25 +4577,14 @@ PrefabInstance:
       objectReference: {fileID: 1759010395}
     - target: {fileID: 8590688048139837806, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
-      propertyPath: num
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590688048409346834, guid: 3cfa8e24539acb14783b807f38a4e6ed,
-        type: 3}
-      propertyPath: num
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: instrumetnsObj
+      value: 
+      objectReference: {fileID: 995417985}
     - target: {fileID: 8590688048409346834, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
       propertyPath: instrumetnsObj
       value: 
       objectReference: {fileID: 2101702599}
-    - target: {fileID: 8590688048801395900, guid: 3cfa8e24539acb14783b807f38a4e6ed,
-        type: 3}
-      propertyPath: a
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f34f856bf0bb48408c2f42f3cdc0355,
-        type: 2}
     - target: {fileID: 8590688048801395900, guid: 3cfa8e24539acb14783b807f38a4e6ed,
         type: 3}
       propertyPath: instrumetnsObj

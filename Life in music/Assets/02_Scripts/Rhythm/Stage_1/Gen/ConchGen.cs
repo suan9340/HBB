@@ -8,7 +8,14 @@ public class ConchGen : MonoBehaviour, IGen
     {
         for (int i = 0; i < list.Count; i++)
         {
+            if (i == 0)
+            {
 
+            }
+            if (i == 1)
+            {
+
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData:
     name: Stage 01_Seaweed
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
     Bpm: 100
     BeatTrnCount: 3
     BestPerSec: 3
