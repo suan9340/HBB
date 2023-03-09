@@ -18,6 +18,7 @@ public static class ConstantManager
     public static string ROCK_ADD = "RockListAdd";
     public static string SEAWEED_ADD = "SeaweedListAdd";
     public static string CONCHLIST_ADD = "ConchListAdd";
+    public static string STARFISH_ADD = "StarFishListAdd";
 
     // RhythmSOName
     public static string SO_STAGE01_SHELLFISH = "Stage01_Shellfish";

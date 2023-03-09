@@ -58,4 +58,9 @@ public class NoteGen : MonoSingleTon<NoteGen>
         igen = new ConchGen();
     }
 
+    public void IGenStarFish()
+    {
+        igen = new StarFishGen();
+    }
+
 }
