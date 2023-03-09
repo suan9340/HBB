@@ -36,15 +36,15 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(5, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(-400f, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.two:
-                    _inst.transform.localPosition = new Vector3(500, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(0f, _swPos, 0f);
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(0, _swPos, 0f);
+                    _inst.transform.localPosition = new Vector3(400f, _swPos, 0f);
                     break;
             }
         }
@@ -84,22 +84,28 @@ public class SeaWeedMove : MonoBehaviour
     private void Update()
     {
         MoveSeaWeed();
+
+        Debug.Log(seaweedPos);
     }
 
     private void MoveSeaWeed()
     {
-       
+
         switch (seaweedPos)
         {
+
             case SeaWeedPos.one:
+               
                 AddList(gameObject);
                 break;
 
             case SeaWeedPos.two:
+                
                 AddList(gameObject);
                 break;
 
-            case SeaWeedPos.three: 
+            case SeaWeedPos.three:
+                
                 AddList(gameObject);
                 break;
         }
@@ -107,6 +113,7 @@ public class SeaWeedMove : MonoBehaviour
 
     private void AddList(GameObject _obj) 
     {
+
        UIManager.Instance.RhythmNoteEffect();
 
         if (isFirst)
