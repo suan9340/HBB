@@ -37,7 +37,6 @@ public class RhythmData : ScriptableObject
         public int BeatTrnCount = 4;
         public int BestPerSec = 3;
         public int MusicPlayTime = 60;
-
         public List<BeatOnOff> NoteList = new();
     }
 

@@ -32,7 +32,7 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(1466f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.two:
@@ -40,7 +40,7 @@ public class SeaWeedMove : MonoBehaviour
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(1100f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(-1466f, 0f, 0f);
                     break;
             }
         }
@@ -53,7 +53,6 @@ public class SeaWeedMove : MonoBehaviour
     #endregion
 
     public float moveSpeed = 1f;
-    public float target;
 
 
     public static bool isFirst = true;
