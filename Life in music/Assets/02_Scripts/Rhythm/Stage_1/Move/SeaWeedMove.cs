@@ -32,7 +32,7 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(1466f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(-1476f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.two:
@@ -40,10 +40,11 @@ public class SeaWeedMove : MonoBehaviour
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(-1466f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(1476f, 0f, 0f);
                     break;
             }
         }
+        
     }
 
     public static void Remove()
@@ -89,7 +90,7 @@ public class SeaWeedMove : MonoBehaviour
         {
 
             case SeaWeedPos.one:
-                if (rect.anchoredPosition.x <= -366f)
+                if (rect.anchoredPosition.x >= -366f)
                 {
                     isStop = true;
                     rect.anchoredPosition = new Vector2(-366f, 0);
@@ -97,7 +98,7 @@ public class SeaWeedMove : MonoBehaviour
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
