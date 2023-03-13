@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeaWeedMove : MonoBehaviour
 {
@@ -44,7 +42,6 @@ public class SeaWeedMove : MonoBehaviour
                     break;
             }
         }
-        
     }
 
     public static void Remove()
@@ -54,6 +51,7 @@ public class SeaWeedMove : MonoBehaviour
     #endregion
 
     public float moveSpeed = 1f;
+    public GameObject animObj = null;
 
 
     public static bool isFirst = true;
@@ -62,9 +60,8 @@ public class SeaWeedMove : MonoBehaviour
     private SeaWeedPos seaweedPos;
     private bool isAdd = false;
 
-
     private RectTransform rect;
-    private Animator myanim = null;
+    private Image image;
 
 
     private static GameObject mom;
@@ -74,7 +71,12 @@ public class SeaWeedMove : MonoBehaviour
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-        myanim = GetComponent<Animator>();
+        image = GetComponent<Image>();
+
+        if (animObj.activeSelf)
+        {
+            animObj.SetActive(false);
+        }
     }
 
     private void Update()
@@ -137,6 +139,7 @@ public class SeaWeedMove : MonoBehaviour
             return;
         }
 
+
         isAdd = true;
         UIManager.Instance.RhythmNoteEffect();
 
@@ -152,7 +155,8 @@ public class SeaWeedMove : MonoBehaviour
 
     public void SeaweedUp()
     {
-        myanim.SetTrigger("isSeaweedFishClick");
+        image.enabled = false;
+        animObj.SetActive(true);
     }
 
 }
