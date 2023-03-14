@@ -49,13 +49,11 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
             return;
         }
 
-
         var _shellonjSelect = _cnt - 1;
         var _obj = shellfishnoteObj[_shellonjSelect].gameObject;
 
         _obj.GetComponent<ShellfishMove>().ShellfishDown();
         shellfishnoteObj.Remove(_obj);
-
     }
 
     public void AddNoteList(GameObject _obj)

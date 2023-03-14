@@ -18,39 +18,30 @@ MonoBehaviour:
     Bpm: 100
     BeatTrnCount: 1
     BestPerSec: 4
-    MusicPlayTime: 100
+    MusicPlayTime: 60
     NoteList:
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
@@ -84,37 +75,28 @@ MonoBehaviour:
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
-    - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
@@ -148,7 +130,292 @@ MonoBehaviour:
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
-    - beatFlag: 01
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00

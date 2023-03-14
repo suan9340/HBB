@@ -28,11 +28,11 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetUpShellfish();
+            SetUpStarfish();
         }
     }
 
-    public void SetUpShellfish()
+    public void SetUpStarfish()
     {
         var _cnt = starfishNoteObj.Count;
         if (_cnt == 0)
@@ -42,10 +42,10 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         }
 
 
-        var _shellonjSelect = _cnt - 1;
-        var _obj = starfishNoteObj[_shellonjSelect].gameObject;
+        var _starfishonjSelect = _cnt - 1;
+        var _obj = starfishNoteObj[_starfishonjSelect].gameObject;
 
-        _obj.GetComponent<StarFishMove>().ShellfishDown();
+        _obj.GetComponent<StarFishMove>().StarfishDown();
         starfishNoteObj.Remove(_obj);
 
     }
