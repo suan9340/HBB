@@ -26,6 +26,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
 
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             SetUpStarfish();
@@ -34,6 +35,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
 
     public void SetUpStarfish()
     {
+     
         var _cnt = starfishNoteObj.Count;
         if (_cnt == 0)
         {
@@ -41,14 +43,18 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
             return;
         }
 
-
         var _starfishonjSelect = _cnt - 1;
         var _obj = starfishNoteObj[_starfishonjSelect].gameObject;
 
         _obj.GetComponent<StarFishMove>().StarfishDown();
+
+
         starfishNoteObj.Remove(_obj);
 
+
     }
+
+
 
     public void AddNoteList(GameObject _obj)
     {

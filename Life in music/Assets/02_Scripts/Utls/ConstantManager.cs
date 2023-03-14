@@ -13,6 +13,7 @@ public static class ConstantManager
 
     // Stage_01
     public static string SHELLFISH_MUSIC = "ShellfishMusic";
+    public static string STARFISH_ANIM = "StarfishAnimation";
 
     public static string SHELLFISHLIST_ADD = "ShellfishListAdd";
     public static string ROCK_ADD = "RockListAdd";

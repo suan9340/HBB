@@ -12,18 +12,18 @@ public class StarFishMove : MonoBehaviour
 
     public static void StarFishAdd()
     {
-        _spos += 20;
-        
+
+        if (mom == null)
+        {
+            mom = GameObject.Find("Rhythm (Starfish)(Clone)");
+        }
 
         var _obj = Resources.Load<StarFishMove>("Notes/Stage_01/StarfishNote");
 
-        _spos += 20;
 
         if (_obj != null)
         {
-
-            var _inst = Instantiate(_obj, mom.transform, false);
-            _inst.transform.localPosition = new Vector3(500f, _spos, 0f);
+            //애니메이션을 실행해야한다.
         }
 
         else
@@ -32,19 +32,15 @@ public class StarFishMove : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        
-    }
+    
+
 
     public static void Remove()
     {
         // 자동삭제
     }
 
-    [Header("NoteAnimation")]
-    public Animator starfish_noteAnimation = null;
-
+    private Animator myanim = null;
     private RectTransform rect;
 
 
@@ -52,23 +48,24 @@ public class StarFishMove : MonoBehaviour
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-        starfish_noteAnimation = GetComponent<Animator>();
+        myanim = GetComponent<Animator>();
+
+        MoveStarFish();
+        EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishAnim);
     }
 
     private void Update()
     {
-        MoveStarFish();
+        
     }
 
     private void MoveStarFish()
     {
-       AddList(gameObject);
+        AddList(gameObject);
     }
 
     private void AddList(GameObject _obj)
     {
-        UIManager.Instance.RhythmNoteEffect();
-
         if (Starfish_isFirst)
         {
             RhythmManager.Instance.StartMusic();
@@ -80,6 +77,13 @@ public class StarFishMove : MonoBehaviour
 
     public void StarfishDown()
     {
-        starfish_noteAnimation.SetTrigger("isStarfishClick");
+        myanim.SetTrigger("isStarfishClick");
+    }
+
+    public void StarfishAnim()
+    {
+        //Debug.Log("애니메이션");
+          StarfishDown();
+
     }
 }

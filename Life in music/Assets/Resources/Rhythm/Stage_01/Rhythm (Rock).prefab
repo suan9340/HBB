@@ -153,8 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f02aeba05cebef4299776b7e610faae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
   rocknoteObj: []
   crab: {fileID: 18424076}
   crabSprite:
