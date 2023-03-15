@@ -61,12 +61,12 @@ public class RhythmMaker : EditorWindow
 
     private readonly string[] _noteCountList =
     {
-        "1", "2", "3", "4"
+        "1", "2", "3", "4", "5"
     };
 
     private readonly int[] _noteCountIndexList =
     {
-       1, 2, 3, 4
+       1, 2, 3, 4, 5
     };
 
     private readonly string[] _noteBestPerSecList =
@@ -136,6 +136,7 @@ public class RhythmMaker : EditorWindow
             {
                 myData.BeatTrnCount = curNote;
                 Debug.Log($"curNote: {curNote.ToString()}");
+                CalculateNoteCount();
             }
 
 
@@ -146,6 +147,7 @@ public class RhythmMaker : EditorWindow
             if (EditorGUI.EndChangeCheck())
             {
                 myData.BestPerSec = curNoteBestPerSec;
+                CalculateNoteCount();
             }
 
 
