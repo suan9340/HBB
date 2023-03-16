@@ -154,7 +154,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
 
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
-        GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
+        ChatMaanger.Instance.Text();
         yield break;
     }
 }
