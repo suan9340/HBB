@@ -12,7 +12,6 @@ public class StarFishMove : MonoBehaviour
 
     public static void StarFishAdd()
     {
-
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Starfish)(Clone)");
@@ -43,8 +42,6 @@ public class StarFishMove : MonoBehaviour
     private Animator myanim = null;
     private RectTransform rect;
 
-
-
     private void Start()
     {
         rect = GetComponent<RectTransform>();
@@ -54,24 +51,22 @@ public class StarFishMove : MonoBehaviour
         EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishAnim);
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void MoveStarFish()
     {
-        AddList(gameObject);
+       AddList(gameObject);
     }
 
     private void AddList(GameObject _obj)
     {
+
         if (Starfish_isFirst)
         {
             RhythmManager.Instance.StartMusic();
             EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             Starfish_isFirst = false;
         }
+
+    
         EventManager<GameObject>.TriggerEvent(ConstantManager.STARFISH_ADD, _obj);
     }
 
