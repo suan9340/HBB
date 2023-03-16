@@ -20,6 +20,7 @@ public class ShellfishMove : MonoBehaviour
 
     public static void Add(Direction _dir)
     {
+        
         if (_pos == -40)
         {
             _pos = -220f;
@@ -62,7 +63,7 @@ public class ShellfishMove : MonoBehaviour
 
                     _inst.transform.localPosition = new Vector3(0f, 1100f, 0f);
                     break;
-
+                     
             }
         }
         else
@@ -132,9 +133,8 @@ public class ShellfishMove : MonoBehaviour
 
                 break;
 
-
-
             case Direction.right:
+
                 if (rect.anchoredPosition.x >= 0)
                 {
                     isStop = true;
@@ -145,6 +145,7 @@ public class ShellfishMove : MonoBehaviour
                 {
                     rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
                 }
+
                 break;
 
 
@@ -182,6 +183,7 @@ public class ShellfishMove : MonoBehaviour
     // todo 관리자가 들고있어야하는거 ShellfishRhythm
     private void AddList(GameObject _obj)
     {
+
         UIManager.Instance.RhythmNoteEffect();
 
         if (isFirst)

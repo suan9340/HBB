@@ -8,13 +8,12 @@ public class ConchGen : MonoBehaviour, IGen
     {
         for (int i = 0; i < list.Count; i++)
         {
-            if (i == 0)
+            if (list[i])
             {
-
-            }
-            if (i == 1)
-            {
-
+                if (i == 0)
+                {
+                    ConchMove.Add();
+                }
             }
         }
     }

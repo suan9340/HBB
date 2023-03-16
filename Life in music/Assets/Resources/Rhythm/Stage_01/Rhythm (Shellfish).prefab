@@ -49,17 +49,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed012b6e5df1194ba643b2e2b332d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  clip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
   shellfishnoteObj: []
-  posList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  noteObj:
-  - {fileID: 4969297768436571499, guid: ad9698e4d99483f47973d638d4eaff1f, type: 3}
-  - {fileID: 4969297768436571499, guid: 9db40b7baf79b3b41995e7af446bce2b, type: 3}
-  - {fileID: 4969297768436571499, guid: ad9698e4d99483f47973d638d4eaff1f, type: 3}
-  - {fileID: 4969297768436571499, guid: 78edd9d214ac4b44e9d2a5dd60936ace, type: 3}
-  - {fileID: 4969297768436571499, guid: 2a4ff8e7a18046143bc54189f27c6aeb, type: 3}

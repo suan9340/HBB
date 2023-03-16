@@ -14,6 +14,7 @@ public class ShellGen : MonoBehaviour, IGen
                 {
                     ShellfishMove.Add(ShellfishMove.Direction.left);
 
+
                 }
                 if (i == 1)
                 {

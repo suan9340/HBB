@@ -165,8 +165,5 @@ public class RockMove : MonoBehaviour
         {
             AddList(gameObject);
         }
-
     }
-
-
 }
