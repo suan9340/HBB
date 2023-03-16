@@ -19,7 +19,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a35af4d777f481a4a877b40b1e80739c, type: 3}
     chat:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
-    - "\uD55C\uBC88 \uB9CC\uC838\uBCF4\uACE0 \uC2F6"
+    - "\uD55C\uBC88 \uB9CC\uC838\uBCF4\uACE0 \uC2F6\uB2E4"
   - stage1: 1
     stageRhythm: {fileID: 8789965736252908555, guid: deb0e6f82d44f0f47996313fdb015d8c,
       type: 3}

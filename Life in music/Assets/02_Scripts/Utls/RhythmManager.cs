@@ -77,7 +77,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
 
     /// <summary>
-    /// Starting Rhythm Notes
+    /// Starting Rhythm Notes 1.4ÃÊ µÚ¿¡
     /// </summary>
     /// <param name="_name"></param>
     public void ReadyRhythm(string _name)
@@ -86,7 +86,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;
 
-        Invoke(nameof(StartRhythmGame), 1.4f);
+        Invoke(nameof(StartRhythmGame), 1.5f);
     }
 
     public void StartRhythmGame()
