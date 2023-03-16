@@ -21,15 +21,13 @@ public class ConchMove : MonoBehaviour
            conchMom = GameObject.Find("Rhythm (Conch)(Clone)");
         }
 
-        var _conchobj = Resources.Load<ConchMove>("Notes/Stage_01/ConchNote");
+    //    var _conchobj = Resources.Load<ConchMove>("Notes/Stage_01/ConchNote");
 
-        if (_conchobj != null)
-        {
-            var _conchInst = Instantiate(_conchobj, conchMom.transform, false);
-            _conchInst.transform.localPosition = new Vector3(1100f, 500f, 0f);
-        }
-
-    
+    //    if (_conchobj != null)
+    //    {
+    //        var _conchInst = Instantiate(_conchobj, conchMom.transform, false);
+    //        _conchInst.transform.localPosition = new Vector3(1100f, 500f, 0f);
+    //    }
     }
 
     public static void Remove()
