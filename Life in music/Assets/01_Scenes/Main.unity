@@ -2709,7 +2709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3037,8 +3037,6 @@ MonoBehaviour:
   messagesList: []
   messagetxt: {fileID: 5511336250778839199}
   messageObj: {fileID: 5511336251081677689}
-  isTyping: 0
-  isClick: 0
 --- !u!4 &1014093423
 Transform:
   m_ObjectHideFlags: 0
