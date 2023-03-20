@@ -15,7 +15,6 @@ public class StarFishGen : MonoBehaviour, IGen
                    StarFishMove.StarFishAdd();
                    EventManager.TriggerEvent(ConstantManager.STARFISH_ANIM);
                 }
-               
             }
         }
     }

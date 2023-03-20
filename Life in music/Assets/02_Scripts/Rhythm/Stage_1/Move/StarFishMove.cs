@@ -31,7 +31,7 @@ public class StarFishMove : MonoBehaviour
         }
     }
 
-    
+
 
 
     public static void Remove()
@@ -53,7 +53,7 @@ public class StarFishMove : MonoBehaviour
 
     private void MoveStarFish()
     {
-       AddList(gameObject);
+        AddList(gameObject);
     }
 
     private void AddList(GameObject _obj)
@@ -66,7 +66,7 @@ public class StarFishMove : MonoBehaviour
             Starfish_isFirst = false;
         }
 
-    
+
         EventManager<GameObject>.TriggerEvent(ConstantManager.STARFISH_ADD, _obj);
     }
 
@@ -78,7 +78,7 @@ public class StarFishMove : MonoBehaviour
     public void StarfishAnim()
     {
         //Debug.Log("애니메이션");
-          StarfishDown();
-
+        StarfishDown();
+        EventManager<GameObject>.TriggerEvent(ConstantManager.STARFISH_ADD, gameObject);
     }
 }

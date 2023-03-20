@@ -11,7 +11,6 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     [Space(20)]
     public GameObject conchMOM = null;
 
-    public GameObject conchTwo = null;
 
     private void Awake()
     {
@@ -24,6 +23,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_CONCH);
 
+
         Invoke(nameof(ConchStart), 1.5f);
     }
 
@@ -32,13 +32,6 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         if (Input.GetMouseButtonDown(0))
         {
             SetupConch();
-
-         
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            Instantiate(conchTwo);
         }
     }
 
@@ -50,7 +43,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     private void SetupConch()
     {
         var _cnt = conchNoteObj.Count;
-        Debug.Log(_cnt);
+
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -60,9 +53,12 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         var _conchOnjSelect = _cnt - 1;
         var _obj = conchNoteObj[_conchOnjSelect].gameObject;
 
-       // _obj.GetComponent<StarFishMove>().StarfishDown();
+        _obj.GetComponent<ConchMove>().ConchDown();
 
         conchNoteObj.Remove(_obj);
+
+
+        Debug.Log(_cnt);
     }
 
     private void ConchStart()
@@ -74,6 +70,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         }
 
         conchMOM.SetActive(true);
-        conchTwo.SetActive(true);
+
     }
+
 }

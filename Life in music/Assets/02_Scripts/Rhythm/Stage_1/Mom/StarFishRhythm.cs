@@ -20,31 +20,28 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     private void Awake()
     {
         NoteGen.Instance.IGenStarFish();
-
     }
 
     private void Start()
     {
+
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
 
         Invoke(nameof(StarFishStart), 1.5f);
     }
 
-
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             SetUpStarfish();
+
         }
     }
 
     public void SetUpStarfish()
     {
-
-
         var _cnt = starfishNoteObj.Count;
 
         if (_cnt == 0)
@@ -57,17 +54,11 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         var _obj = starfishNoteObj[_starfishonjSelect].gameObject;
 
         _obj.GetComponent<StarFishMove>().StarfishDown();
-
         starfishNoteObj.Remove(_obj);
-
-        Debug.Log(_cnt);
     }
-
-
 
     public void AddNoteList(GameObject _obj)
     {
-
         starfishNoteObj.Add(_obj);
     }
 
