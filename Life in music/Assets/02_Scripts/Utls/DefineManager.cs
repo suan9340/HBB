@@ -29,9 +29,11 @@ public static class DefineManager
 
     public enum GameState
     {
+        Start,
         Playing,
         Setting,
         Menu,
+        Menu_Set,
         Rhythm,
     }
 
