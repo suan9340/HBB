@@ -16,10 +16,20 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
     public GameObject messageObj = null;
 
 
-    public bool isTyping = false;
+    private bool isTyping = false;
 
-    public bool isClick = false;
+    private bool isClick = false;
     private readonly WaitForSeconds textTime = new WaitForSeconds(2f);
+
+    private void Start()
+    {
+        if (messagesList.Count > 0)
+        {
+            messagesList.Clear();
+        }
+
+        messagetxt.text = "";
+    }
 
     private void Update()
     {
@@ -49,6 +59,7 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
     {
         if (isTyping) yield break;
 
+        messagetxt.text = "";
         isTyping = true;
         messageObj.SetActive(true);
 
