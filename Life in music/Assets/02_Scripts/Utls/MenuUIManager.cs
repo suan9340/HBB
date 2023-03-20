@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Purchasing;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
@@ -10,16 +9,29 @@ public class MenuUIManager : MonoBehaviour
     public Animator GameOutAnim = null;
     public List<GameObject> doors = new List<GameObject>();
     private bool isOut = false;
+    private DefineManager.GameState lastState;
 
 
     [Space(20)]
     [Header("BoardUI")]
     public Animator BoardAnim = null;
+    public List<GameObject> stageBtn = new List<GameObject>();
+
+
+    [Space(20)]
+    [Header("StartUI")]
+    public Animator startAnim = null;
+
+
     private bool isBoardZoomIn = false;
+    private bool isMoving = false;
+    private readonly WaitForSeconds boardSec = new WaitForSeconds(1.5f);
 
     #region GameOutUI
     public void OnClickDoorExit()
     {
+        lastState = GameManager.Instance.GetGameState();
+
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
         {
             return;
@@ -63,7 +75,7 @@ public class MenuUIManager : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+            GameManager.Instance.SettingGameState(lastState);
 
             GameOutAnim.SetBool("isGameOut", false);
 
@@ -76,22 +88,70 @@ public class MenuUIManager : MonoBehaviour
 
     public void OnClickBoard()
     {
-        BoardUI();
+        if (GameManager.Instance.GetGameState() == DefineManager.GameState.Start)
+        {
+            return;
+        }
+
+        StartCoroutine(BoardUI());
     }
-    private void BoardUI()
+
+    private IEnumerator BoardUI()
     {
+        if (isMoving)
+        {
+            yield break;
+        }
+
         isBoardZoomIn = !isBoardZoomIn;
+        isMoving = true;
 
         if (isBoardZoomIn)
         {
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
             BoardAnim.SetBool("isBoardClick", true);
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
 
+            yield return boardSec;
+            isMoving = false;
+            SettingStageBtn(true);
         }
         else
         {
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
             BoardAnim.SetBool("isBoardClick", false);
+            SettingStageBtn(false);
+
+
+            yield return boardSec;
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+            isMoving = false;
         }
+
+        yield return null;
+    }
+
+    public void OnClickStage()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    private void SettingStageBtn(bool _isOn)
+    {
+        var _listCnt = stageBtn.Count;
+        if (_listCnt == 0)
+        {
+            Debug.Log("stageBtn is NULL!!!");
+            return;
+        }
+
+        for (int i = 0; i < _listCnt; i++)
+        {
+            stageBtn[i].SetActive(_isOn);
+        }
+    }
+
+    public void OnClickStart()
+    {
+        startAnim.SetTrigger("isClickStartBtn");
+        GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
     }
 }
