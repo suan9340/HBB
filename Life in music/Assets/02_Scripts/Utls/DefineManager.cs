@@ -32,6 +32,7 @@ public static class DefineManager
         Playing,
         Setting,
         Menu,
+        Menu_Set,
         Rhythm,
     }
 

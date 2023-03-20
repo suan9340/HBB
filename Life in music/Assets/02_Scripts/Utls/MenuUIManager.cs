@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Purchasing;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,21 @@ public class MenuUIManager : MonoBehaviour
     public Animator GameOutAnim = null;
     public List<GameObject> doors = new List<GameObject>();
     private bool isOut = false;
+
+
+    [Space(20)]
+    [Header("BoardUI")]
+    public Animator BoardAnim = null;
+    private bool isBoardZoomIn = false;
+
+    #region GameOutUI
     public void OnClickDoorExit()
     {
+        if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
+        {
+            return;
+        }
+
         OutUI();
     }
 
@@ -35,10 +49,13 @@ public class MenuUIManager : MonoBehaviour
             return;
         }
 
+
         isOut = !isOut;
 
         if (isOut)
         {
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
+
             GameOutAnim.SetBool("isGameOut", true);
 
             doors[0].SetActive(true);
@@ -46,13 +63,35 @@ public class MenuUIManager : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+
             GameOutAnim.SetBool("isGameOut", false);
-
-
 
             doors[0].SetActive(false);
             doors[1].SetActive(false);
         }
     }
+    #endregion
 
+
+    public void OnClickBoard()
+    {
+        BoardUI();
+    }
+    private void BoardUI()
+    {
+        isBoardZoomIn = !isBoardZoomIn;
+
+        if (isBoardZoomIn)
+        {
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
+            BoardAnim.SetBool("isBoardClick", true);
+
+        }
+        else
+        {
+            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+            BoardAnim.SetBool("isBoardClick", false);
+        }
+    }
 }
