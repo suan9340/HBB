@@ -39,12 +39,13 @@ public class MenuUIManager : MonoBehaviour
     #region GameOutUI
     public void OnClickDoorExit()
     {
-        lastState = GameManager.Instance.GetGameState();
 
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
         {
             return;
         }
+
+        lastState = GameManager.Instance.GetGameState();
 
         OutUI();
     }
