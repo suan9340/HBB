@@ -5,21 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
-    [Header("GameOutUI")]
+    [Space(20)]
+    [Header("--- AudioSource ---")]
+    public AudioSource audioSource = null;
+
+
+    [Space(20)]
+    [Header("--- GameOutUI ---")]
     public Animator GameOutAnim = null;
     public List<GameObject> doors = new List<GameObject>();
     private bool isOut = false;
     private DefineManager.GameState lastState;
+    public AudioClip openDoor = null;
+    public AudioClip closeDoor = null;
 
 
     [Space(20)]
-    [Header("BoardUI")]
+    [Header("--- BoardUI ---")]
     public Animator BoardAnim = null;
     public List<GameObject> stageBtn = new List<GameObject>();
 
 
+
     [Space(20)]
-    [Header("StartUI")]
+    [Header("--- StartUI ---")]
     public Animator startAnim = null;
 
 
@@ -30,12 +39,13 @@ public class MenuUIManager : MonoBehaviour
     #region GameOutUI
     public void OnClickDoorExit()
     {
-        lastState = GameManager.Instance.GetGameState();
 
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
         {
             return;
         }
+
+        lastState = GameManager.Instance.GetGameState();
 
         OutUI();
     }
@@ -66,6 +76,7 @@ public class MenuUIManager : MonoBehaviour
 
         if (isOut)
         {
+            audioSource.PlayOneShot(openDoor);
             GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
 
             GameOutAnim.SetBool("isGameOut", true);
@@ -75,6 +86,7 @@ public class MenuUIManager : MonoBehaviour
         }
         else
         {
+            audioSource.PlayOneShot(closeDoor);
             GameManager.Instance.SettingGameState(lastState);
 
             GameOutAnim.SetBool("isGameOut", false);
@@ -89,6 +101,11 @@ public class MenuUIManager : MonoBehaviour
     public void OnClickBoard()
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Start)
+        {
+            return;
+        }
+
+        if (isOut)
         {
             return;
         }
