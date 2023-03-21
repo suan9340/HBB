@@ -12,11 +12,13 @@ public class RockGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
+
                     RockMove.Add(false);
 
                 }
                 if (i == 1)
                 {
+
                     RockMove.Add(true);
                 }
             }

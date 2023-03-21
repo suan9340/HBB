@@ -10,7 +10,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ConchMove : MonoBehaviour
 {
-   
+
     //public Image musicNote;
     private static GameObject conchMom;
 
@@ -20,13 +20,12 @@ public class ConchMove : MonoBehaviour
     //public GameObject conch4 = null;
 
     public bool isOne, isTwo, isThree;
-        
-        //,isFour;
+
+    //,isFour;
 
     public enum ConchDirection
     {
-        zero,
-        one,
+     one,
         two,
         three,
         four,
@@ -36,16 +35,16 @@ public class ConchMove : MonoBehaviour
     {
         if (conchMom == null)
         {
-           conchMom = GameObject.Find("Rhythm (Conch)(Clone)");
+            conchMom = GameObject.Find("Rhythm (Conch)(Clone)");
         }
 
         var _conchObj = Resources.Load<ConchMove>("Notes/Stage_01/ConchNote");
 
         if (_conchObj != null)
         {
-          var _inst = Instantiate(_conchObj, conchMom.transform, false);
+            var _inst = Instantiate(_conchObj, conchMom.transform, false);
             _inst.conchDirection = _dir;
-           // Debug.Log(_dir);
+            // Debug.Log(_dir);
             //switch (_dir)
             //{
             //    case ConchDirection.one:
@@ -66,7 +65,7 @@ public class ConchMove : MonoBehaviour
         }
         else
         {
-          Debug.LogError("_conchObj NULL");
+            Debug.LogError("_conchObj NULL");
         }
     }
 
@@ -89,7 +88,7 @@ public class ConchMove : MonoBehaviour
         conch1 = transform.Find("One").gameObject;
         conch2 = transform.Find("Two").gameObject;
         conch3 = transform.Find("Three").gameObject;
-       // conch4 = transform.Find("Four").gameObject;
+        // conch4 = transform.Find("Four").gameObject;
     }
 
     private void Update()
@@ -101,11 +100,11 @@ public class ConchMove : MonoBehaviour
     private void MoveConch()
     {
 
-         switch (conchDirection)
+        switch (conchDirection)
         {
-            case ConchDirection.zero:
-                break;
-            
+         //   case ConchDirection.zero:
+           //     break;
+
 
             case ConchDirection.one:
                 if (isOne)
@@ -114,12 +113,11 @@ public class ConchMove : MonoBehaviour
                 conchAnim.SetTrigger("ConchOne");
 
                 isOne = true;
-              // conch1.SetActive(true);
-               conch3.SetActive(true);
-                 Debug.Log($"1");
+                conch3.SetActive(true);
+                Debug.Log($"1");
                 AddList(gameObject);
 
-                
+
                 break;
 
             case ConchDirection.two:
@@ -133,7 +131,7 @@ public class ConchMove : MonoBehaviour
                 Debug.Log($"2");
                 AddList(gameObject);
 
-                
+
                 break;
 
             case ConchDirection.three:
@@ -143,7 +141,6 @@ public class ConchMove : MonoBehaviour
                 conchAnim.SetTrigger("ConchThree");
 
                 isThree = true;
-              //  conch3.SetActive(true);
                 conch1.SetActive(true);
                 Debug.Log($"3");
                 AddList(gameObject);
@@ -169,11 +166,11 @@ public class ConchMove : MonoBehaviour
     private void ConchAnimation()
     {
         //애니메이션
-       
+
     }
 
     private void AddList(GameObject _obj)
-        {
+    {
 
         if (conchMove_isFirst)
         {
@@ -182,31 +179,31 @@ public class ConchMove : MonoBehaviour
             EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             conchMove_isFirst = false;
         }
-       
-         EventManager<GameObject>.TriggerEvent(ConstantManager.CONCHLIST_ADD, _obj);
+
+        EventManager<GameObject>.TriggerEvent(ConstantManager.CONCHLIST_ADD, _obj);
     }
 
     public void ConchDown()
     {
         if (isOne)
         {
-          //  conchAnim.SetTrigger("ConchOneOut");
+            //  conchAnim.SetTrigger("ConchOneOut");
             conch3.SetActive(false);
         }
         if (isTwo)
         {
-           // conchAnim.SetTrigger("ConchTwoOut");
+            // conchAnim.SetTrigger("ConchTwoOut");
             conch2.SetActive(false);
         }
         if (isThree)
         {
-           // conchAnim.SetTrigger("ConchThreeOut");
-           conch1.SetActive(false);
+            // conchAnim.SetTrigger("ConchThreeOut");
+            conch1.SetActive(false);
         }
-       // if (isFour)
+        // if (isFour)
         {
-           // conchAnim.SetTrigger("ConchFourOut");
-         //       conch4.SetActive(false);
+            // conchAnim.SetTrigger("ConchFourOut");
+            //       conch4.SetActive(false);
         }
     }
 }

@@ -12,18 +12,18 @@ public class ConchGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
-                    ConchMove.ConchAdd(ConchMove.ConchDirection.one);
+                    //ConchMove.ConchAdd(ConchMove.ConchDirection.one);
 
 
                 }
                 if (i == 1)
                 {
-                    ConchMove.ConchAdd(ConchMove.ConchDirection.two);
+                    //ConchMove.ConchAdd(ConchMove.ConchDirection.two);
 
                 }
                 if (i == 2)
                 {
-                    ConchMove.ConchAdd(ConchMove.ConchDirection.three);
+                    //ConchMove.ConchAdd(ConchMove.ConchDirection.three);
 
                 }
                // if (i == 3)
