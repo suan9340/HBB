@@ -13,6 +13,7 @@ public class RockGen : MonoBehaviour, IGen
                 if (i == 0)
                 {
                     RockMove.Add(false);
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
 
                 }
                 if (i == 1)

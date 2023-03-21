@@ -49,6 +49,7 @@ public class ClickInstruments : ImageSizeInterface
                 InstantiateRhythm(_instante, _loadObj);
                 ChatMaanger.Instance.SetChatting(_so1.infos[num].chat);
                 GameManager.Instance.SetClip(_so1.infos[num].clip);
+                NoteManager.Instance.SettingNoteObj(_so1.infos[num].noteObj);
                 break;
 
 

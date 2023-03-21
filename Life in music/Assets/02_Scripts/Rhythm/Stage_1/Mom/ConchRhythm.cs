@@ -32,6 +32,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         if (Input.GetMouseButtonDown(0))
         {
             SetupConch();
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
 

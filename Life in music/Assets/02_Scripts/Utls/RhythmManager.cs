@@ -17,6 +17,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     [Header("Current Rhythm")]
     public GameObject curRhy;
 
+
+    [Space(20)]
+    [Header("--- RhythmNodeList ---")]
+
     private int currentIndex = 0;
 
     private float currentTime = 0f;

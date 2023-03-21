@@ -36,4 +36,8 @@ public static class ConstantManager
 
     // NoteGen
     public static string CHANGE_NOTE_GEN = "NoteGenChange";
+
+    // NoteImage
+    public static string NOTE_IMAGE_INSTANCE = "NoteImageInst";
+    public static string NOTE_LIST_REMOVE = "NoteImageRemove";
 }

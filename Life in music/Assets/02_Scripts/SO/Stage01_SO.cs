@@ -16,6 +16,7 @@ public class Info1
     public DefineManager.Stage_01_Inst stage1;
     public GameObject stageRhythm;
     public AudioClip clip;
+    public GameObject noteObj;
 
     public List<string> chat = new List<string>();
 }

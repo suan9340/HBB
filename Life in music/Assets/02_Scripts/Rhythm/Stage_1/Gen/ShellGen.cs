@@ -31,6 +31,9 @@ public class ShellGen : MonoBehaviour, IGen
                     ShellfishMove.Add(ShellfishMove.Direction.up);
 
                 }
+
+                EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+
             }
         }
     }

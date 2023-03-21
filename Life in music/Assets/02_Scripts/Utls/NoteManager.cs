@@ -1,64 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteManager : MonoSingleTon<NoteManager>
 {
-    public int bpm = 0;
-    double currentTime = 0d;
-
-    [Header("Sound")]
-    [SerializeField] private AudioSource metronomeAudio = null;
-    public AudioClip metronomClip = null;
+    [Header("--- NoteTrnYObject ---")]
+    public GameObject noteObj = null;
+    public RectTransform noteTrn = null;
 
 
     [Space(20)]
-    [Header("Metronom")]
-    [SerializeField] private List<GameObject> metrnomList = new List<GameObject>();
-    private bool ismetrnom = false;
+    [Header("--- NoteList ---")]
+    public List<GameObject> noteList = new List<GameObject>();
 
     private void Start()
     {
-        if (metronomeAudio == null)
-            Debug.LogError("metronomeAudio is null");
-
-        if (metrnomList.Count == 0)
-            Debug.LogError("metronomList is null");
+        EventManager.StartListening(ConstantManager.NOTE_IMAGE_INSTANCE, InstantiateNote);
+        EventManager.StartListening(ConstantManager.NOTE_LIST_REMOVE, RemoveBackList);
     }
 
-    private void Update()
+    public void SettingNoteObj(GameObject _obj)
     {
-        BPMCheck();
+        noteObj = _obj;
     }
 
-    private void BPMCheck()
+    public void InstantiateNote()
     {
-        currentTime += Time.deltaTime;
+        var _obj = Instantiate(noteObj, noteTrn);
+        _obj.transform.SetParent(noteTrn.transform);
+        _obj.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
 
-        if (currentTime >= 60d / bpm)
-        {
-            Debug.Log(currentTime);
-            metronomeAudio.PlayOneShot(metronomClip);
-            currentTime -= 60d / bpm;
-
-            ChangeImage();
-        }
+        noteList.Add(_obj);
     }
 
-    private void ChangeImage()
+    private void RemoveList()
     {
-        ismetrnom = !ismetrnom;
+        noteList.Clear();
+    }
 
-        if(ismetrnom)
+    private void RemoveBackList()
+    {
+        if (noteList.Count <= 0)
         {
-            metrnomList[0].gameObject.SetActive(true);
-            metrnomList[1].gameObject.SetActive(false);
+            Debug.Log("NoteList is NULL!!!!!!!!!");
+            return;
         }
-        else
-        {
-            metrnomList[0].gameObject.SetActive(false);
-            metrnomList[1].gameObject.SetActive(true);
-        }
+
+        //var _noteCnt = noteList.Count - 1;
+        //noteList.Remove();
+        //Destroy(noteList[_noteCnt].gameObject);
+       
     }
 }
