@@ -103,7 +103,7 @@ public class ClickInstruments : ImageSizeInterface
     private void InstantiateRhythm(GameObject _instobj, GameObject _loadobj)
     {
         _instobj = Instantiate(_loadobj);
-        _instobj.transform.SetParent(rhythmCanvas.transform, false);
+        _instobj.transform.SetParent(rhythmCanvas.transform.GetChild(2), false);
         RhythmManager.Instance.SettingCurRhythm(_instobj);
     }
 }

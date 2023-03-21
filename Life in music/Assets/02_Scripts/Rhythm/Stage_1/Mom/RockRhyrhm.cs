@@ -25,7 +25,6 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
 
     private void Start()
     {
-
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);

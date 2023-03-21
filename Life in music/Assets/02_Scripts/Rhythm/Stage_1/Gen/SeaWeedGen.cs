@@ -24,8 +24,10 @@ public class SeaWeedGen : MonoBehaviour, IGen
                 {
                     SeaWeedMove.Add(SeaWeedMove.SeaWeedPos.three);
                 }
-
-                EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+                if (i == 3)
+                {
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+                }
             }
         }
     }

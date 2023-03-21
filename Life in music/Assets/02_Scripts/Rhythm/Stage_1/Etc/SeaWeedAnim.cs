@@ -17,7 +17,7 @@ public class SeaWeedAnim : MonoBehaviour
     {
         var _rand = UnityEngine.Random.Range(0, 2);
 
-        Debug.Log(_rand);
+        //Debug.Log(_rand);
 
         if (_rand == 0)
         {

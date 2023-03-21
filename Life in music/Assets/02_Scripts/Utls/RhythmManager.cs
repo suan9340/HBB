@@ -56,12 +56,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
 
-           // Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
+            Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
 
 
             if (currentIndex >= data.NoteList.Count)
             {
                 StopRhythm();
+                SoundManager.Instance.VolumeReturn();
                 Debug.Log("ENd!!!!!!");
                 SoundManager.Instance.StopLoopSource();
                 isRhythm = false;
@@ -86,6 +87,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     /// <param name="_name"></param>
     public void ReadyRhythm(string _name)
     {
+        SoundManager.Instance.VolumeRhythmSettingDown(0.5f);
         data = RhythmData.LoadData(_name);
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;

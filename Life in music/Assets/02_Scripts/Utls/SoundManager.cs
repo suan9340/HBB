@@ -9,8 +9,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
     [Header("--- LoopStation Source ---")]
     public List<LoopInfo> loopStationsources = new List<LoopInfo>();
 
-    public List<AudioClip> audioclips = new List<AudioClip>();
-
+    public AudioSource rhythmAudio = null;
 
     public int num = 1;
 
@@ -103,11 +102,23 @@ public class SoundManager : MonoSingleTon<SoundManager>
         }
     }
 
-    public void CurrentRhythm()
+    public void VolumeRhythmSettingDown(float _vol)
     {
-
+        for (int i = 0; i < num; i++)
+        {
+            var loop = loopStationsources[i];
+            loop.source.volume = _vol;
+        }
     }
 
+    public void VolumeReturn()
+    {
+        for (int i = 0; i < num; i++)
+        {
+            var loop = loopStationsources[i];
+            loop.source.volume = 1f;
+        }
+    }
 }
 
 [Serializable]
