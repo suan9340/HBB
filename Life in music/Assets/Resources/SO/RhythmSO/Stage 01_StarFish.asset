@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData:
     name: Stage 01_StarFish
-    AudioClip: {fileID: 8300000, guid: a35af4d777f481a4a877b40b1e80739c, type: 3}
+    AudioClip: {fileID: 8300000, guid: bb2960a7310e4974d8c0a1c6e74f7fd0, type: 3}
     Bpm: 100
     BeatTrnCount: 1
     BestPerSec: 4
-    MusicPlayTime: 30
+    MusicPlayTime: 60
     NoteList:
     - beatFlag: 01
     - beatFlag: 00
@@ -36,6 +36,38 @@ MonoBehaviour:
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
+    - beatFlag: 01
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 01
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 01
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
+    - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
@@ -77,112 +109,8 @@ MonoBehaviour:
     - beatFlag: 01
     - beatFlag: 00
     - beatFlag: 00
+    - beatFlag: 00
     - beatFlag: 01
-    - beatFlag: 01
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
-    - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00
     - beatFlag: 00

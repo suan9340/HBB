@@ -16,7 +16,7 @@ MonoBehaviour:
   - stage1: 0
     stageRhythm: {fileID: 6067029285676514292, guid: a34353c05e0276c4d81f50c70a465b90,
       type: 3}
-    clip: {fileID: 8300000, guid: a35af4d777f481a4a877b40b1e80739c, type: 3}
+    clip: {fileID: 8300000, guid: bb2960a7310e4974d8c0a1c6e74f7fd0, type: 3}
     chat:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
     - "\uD55C\uBC88 \uB9CC\uC838\uBCF4\uACE0 \uC2F6\uB2E4"

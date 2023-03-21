@@ -140,30 +140,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ConchOneOut
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: ConchTwoOut
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: ConchThreeOut
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: ConchFourOut
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -265,19 +241,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7007451392941944541}
-    m_Position: {x: 10, y: -140, z: 0}
+    m_Position: {x: -250, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3309516719762068890}
     m_Position: {x: -200, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6348119907034703652}
-    m_Position: {x: 150, y: -90, z: 0}
+    m_Position: {x: -190, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3963947350212659523}
-    m_Position: {x: 220, y: -30, z: 0}
+    m_Position: {x: -100, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 580325575449052806}
-    m_Position: {x: 230, y: 20, z: 0}
+    m_Position: {x: 0, y: -210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7500088671647477764}
@@ -290,7 +266,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 40, y: 50, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: -60, y: -60, z: 0}
+  m_ExitPosition: {x: -130, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -3309516719762068890}
 --- !u!1102 &6348119907034703652
