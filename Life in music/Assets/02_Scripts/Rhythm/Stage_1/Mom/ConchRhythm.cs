@@ -27,39 +27,39 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         Invoke(nameof(ConchStart), 1.5f);
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        SetupConch();
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SetupConch();
+        }
+    }
 
     public void AddNoteList(GameObject _obj)
     {
         conchNoteObj.Add(_obj);
     }
 
-    //private void SetupConch()
-    //{
-    //    var _cnt = conchNoteObj.Count;
+    private void SetupConch()
+    {
+        var _cnt = conchNoteObj.Count;
 
-    //    if (_cnt == 0)
-    //    {
-    //        Debug.Log("List Count is Zerooo");
-    //        return;
-    //    }
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
 
-    //    var _conchOnjSelect = _cnt - 1;
-    //    var _obj = conchNoteObj[_conchOnjSelect].gameObject;
+        var _conchOnjSelect = _cnt - 1;
+        var _obj = conchNoteObj[_conchOnjSelect].gameObject;
 
-    //    _obj.GetComponent<ConchMove>().ConchDown();
+        _obj.GetComponent<ConchMove>().ConchDown();
 
-    //    conchNoteObj.Remove(_obj);
+        conchNoteObj.Remove(_obj);
 
 
-    //    Debug.Log(_cnt);
-    //}
+        Debug.Log(_cnt);
+    }
 
     private void ConchStart()
     {
