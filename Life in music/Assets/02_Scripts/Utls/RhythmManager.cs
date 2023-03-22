@@ -83,7 +83,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
 
     /// <summary>
-    /// Starting Rhythm Notes 1.4ÃÊ µÚ¿¡
+    /// Starting Rhythm Notes 1.4ï¿½ï¿½ ï¿½Ú¿ï¿½
     /// </summary>
     /// <param name="_name"></param>
     public void ReadyRhythm(string _name)
