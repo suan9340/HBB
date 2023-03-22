@@ -50,6 +50,7 @@ public class ClickInstruments : ImageSizeInterface
                 ChatMaanger.Instance.SetChatting(_so1.infos[num].chat);
                 GameManager.Instance.SetClip(_so1.infos[num].clip);
                 NoteManager.Instance.SettingNoteObj(_so1.infos[num].noteObj);
+                NoteManager.Instance.SettingCenterImage(_so1.infos[num].noteEndObj);
                 break;
 
 

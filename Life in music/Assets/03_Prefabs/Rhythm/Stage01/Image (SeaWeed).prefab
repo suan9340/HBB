@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3890609369124476554}
   - component: {fileID: 3890609369124476557}
   - component: {fileID: 1390354779763218778}
-  - component: {fileID: 862044645917384763}
   m_Layer: 7
   m_Name: Image (SeaWeed)
   m_TagString: rhythmNote
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 881, y: 0}
-  m_SizeDelta: {x: 211.48, y: 171.2}
+  m_SizeDelta: {x: 236.66666, y: 183.33333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3890609369124476554
 CanvasRenderer:
@@ -68,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1068591613, guid: d26101f2764fc764bbd33f103aa060fa, type: 3}
+  m_Sprite: {fileID: -1522426412, guid: bdf710c867e9ddf4e9212ccb66a1fec4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,19 +89,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d090398a7f2314498e81d43628fbe1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 105
---- !u!114 &862044645917384763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3890609369124476559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.46226418, b: 0.099488705, a: 1}
-  m_EffectDistance: {x: 9, y: -9}
-  m_UseGraphicAlpha: 1
+  moveSpeed: 108

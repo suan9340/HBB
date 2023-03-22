@@ -16,7 +16,14 @@ public class Info1
     public DefineManager.Stage_01_Inst stage1;
     public GameObject stageRhythm;
     public AudioClip clip;
-    public GameObject noteObj;
 
+    [Space(10)]
+    [Header("--- NoteUI ---")]
+    public GameObject noteObj;
+    public GameObject noteEndObj;
+
+
+    [Space(10)]
+    [Header("--- Chat ---")]
     public List<string> chat = new List<string>();
 }

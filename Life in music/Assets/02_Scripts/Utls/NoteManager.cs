@@ -20,6 +20,8 @@ public class NoteManager : MonoSingleTon<NoteManager>
     public List<RectTransform> timingRect = new List<RectTransform>();
     public Vector2[] timingBoxs = null;
 
+    public GameObject noteEndImage = null;
+
     private void Start()
     {
         EventManager.StartListening(ConstantManager.NOTE_IMAGE_INSTANCE, InstantiateNote);
@@ -99,6 +101,17 @@ public class NoteManager : MonoSingleTon<NoteManager>
         {
             Destroy(noteTrn.transform.GetChild(i).gameObject);
         }
+        noteList.Clear();
+
+        Destroy(noteEndImage);
+    }
+
+    public void SettingCenterImage(GameObject _obj)
+    {
+        Debug.Log("qwe");
+        noteEndImage = Instantiate(_obj, center);
+        noteEndImage.transform.SetParent(center.transform, false);
+        noteEndImage.transform.localPosition = new Vector3(0, 0, 0);
     }
 
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5793928616832132487}
   - component: {fileID: 5793928616832132484}
   - component: {fileID: -7112902386366956665}
-  - component: {fileID: -4829672986113945884}
   m_Layer: 7
   m_Name: Image (Conch)
   m_TagString: rhythmNote
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 407, y: 0}
-  m_SizeDelta: {x: 247.61, y: 134.67}
+  m_SizeDelta: {x: 246.66666, y: 126.666664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5793928616832132487
 CanvasRenderer:
@@ -68,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2017378709, guid: d26101f2764fc764bbd33f103aa060fa, type: 3}
+  m_Sprite: {fileID: -2136723277, guid: bdf710c867e9ddf4e9212ccb66a1fec4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,18 +90,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 70
---- !u!114 &-4829672986113945884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5793928616832132482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.4339623, g: 0.16749944, b: 0, a: 1}
-  m_EffectDistance: {x: 9, y: -9}
-  m_UseGraphicAlpha: 1

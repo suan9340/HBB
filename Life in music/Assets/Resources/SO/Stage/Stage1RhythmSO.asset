@@ -19,6 +19,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: bb2960a7310e4974d8c0a1c6e74f7fd0, type: 3}
     noteObj: {fileID: 5397540457462237569, guid: 6d4edb15552615d468ed41da53e3f5aa,
       type: 3}
+    noteEndObj: {fileID: 4129381342916783207, guid: 8743ca97c866a514cb524fa2d09c784e,
+      type: 3}
     chat:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
     - "\uD55C\uBC88 \uB9CC\uC838\uBCF4\uACE0 \uC2F6\uB2E4"
@@ -28,6 +30,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
     noteObj: {fileID: 2197310107535397376, guid: 4a38ca408db57904aac711a7dd538070,
       type: 3}
+    noteEndObj: {fileID: 6939795860134074587, guid: 7b557df13fdf8884d82cfb5448a756c6,
+      type: 3}
     chat:
     - "\uC870\uAC1C \uC18C\uB9AC\uAC00 \uC4F8 \uB370 \uC5C6\uC774 \uC88B\uB124\u2026."
   - stage1: 2
@@ -35,6 +39,8 @@ MonoBehaviour:
       type: 3}
     clip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
     noteObj: {fileID: 5793928616832132482, guid: 243f5f00f18938e468c28d6c7148e71c,
+      type: 3}
+    noteEndObj: {fileID: 966402483036469579, guid: d8864c64757454743801595c898ad428,
       type: 3}
     chat:
     - "\uBB50\uC9C0...?"
@@ -46,6 +52,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
     noteObj: {fileID: 644878289164705110, guid: b258878f99c392f479670af0c03ecf26,
       type: 3}
+    noteEndObj: {fileID: 3723577050308351577, guid: bc6c07469712f0443a9721d8f757e736,
+      type: 3}
     chat:
     - "\uAC00\uC871\uB4E4\uC774\uB791 \uBC14\uB2F7\uAC00 \uC640\uC11C \uB3CC\uB9F9\uC774\uB85C
       \uBB3C \uC218\uC81C\uBE44 \uD55C \uAC8C \uB5A0\uC624\uB974\uB124?"
@@ -54,6 +62,8 @@ MonoBehaviour:
       type: 3}
     clip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
     noteObj: {fileID: 3890609369124476559, guid: 8416a22f8a4b26a4a9b904b2242141b0,
+      type: 3}
+    noteEndObj: {fileID: 3684012898452488951, guid: 71363ca0d89951448bfa8a4770ad836c,
       type: 3}
     chat:
     - "\uBBF8\uC5ED\uC774\uB124..?"
