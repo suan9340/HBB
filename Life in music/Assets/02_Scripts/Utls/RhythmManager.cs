@@ -161,6 +161,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
 
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+        EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
         ChatMaanger.Instance.Text();
         yield break;
     }

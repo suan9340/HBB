@@ -89,6 +89,7 @@ public class ClickInstruments : ImageSizeInterface
 
         ImageSizeBig();
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+        EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
         instrumetnsObj.SetActive(true);
 
         CheckStage();

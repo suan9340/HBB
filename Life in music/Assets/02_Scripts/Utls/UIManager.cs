@@ -20,10 +20,17 @@ public class UIManager : MonoSingleTon<UIManager>
     [Header("RhythmEffectImage")]
     public Image rhythmEffectImage = null;
 
+
+    [Space(20)]
+    [Header("RhythmNoteShow")]
+    public Animator rhythmNotePanel = null;
+    private bool isRhythmPanel = false;
+
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
+        EventManager.StartListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
     }
 
     public void OnclickAudioUI()
@@ -58,18 +65,35 @@ public class UIManager : MonoSingleTon<UIManager>
             Debug.LogWarning("readyRhythmAnimator ((ReadyRhythmUI)) is NULL!!!");
             return;
         }
+
+        isReadyRhythm = !isReadyRhythm;
+        if (isReadyRhythm)
+        {
+            readyRhythmAnimator.SetBool("OnReady", true);
+        }
         else
         {
-            if (isReadyRhythm == false)
-            {
-                isReadyRhythm = true;
-                readyRhythmAnimator.SetBool("OnReady", true);
-            }
-            else
-            {
-                isReadyRhythm = false;
-                readyRhythmAnimator.SetBool("OnReady", false);
-            }
+            readyRhythmAnimator.SetBool("OnReady", false);
+        }
+    }
+
+    private void ReadyRhythmPanel()
+    {
+        if (rhythmNotePanel == null)
+        {
+            Debug.LogWarning("rhythmNotePanel  is NULL!!!");
+            return;
+        }
+
+        isRhythmPanel = !isRhythmPanel;
+
+        if (isReadyRhythm)
+        {
+            rhythmNotePanel.SetBool("ispanelOn", true);
+        }
+        else
+        {
+            rhythmNotePanel.SetBool("ispanelOn", false);
         }
     }
 
