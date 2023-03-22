@@ -38,6 +38,8 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
         {
             SetUpRockFish();
             StartCoroutine(CrabMove());
+
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
 

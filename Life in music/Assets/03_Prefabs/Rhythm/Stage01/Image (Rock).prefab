@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4582868891319189957}
   m_Layer: 7
   m_Name: Image (Rock)
-  m_TagString: Untagged
+  m_TagString: rhythmNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d090398a7f2314498e81d43628fbe1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 85
+  moveSpeed: 82
 --- !u!114 &4582868891319189957
 MonoBehaviour:
   m_ObjectHideFlags: 0

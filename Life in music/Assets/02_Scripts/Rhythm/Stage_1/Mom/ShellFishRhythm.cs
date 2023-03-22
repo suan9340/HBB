@@ -35,6 +35,7 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
         if (Input.GetMouseButtonDown(0))
         {
             SetUpShellfish();
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
 

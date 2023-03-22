@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RhythmCanvas
   - Crab
+  - rhythmNote
   layers:
   - Default
   - TransparentFX

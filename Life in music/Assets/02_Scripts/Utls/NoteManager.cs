@@ -14,11 +14,21 @@ public class NoteManager : MonoSingleTon<NoteManager>
     [Header("--- NoteList ---")]
     public List<GameObject> noteList = new List<GameObject>();
 
+    [Space(20)]
+    [Header("--- NoteColider ---")]
+    public RectTransform center = null;
+    public List<RectTransform> timingRect = new List<RectTransform>();
+    public Vector2[] timingBoxs = null;
+
     private void Start()
     {
         EventManager.StartListening(ConstantManager.NOTE_IMAGE_INSTANCE, InstantiateNote);
-        EventManager.StartListening(ConstantManager.NOTE_LIST_REMOVE, RemoveBackList);
+        EventManager.StartListening(ConstantManager.NOTE_LIST_REMOVE, CheckTiming);
+
+        SettingBox();
     }
+
+
 
     public void SettingNoteObj(GameObject _obj)
     {
@@ -33,23 +43,62 @@ public class NoteManager : MonoSingleTon<NoteManager>
 
         noteList.Add(_obj);
     }
-
-    private void RemoveList()
+    private void SettingBox()
     {
-        noteList.Clear();
+        timingBoxs = new Vector2[timingRect.Count];
+
+        for (int i = 0; i < timingRect.Count; i++)
+        {
+            timingBoxs[i].Set(center.transform.localPosition.x - timingRect[i].rect.width / 2,
+             center.transform.localPosition.x + timingRect[i].rect.width / 2);
+        }
     }
 
-    private void RemoveBackList()
+    private void CheckTiming()
     {
-        if (noteList.Count <= 0)
+        if (noteList.Count == 0)
         {
-            Debug.Log("NoteList is NULL!!!!!!!!!");
             return;
         }
 
-        //var _noteCnt = noteList.Count - 1;
-        //noteList.Remove();
-        //Destroy(noteList[_noteCnt].gameObject);
-       
+        for (int j = 0; j < noteList.Count; j++)
+        {
+            var _notepos = noteList[j].transform.localPosition.x - 920f;
+
+            for (int i = 0; i < timingBoxs.Length; i++)
+            {
+                if (timingBoxs[i].x <= _notepos && _notepos <= timingBoxs[i].y)
+                {
+                    noteList[j].SetActive(false);
+                    noteList.RemoveAt(j);
+
+                    switch (i)
+                    {
+                        case 0:
+                            Debug.Log("Prefect");
+                            break;
+
+                        case 1:
+                            Debug.Log("Good");
+                            break;
+
+                        case 2:
+                            Debug.Log("Bad");
+                            break;
+                    }
+
+                    return;
+                }
+            }
+        }
     }
+
+    public void RemoveNote()
+    {
+        for (int i = 0; i < noteTrn.transform.childCount; i++)
+        {
+            Destroy(noteTrn.transform.GetChild(i).gameObject);
+        }
+    }
+
 }

@@ -35,6 +35,7 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
         if (Input.GetMouseButtonDown(0))
         {
             SetUpSeaweed();
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
 
