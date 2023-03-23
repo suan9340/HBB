@@ -41,4 +41,7 @@ public static class ConstantManager
     // NoteImage
     public static string NOTE_IMAGE_INSTANCE = "NoteImageInst";
     public static string NOTE_LIST_REMOVE = "NoteImageRemove";
+
+    // NoteText
+    public static string NOTE_CHECKING_TXT = "NoteCheckText";
 }

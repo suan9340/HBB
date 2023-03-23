@@ -27,6 +27,7 @@ public class NoteManager : MonoSingleTon<NoteManager>
     [Space(20)]
     [Header("--- Current ---")]
     public DefineManager.NoteTimingCheck noteTiming;
+    private string timingText;
 
     private void Start()
     {
@@ -84,16 +85,21 @@ public class NoteManager : MonoSingleTon<NoteManager>
                     {
                         case 0:
                             noteTiming = DefineManager.NoteTimingCheck.Perfect;
+                            timingText = "Perfect";
                             break;
 
                         case 1:
                             noteTiming = DefineManager.NoteTimingCheck.Good;
+                            timingText = "Good";
                             break;
 
                         case 2:
                             noteTiming = DefineManager.NoteTimingCheck.Bad;
+                            timingText = "Bad";
                             break;
                     }
+
+                    EventManager<string>.TriggerEvent(ConstantManager.NOTE_CHECKING_TXT, timingText);
                     return;
                 }
             }

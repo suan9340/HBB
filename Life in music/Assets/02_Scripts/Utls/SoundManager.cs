@@ -77,7 +77,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
             if (loop.isOn)
             {
-                Debug.Log($"{i} 개 실행중");
+                //Debug.Log($"{i} 개 실행중");
                 loop.source.Play();
             }
         }

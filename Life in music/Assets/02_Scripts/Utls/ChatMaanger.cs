@@ -33,9 +33,10 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isTyping)
+        if (Input.GetMouseButtonDown(0))
         {
-            isClick = true;
+            if (!isTyping)
+                isClick = true;
         }
     }
 

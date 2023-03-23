@@ -9,18 +9,23 @@ public class NoteTextAnimation : MonoBehaviour
 
     private Animator myAnim = null;
     private Text myTxt = null;
+    private RectTransform myRect = null;
 
-
+    public GameObject canUseRect = null;
+    public GameObject cantUseRect = null;
 
     private void OnEnable()
     {
         myAnim = GetComponent<Animator>();
         myTxt = GetComponent<Text>();
+        myRect = GetComponent<RectTransform>();
 
+
+        myRect.SetParent(cantUseRect.transform);
         CheckYShow();
     }
 
-    public void SettingEnum()
+    public void SettingEnum(string _s)
     {
         timingCheck = NoteManager.Instance.GetTiming();
     }
@@ -62,5 +67,6 @@ public class NoteTextAnimation : MonoBehaviour
     private void DestroyTxt()
     {
         gameObject.SetActive(false);
+        myRect.SetParent(canUseRect.transform);
     }
 }
