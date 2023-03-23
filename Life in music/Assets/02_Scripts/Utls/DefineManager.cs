@@ -53,4 +53,11 @@ public static class DefineManager
         BGM,
         Metronom,
     }
+
+    public enum NoteTimingCheck
+    {
+        Perfect,
+        Good,
+        Bad
+    }
 }

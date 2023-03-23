@@ -22,6 +22,12 @@ public class NoteManager : MonoSingleTon<NoteManager>
 
     public GameObject noteEndImage = null;
 
+
+
+    [Space(20)]
+    [Header("--- Current ---")]
+    public DefineManager.NoteTimingCheck noteTiming;
+
     private void Start()
     {
         EventManager.StartListening(ConstantManager.NOTE_IMAGE_INSTANCE, InstantiateNote);
@@ -77,18 +83,17 @@ public class NoteManager : MonoSingleTon<NoteManager>
                     switch (i)
                     {
                         case 0:
-                            Debug.Log("Prefect");
+                            noteTiming = DefineManager.NoteTimingCheck.Perfect;
                             break;
 
                         case 1:
-                            Debug.Log("Good");
+                            noteTiming = DefineManager.NoteTimingCheck.Good;
                             break;
 
                         case 2:
-                            Debug.Log("Bad");
+                            noteTiming = DefineManager.NoteTimingCheck.Bad;
                             break;
                     }
-
                     return;
                 }
             }
@@ -112,6 +117,11 @@ public class NoteManager : MonoSingleTon<NoteManager>
         noteEndImage = Instantiate(_obj, center);
         noteEndImage.transform.SetParent(center.transform, false);
         noteEndImage.transform.localPosition = new Vector3(0, 0, 0);
+    }
+
+    public DefineManager.NoteTimingCheck GetTiming()
+    {
+        return noteTiming;
     }
 
 }
