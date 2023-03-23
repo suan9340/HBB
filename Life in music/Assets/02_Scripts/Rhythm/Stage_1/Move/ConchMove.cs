@@ -30,7 +30,7 @@ public class ConchMove : MonoBehaviour
         {
             var _inst = Instantiate(_conchObj, conchMom.transform, false);
             _inst.conchDirection = _dir;
-            Debug.Log(_dir);
+        //    Debug.Log(_dir);
             switch (_dir)
             {
                 case ConchDirection.one:
@@ -68,7 +68,7 @@ public class ConchMove : MonoBehaviour
     private void Start()
     {
         conchAnim = GetComponent<Animator>();
-        conch1 = transform.Find("One").gameObject;
+        conch1 = transform.Find("One2").gameObject;
         conch2 = transform.Find("Two").gameObject;
         conch3 = transform.Find("Three").gameObject;
     }
@@ -77,7 +77,6 @@ public class ConchMove : MonoBehaviour
     {
         MoveConch();
         ConchAnimation();
-
     }
 
     private void MoveConch()
@@ -85,19 +84,18 @@ public class ConchMove : MonoBehaviour
 
         switch (conchDirection)
         {
+          
            case ConchDirection.one:
                 if (isOne)
                     break;
 
-                //   conchAnim.SetTrigger("ConchOne");
-                 conchAnim.SetTrigger("ConchOneTest");
+                conchAnim.SetTrigger("ConchOne");
+                
 
                 isOne = true;
-                conch3.SetActive(true);
-                Debug.Log($"1");
-                AddList(gameObject);
-
-
+                conch3.SetActive(true); 
+             //   Debug.Log($"1");
+                Invoke("ConchOne_AddList", 0.5f);
                 break;
 
             case ConchDirection.two:
@@ -107,11 +105,9 @@ public class ConchMove : MonoBehaviour
                 conchAnim.SetTrigger("ConchTwo");
 
                 isTwo = true;
-                conch2.SetActive(true);
-                Debug.Log($"2");
-                AddList(gameObject);
-
-
+                conch2.SetActive(true); 
+            //    Debug.Log($"2");
+                Invoke("ConchOne_AddList", 0.6f);
                 break;
 
             case ConchDirection.three:
@@ -122,12 +118,15 @@ public class ConchMove : MonoBehaviour
 
                 isThree = true;
                 conch1.SetActive(true);
-                Debug.Log($"3");
-                AddList(gameObject);
-
+            //    Debug.Log($"3");
+                Invoke("ConchOne_AddList", 0.5f);
                 break;
-
         }
+    }
+
+    void ConchOne_AddList()
+    {
+        AddList(gameObject);
     }
 
     private void ConchAnimation()
@@ -155,7 +154,7 @@ public class ConchMove : MonoBehaviour
         if (isOne)
         {
             conchAnim.SetTrigger("ConchThreeOut");
-            conch3.SetActive(false);
+          //  conch3.SetActive(false);
 
 
 
@@ -163,13 +162,12 @@ public class ConchMove : MonoBehaviour
         if (isTwo)
         {
              conchAnim.SetTrigger("ConchTwoOut");
-            conch2.SetActive(false);
+          //  conch2.SetActive(false);
         }
         if (isThree)
         {
             conchAnim.SetTrigger("ConchOneOut");
-            // conchAnim.SetTrigger("ConchThreeOut");
-            conch1.SetActive(false);
+          // conch1.SetActive(false);
         }
     }
 }
