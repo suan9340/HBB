@@ -16,6 +16,10 @@ public class StarFishGen : MonoBehaviour, IGen
                     EventManager.TriggerEvent(ConstantManager.STARFISH_ANIM);
                     EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
                 }
+                if (i == 1)
+                {
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+                }
             }
         }
     }

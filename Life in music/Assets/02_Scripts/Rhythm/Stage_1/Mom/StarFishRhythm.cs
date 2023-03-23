@@ -36,6 +36,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         {
             SetUpStarfish();
 
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
 
