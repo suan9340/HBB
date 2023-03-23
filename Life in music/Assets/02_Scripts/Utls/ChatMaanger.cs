@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEditor.Rendering.PostProcessing;
-using UnityEditor.XR;
 
 public class ChatMaanger : MonoSingleTon<ChatMaanger>
 {
@@ -33,10 +31,9 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isTyping)
         {
-            if (!isTyping)
-                isClick = true;
+            isClick = true;
         }
     }
 

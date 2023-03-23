@@ -22,7 +22,7 @@ public class ConchGen : MonoBehaviour, IGen
                 {
                     ConchMove.ConchAdd(ConchMove.ConchDirection.three);
                 }
-             
+                EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
             }
         }
     }
