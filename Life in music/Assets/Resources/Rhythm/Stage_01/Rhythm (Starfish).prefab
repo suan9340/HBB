@@ -1,81 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5674203375502773002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4119383850680162909}
-  - component: {fileID: 5858117740640359476}
-  - component: {fileID: 5323854685083323826}
-  m_Layer: 7
-  m_Name: StarfishImg
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &4119383850680162909
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674203375502773002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4136845884073264716}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5858117740640359476
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674203375502773002}
-  m_CullTransparentMesh: 1
---- !u!114 &5323854685083323826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674203375502773002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -370659953, guid: 9c4f58460b24efe4b86eb8f7d4a15daa, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6067029285676514292
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,11 +26,10 @@ RectTransform:
   m_GameObject: {fileID: 6067029285676514292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.363163, y: 9.363163, z: 9.363163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4864408399175630496}
-  - {fileID: 4119383850680162909}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starfishNoteObj: []
-  Starfish_Image: {fileID: 4864408399175630503}
+  starFIshImg: {fileID: 4864408399175630503}
 --- !u!1001 &4355247362486239858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,12 +97,12 @@ PrefabInstance:
     - target: {fileID: 9219198068429765842, guid: ceee8171fd64a3745b8bd8b8f47ae4f2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 353.85
       objectReference: {fileID: 0}
     - target: {fileID: 9219198068429765842, guid: ceee8171fd64a3745b8bd8b8f47ae4f2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 353.85
       objectReference: {fileID: 0}
     - target: {fileID: 9219198068429765842, guid: ceee8171fd64a3745b8bd8b8f47ae4f2,
         type: 3}
@@ -224,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 9219198068429765842, guid: ceee8171fd64a3745b8bd8b8f47ae4f2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -158
       objectReference: {fileID: 0}
     - target: {fileID: 9219198068429765842, guid: ceee8171fd64a3745b8bd8b8f47ae4f2,
         type: 3}

@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
-using System.Runtime.InteropServices;
-using System;
-using UnityEngine.UI;
 
 
 public class StarFishRhythm : MonoBehaviour, IRhythmMom
@@ -14,7 +10,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     public List<GameObject> starfishNoteObj = new List<GameObject>();
 
     [Space(20)]
-    public GameObject Starfish_Image;
+    public GameObject starFIshImg = null;
 
 
     private void Awake()
@@ -26,8 +22,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     {
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
-
-        Invoke(nameof(StarFishStart), 1.5f);
+        Invoke(nameof(StarFishMOM), 1.5f);
     }
 
     private void Update()
@@ -39,6 +34,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
             EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
+
 
     public void SetUpStarfish()
     {
@@ -62,13 +58,14 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         starfishNoteObj.Add(_obj);
     }
 
-    private void StarFishStart()
+    private void StarFishMOM()
     {
-        if (Starfish_Image == null)
+        if (starFIshImg == null)
         {
             Debug.LogError("Starfish_Image is NULL!!!!");
             return;
         }
-        Starfish_Image.gameObject.SetActive(true);
+
+        starFIshImg.gameObject.SetActive(true);
     }
 }

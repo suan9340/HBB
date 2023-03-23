@@ -32,8 +32,6 @@ public class StarFishMove : MonoBehaviour
     }
 
 
-
-
     public static void Remove()
     {
         // 자동삭제
@@ -47,18 +45,11 @@ public class StarFishMove : MonoBehaviour
         rect = GetComponent<RectTransform>();
         myanim = GetComponent<Animator>();
 
-        MoveStarFish();
-        EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishAnim);
-    }
-
-    private void MoveStarFish()
-    {
-        AddList(gameObject);
+        EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishDown);
     }
 
     private void AddList(GameObject _obj)
     {
-
         if (Starfish_isFirst)
         {
             RhythmManager.Instance.StartMusic();
@@ -73,12 +64,6 @@ public class StarFishMove : MonoBehaviour
     public void StarfishDown()
     {
         myanim.SetTrigger("isStarfishClick");
-    }
-
-    public void StarfishAnim()
-    {
-        //Debug.Log("애니메이션");
-        StarfishDown();
-        EventManager<GameObject>.TriggerEvent(ConstantManager.STARFISH_ADD, gameObject);
+        AddList(gameObject);
     }
 }
