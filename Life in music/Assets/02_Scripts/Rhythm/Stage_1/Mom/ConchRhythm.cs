@@ -59,7 +59,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         conchNoteObj.Remove(_obj);
 
 
-        Debug.Log(_cnt);
+     //   Debug.Log(_cnt);
     }
 
     private void ConchStart()
