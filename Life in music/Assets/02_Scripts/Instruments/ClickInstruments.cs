@@ -80,6 +80,7 @@ public class ClickInstruments : ImageSizeInterface
 
     }
 
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
