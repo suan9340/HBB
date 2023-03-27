@@ -137,7 +137,7 @@ public class RockMove : MonoBehaviour
         }
         else if (type == Type.fish)
         {
-            Debug.Log("This is Fish");
+            //Debug.Log("This is Fish");
             StopMoveRock();
         }
     }

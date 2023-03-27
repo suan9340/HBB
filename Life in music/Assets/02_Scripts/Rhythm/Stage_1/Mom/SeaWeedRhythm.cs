@@ -25,9 +25,7 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
 
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SEAWEED);
-
-        Invoke(nameof(SetUpSeaweedMOM), 1.5f);
+        StartRhythm();
     }
 
     private void Update()
@@ -37,6 +35,12 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
             SetUpSeaweed();
             EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
+    }
+
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SEAWEED);
+        Invoke(nameof(SetUpSeaweedMOM), 1.5f);
     }
 
     public void SetUpSeaweed()

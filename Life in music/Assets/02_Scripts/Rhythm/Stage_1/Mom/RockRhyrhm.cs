@@ -27,9 +27,7 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
     {
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
-
-        Invoke(nameof(SetUpCrab), 1.5f);
+        StartRhythm();
     }
 
     private void Update()
@@ -43,7 +41,12 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
         }
     }
 
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
 
+        Invoke(nameof(SetUpCrab), 1.5f);
+    }
     public void SetUpRockFish()
     {
         var _cnt = rocknoteObj.Count;

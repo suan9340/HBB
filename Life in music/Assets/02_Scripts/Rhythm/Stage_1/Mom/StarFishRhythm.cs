@@ -21,8 +21,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     private void Start()
     {
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
-        Invoke(nameof(StarFishMOM), 1.5f);
+        StartRhythm();
     }
 
     private void Update()
@@ -35,6 +34,11 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         }
     }
 
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
+        Invoke(nameof(StarFishMOM), 1.5f);
+    }
 
     public void SetUpStarfish()
     {

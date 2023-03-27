@@ -21,10 +21,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     {
         EventManager<GameObject>.StartListening(ConstantManager.CONCHLIST_ADD, AddNoteList);
 
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_CONCH);
-
-
-        Invoke(nameof(ConchStart), 1.5f);
+        StartRhythm();
     }
 
     private void Update()
@@ -35,6 +32,13 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
             EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
         }
     }
+
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_CONCH);
+        Invoke(nameof(ConchStart), 1.5f);
+    }
+
 
     public void AddNoteList(GameObject _obj)
     {

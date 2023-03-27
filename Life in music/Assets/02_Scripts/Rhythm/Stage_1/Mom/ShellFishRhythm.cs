@@ -19,8 +19,7 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
     private void Start()
     {
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
-
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
+        StartRhythm();
     }
 
     //private void Start()
@@ -39,7 +38,10 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
         }
     }
 
-
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
+    }
     public void SetUpShellfish()
     {
         var _cnt = shellfishnoteObj.Count;
