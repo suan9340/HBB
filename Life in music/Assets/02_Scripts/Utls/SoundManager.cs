@@ -13,19 +13,21 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     public int num = 1;
 
+    private readonly WaitForSeconds soundSec = new WaitForSeconds(0.05f);
 
     private void Start()
     {
-        GoGoSound();
-        EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+        PlayLoopSource(1f);
+        //EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+        EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
 
-    public void GoGoSound()
+    public void GoGoSound(float _vol)
     {
         //Debug.Log("SoundMusic");
-        StopLoopSource();
-        PlayLoopSource();
+        //StopLoopSource();
+        PlayLoopSource(_vol);
     }
     public void CheckYOnAudio(AudioClip _clip)
     {
@@ -69,7 +71,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
     }
 
 
-    public void PlayLoopSource()
+    public void PlayLoopSource(float _vol)
     {
         for (int i = 0; i < num; i++)
         {
@@ -79,6 +81,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
             {
                 //Debug.Log($"{i} 개 실행중");
                 loop.source.Play();
+                StartCoroutine(FadeInMusic(loop.source, _vol));
             }
         }
     }
@@ -88,7 +91,37 @@ public class SoundManager : MonoSingleTon<SoundManager>
         for (int i = 0; i < num; i++)
         {
             var loop = loopStationsources[i];
-            loop.source.Stop();
+            //loop.source.Stop();
+            StartCoroutine(FadeOutMusic(loop.source));
+        }
+    }
+
+    private IEnumerator FadeOutMusic(AudioSource _source)
+    {
+        while (true)
+        {
+            if (_source.volume <= 0)
+            {
+                yield break;
+            }
+            _source.volume -= Time.deltaTime * 3f;
+            yield return soundSec;
+        }
+
+    }
+
+    private IEnumerator FadeInMusic(AudioSource _source, float _vol)
+    {
+        while (true)
+        {
+            if (_source.volume >= _vol)
+            {
+                _source.volume = _vol;
+                yield break;
+            }
+            _source.volume += Time.deltaTime * 3f;
+            //Debug.Log(_source.volume);
+            yield return soundSec;
         }
     }
 

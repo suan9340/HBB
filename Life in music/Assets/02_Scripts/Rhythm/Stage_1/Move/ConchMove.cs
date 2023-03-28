@@ -30,7 +30,7 @@ public class ConchMove : MonoBehaviour
         {
             var _inst = Instantiate(_conchObj, conchMom.transform, false);
             _inst.conchDirection = _dir;
-        //    Debug.Log(_dir);
+            //    Debug.Log(_dir);
             switch (_dir)
             {
                 case ConchDirection.one:
@@ -84,18 +84,18 @@ public class ConchMove : MonoBehaviour
 
         switch (conchDirection)
         {
-          
-           case ConchDirection.one:
+
+            case ConchDirection.one:
                 if (isOne)
                     break;
 
                 conchAnim.SetTrigger("ConchOne");
-                
+
 
                 isOne = true;
-                conch3.SetActive(true); 
-             //   Debug.Log($"1");
-                Invoke("ConchOne_AddList", 0.5f);
+                conch3.SetActive(true);
+                //   Debug.Log($"1");
+                Invoke(nameof(ConchOne_AddList), 0.5f);
                 break;
 
             case ConchDirection.two:
@@ -105,9 +105,9 @@ public class ConchMove : MonoBehaviour
                 conchAnim.SetTrigger("ConchTwo");
 
                 isTwo = true;
-                conch2.SetActive(true); 
-            //    Debug.Log($"2");
-                Invoke("ConchOne_AddList", 0.6f);
+                conch2.SetActive(true);
+                //    Debug.Log($"2");
+                Invoke(nameof(ConchOne_AddList), 0.6f);
                 break;
 
             case ConchDirection.three:
@@ -118,8 +118,8 @@ public class ConchMove : MonoBehaviour
 
                 isThree = true;
                 conch1.SetActive(true);
-            //    Debug.Log($"3");
-                Invoke("ConchOne_AddList", 0.5f);
+                //    Debug.Log($"3");
+                Invoke(nameof(ConchOne_AddList), 0.5f);
                 break;
         }
     }
@@ -134,7 +134,6 @@ public class ConchMove : MonoBehaviour
         //애니메이션
 
     }
-
     private void AddList(GameObject _obj)
     {
 
@@ -142,7 +141,7 @@ public class ConchMove : MonoBehaviour
         {
 
             RhythmManager.Instance.StartMusic();
-            EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
             conchMove_isFirst = false;
         }
 
@@ -154,20 +153,20 @@ public class ConchMove : MonoBehaviour
         if (isOne)
         {
             conchAnim.SetTrigger("ConchThreeOut");
-          //  conch3.SetActive(false);
+            // onch3.SetActive(false);
 
 
 
         }
         if (isTwo)
         {
-             conchAnim.SetTrigger("ConchTwoOut");
-          //  conch2.SetActive(false);
+            conchAnim.SetTrigger("ConchTwoOut");
+            // onch2.SetActive(false);
         }
         if (isThree)
         {
             conchAnim.SetTrigger("ConchOneOut");
-          // conch1.SetActive(false);
+            // nch1.SetActive(false);
         }
     }
 }

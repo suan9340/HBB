@@ -146,7 +146,7 @@ public class SeaWeedMove : MonoBehaviour
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
-            EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.SEAWEED_ADD, _obj);

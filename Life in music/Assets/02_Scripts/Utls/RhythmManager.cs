@@ -63,7 +63,6 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
             {
                 StopRhythm();
                 NoteManager.Instance.RemoveNote();
-                SoundManager.Instance.VolumeReturn();
                 Debug.Log("ENd!!!!!!");
                 SoundManager.Instance.StopLoopSource();
                 isRhythm = false;
@@ -88,7 +87,6 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     /// <param name="_name"></param>
     public void ReadyRhythm(string _name)
     {
-        SoundManager.Instance.VolumeRhythmSettingDown(0.5f);
         data = RhythmData.LoadData(_name);
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;
@@ -106,47 +104,14 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         Destroy(curRhy.gameObject);
 
         isRhythm = false;
-
         currentIndex = 0;
-
-        //data.name = null;
-        //data.AudioClip = null;
-        //data.Bpm = 0;
-        //data.BeatTrnCount = 0;
-        //data.BestPerSec = 0;
-        //data.NoteList = null;
-        //curRhy = null;
-
-        //objList.Clear();
-
         audioSource.clip = null;
     }
-
-
-    //public void SettingRhythmObject(GameObject _obj)
-    //{
-    //    objList.Add(_obj);
-    //}
 
     public void StartMusic()
     {
         audioSource.Play();
     }
-
-    public void EndMusic()
-    {
-        audioSource.Stop();
-    }
-
-    private void CheckStopRhythm()
-    {
-        if (currentIndex >= data.NoteList.Count)
-        {
-            StopRhythm();
-            EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
-        }
-    }
-
 
     public void SettingCurRhythm(GameObject _obj)
     {
@@ -163,6 +128,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
         ChatMaanger.Instance.Text();
+        SoundManager.Instance.PlayLoopSource(1f);
         yield break;
     }
 }
