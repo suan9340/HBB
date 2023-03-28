@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6017525717455102487}
   - component: {fileID: 7448643387426917077}
   m_Layer: 7
-  m_Name: ShellfishNote
+  m_Name: ShellfishTuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -119,7 +119,6 @@ public class NoteManager : MonoSingleTon<NoteManager>
 
     public void SettingCenterImage(GameObject _obj)
     {
-        Debug.Log("qwe");
         noteEndImage = Instantiate(_obj, center);
         noteEndImage.transform.SetParent(center.transform, false);
         noteEndImage.transform.localPosition = new Vector3(0, 0, 0);

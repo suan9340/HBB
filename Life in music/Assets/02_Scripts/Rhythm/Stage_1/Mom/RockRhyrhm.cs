@@ -123,14 +123,40 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
         {
             case 1:
                 isTuto = true;
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
+                tutoObj[0].SetActive(true);
 
                 break;
 
             case 2:
 
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
 
+
+            case 3:
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
+                break;
+
+
+            case 4:
+                tutoObj[1].SetActive(false);
+                tutoObj[2].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
+                break;
+
+            case 5:
+                tutoObj[2].SetActive(false);
+                tutoObj[3].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[4]);
+                break;
+
+
             default:
+                tutoObj[3].SetActive(false);
+                TutoManager.Instance.SetActiveFalseText();
                 isTuto = false;
                 StartRhythm();
                 break;
