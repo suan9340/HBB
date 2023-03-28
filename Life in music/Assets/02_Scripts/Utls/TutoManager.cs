@@ -8,9 +8,9 @@ using Unity.VisualScripting;
 public class TutoManager : MonoSingleTon<TutoManager>
 {
     public Text tutoTxt = null;
+    private bool isTyping = false;
 
-
-    private readonly WaitForSeconds textWait = new WaitForSeconds(3f);
+    private readonly WaitForSeconds textWait = new WaitForSeconds(2f);
     public void SetActiveTrueText()
     {
         tutoTxt.text = "0";
@@ -24,18 +24,31 @@ public class TutoManager : MonoSingleTon<TutoManager>
         tutoTxt.gameObject.SetActive(false);
     }
 
+    public bool IsTyping
+    {
+        get { return isTyping; }
+    }
+
     public void TextingOut(string _input)
     {
+        if (isTyping)
+        {
+            return;
+        }
+
         StartCoroutine(TextOutCor(_input));
     }
 
     private IEnumerator TextOutCor(string _input)
     {
+        isTyping = true;
+
         SetActiveTrueText();
 
-        tutoTxt.DOText(_input, 3f);
+        tutoTxt.DOText(_input, 2f);
 
         yield return textWait;
+        isTyping = false;
 
         yield break;
     }

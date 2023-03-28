@@ -412,5 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e6b50d09e4f94598b9f14cb531627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
   seaWeednoteObj: []
   seaWeedMOM: {fileID: 8182409409735710329}
+  tutoTxt: []
+  tutoObj: []

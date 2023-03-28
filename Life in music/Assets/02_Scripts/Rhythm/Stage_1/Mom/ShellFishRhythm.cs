@@ -5,7 +5,7 @@ using DG.Tweening;
 using System;
 using Unity.VisualScripting;
 
-public class ShellFishRhythm : MonoBehaviour, IRhythmMom
+public class ShellFishRhythm : TutoMOM, IRhythmMom
 {
     [Space(20)]
     [Header("--- ShellfishNote List ---")]
@@ -24,8 +24,10 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
         NoteGen.Instance.IgenShell();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
 
         Invoke(nameof(Tuto), 1.5f);
@@ -57,6 +59,7 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
 
     private void StartRhythm()
     {
+        TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
     }
     public void SetUpShellfish()
@@ -82,33 +85,43 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
 
     public void Tuto()
     {
+        if (TutoManager.Instance.IsTyping) return;
+
         tutoNum++;
         switch (tutoNum)
         {
             case 1:
                 isTuto = true;
-                Debug.Log(tutoNum);
                 tutoObj[0].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[0]);
-
-
                 break;
+
 
             case 2:
+
                 TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
+
 
             case 3:
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
+
             case 4:
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
+
+            case 5:
+                TutoManager.Instance.TextingOut(tutoTxt[4]);
+                break;
+
+
             default:
                 isTuto = false;
-                TutoManager.Instance.SetActiveFalseText();
                 StartRhythm();
                 break;
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RockRhyrhm : MonoBehaviour, IRhythmMom
+public class RockRhyrhm : TutoMOM, IRhythmMom
 {
 
     [Space(20)]
@@ -17,8 +17,8 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
     public List<Sprite> crabSprite = new List<Sprite>();
     private bool isMoving = false;
 
-
-    [Space(20)]
+    [Space(40)]
+    [Header("------------------------")]
     [Header("--- TutoObj ---")]
     public List<String> tutoTxt = new List<String>();
     public List<GameObject> tutoObj = new List<GameObject>();
@@ -32,8 +32,10 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
         NoteGen.Instance.IgenRock();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
         Invoke(nameof(Tuto), 1.5f);
@@ -60,6 +62,7 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
 
     private void StartRhythm()
     {
+        TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
 
         Invoke(nameof(SetUpCrab), 1.5f);
@@ -118,6 +121,8 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
 
     public void Tuto()
     {
+        if (TutoManager.Instance.IsTyping) return;
+
         tutoNum++;
         switch (tutoNum)
         {
@@ -135,6 +140,7 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
 
 
             case 3:
+                mySource.PlayOneShot(myClip);
                 tutoObj[0].SetActive(false);
                 tutoObj[1].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
@@ -156,7 +162,7 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
 
             default:
                 tutoObj[3].SetActive(false);
-                TutoManager.Instance.SetActiveFalseText();
+                
                 isTuto = false;
                 StartRhythm();
                 break;

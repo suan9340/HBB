@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
+public class SeaWeedRhythm : TutoMOM, IRhythmMom
 {
 
     [Space(20)]
@@ -15,7 +15,8 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
     public GameObject seaWeedMOM = null;
 
 
-    [Space(20)]
+    [Space(40)]
+    [Header("------------------------")]
     [Header("--- TutoObj ---")]
     public List<String> tutoTxt = new List<String>();
     public List<GameObject> tutoObj = new List<GameObject>();
@@ -29,9 +30,9 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
         NoteGen.Instance.IgenSeaweed();
     }
 
-    private void Start()
+    protected override void Start()
     {
-        //  base.Start();
+        base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
 
@@ -99,6 +100,8 @@ public class SeaWeedRhythm : MonoBehaviour, IRhythmMom
 
     public void Tuto()
     {
+        if (TutoManager.Instance.IsTyping) return;
+
         tutoNum++;
         switch (tutoNum)
         {

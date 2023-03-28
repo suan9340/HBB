@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class StarFishRhythm : MonoBehaviour, IRhythmMom
+public class StarFishRhythm : TutoMOM, IRhythmMom
 {
     [Space(20)]
     [Header("--- StarFishNoteList ---")]
@@ -25,8 +25,10 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         NoteGen.Instance.IGenStarFish();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
 
         Invoke(nameof(Tuto), 1.5f);
@@ -52,6 +54,7 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
 
     private void StartRhythm()
     {
+        TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
         Invoke(nameof(StarFishMOM), 1.5f);
     }
@@ -91,20 +94,40 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
 
     public void Tuto()
     {
+        if (TutoManager.Instance.IsTyping) return;
+
+
         tutoNum++;
         switch (tutoNum)
         {
             case 1:
                 isTuto = true;
-
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
+                tutoObj[0].SetActive(true);
                 break;
+
 
             case 2:
-
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
+
+
+            case 3:
+                mySource.PlayOneShot(myClip);
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
+                break;
+
+
+            case 4:
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
+                break;
+
 
             default:
                 isTuto = false;
+                tutoObj[1].SetActive(false);
                 StartRhythm();
                 break;
         }

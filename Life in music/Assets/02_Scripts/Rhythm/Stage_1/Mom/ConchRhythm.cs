@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConchRhythm : MonoBehaviour, IRhythmMom
+public class ConchRhythm : TutoMOM, IRhythmMom
 {
     [Space(20)]
     [Header("--- ConchNote List ---")]
@@ -13,7 +13,8 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     public GameObject conchMOM = null;
 
 
-    [Space(20)]
+    [Space(40)]
+    [Header("------------------------")]
     [Header("--- TutoObj ---")]
     public List<String> tutoTxt = new List<String>();
     public List<GameObject> tutoObj = new List<GameObject>();
@@ -27,8 +28,10 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         NoteGen.Instance.IgenConch();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager<GameObject>.StartListening(ConstantManager.CONCHLIST_ADD, AddNoteList);
 
         Invoke(nameof(Tuto), 1.5f);
@@ -99,6 +102,8 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
 
     public void Tuto()
     {
+        if (TutoManager.Instance.IsTyping) return;
+
         tutoNum++;
         switch (tutoNum)
         {

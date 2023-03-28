@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f02aeba05cebef4299776b7e610faae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClip: {fileID: 8300000, guid: 9f3fc8bcec70af4488e4f586f8300f5e, type: 3}
   rocknoteObj: []
   crab: {fileID: 18424076}
   crabSprite:
@@ -389,8 +390,8 @@ MonoBehaviour:
   - {fileID: -1656282857, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
   tutoTxt:
   - "\uC774\uAC74 \uB3CC\uBA69\uC774\uC796\uC544? \uC65C\uC774\uB807\uAC8C \uAE68\uACE0\uC2F6\uC9C0!"
-  - "\uD55C\uBC88 \uB20C\uB7EC\uBCFC\uAE4C?"
-  - "\uC624\uC637? \uC9C4\uC9DC \uAE68\uC9C0\uB124!"
+  - "\uC774\uC57C\uC544\uC544\uC557!!"
+  - "\uC73C\uC545!! \uAE68\uC838\uBC84\uB838\uB124....?"
   - "\uC774 \uBB3C\uACE0\uAE30\uB294 \uBB54\uB370 \uC774\uB807\uAC8C \uADC0\uC5FD\uC9C0?
     \uCC0C\uB974\uACE0\uC2F6\uB2E4!"
   - "(\uC544\uC557.. \uC548\uB3FC.. \uBB3C\uACE0\uAE30\uB97C \uC65C\uCC14\uB7EC!!

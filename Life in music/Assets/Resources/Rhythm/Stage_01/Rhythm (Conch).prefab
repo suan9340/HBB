@@ -471,5 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b09f47cc2c20e44eafa6697be67e746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}
   conchNoteObj: []
   conchMOM: {fileID: 1895148028}
+  tutoTxt: []
+  tutoObj: []
