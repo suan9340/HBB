@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,14 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
     private bool isMoving = false;
 
 
+    [Space(20)]
+    [Header("--- TutoObj ---")]
+    public List<String> tutoTxt = new List<String>();
+    public List<GameObject> tutoObj = new List<GameObject>();
+
+    private int tutoNum = 0;
+    private bool isTuto = false;
+
     private readonly WaitForSeconds crabSec = new WaitForSeconds(0.5f);
     private void Awake()
     {
@@ -27,17 +36,25 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
     {
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
 
-        StartRhythm();
+        Invoke(nameof(Tuto), 1.5f);
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetUpRockFish();
-            StartCoroutine(CrabMove());
+            if (isTuto)
+            {
+                Tuto();
+            }
+            else
+            {
+                SetUpRockFish();
 
-            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+                StartCoroutine(CrabMove());
+                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            }
+
         }
     }
 
@@ -96,5 +113,27 @@ public class RockRhyrhm : MonoBehaviour, IRhythmMom
             return;
         }
         crab.gameObject.SetActive(true);
+    }
+
+
+    public void Tuto()
+    {
+        tutoNum++;
+        switch (tutoNum)
+        {
+            case 1:
+                isTuto = true;
+
+                break;
+
+            case 2:
+
+                break;
+
+            default:
+                isTuto = false;
+                StartRhythm();
+                break;
+        }
     }
 }

@@ -7,6 +7,7 @@ using DG.Tweening;
 public class ChatMaanger : MonoSingleTon<ChatMaanger>
 {
     [Header("--- Chatings List ---")]
+    public GameObject chatingObj = null;
     public List<string> messagesList = new List<string>();
 
     [Space(20)]
@@ -36,6 +37,7 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
             isClick = true;
         }
     }
+
 
     public void SetChatting(List<string> _list)
     {

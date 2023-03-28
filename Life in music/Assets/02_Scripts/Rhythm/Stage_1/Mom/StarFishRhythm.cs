@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,13 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     [Space(20)]
     public GameObject starFIshImg = null;
 
+    [Space(20)]
+    [Header("--- TutoObj ---")]
+    public List<String> tutoTxt = new List<String>();
+    public List<GameObject> tutoObj = new List<GameObject>();
 
+    private int tutoNum = 0;
+    private bool isTuto = false;
     private void Awake()
     {
         NoteGen.Instance.IGenStarFish();
@@ -21,16 +28,25 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
     private void Start()
     {
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
-        StartRhythm();
+
+        Invoke(nameof(Tuto), 1.5f);
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetUpStarfish();
+            if (isTuto)
+            {
+                Tuto();
+            }
+            else
+            {
+                SetUpStarfish();
 
-            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            }
+
         }
     }
 
@@ -71,5 +87,26 @@ public class StarFishRhythm : MonoBehaviour, IRhythmMom
         }
 
         starFIshImg.gameObject.SetActive(true);
+    }
+
+    public void Tuto()
+    {
+        tutoNum++;
+        switch (tutoNum)
+        {
+            case 1:
+                isTuto = true;
+
+                break;
+
+            case 2:
+
+                break;
+
+            default:
+                isTuto = false;
+                StartRhythm();
+                break;
+        }
     }
 }

@@ -29,7 +29,7 @@ public class MonoSingleTon<T> : MonoBehaviour where T : MonoBehaviour
                         GameObject _temp = new GameObject(typeof(T).ToString());
                         _instance = _temp.AddComponent<T>();
                     }
-                    DontDestroyOnLoad(_instance);
+                    //DontDestroyOnLoad(_instance);
                 }
             }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,15 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     public GameObject conchMOM = null;
 
 
+    [Space(20)]
+    [Header("--- TutoObj ---")]
+    public List<String> tutoTxt = new List<String>();
+    public List<GameObject> tutoObj = new List<GameObject>();
+
+    private int tutoNum = 0;
+    private bool isTuto = false;
+
+
     private void Awake()
     {
         NoteGen.Instance.IgenConch();
@@ -21,15 +31,23 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
     {
         EventManager<GameObject>.StartListening(ConstantManager.CONCHLIST_ADD, AddNoteList);
 
-        StartRhythm();
+        Invoke(nameof(Tuto), 1.5f);
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetupConch();
-            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            if (isTuto)
+            {
+                Tuto();
+            }
+            else
+            {
+                SetupConch();
+
+                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            }
         }
     }
 
@@ -63,7 +81,7 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
         conchNoteObj.Remove(_obj);
 
 
-     //   Debug.Log(_cnt);
+        //   Debug.Log(_cnt);
     }
 
     private void ConchStart()
@@ -78,4 +96,25 @@ public class ConchRhythm : MonoBehaviour, IRhythmMom
 
     }
 
+
+    public void Tuto()
+    {
+        tutoNum++;
+        switch (tutoNum)
+        {
+            case 1:
+                isTuto = true;
+
+                break;
+
+            case 2:
+
+                break;
+
+            default:
+                isTuto = false;
+                StartRhythm();
+                break;
+        }
+    }
 }

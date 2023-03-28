@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using Unity.VisualScripting;
 
 public class ShellFishRhythm : MonoBehaviour, IRhythmMom
 {
@@ -11,6 +12,13 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
     public List<GameObject> shellfishnoteObj = new List<GameObject>();
 
 
+    [Space(20)]
+    [Header("--- TutoObj ---")]
+    public List<String> tutoTxt = new List<String>();
+    public List<GameObject> tutoObj = new List<GameObject>();
+
+    private int tutoNum = 0;
+    private bool isTuto = false;
     private void Awake()
     {
         NoteGen.Instance.IgenShell();
@@ -19,7 +27,8 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
     private void Start()
     {
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
-        StartRhythm();
+
+        Invoke(nameof(Tuto), 1.5f);
     }
 
     //private void Start()
@@ -33,8 +42,16 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetUpShellfish();
-            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            if (isTuto)
+            {
+                Tuto();
+
+            }
+            else
+            {
+                SetUpShellfish();
+                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+            }
         }
     }
 
@@ -61,5 +78,40 @@ public class ShellFishRhythm : MonoBehaviour, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         shellfishnoteObj.Add(_obj);
+    }
+
+    public void Tuto()
+    {
+        tutoNum++;
+        switch (tutoNum)
+        {
+            case 1:
+                isTuto = true;
+                Debug.Log(tutoNum);
+                tutoObj[0].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
+
+
+                break;
+
+            case 2:
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
+                break;
+
+            case 3:
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
+                break;
+
+            case 4:
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
+                break;
+
+            default:
+                isTuto = false;
+                TutoManager.Instance.SetActiveFalseText();
+                StartRhythm();
+                break;
+        }
+
     }
 }
