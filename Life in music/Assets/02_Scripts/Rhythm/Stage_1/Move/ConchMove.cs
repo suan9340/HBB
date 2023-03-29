@@ -3,12 +3,7 @@ using static ConchMove;
 
 public class ConchMove : MonoBehaviour
 {
-
     private static GameObject conchMom;
-
-    public GameObject conch1 = null;
-    public GameObject conch2 = null;
-    public GameObject conch3 = null;
 
     public enum ConchDirection
     {
@@ -51,23 +46,14 @@ public class ConchMove : MonoBehaviour
     private void Start()
     {
         conchAnim = GetComponent<Animator>();
-            //conch1 = transform.Find("One2").gameObject;
-            //conch2 = transform.Find("Two").gameObject;
-            //conch3 = transform.Find("Three").gameObject;
-    }
-
-    private void Update()
-    {
         MoveConch();
-        ConchAnimation();
     }
 
     private void MoveConch()
     {
-
         switch (conchDirection)
         {
-                
+
             case ConchDirection.one:
 
                 conchAnim.SetTrigger("ConchOne");
@@ -81,16 +67,16 @@ public class ConchMove : MonoBehaviour
 
                 conchAnim.SetTrigger("ConchTwo");
                 Invoke(nameof(ConchOne_AddList), 0.5f);
-                
+
                 break;
 
 
 
             case ConchDirection.three:
-                
+
                 conchAnim.SetTrigger("ConchThree");
                 Invoke(nameof(ConchOne_AddList), 0.5f);
-                
+
                 break;
         }
     }
@@ -100,11 +86,6 @@ public class ConchMove : MonoBehaviour
         AddList(gameObject);
     }
 
-    private void ConchAnimation()
-    {
-        //애니메이션
-
-    }
     private void AddList(GameObject _obj)
     {
         if (isFirst)
@@ -119,20 +100,20 @@ public class ConchMove : MonoBehaviour
 
     public void ConchDown()
     {
-        switch(conchDirection)
+        switch (conchDirection)
         {
             case ConchDirection.one:
-            conchAnim.SetTrigger("ConchThreeOut");
+                conchAnim.SetTrigger("ConchThreeOut");
                 break;
 
 
             case ConchDirection.two:
-            conchAnim.SetTrigger("ConchTwoOut");
+                conchAnim.SetTrigger("ConchTwoOut");
                 break;
-            
+
 
             case ConchDirection.three:
-            conchAnim.SetTrigger("ConchOneOut");
+                conchAnim.SetTrigger("ConchOneOut");
                 break;
         }
     }
