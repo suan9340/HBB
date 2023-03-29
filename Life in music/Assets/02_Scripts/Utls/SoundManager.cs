@@ -15,20 +15,20 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     private readonly WaitForSeconds soundSec = new WaitForSeconds(0.05f);
 
+    public bool isFadeIn, isFadeOut = false;
+
     private void Start()
     {
         PlayLoopSource(1f);
-        //EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
         EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
 
     public void GoGoSound(float _vol)
     {
-        //Debug.Log("SoundMusic");
-        //StopLoopSource();
         PlayLoopSource(_vol);
     }
+
     public void CheckYOnAudio(AudioClip _clip)
     {
         if (loopStationsources == null)
@@ -98,10 +98,15 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     private IEnumerator FadeOutMusic(AudioSource _source)
     {
+        isFadeOut = true;
+
         while (true)
         {
             if (_source.volume <= 0)
             {
+                isFadeOut = false;
+                _source.volume = 0;
+                _source.Stop();
                 yield break;
             }
             _source.volume -= Time.deltaTime * 3f;
@@ -112,11 +117,15 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     private IEnumerator FadeInMusic(AudioSource _source, float _vol)
     {
+        isFadeIn = true;
+        _source.Play();
+
         while (true)
         {
             if (_source.volume >= _vol)
             {
                 _source.volume = _vol;
+                isFadeIn = false;
                 yield break;
             }
             _source.volume += Time.deltaTime * 3f;
@@ -125,13 +134,12 @@ public class SoundManager : MonoSingleTon<SoundManager>
         }
     }
 
-    public void ResetMusic()
+    public void STOPingMusic()
     {
         for (int i = 0; i < num; i++)
         {
             var loop = loopStationsources[i];
-            loop.isOn = false;
-            loop.source.clip = null;
+            loop.source.Stop();
         }
     }
 

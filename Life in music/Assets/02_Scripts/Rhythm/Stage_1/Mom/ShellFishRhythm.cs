@@ -42,7 +42,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     //}
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
             if (isTuto)
             {

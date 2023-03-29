@@ -61,13 +61,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
             if (currentIndex >= data.NoteList.Count)
             {
-                StopRhythm();
-                NoteManager.Instance.RemoveNote();
-                Debug.Log("ENd!!!!!!");
-                SoundManager.Instance.StopLoopSource();
-                isRhythm = false;
-
-                StartCoroutine(GoHomeYPlayMusic());
+                StopRhythmY();
                 return;
             }
             else
@@ -80,11 +74,32 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         }
     }
 
+    public void OnClickStopRhythm()
+    {
+        if (GameManager.Instance.gameState == DefineManager.GameState.CantClick) return;
 
-    /// <summary>
-    /// Starting Rhythm Notes 1.4�� �ڿ�
-    /// </summary>
-    /// <param name="_name"></param>
+        GameManager.Instance.SettingGameState(DefineManager.GameState.CantClick);
+        SoundManager.Instance.StopLoopSource();
+
+        StopRhythmSetting();
+        NoteManager.Instance.RemoveNote();
+        Debug.Log("STOP!!!!!!");
+        isRhythm = false;
+
+        StartCoroutine(GoHomeClose());
+    }
+
+    public void StopRhythmY()
+    {
+        StopRhythmSetting();
+        NoteManager.Instance.RemoveNote();
+        Debug.Log("ENd!!!!!!");
+        SoundManager.Instance.StopLoopSource();
+        isRhythm = false;
+
+        StartCoroutine(GoHomeYPlayMusic());
+    }
+
     public void ReadyRhythm(string _name)
     {
         data = RhythmData.LoadData(_name);
@@ -99,7 +114,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         isRhythm = true;
     }
 
-    public void StopRhythm()
+    public void StopRhythmSetting()
     {
         Destroy(curRhy.gameObject);
 
@@ -128,6 +143,22 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
         ChatMaanger.Instance.Text();
+        SoundManager.Instance.PlayLoopSource(1f);
+        yield break;
+    }
+
+    private IEnumerator GoHomeClose()
+    {
+        yield return new WaitForSeconds(3f);
+
+        GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
+
+        EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
+
+        EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
+        EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
+
+        TutoManager.Instance.SetActiveFalseText();
         SoundManager.Instance.PlayLoopSource(1f);
         yield break;
     }

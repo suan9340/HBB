@@ -56,7 +56,7 @@ MonoBehaviour:
       type: 3}
     chat:
     - "\uAC00\uC871\uB4E4\uC774\uB791 \uBC14\uB2F7\uAC00 \uC640\uC11C \uB3CC\uB9F9\uC774\uB85C
-      \uBB3C \uC218\uC81C\uBE44 \uD55C \uAC8C \uB5A0\uC624\uB974\uB124?"
+      \uBB3C \uC218\uC81C\uBE44 \uD55C \uAC8C \uB5A0\uC624\uB978\uB2E4."
   - stage1: 4
     stageRhythm: {fileID: 8618916980925076407, guid: b7335ec50102f4a40b885052462b131b,
       type: 3}

@@ -35,6 +35,7 @@ public static class DefineManager
         Menu,
         Menu_Set,
         Rhythm,
+        CantClick,
     }
 
     public enum Stage_01_MoveType

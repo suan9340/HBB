@@ -53,6 +53,7 @@ public class MenuUIManager : MonoBehaviour
     public void OnClickReallyOut()
     {
         Debug.Log("Out Game");
+        Application.Quit();
     }
 
     public void OnClickReallyNoOut()
@@ -148,7 +149,7 @@ public class MenuUIManager : MonoBehaviour
 
     public void OnClickStage()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Main");
     }
 
     private void SettingStageBtn(bool _isOn)
