@@ -15,9 +15,11 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
     public GameObject messageObj = null;
 
 
+
+    public bool isChatStarting = false;
     private bool isTyping = false;
 
-    private bool isClick = false;
+    public bool isClick = false;
     private readonly WaitForSeconds textTime = new WaitForSeconds(2f);
 
     private void Start()
@@ -32,7 +34,7 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isChatStarting)
         {
             if (isTyping)
             {
@@ -57,6 +59,7 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
             return;
         }
 
+        isChatStarting = true;
         StartCoroutine(TextCor());
     }
 
@@ -80,12 +83,14 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
 
         messageObj.SetActive(false);
         isTyping = false;
+        isChatStarting = false;
 
         yield break;
     }
 
     private IEnumerator TextOutCor(string _input)
     {
+        isClick = false;
         isTyping = true;
         SetActiveTrueText();
 
