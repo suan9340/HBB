@@ -27,13 +27,18 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
             messagesList.Clear();
         }
 
-        messagetxt.text = "";
+        SetActiveTrueText();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isTyping)
+        if (Input.GetMouseButtonDown(0))
         {
+            if (isTyping)
+            {
+                return;
+            }
+
             isClick = true;
         }
     }
@@ -55,22 +60,19 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
         StartCoroutine(TextCor());
     }
 
+    private void SetActiveTrueText()
+    {
+        messagetxt.text = " ";
+    }
+
     private IEnumerator TextCor()
     {
-        if (isTyping) yield break;
-
-        messagetxt.text = "";
-        isTyping = true;
         messageObj.SetActive(true);
 
         for (int i = 0; i < messagesList.Count; i++)
         {
-            messagetxt.DOText(messagesList[i], 3f);
-            yield return textTime;
-
+            yield return TextOutCor(messagesList[i]);
             yield return new WaitUntil(() => isClick == true);
-            messagetxt.text = "";
-            isClick = false;
         }
 
         GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
@@ -81,4 +83,19 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
 
         yield break;
     }
+
+    private IEnumerator TextOutCor(string _input)
+    {
+        isTyping = true;
+        SetActiveTrueText();
+
+        messagetxt.DOText(_input, 2f);
+
+        yield return textTime;
+
+        isTyping = false;
+        yield break;
+    }
+
+
 }
