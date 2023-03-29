@@ -56,6 +56,7 @@ public class ConchRhythm : TutoMOM, IRhythmMom
 
     private void StartRhythm()
     {
+        TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_CONCH);
         Invoke(nameof(ConchStart), 1.5f);
     }
@@ -109,15 +110,38 @@ public class ConchRhythm : TutoMOM, IRhythmMom
         {
             case 1:
                 isTuto = true;
+                tutoObj[0].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
 
                 break;
 
             case 2:
-
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
+
+
+            case 3:
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
+                break;
+
+
+            case 4:
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
+                break;
+
+
+            case 5:
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
+                mySource.PlayOneShot(myClip);
+                TutoManager.Instance.TextingOut(tutoTxt[4]);
+                break;
+
+
 
             default:
                 isTuto = false;
+                tutoObj[1].SetActive(false);
                 StartRhythm();
                 break;
         }

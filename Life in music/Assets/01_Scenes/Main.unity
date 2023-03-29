@@ -4078,6 +4078,8 @@ MonoBehaviour:
   messagesList: []
   messagetxt: {fileID: 5511336250778839199}
   messageObj: {fileID: 5511336251081677689}
+  isChatStarting: 0
+  isClick: 0
 --- !u!4 &1014093423
 Transform:
   m_ObjectHideFlags: 0
