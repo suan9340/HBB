@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
+  loadnum: 1
   shellfishnoteObj: []
   tutoTxt:
   - "\uC774 \uC870\uAC1C\uB294 \uBB50\uC9C0? \uC65C \uC785\uC744 \uB2EB\uACE0\uC788\uB294\uAC70\uC57C

@@ -31,6 +31,7 @@ public class RhythmData : ScriptableObject
     [Serializable]
     public class MyData
     {
+        public bool isTuto = false;
         public string name;
         public AudioClip AudioClip;
         public int Bpm = 60;

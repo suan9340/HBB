@@ -35,11 +35,16 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
-
-        Invoke(nameof(Tuto), 1.5f);
+        CheckingTuto();
+        
     }
 
     private void Update()
+    {
+        InputKey();
+    }
+
+    private void InputKey()
     {
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
@@ -58,9 +63,25 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
     private void StartRhythm()
     {
+        RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SEAWEED);
         Invoke(nameof(SetUpSeaweedMOM), 1.5f);
+    }
+
+    private void CheckingTuto()
+    {
+        var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_SEAWEED);
+
+        if (_isTutoGo)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
     }
 
     public void SetUpSeaweed()

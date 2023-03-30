@@ -24,7 +24,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
     public List<GameObject> tutoObj = new List<GameObject>();
 
     private int tutoNum = 0;
-    private bool isTuto = false;
+    public bool isTuto = false;
 
     private readonly WaitForSeconds crabSec = new WaitForSeconds(0.5f);
     private void Awake()
@@ -35,13 +35,16 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
     protected override void Start()
     {
         base.Start();
-
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
-
-        Invoke(nameof(Tuto), 1.5f);
+        CHeckingTuto();
     }
 
     private void Update()
+    {
+        InputKey();
+    }
+
+    private void InputKey()
     {
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
@@ -52,7 +55,6 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
             else
             {
                 SetUpRockFish();
-
                 StartCoroutine(CrabMove());
                 EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
             }
@@ -60,8 +62,23 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
         }
     }
 
+    private void CHeckingTuto()
+    {
+        var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_Rock);
+        if (_isTutoGO)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
     private void StartRhythm()
     {
+        RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
 
@@ -162,7 +179,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
             default:
                 tutoObj[3].SetActive(false);
-                
+
                 isTuto = false;
                 StartRhythm();
                 break;

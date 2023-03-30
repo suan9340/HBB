@@ -469,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}
+  loadnum: 2
   conchNoteObj: []
   conchMOM: {fileID: 6131210496383215304}
   tutoTxt:

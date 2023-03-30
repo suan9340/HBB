@@ -29,18 +29,15 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
-
-        Invoke(nameof(Tuto), 1.5f);
+        CheckingTuto();
     }
 
-    //private void Start()
-    //{
-    //    EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
-
-    //    RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
-
-    //}
     private void Update()
+    {
+        InputKey();
+    }
+
+    private void InputKey()
     {
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
@@ -57,8 +54,23 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         }
     }
 
+    private void CheckingTuto()
+    {
+        var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_SHELLFISH);
+        if (_isTutoGO)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
     private void StartRhythm()
     {
+        RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_SHELLFISH);
     }

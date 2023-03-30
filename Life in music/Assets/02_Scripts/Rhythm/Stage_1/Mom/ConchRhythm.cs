@@ -34,10 +34,15 @@ public class ConchRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.CONCHLIST_ADD, AddNoteList);
 
-        Invoke(nameof(Tuto), 1.5f);
+        CheckingTuto();
     }
 
     private void Update()
+    {
+        InputKey();
+    }
+    
+    private void InputKey()
     {
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
@@ -54,8 +59,23 @@ public class ConchRhythm : TutoMOM, IRhythmMom
         }
     }
 
+    private void CheckingTuto()
+    {
+        var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_CONCH);
+        if (_isTutoGO)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
     private void StartRhythm()
     {
+        RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_CONCH);
         Invoke(nameof(ConchStart), 1.5f);

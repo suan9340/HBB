@@ -9,6 +9,7 @@ public class TutoMOM : MonoBehaviour
     protected bool isClick = false;
 
     public AudioClip myClip = null;
+    public int loadnum;
 
     protected virtual void Start()
     {

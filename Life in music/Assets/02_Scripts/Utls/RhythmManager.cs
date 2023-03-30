@@ -10,6 +10,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     public AudioSource audioSource;
 
     public RhythmData.MyData data;
+    private RhythmData.MyData loadData;
     private CurrnetstageSO currentStage;
 
 
@@ -100,9 +101,34 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         StartCoroutine(GoHomeYPlayMusic());
     }
 
+    public bool CheckTuto(string _name)
+    {
+        loadData = RhythmData.LoadData(_name);
+        if (loadData == null)
+        {
+            Debug.Log($"Cant Load {_name}");
+            return false;
+        }
+
+        if (loadData.isTuto)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void TutoClear()
+    {
+        loadData.isTuto = true;
+    }
+
     public void ReadyRhythm(string _name)
     {
-        data = RhythmData.LoadData(_name);
+        //data = RhythmData.LoadData(_name);
+        data = loadData;
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;
 

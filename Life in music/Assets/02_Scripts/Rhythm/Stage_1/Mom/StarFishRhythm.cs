@@ -30,11 +30,15 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
-
-        Invoke(nameof(Tuto), 1.5f);
+        CheckingTuto();
     }
 
     private void Update()
+    {
+        InputKey();
+    }
+
+    private void InputKey()
     {
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
@@ -52,8 +56,23 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
         }
     }
 
+    private void CheckingTuto()
+    {
+        var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_STARFISH);
+        if (_isTutoGO)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
     private void StartRhythm()
     {
+        RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_STARFISH);
         Invoke(nameof(StarFishMOM), 1.5f);
