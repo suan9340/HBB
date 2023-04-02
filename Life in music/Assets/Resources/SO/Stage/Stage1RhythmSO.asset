@@ -23,7 +23,7 @@ MonoBehaviour:
       type: 3}
     chat:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
-    - "\uD55C\uBC88 \uB9CC\uC838\uBCF4\uACE0 \uC2F6\uB2E4"
+    - "\uC608\uC804\uC5D0 \uBC14\uB2F7\uAC00\uC5D0\uC11C \uC8FC\uC6B4\uC801 \uC788\uC5C8\uB294\uB370.."
   - stage1: 1
     stageRhythm: {fileID: 8789965736252908555, guid: deb0e6f82d44f0f47996313fdb015d8c,
       type: 3}
@@ -68,4 +68,4 @@ MonoBehaviour:
     chat:
     - "\uBBF8\uC5ED\uC774\uB124..?"
     - "\uACE0\uB4F1\uD559\uC0DD \uB54C \uC5C4\uB9C8\uAC00 \uB053\uC5EC\uC8FC\uC2E0
-      \uBBF8\uC5ED\uAD6D \uCC38 \uB9DB\uC788\uC5C8\uC740\uB370..."
+      \uBBF8\uC5ED\uAD6D \uCC38 \uB9DB\uC788\uC5C8\uC740\uB370."

@@ -132,14 +132,15 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
 
             case 3:
-                mySource.PlayOneShot(myClip);
-                tutoObj[0].SetActive(false);
-                tutoObj[1].SetActive(true);
+                
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
+                mySource.PlayOneShot(myClip);
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
