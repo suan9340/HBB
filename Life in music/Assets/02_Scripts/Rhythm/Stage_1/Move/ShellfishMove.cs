@@ -185,7 +185,6 @@ public class ShellfishMove : MonoBehaviour
     {
 
         UIManager.Instance.RhythmNoteEffect();
-
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();

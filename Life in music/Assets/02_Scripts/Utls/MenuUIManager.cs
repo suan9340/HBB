@@ -98,6 +98,11 @@ public class MenuUIManager : MonoBehaviour
     }
     #endregion
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     public void OnClickBoard()
     {

@@ -57,7 +57,7 @@ public class ConchMove : MonoBehaviour
             case ConchDirection.one:
 
                 conchAnim.SetTrigger("ConchOne");
-                Invoke(nameof(ConchOne_AddList), 0.5f);
+                Invoke(nameof(ConchOne_AddList), 0.6f);
 
                 break;
 
@@ -66,7 +66,7 @@ public class ConchMove : MonoBehaviour
             case ConchDirection.two:
 
                 conchAnim.SetTrigger("ConchTwo");
-                Invoke(nameof(ConchOne_AddList), 0.5f);
+                Invoke(nameof(ConchOne_AddList), 0.6f);
 
                 break;
 
@@ -75,7 +75,7 @@ public class ConchMove : MonoBehaviour
             case ConchDirection.three:
 
                 conchAnim.SetTrigger("ConchThree");
-                Invoke(nameof(ConchOne_AddList), 0.5f);
+                Invoke(nameof(ConchOne_AddList), 0.6f);
 
                 break;
         }
@@ -88,6 +88,7 @@ public class ConchMove : MonoBehaviour
 
     private void AddList(GameObject _obj)
     {
+        UIManager.Instance.RhythmNoteEffect();
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();

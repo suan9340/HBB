@@ -50,6 +50,8 @@ public class StarFishMove : MonoBehaviour
 
     private void AddList(GameObject _obj)
     {
+        UIManager.Instance.RhythmNoteEffect();
+
         if (Starfish_isFirst)
         {
             RhythmManager.Instance.StartMusic();
