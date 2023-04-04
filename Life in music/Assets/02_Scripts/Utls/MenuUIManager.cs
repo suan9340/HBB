@@ -154,7 +154,7 @@ public class MenuUIManager : MonoBehaviour
 
     public void OnClickStage()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(1);
     }
 
     private void SettingStageBtn(bool _isOn)

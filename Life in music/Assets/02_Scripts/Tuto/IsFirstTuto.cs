@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IsFirstTuto : MonoBehaviour
 {
@@ -8,50 +9,30 @@ public class IsFirstTuto : MonoBehaviour
     [Tooltip("Audios BackGround Image!")]
     public Animator audioUIAnimator = null;
     private bool isOnAudioUI = false;
-
+    private int tutoCnt;
 
     [Space(30)]
     public List<GameObject> tutoObj = new List<GameObject>();
+    public AudioSource mySource = null;
+    public AudioClip myClip = null;
 
-    int tutoNum = 0;
+    private int tutoNum = 0;
+
+    private GameObject currentTutoObj = null;
     private void Start()
     {
+        tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
     }
 
     public void OnClickTutoNext()
     {
-        tutoNum++;
-        Tuto();
+        CheckNum(true);
     }
 
     public void OnClickTutoBack()
     {
-        tutoNum--;
-        Tuto();
-    }
-
-    public void OnclickAudioUI()
-    {
-        if (audioUIAnimator == null)
-        {
-            Debug.LogWarning("audioBackGroundImage ((AudioUI)) is NULL!!!");
-            return;
-        }
-        else
-        {
-            if (isOnAudioUI == false)
-            {
-                isOnAudioUI = true;
-                audioUIAnimator.SetBool("OnButton", true);
-
-            }
-            else
-            {
-                isOnAudioUI = false;
-                audioUIAnimator.SetBool("OnButton", false);
-            }
-        }
+        CheckNum(false);
     }
 
 
@@ -59,32 +40,73 @@ public class IsFirstTuto : MonoBehaviour
     {
         switch (tutoNum)
         {
-            case 0:
-                tutoObj[0].gameObject.SetActive(true);
-                break;
-
-
-
             case 1:
-                OnclickAudioUI();
-                tutoObj[0].gameObject.SetActive(false);
-                tutoObj[1].gameObject.SetActive(true);
+                audioUIAnimator.SetBool("OnButton", false);
+                CheckCurrentGameObj(tutoObj[0]);
                 break;
 
 
 
             case 2:
-                tutoObj[1].gameObject.SetActive(false);
-                tutoObj[2].gameObject.SetActive(true);
+                isOnAudioUI = true;
+                audioUIAnimator.SetBool("OnButton", true);
+                CheckCurrentGameObj(tutoObj[1]);
                 break;
+
+
 
             case 3:
-                OnclickAudioUI();
-                tutoObj[2].gameObject.SetActive(false);
-                tutoObj[3].gameObject.SetActive(true);
+                if (!isOnAudioUI)
+                    audioUIAnimator.SetBool("OnButton", true);
+                CheckCurrentGameObj(tutoObj[2]);
+                break;
+
+            case 4:
+                isOnAudioUI = false;
+                audioUIAnimator.SetBool("OnButton", false);
+                CheckCurrentGameObj(tutoObj[3]);
+                break;
+
+
+            case 5:
+                SceneManager.LoadScene(2);
                 break;
         }
+    }
 
+    private void CheckNum(bool _isPlus)
+    {
+        if (_isPlus)
+        {
+            var _input = tutoNum + 1;
 
+            if (_input <= tutoCnt)
+            {
+                tutoNum++;
+            }
+        }
+        else
+        {
+            var _iiput = tutoNum - 1;
+
+            if (_iiput > 0)
+            {
+                tutoNum--;
+            }
+        }
+
+        Tuto();
+    }
+
+    private void CheckCurrentGameObj(GameObject _obj)
+    {
+        mySource.PlayOneShot(myClip);
+        if (currentTutoObj != null)
+        {
+            currentTutoObj.SetActive(false);
+        }
+
+        currentTutoObj = _obj;
+        currentTutoObj.SetActive(true);
     }
 }
