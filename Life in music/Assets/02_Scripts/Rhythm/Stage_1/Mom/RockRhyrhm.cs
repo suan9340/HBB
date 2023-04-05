@@ -13,7 +13,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
     [Space(20)]
     [Header("--- Crab ---")]
-    public Image crab = null;
+    public GameObject crab = null;
     public List<Sprite> crabSprite = new List<Sprite>();
     private bool isMoving = false;
 
@@ -27,6 +27,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
     public bool isTuto = false;
 
     private readonly WaitForSeconds crabSec = new WaitForSeconds(0.5f);
+    private SpriteRenderer crabSpriteCom = null;
     private void Awake()
     {
         NoteGen.Instance.IgenRock();
@@ -36,6 +37,11 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
     {
         base.Start();
         EventManager<GameObject>.StartListening(ConstantManager.ROCK_ADD, AddNoteList);
+
+        if (crab != null)
+        {
+            crabSpriteCom = crab.GetComponent<SpriteRenderer>();
+        }
         CHeckingTuto();
     }
 
@@ -113,9 +119,9 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
         isMoving = true;
 
-        crab.sprite = crabSprite[0];
+        crabSpriteCom.sprite = crabSprite[0];
         yield return crabSec;
-        crab.sprite = crabSprite[1];
+        crabSpriteCom.sprite = crabSprite[1];
 
         isMoving = false;
     }

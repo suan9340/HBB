@@ -35,7 +35,7 @@ MonoBehaviour:
     chat:
     - "\uC870\uAC1C \uC18C\uB9AC\uAC00 \uC4F8 \uB370 \uC5C6\uC774 \uC88B\uB124\u2026."
   - stage1: 2
-    stageRhythm: {fileID: 7313266730966089348, guid: 0f4a8653570d946468edd0d7af1d7d14,
+    stageRhythm: {fileID: 6643353951219872024, guid: cb366ef1df1f2b943bea1f210c84586b,
       type: 3}
     clip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
     noteObj: {fileID: 5793928616832132482, guid: 243f5f00f18938e468c28d6c7148e71c,
@@ -47,7 +47,7 @@ MonoBehaviour:
     - "\uC18C\uB77C\uACE0\uB3D9 \uC18C\uB9AC\uB97C \uB4E4\uC73C\uB2C8 \uBB54\uAC00
       \uB5A0\uC624\uB974\uB294 \uAC83 \uAC19\uC544"
   - stage1: 3
-    stageRhythm: {fileID: 7070486113039074098, guid: 28533a8766a6ae341b086205da20bbc7,
+    stageRhythm: {fileID: 2600144270531631212, guid: 761721b8d14b9254397fe927bf11fb8e,
       type: 3}
     clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
     noteObj: {fileID: 644878289164705110, guid: b258878f99c392f479670af0c03ecf26,

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class NoteManager : MonoSingleTon<NoteManager>
 {
     [Header("--- NoteTrnYObject ---")]
-    public GameObject noteObj = null;
     public RectTransform noteTrn = null;
 
 
@@ -18,15 +17,14 @@ public class NoteManager : MonoSingleTon<NoteManager>
     [Header("--- NoteColider ---")]
     public RectTransform center = null;
     public List<RectTransform> timingRect = new List<RectTransform>();
-    public Vector2[] timingBoxs = null;
-
-    public GameObject noteEndImage = null;
+    private Vector2[] timingBoxs = null;
 
 
+    private GameObject noteEndImage = null;
+    private GameObject noteObj = null;
+    
 
-    [Space(20)]
-    [Header("--- Current ---")]
-    public DefineManager.NoteTimingCheck noteTiming;
+    private DefineManager.NoteTimingCheck noteTiming;
     private string timingText;
 
     private void Start()

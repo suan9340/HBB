@@ -25,7 +25,7 @@ public class ImageSizeInterface : MonoBehaviour
         if(effectAudio == null && clip != null)
         {
             var _effectobj = GameObject.Find("SoundManager");
-            effectAudio = _effectobj.transform.GetChild(0).GetComponent<AudioSource>();
+            effectAudio = _effectobj.transform.GetChild(0)?.GetComponent<AudioSource>();
         }
     }
 

@@ -7,19 +7,16 @@ using DG.Tweening;
 public class ChatMaanger : MonoSingleTon<ChatMaanger>
 {
     [Header("--- Chatings List ---")]
-    public GameObject chatingObj = null;
-    public List<string> messagesList = new List<string>();
+    public GameObject messageObj = null;
+    public Text messagetxt = null;
 
     [Space(20)]
-    public Text messagetxt = null;
-    public GameObject messageObj = null;
+    public List<string> messagesList = new List<string>();
 
-
-
-    public bool isChatStarting = false;
+    private bool isChatStarting = false;
     private bool isTyping = false;
+    private bool isClick = false;
 
-    public bool isClick = false;
     private readonly WaitForSeconds textTime = new WaitForSeconds(2f);
 
     private void Start()

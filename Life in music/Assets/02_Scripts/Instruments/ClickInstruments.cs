@@ -4,32 +4,59 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickInstruments : ImageSizeInterface
-     , IPointerClickHandler
-    , IPointerExitHandler
+public class ClickInstruments : MonoBehaviour
 {
+
+    [Header("AudioSound")]
+    public AudioSource effectAudio = null;
+    public AudioClip clip = null;
     [Space(20)]
     public GameObject instrumetnsObj = null;
 
     [Space(20)]
     public DefineManager.Stage_01_Inst instruments;
     public int num;
-    public Canvas rhythmCanvas;
 
-    protected override void Start()
+    //public Canvas rhythmCanvas;
+
+    Vector2 rayOrigin = Vector2.zero;
+    RaycastHit2D hit;
+
+
+    private void Start()
     {
-        base.Start();
+        CheckAudioComponents();
+    }
 
-        if (rhythmCanvas == null)
+    private void Update()
+    {
+        CheckInput();
+    }
+
+    private void CheckInput()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            rhythmCanvas = GameObject.FindGameObjectWithTag(ConstantManager.TAG_RHYTHMCANVAS).GetComponent<Canvas>();
-        }
+            rayOrigin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            hit = Physics2D.Raycast(rayOrigin, Vector2.zero);
 
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject == gameObject)
+                {
+                    OnClickEvent();
+                }
+            }
+        }
+    }
+
+    private void CheckAudioComponents()
+    {
         if (effectAudio == null && clip != null)
         {
-            CheckAudioComponents();
+            var _effectobj = GameObject.Find("SoundManager");
+            effectAudio = _effectobj.transform.GetChild(0)?.GetComponent<AudioSource>();
         }
-
     }
 
     private void CheckStage()
@@ -77,38 +104,32 @@ public class ClickInstruments : ImageSizeInterface
 
                 break;
         }
-
-
-
     }
 
-
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnClickEvent()
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
 
         GameManager.Instance.SettingGameState(DefineManager.GameState.Rhythm);
 
-
-        ImageSizeBig();
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
-        instrumetnsObj.SetActive(true);
+
+        if (instrumetnsObj != null)
+            instrumetnsObj.SetActive(true);
 
         CheckStage();
         SoundManager.Instance.StopLoopSource();
     }
-
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        ImageSizeSmall();
+        Debug.Log("wee");
     }
-
 
     private void InstantiateRhythm(GameObject _instobj, GameObject _loadobj)
     {
         _instobj = Instantiate(_loadobj);
-        _instobj.transform.SetParent(rhythmCanvas.transform.GetChild(2), false);
+        //_instobj.transform.SetParent(rhythmCanvas.transform.GetChild(2), false);
         RhythmManager.Instance.SettingCurRhythm(_instobj);
     }
 }
