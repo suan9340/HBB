@@ -25,7 +25,7 @@ MonoBehaviour:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
     - "\uC608\uC804\uC5D0 \uBC14\uB2F7\uAC00\uC5D0\uC11C \uC8FC\uC6B4\uC801 \uC788\uC5C8\uB294\uB370.."
   - stage1: 1
-    stageRhythm: {fileID: 8789965736252908555, guid: deb0e6f82d44f0f47996313fdb015d8c,
+    stageRhythm: {fileID: 6777877845949713200, guid: caadd12e0d058e44eb4500fd4029b934,
       type: 3}
     clip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
     noteObj: {fileID: 2197310107535397376, guid: 4a38ca408db57904aac711a7dd538070,

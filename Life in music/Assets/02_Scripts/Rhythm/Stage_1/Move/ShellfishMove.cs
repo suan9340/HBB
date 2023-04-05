@@ -16,17 +16,18 @@ public class ShellfishMove : MonoBehaviour
     }
 
     public static float targetpos;
-    public static float _pos = -220f;
+    public static float _pos = -1.2f;
 
     public static void Add(Direction _dir)
     {
-        
-        if (_pos == -40)
+
+        if (_pos >= 0.4f)
         {
-            _pos = -220f;
+            Debug.Log(_pos);
+            _pos = -1.2f;
         }
 
-        _pos += 20;
+        _pos += 0.2f;
         targetpos = _pos;
 
         if (mom == null)
@@ -44,26 +45,26 @@ public class ShellfishMove : MonoBehaviour
             switch (_dir)
             {
                 case Direction.left:
-                    _inst.transform.localPosition = new Vector3(1100f, _pos, 0f);
+                    _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
                     break;
 
 
                 case Direction.right:
-                    _inst.transform.localPosition = new Vector3(-1100f, _pos, 0f);
+                    _inst.transform.localPosition = new Vector3(-11f, _pos, 0f);
 
                     break;
 
 
                 case Direction.up:
-                    _inst.transform.localPosition = new Vector3(0f, -1100f, 0f);
+                    _inst.transform.localPosition = new Vector3(0f, -11f, 0f);
                     break;
 
 
                 case Direction.down:
 
-                    _inst.transform.localPosition = new Vector3(0f, 1100f, 0f);
+                    _inst.transform.localPosition = new Vector3(0f, 11f, 0f);
                     break;
-                     
+
             }
         }
         else
@@ -93,7 +94,7 @@ public class ShellfishMove : MonoBehaviour
 
     public static bool isFirst = true;
 
-    private RectTransform rect;
+    private Transform myTrn;
     private static GameObject mom;
 
     private void OnEnable()
@@ -103,7 +104,7 @@ public class ShellfishMove : MonoBehaviour
 
     private void Start()
     {
-        rect = GetComponent<RectTransform>();
+        myTrn = GetComponent<Transform>();
         noteAnimation = GetComponent<Animator>();
     }
 
@@ -120,30 +121,30 @@ public class ShellfishMove : MonoBehaviour
         {
             case Direction.left:
 
-                if (rect.anchoredPosition.x <= 0)
+                if (myTrn.position.x <= 0)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    myTrn.position = new Vector2(0, target);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(-10, 0) * moveSpeed * Time.deltaTime;
                 }
 
                 break;
 
             case Direction.right:
 
-                if (rect.anchoredPosition.x >= 0)
+                if (myTrn.position.x >= 0)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    myTrn.position = new Vector2(0, target);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(10, 0) * moveSpeed * Time.deltaTime;
                 }
 
                 break;
@@ -151,30 +152,30 @@ public class ShellfishMove : MonoBehaviour
 
 
             case Direction.down:
-                if (rect.anchoredPosition.y <= target)
+                if (myTrn.position.y <= target)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    myTrn.position = new Vector2(0, target);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(0, -10) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(0, -10) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
 
 
             case Direction.up:
-                if (rect.anchoredPosition.y >= target)
+                if (myTrn.position.y >= target)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0, target);
+                    myTrn.position = new Vector2(0, target);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(0, 10) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(0, 10) * moveSpeed * Time.deltaTime;
                 }
                 break;
         }
