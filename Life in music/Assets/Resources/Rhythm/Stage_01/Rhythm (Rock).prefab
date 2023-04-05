@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 46184628729587657}
   - component: {fileID: 46184628729587656}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: RockImage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689400605727730726}
   - component: {fileID: 1689400605727730725}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FishImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973111762518986462}
   - component: {fileID: 1973111762518986463}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FishImage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2600144270531631211}
   - component: {fileID: 6817243296041458454}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Rhythm (Rock)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3019271251680271644}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4129953383029524574}
   - component: {fileID: 4129953383029524573}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: RockImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 5047119942203341395}
   - component: {fileID: 6768096601869503238}
   - component: {fileID: 5047119942203341394}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Crab
   m_TagString: Crab
   m_Icon: {fileID: 0}
@@ -462,8 +462,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5047119942203341396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.82, z: 0}
-  m_LocalScale: {x: 1.3234501, y: 1.3234501, z: 1.3234501}
+  m_LocalPosition: {x: 0, y: -2.78, z: 0}
+  m_LocalScale: {x: 1.3869, y: 1.3869, z: 1.3869}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2600144270531631211}

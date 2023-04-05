@@ -39,7 +39,6 @@ public class ClickInstruments : MonoBehaviour
         {
             rayOrigin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hit = Physics2D.Raycast(rayOrigin, Vector2.zero);
-
             if (hit.collider != null)
             {
                 if (hit.collider.gameObject == gameObject)
