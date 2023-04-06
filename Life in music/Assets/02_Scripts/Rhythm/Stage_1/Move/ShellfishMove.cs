@@ -23,7 +23,6 @@ public class ShellfishMove : MonoBehaviour
 
         if (_pos >= 0.4f)
         {
-            Debug.Log(_pos);
             _pos = -1.2f;
         }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9219198068429765840}
   - component: {fileID: 9219198068429765843}
   - component: {fileID: 5677848047217971187}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: StarfishNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &9219198068429765843
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,7 +101,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!222 &5677848047217971187
 CanvasRenderer:
   m_ObjectHideFlags: 0

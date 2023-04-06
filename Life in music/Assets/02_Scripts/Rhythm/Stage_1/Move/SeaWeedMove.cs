@@ -30,15 +30,15 @@ public class SeaWeedMove : MonoBehaviour
             switch (_pos)
             {
                 case SeaWeedPos.one:
-                    _inst.transform.localPosition = new Vector3(-1476f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(-14.76f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.two:
-                    _inst.transform.localPosition = new Vector3(-1100f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(-11f, 0f, 0f);
                     break;
 
                 case SeaWeedPos.three:
-                    _inst.transform.localPosition = new Vector3(1476f, 0f, 0f);
+                    _inst.transform.localPosition = new Vector3(14.76f, 0f, 0f);
                     break;
             }
         }
@@ -60,8 +60,8 @@ public class SeaWeedMove : MonoBehaviour
     private SeaWeedPos seaweedPos;
     private bool isAdd = false;
 
-    private RectTransform rect;
-    private Image image;
+    private Transform myTrn;
+    private SpriteRenderer mySprite;
 
 
     private static GameObject mom;
@@ -70,8 +70,8 @@ public class SeaWeedMove : MonoBehaviour
 
     private void Start()
     {
-        rect = GetComponent<RectTransform>();
-        image = GetComponent<Image>();
+        myTrn = GetComponent<Transform>();
+        mySprite = GetComponent<SpriteRenderer>();
 
         if (animObj.activeSelf)
         {
@@ -92,41 +92,41 @@ public class SeaWeedMove : MonoBehaviour
         {
 
             case SeaWeedPos.one:
-                if (rect.anchoredPosition.x >= -366f)
+                if (myTrn.position.x >= -3.6f)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(-366f, 0);
+                    myTrn.position = new Vector3(-3.6f, 0, 0);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(1, 0, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
             case SeaWeedPos.two:
-                if (rect.anchoredPosition.x >= 0)
+                if (myTrn.position.x >= 0)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(0f, 0f);
+                    myTrn.position = new Vector2(0f, 0f);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(1, 0, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
 
             case SeaWeedPos.three:
-                if (rect.anchoredPosition.x <= 366f)
+                if (myTrn.position.x <= 3.6f)
                 {
                     isStop = true;
-                    rect.anchoredPosition = new Vector2(366f, 0f);
+                    myTrn.position = new Vector2(3.6f, 0f);
                     AddList(gameObject);
                 }
                 else
                 {
-                    rect.anchoredPosition += new Vector2(-10, 0) * moveSpeed * Time.deltaTime;
+                    myTrn.position += new Vector3(-1, 0, 0) * moveSpeed * Time.deltaTime;
                 }
                 break;
         }
@@ -155,7 +155,7 @@ public class SeaWeedMove : MonoBehaviour
 
     public void SeaweedUp()
     {
-        image.enabled = false;
+        mySprite.enabled = false;
         animObj.SetActive(true);
     }
 

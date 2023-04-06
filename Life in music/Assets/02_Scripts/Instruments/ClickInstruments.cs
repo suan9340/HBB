@@ -109,6 +109,7 @@ public class ClickInstruments : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
 
+        effectAudio.PlayOneShot(clip);
         GameManager.Instance.SettingGameState(DefineManager.GameState.Rhythm);
 
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
@@ -119,10 +120,6 @@ public class ClickInstruments : MonoBehaviour
 
         CheckStage();
         SoundManager.Instance.StopLoopSource();
-    }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("wee");
     }
 
     private void InstantiateRhythm(GameObject _instobj, GameObject _loadobj)

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infos:
   - stage1: 0
-    stageRhythm: {fileID: 6067029285676514292, guid: a34353c05e0276c4d81f50c70a465b90,
+    stageRhythm: {fileID: 5363186388627015707, guid: 24f7abedec243a2428b5d7538839b660,
       type: 3}
     clip: {fileID: 8300000, guid: a5283f75080e59f4cae1a3787ea68cce, type: 3}
     noteObj: {fileID: 5397540457462237569, guid: 6d4edb15552615d468ed41da53e3f5aa,
@@ -58,7 +58,7 @@ MonoBehaviour:
     - "\uAC00\uC871\uB4E4\uC774\uB791 \uBC14\uB2F7\uAC00 \uC640\uC11C \uB3CC\uB9F9\uC774\uB85C
       \uBB3C \uC218\uC81C\uBE44 \uD55C \uAC8C \uB5A0\uC624\uB978\uB2E4."
   - stage1: 4
-    stageRhythm: {fileID: 8618916980925076407, guid: b7335ec50102f4a40b885052462b131b,
+    stageRhythm: {fileID: 2095509684888760273, guid: 9fb06c0d086b5a849b9c7cf0548052d7,
       type: 3}
     clip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
     noteObj: {fileID: 3890609369124476559, guid: 8416a22f8a4b26a4a9b904b2242141b0,

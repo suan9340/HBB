@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6491314440961540831}
   - component: {fileID: 1074136167923342582}
   - component: {fileID: 3303797965736323936}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Zero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3704138277681130945}
   - component: {fileID: 3263286069658299199}
   - component: {fileID: 607593922455117277}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Three
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 640903835326578726}
   - component: {fileID: 1947716950}
   - component: {fileID: 1947716949}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: One2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 2686888933543886654}
   - component: {fileID: 6485395856031363729}
   - component: {fileID: 7661420903532310915}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 6992378253784936483}
   - component: {fileID: 4200323616135214609}
   - component: {fileID: 576342456}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: ConchNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &4200323616135214609
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -405,7 +405,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &576342456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +419,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851d69a0c18331c41b81009b789a5431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conch1: {fileID: 2052001347320567757}
-  conch2: {fileID: 7682115600327387728}
-  conch3: {fileID: 6324062752431942031}
   conchDirection: 0

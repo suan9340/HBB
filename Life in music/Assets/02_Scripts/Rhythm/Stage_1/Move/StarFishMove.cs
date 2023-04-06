@@ -20,12 +20,7 @@ public class StarFishMove : MonoBehaviour
         var _obj = Resources.Load<StarFishMove>("Notes/Stage_01/StarfishNote");
 
 
-        if (_obj != null)
-        {
-            //애니메이션을 실행해야한다.
-        }
-
-        else
+        if (_obj == null)
         {
             Debug.LogError("ShellfishNote NULL");
         }
@@ -38,11 +33,9 @@ public class StarFishMove : MonoBehaviour
     }
 
     private Animator myanim = null;
-    private RectTransform rect;
 
     private void Start()
     {
-        rect = GetComponent<RectTransform>();
         myanim = GetComponent<Animator>();
 
         EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishDown);
