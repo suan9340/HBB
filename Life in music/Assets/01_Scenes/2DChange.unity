@@ -6215,6 +6215,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1614894663}
     m_Modifications:
+    - target: {fileID: 797171049957211712, guid: f97328d59030a654cb7c86fdfe12c6c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 797171049957211774, guid: f97328d59030a654cb7c86fdfe12c6c1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2107058641, guid: 65a1e2bc38ad4004a86af1f42b63b21a,
+        type: 3}
+    - target: {fileID: 797171049957211775, guid: f97328d59030a654cb7c86fdfe12c6c1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 546.6667
+      objectReference: {fileID: 0}
+    - target: {fileID: 797171049957211775, guid: f97328d59030a654cb7c86fdfe12c6c1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 273.33334
+      objectReference: {fileID: 0}
     - target: {fileID: 797171050903740409, guid: f97328d59030a654cb7c86fdfe12c6c1,
         type: 3}
       propertyPath: m_Pivot.x

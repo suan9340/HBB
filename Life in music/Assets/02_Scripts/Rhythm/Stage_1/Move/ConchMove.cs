@@ -41,7 +41,6 @@ public class ConchMove : MonoBehaviour
 
     public ConchDirection conchDirection;
     private Animator conchAnim = null;
-    private RectTransform rect;
 
     private void Start()
     {
