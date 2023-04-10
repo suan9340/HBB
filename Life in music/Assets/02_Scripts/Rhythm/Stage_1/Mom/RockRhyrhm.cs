@@ -99,6 +99,8 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
             return;
         }
 
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        UIManager.Instance.RhythmNoteEffect();
 
         var _rockSelect = _cnt - 1;
         var _obj = rocknoteObj[_rockSelect].gameObject;

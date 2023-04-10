@@ -83,6 +83,9 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
             return;
         }
 
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        UIManager.Instance.RhythmNoteEffect();
+
         var _shellonjSelect = _cnt - 1;
         var _obj = shellfishnoteObj[_shellonjSelect].gameObject;
 

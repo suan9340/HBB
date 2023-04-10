@@ -32,6 +32,9 @@ public static class ConstantManager
     // RhythmManager
     public static string BEAT = "Beat";
 
+    // CameraShaking
+    public static string CAMERA_SHAKE = "CameraShaking";
+
     // SoundManager
     public static string RHYTHM_SOUND_START = "RhythmSound";
 

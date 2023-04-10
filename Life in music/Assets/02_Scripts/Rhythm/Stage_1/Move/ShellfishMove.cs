@@ -183,7 +183,7 @@ public class ShellfishMove : MonoBehaviour
     // todo 관리자가 들고있어야하는거 ShellfishRhythm
     private void AddList(GameObject _obj)
     {
-
+        
         UIManager.Instance.RhythmNoteEffect();
         if (isFirst)
         {

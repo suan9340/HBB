@@ -97,6 +97,9 @@ public class ConchRhythm : TutoMOM, IRhythmMom
             return;
         }
 
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        UIManager.Instance.RhythmNoteEffect();
+
         var _conchOnjSelect = _cnt - 1;
         var _obj = conchNoteObj[_conchOnjSelect].gameObject;
 

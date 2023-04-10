@@ -27,6 +27,7 @@ public class UIManager : MonoSingleTon<UIManager>
     private bool isRhythmPanel = false;
 
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
+
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);

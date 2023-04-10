@@ -88,6 +88,9 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
             return;
         }
 
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        UIManager.Instance.RhythmNoteEffect();
+
         var _starfishonjSelect = _cnt - 1;
         var _obj = starfishNoteObj[_starfishonjSelect].gameObject;
 

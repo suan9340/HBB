@@ -15,7 +15,18 @@ public class Stage02_SO : ScriptableObject
 [Serializable]
 public class Info2
 {
-    public DefineManager.Stage_01_Inst stage1;
+    public DefineManager.Stage_02_School stage2;
     public GameObject stageRhythm;
+    public AudioClip clip;
+
+    [Space(10)]
+    [Header("--- NoteUI ---")]
+    public GameObject noteObj;
+    public GameObject noteEndObj;
+
+
+    [Space(10)]
+    [Header("--- Chat ---")]
+    public List<string> chat = new List<string>();
 }
 

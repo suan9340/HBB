@@ -93,7 +93,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
             return;
         }
 
-
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         var _shellonjSelect = _cnt - 1;
         var _obj = seaWeednoteObj[_shellonjSelect].gameObject;
 

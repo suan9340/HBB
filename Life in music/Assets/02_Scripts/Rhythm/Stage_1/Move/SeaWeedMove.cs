@@ -141,7 +141,6 @@ public class SeaWeedMove : MonoBehaviour
 
 
         isAdd = true;
-        UIManager.Instance.RhythmNoteEffect();
 
         if (isFirst)
         {
