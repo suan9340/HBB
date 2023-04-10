@@ -12,4 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354717f40007b7d47b38266a641dd845, type: 3}
   m_Name: Stage2RhythmSO
   m_EditorClassIdentifier: 
-  infos: []
+  infos:
+  - stage2: 0
+    stageRhythm: {fileID: 6900794854004529759, guid: e368d324a430944479acfbd54722e3de,
+      type: 3}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage2: 1
+    stageRhythm: {fileID: 5350606685092706600, guid: c5e830871c96f5849811cfd982602d18,
+      type: 3}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage2: 2
+    stageRhythm: {fileID: 8945753231260126718, guid: f560696b671aa644ebbb1a8d1dfb9fa2,
+      type: 3}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage2: 3
+    stageRhythm: {fileID: 2509645745563083472, guid: 8f341ba773ce9a846b1b722af52c052e,
+      type: 3}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage2: 4
+    stageRhythm: {fileID: 5753192265653330423, guid: 812e960c00733df44a84e84c0ea0ae40,
+      type: 3}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
