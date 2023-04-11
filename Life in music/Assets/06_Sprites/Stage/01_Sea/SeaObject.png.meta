@@ -108,10 +108,10 @@ TextureImporter:
       name: SeaObject_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 24
-        width: 338
-        height: 279
+        x: 0
+        y: 28
+        width: 341
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2364c7c5304afaa42bcbfd2d8d514ffc
-      internalID: 534177347
+      spriteID: 515fb1f1f24437647a29212291a0e265
+      internalID: -1886607212
       vertices: []
       indices: 
       edges: []
@@ -129,10 +129,10 @@ TextureImporter:
       name: SeaObject_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 28
-        width: 189
-        height: 176
+        x: 400
+        y: 40
+        width: 168
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d04386bb998c9f479ee5e7d24a6ce9d
-      internalID: 1823799993
+      spriteID: b77a0497b55541145af9576dc8228e63
+      internalID: -822605967
       vertices: []
       indices: 
       edges: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: SeaObject_2
       rect:
         serializedVersion: 2
-        x: 644
-        y: 32
-        width: 141
-        height: 143
+        x: 645
+        y: 33
+        width: 137
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f62949d433f18d1469e20b7aba51d550
-      internalID: 531539493
+      spriteID: d73f8aa28e6006142b1c7296e6dc91ee
+      internalID: -1023866899
       vertices: []
       indices: 
       edges: []
@@ -171,10 +171,10 @@ TextureImporter:
       name: SeaObject_3
       rect:
         serializedVersion: 2
-        x: 847
-        y: 31
-        width: 289
-        height: 151
+        x: 827
+        y: 18
+        width: 332
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c03a1a5df62db73448291cc52f6d0bbd
-      internalID: -1521825979
+      spriteID: 0573b3d0a0c7ce347b8d9f60242e2038
+      internalID: -382651293
       vertices: []
       indices: 
       edges: []
@@ -192,10 +192,10 @@ TextureImporter:
       name: SeaObject_4
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 32
-        width: 182
-        height: 182
+        x: 1195
+        y: 33
+        width: 187
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d29a51a6bb75c9458058f497ff1fa12
-      internalID: -1628757603
+      spriteID: c2bb4747b4009774ca97a6c2ce9b9409
+      internalID: 1479037847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaObject_5
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 42
+        width: 169
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e81e816c432d9449a9bd762da05bfe
+      internalID: 2029584996
       vertices: []
       indices: 
       edges: []
@@ -212,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1947dd4cd110a8349bd1f6a5d11a45f7
+    spriteID: 82ce7f0196aa3b2439ec97fb091e2a85
     internalID: 0
     vertices: []
     indices: 
@@ -220,11 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SeaObject_0: 534177347
-      SeaObject_1: 1823799993
-      SeaObject_2: 531539493
-      SeaObject_3: -1521825979
-      SeaObject_4: -1628757603
+      SeaObject_0: -1886607212
+      SeaObject_1: -822605967
+      SeaObject_2: -1023866899
+      SeaObject_3: -382651293
+      SeaObject_4: 1479037847
+      SeaObject_5: 2029584996
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
