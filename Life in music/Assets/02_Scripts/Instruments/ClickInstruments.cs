@@ -88,6 +88,8 @@ public class ClickInstruments : MonoBehaviour
                 _loadObj = _so2.infos[num].stageRhythm;
 
                 InstantiateRhythm(_instante, _loadObj);
+
+                NoteManager.Instance.SettingCenterImage(_so2.infos[num].noteEndObj);
                 break;
 
 

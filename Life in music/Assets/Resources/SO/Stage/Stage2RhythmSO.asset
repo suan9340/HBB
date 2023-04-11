@@ -18,33 +18,38 @@ MonoBehaviour:
       type: 3}
     clip: {fileID: 0}
     noteObj: {fileID: 0}
-    noteEndObj: {fileID: 0}
+    noteEndObj: {fileID: 1957958612552360812, guid: 645fd73a1fc4a144cb30461ae44700bc,
+      type: 3}
     chat: []
   - stage2: 1
     stageRhythm: {fileID: 5350606685092706600, guid: c5e830871c96f5849811cfd982602d18,
       type: 3}
     clip: {fileID: 0}
     noteObj: {fileID: 0}
-    noteEndObj: {fileID: 0}
+    noteEndObj: {fileID: 1368886755882742587, guid: 20335042038cd344aae3e85d5cb2fb0b,
+      type: 3}
     chat: []
   - stage2: 2
     stageRhythm: {fileID: 8945753231260126718, guid: f560696b671aa644ebbb1a8d1dfb9fa2,
       type: 3}
     clip: {fileID: 0}
     noteObj: {fileID: 0}
-    noteEndObj: {fileID: 0}
+    noteEndObj: {fileID: 3578896200877195486, guid: 9f3313670e2326945a45805884eff86a,
+      type: 3}
     chat: []
   - stage2: 3
     stageRhythm: {fileID: 2509645745563083472, guid: 8f341ba773ce9a846b1b722af52c052e,
       type: 3}
     clip: {fileID: 0}
     noteObj: {fileID: 0}
-    noteEndObj: {fileID: 0}
+    noteEndObj: {fileID: 4175164232464151315, guid: fa6f8c7c09653664e97ae13755f7d0f5,
+      type: 3}
     chat: []
   - stage2: 4
     stageRhythm: {fileID: 5753192265653330423, guid: 812e960c00733df44a84e84c0ea0ae40,
       type: 3}
     clip: {fileID: 0}
     noteObj: {fileID: 0}
-    noteEndObj: {fileID: 0}
+    noteEndObj: {fileID: 7434819194312618724, guid: 746d3cf0b5f621a449e00ce95ed63edf,
+      type: 3}
     chat: []
