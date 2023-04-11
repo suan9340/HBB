@@ -36,6 +36,12 @@ public static class ConstantManager
     public static string SO_STAGE01_CONCH = "Stage 01_Conch";
     public static string SO_STAGE01_STARFISH = "Stage 01_StarFish";
 
+    public static string SO_STAGE02_BELL = "Stage 02_Bell";
+    public static string SO_STAGE02_WATER = "Stage 02_Water";
+    public static string SO_STAGE02_BOOK = "Stage 02_Book";
+    public static string SO_STAGE02_UMBRELLA = "Stage 02_Umbrella";
+    public static string SO_STAGE02_BROOMSTICK = "Stage 02_BroomStick";
+
     // RhythmManager
     public static string BEAT = "Beat";
 

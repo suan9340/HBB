@@ -22,26 +22,21 @@ public class ConchRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
-    private void Update()
+    protected override void Update()
     {
-        InputKey();
+        base.Update();
     }
-    
-    private void InputKey()
-    {
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
-        {
-            if (isTuto)
-            {
-                Tuto();
-            }
-            else
-            {
-                SetupConch();
 
-                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
-            }
-        }
+    protected override void Tutoing()
+    {
+        Tuto();
+    }
+
+
+    protected override void RhythmGaming()
+    {
+        SetupConch();
+        EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
     private void CheckingTuto()

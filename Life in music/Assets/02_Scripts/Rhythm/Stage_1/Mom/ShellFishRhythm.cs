@@ -20,34 +20,30 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
-    private void Update()
+    protected override void Update()
     {
-        InputKey();
+        base.Update();
     }
 
-    private void InputKey()
+    protected override void Tutoing()
     {
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
-        {
-            if (isTuto)
-            {
-                Tuto();
-
-            }
-            else
-            {
-                SetUpShellfish();
-                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
-            }
-        }
+        Tuto();
     }
 
+
+    protected override void RhythmGaming()
+    {
+        SetUpShellfish();
+        EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+    }
+
+   
     private void CheckingTuto()
     {
         var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_SHELLFISH);
         if (_isTutoGO)
         {
-            Invoke(nameof(Tuto), 1.5f);
+            Invoke(nameof(Tutoing), 1.5f);
         }
         else
         {

@@ -32,5 +32,30 @@ public class TutoMOM : MonoBehaviour
         mySource = GameObject.FindGameObjectWithTag("rhythmTutoSound").GetComponent<AudioSource>();
     }
 
+    protected virtual void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
+        {
+            if (isTuto)
+            {
+                Tutoing();
+
+            }
+            else
+            {
+                RhythmGaming();
+            }
+        }
+    }
+    
+    protected virtual void Tutoing()
+    {
+
+    }
+
+    protected virtual void RhythmGaming()
+    {
+
+    }
 
 }

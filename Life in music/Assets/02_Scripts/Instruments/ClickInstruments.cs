@@ -87,7 +87,11 @@ public class ClickInstruments : MonoBehaviour
                 _loadObj = _so2.infos[num].stageRhythm;
 
                 InstantiateRhythm(_instante, _loadObj);
+                ChatMaanger.Instance.SetChatting(_so2.infos[num].chat);
 
+                GameManager.Instance.SetClip(_so2.infos[num].clip);
+
+                NoteManager.Instance.SettingNoteObj(_so2.infos[num].noteObj);
                 NoteManager.Instance.SettingCenterImage(_so2.infos[num].noteEndObj);
                 break;
 

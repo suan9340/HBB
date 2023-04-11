@@ -22,28 +22,23 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
         
     }
 
-    private void Update()
+    protected override void Update()
     {
-        InputKey();
+        base.Update();
     }
 
-    private void InputKey()
+    protected override void Tutoing()
     {
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
-        {
-            if (isTuto)
-            {
-                Tuto();
-            }
-            else
-            {
-                SetUpSeaweed();
-
-                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
-            }
-        }
+        Tuto();
     }
 
+
+    protected override void RhythmGaming()
+    {
+        SetUpSeaweed();
+        EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+    }
+  
     private void StartRhythm()
     {
         RhythmManager.Instance.TutoClear();

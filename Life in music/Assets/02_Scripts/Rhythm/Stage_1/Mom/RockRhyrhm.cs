@@ -31,28 +31,24 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
         CHeckingTuto();
     }
 
-    private void Update()
+    protected override void Update()
     {
-        InputKey();
+        base.Update();
     }
 
-    private void InputKey()
+    protected override void Tutoing()
     {
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
-        {
-            if (isTuto)
-            {
-                Tuto();
-            }
-            else
-            {
-                SetUpRockFish();
-                StartCoroutine(CrabMove());
-                EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
-            }
-
-        }
+        Tuto();
     }
+
+
+    protected override void RhythmGaming()
+    {
+        SetUpRockFish();
+        StartCoroutine(CrabMove());
+        EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+    }
+
 
     private void CHeckingTuto()
     {
