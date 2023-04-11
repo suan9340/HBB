@@ -63,4 +63,29 @@ public class NoteGen : MonoSingleTon<NoteGen>
         igen = new StarFishGen();
     }
 
+    public void IGenBell()
+    {
+        igen = new BellGen();
+    }
+
+    public void IGenWater()
+    {
+        igen = new WaterGen();
+    }
+
+    public void IGenBook()
+    {
+        igen = new BookGen();
+    }
+
+    public void IGenUmbrella()
+    {
+        igen = new UmbrellaGen();
+    }
+
+    public void IGenBroomStick()
+    {
+        igen = new BroomStickGen();
+    }
+
 }

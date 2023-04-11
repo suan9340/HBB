@@ -14,7 +14,6 @@ public class ClickInstruments : MonoBehaviour
     public GameObject instrumetnsObj = null;
 
     [Space(20)]
-    public DefineManager.Stage_01_Inst instruments;
     public int num;
 
     //public Canvas rhythmCanvas;
