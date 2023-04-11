@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181281408731638177}
   - component: {fileID: 1181281408731638176}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181281408731638191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 0.23, z: 0}
+  m_LocalPosition: {x: 0.58, y: -0.21999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509021801050729330}
   - component: {fileID: 1509021801050729331}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003568537211955375}
   - component: {fileID: 3003568537211955360}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: One2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5256497633189710817}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5256497633189710816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -297,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799231185259232884}
   - component: {fileID: 799231185259232883}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Rhythm (Conch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,8 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}
   loadnum: 2
-  noteObj: []
-  MOMObj: {fileID: 7807677243661936980}
+  noteObjList: []
   tutoTxt:
   - "\uC6B0\uC640 \uC18C\uB77C\uACE0\uB3D9\uC774\uB2E4...!"
   - "\uADFC\uB370 \uC65C \uAEA0\uC838\uC788\uB294\uAC70\uC57C!"
@@ -348,18 +347,7 @@ MonoBehaviour:
   tutoObj:
   - {fileID: 5256497633189710816}
   - {fileID: 1181281408731638191}
-  conchNoteObj: []
   conchMOM: {fileID: 7807677243661936980}
-  tutoTxt:
-  - "\uC6B0\uC640 \uC18C\uB77C\uACE0\uB3D9\uC774\uB2E4...!"
-  - "\uADFC\uB370 \uC65C \uAEA0\uC838\uC788\uB294\uAC70\uC57C!"
-  - "\uC544... \uC774\uAC70 \uC608\uC804\uC5D0 \uBC14\uB2F7\uAC00 \uAC00\uC11C \uB0B4\uAC00
-    \uC8FC\uC6E0\uB358 \uAC70\uC796\uC544 !"
-  - "\uADF8\uB54C \uB0B4\uAC00 \uC774\uAC78 \uC774\uB807\uAC8C \uB9DE\uCD94\uBA74.."
-  - "\uC544, \uC774\uAC70\uC600\uC9C0. \uB410\uB2E4!!"
-  tutoObj:
-  - {fileID: 5256497633189710816}
-  - {fileID: 1181281408731638191}
 --- !u!1 &7068232904280151788
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7068232904280151789}
   - component: {fileID: 7068232904280151790}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Three
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7408928535838796351}
   - component: {fileID: 7408928535838796336}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Zero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7807677243661936981}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: MOM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
