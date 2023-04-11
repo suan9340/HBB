@@ -6,25 +6,11 @@ using UnityEngine.UI;
 
 public class RockRhyrhm : TutoMOM, IRhythmMom
 {
-
-    [Space(20)]
-    [Header("--- RockNoteList ---")]
-    public List<GameObject> rocknoteObj = new List<GameObject>();
-
     [Space(20)]
     [Header("--- Crab ---")]
     public GameObject crab = null;
     public List<Sprite> crabSprite = new List<Sprite>();
     private bool isMoving = false;
-
-    [Space(40)]
-    [Header("------------------------")]
-    [Header("--- TutoObj ---")]
-    public List<String> tutoTxt = new List<String>();
-    public List<GameObject> tutoObj = new List<GameObject>();
-
-    private int tutoNum = 0;
-    public bool isTuto = false;
 
     private readonly WaitForSeconds crabSec = new WaitForSeconds(0.5f);
     private SpriteRenderer crabSpriteCom = null;
@@ -92,7 +78,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
     }
     public void SetUpRockFish()
     {
-        var _cnt = rocknoteObj.Count;
+        var _cnt = noteObjList.Count;
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -103,9 +89,9 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
         UIManager.Instance.RhythmNoteEffect();
 
         var _rockSelect = _cnt - 1;
-        var _obj = rocknoteObj[_rockSelect].gameObject;
+        var _obj = noteObjList[_rockSelect].gameObject;
 
-        rocknoteObj.Remove(_obj);
+        noteObjList.Remove(_obj);
 
 
         _obj.GetComponent<RockMove>().CheckType();
@@ -130,7 +116,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
     public void AddNoteList(GameObject _obj)
     {
-        rocknoteObj.Add(_obj);
+        noteObjList.Add(_obj);
     }
 
     private void SetUpCrab()

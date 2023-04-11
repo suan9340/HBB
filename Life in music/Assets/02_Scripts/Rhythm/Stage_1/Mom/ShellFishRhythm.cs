@@ -7,18 +7,6 @@ using Unity.VisualScripting;
 
 public class ShellFishRhythm : TutoMOM, IRhythmMom
 {
-    [Space(20)]
-    [Header("--- ShellfishNote List ---")]
-    public List<GameObject> shellfishnoteObj = new List<GameObject>();
-
-
-    [Space(20)]
-    [Header("--- TutoObj ---")]
-    public List<String> tutoTxt = new List<String>();
-    public List<GameObject> tutoObj = new List<GameObject>();
-
-    private int tutoNum = 0;
-    private bool isTuto = false;
     private void Awake()
     {
         NoteGen.Instance.IgenShell();
@@ -76,7 +64,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     }
     public void SetUpShellfish()
     {
-        var _cnt = shellfishnoteObj.Count;
+        var _cnt = noteObjList.Count;
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -87,15 +75,15 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         UIManager.Instance.RhythmNoteEffect();
 
         var _shellonjSelect = _cnt - 1;
-        var _obj = shellfishnoteObj[_shellonjSelect].gameObject;
+        var _obj = noteObjList[_shellonjSelect].gameObject;
 
         _obj.GetComponent<ShellfishMove>().ShellfishDown();
-        shellfishnoteObj.Remove(_obj);
+        noteObjList.Remove(_obj);
     }
 
     public void AddNoteList(GameObject _obj)
     {
-        shellfishnoteObj.Add(_obj);
+        noteObjList.Add(_obj);
     }
 
     public void Tuto()

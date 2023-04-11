@@ -12,6 +12,20 @@ public class TutoMOM : MonoBehaviour
     public AudioClip myClip = null;
     public int loadnum;
 
+    [Space(20)]
+    [Header("--- StarFishNoteList ---")]
+    public List<GameObject> noteObjList = new List<GameObject>();
+
+
+    [Space(20)]
+    [Header("--- TutoObj ---")]
+    public List<String> tutoTxt = new List<String>();
+    public List<GameObject> tutoObj = new List<GameObject>();
+    [Header("-----------------")]
+
+    protected int tutoNum = 0;
+    protected bool isTuto = false;
+
     protected virtual void Start()
     {
         myAnim = GetComponent<Animator>();

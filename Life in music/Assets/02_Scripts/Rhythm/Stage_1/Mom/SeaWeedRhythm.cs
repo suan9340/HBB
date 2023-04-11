@@ -5,25 +5,8 @@ using UnityEngine;
 
 public class SeaWeedRhythm : TutoMOM, IRhythmMom
 {
-
-    [Space(20)]
-    [Header("--- SeaWweedNote List ---")]
-    public List<GameObject> seaWeednoteObj = new List<GameObject>();
-
-
     [Space(20)]
     public GameObject seaWeedMOM = null;
-
-
-    [Space(40)]
-    [Header("------------------------")]
-    [Header("--- TutoObj ---")]
-    public List<String> tutoTxt = new List<String>();
-    public List<GameObject> tutoObj = new List<GameObject>();
-
-    private int tutoNum = 0;
-    private bool isTuto = false;
-
 
     private void Awake()
     {
@@ -86,7 +69,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
     public void SetUpSeaweed()
     {
-        var _cnt = seaWeednoteObj.Count;
+        var _cnt = noteObjList.Count;
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -95,17 +78,17 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         var _shellonjSelect = _cnt - 1;
-        var _obj = seaWeednoteObj[_shellonjSelect].gameObject;
+        var _obj = noteObjList[_shellonjSelect].gameObject;
 
         // _obj.GetComponent<SeaWeedMove>().ShellfishDown();
         _obj.GetComponent<SeaWeedMove>().SeaweedUp();
-        seaWeednoteObj.Remove(_obj);
+        noteObjList.Remove(_obj);
 
     }
 
     public void AddNoteList(GameObject _obj)
     {
-        seaWeednoteObj.Add(_obj);
+        noteObjList.Add(_obj);
     }
 
     private void SetUpSeaweedMOM()

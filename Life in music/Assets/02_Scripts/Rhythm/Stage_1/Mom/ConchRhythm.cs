@@ -6,22 +6,7 @@ using UnityEngine;
 public class ConchRhythm : TutoMOM, IRhythmMom
 {
     [Space(20)]
-    [Header("--- ConchNote List ---")]
-    public List<GameObject> conchNoteObj = new List<GameObject>();
-
-    [Space(20)]
     public GameObject conchMOM = null;
-
-
-    [Space(40)]
-    [Header("------------------------")]
-    [Header("--- TutoObj ---")]
-    public List<String> tutoTxt = new List<String>();
-    public List<GameObject> tutoObj = new List<GameObject>();
-
-    private int tutoNum = 0;
-    private bool isTuto = false;
-
 
     private void Awake()
     {
@@ -84,12 +69,12 @@ public class ConchRhythm : TutoMOM, IRhythmMom
 
     public void AddNoteList(GameObject _obj)
     {
-        conchNoteObj.Add(_obj);
+        noteObjList.Add(_obj);
     }
 
     private void SetupConch()
     {
-        var _cnt = conchNoteObj.Count;
+        var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
         {
@@ -101,11 +86,11 @@ public class ConchRhythm : TutoMOM, IRhythmMom
         UIManager.Instance.RhythmNoteEffect();
 
         var _conchOnjSelect = _cnt - 1;
-        var _obj = conchNoteObj[_conchOnjSelect].gameObject;
+        var _obj = noteObjList[_conchOnjSelect].gameObject;
 
         _obj.GetComponent<ConchMove>().ConchDown();
 
-        conchNoteObj.Remove(_obj);
+        noteObjList.Remove(_obj);
 
 
         //   Debug.Log(_cnt);

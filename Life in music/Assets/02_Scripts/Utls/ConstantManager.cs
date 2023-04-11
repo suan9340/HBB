@@ -22,6 +22,13 @@ public static class ConstantManager
     public static string CONCHLIST_ADD = "ConchListAdd";
     public static string STARFISH_ADD = "StarFishListAdd";
 
+    // Stage_02
+    public static string BELL_ADD = "BellListAdd";
+    public static string WATER_ADD = "WaterListAdd";
+    public static string BOOK_ADD = "BookListAdd";
+    public static string UMBRELLA_ADD = "UmbrellaListAdd";
+    public static string BROOMSTICK_ADD = "BroomStickListAdd";
+
     // RhythmSOName
     public static string SO_STAGE01_SHELLFISH = "Stage01_Shellfish";
     public static string SO_STAGE01_Rock = "Stage 01_Rock";

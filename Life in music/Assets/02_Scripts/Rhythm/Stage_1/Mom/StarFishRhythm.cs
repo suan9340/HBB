@@ -7,19 +7,8 @@ using UnityEngine;
 public class StarFishRhythm : TutoMOM, IRhythmMom
 {
     [Space(20)]
-    [Header("--- StarFishNoteList ---")]
-    public List<GameObject> starfishNoteObj = new List<GameObject>();
-
-    [Space(20)]
     public GameObject starFIshImg = null;
 
-    [Space(20)]
-    [Header("--- TutoObj ---")]
-    public List<String> tutoTxt = new List<String>();
-    public List<GameObject> tutoObj = new List<GameObject>();
-
-    private int tutoNum = 0;
-    private bool isTuto = false;
     private void Awake()
     {
         NoteGen.Instance.IGenStarFish();
@@ -80,7 +69,7 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
     public void SetUpStarfish()
     {
-        var _cnt = starfishNoteObj.Count;
+        var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
         {
@@ -92,15 +81,15 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
         UIManager.Instance.RhythmNoteEffect();
 
         var _starfishonjSelect = _cnt - 1;
-        var _obj = starfishNoteObj[_starfishonjSelect].gameObject;
+        var _obj = noteObjList[_starfishonjSelect].gameObject;
 
         _obj.GetComponent<StarFishMove>().StarfishDown();
-        starfishNoteObj.Remove(_obj);
+        noteObjList.Remove(_obj);
     }
 
     public void AddNoteList(GameObject _obj)
     {
-        starfishNoteObj.Add(_obj);
+        noteObjList.Add(_obj);
     }
 
     private void StarFishMOM()
