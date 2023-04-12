@@ -32,6 +32,10 @@ public class RhythmData : ScriptableObject
     public class MyData
     {
         public bool isTuto = false;
+        public bool isClear = false;
+
+        [Header("----------")]
+        [Space(20)]
         public string name;
         public AudioClip AudioClip;
         public int Bpm = 60;

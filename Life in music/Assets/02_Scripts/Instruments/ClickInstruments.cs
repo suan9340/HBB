@@ -15,6 +15,7 @@ public class ClickInstruments : MonoBehaviour
 
     [Space(20)]
     public int num;
+    public bool isClear = false;
 
     //public Canvas rhythmCanvas;
 
@@ -69,15 +70,16 @@ public class ClickInstruments : MonoBehaviour
         {
             case DefineManager.StageNames.Sea_01:
                 Stage01_SO _so1 = Resources.Load<Stage01_SO>("SO/Stage/Stage1RhythmSO");
+
                 _loadObj = _so1.infos[num].stageRhythm;
 
                 InstantiateRhythm(_instante, _loadObj);
                 ChatMaanger.Instance.SetChatting(_so1.infos[num].chat);
-
                 GameManager.Instance.SetClip(_so1.infos[num].clip);
 
                 NoteManager.Instance.SettingNoteObj(_so1.infos[num].noteObj);
                 NoteManager.Instance.SettingCenterImage(_so1.infos[num].noteEndObj);
+
                 break;
 
 
@@ -113,6 +115,8 @@ public class ClickInstruments : MonoBehaviour
     public void OnClickEvent()
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
+
+        if (isClear) return;
 
         effectAudio.PlayOneShot(clip);
         GameManager.Instance.SettingGameState(DefineManager.GameState.Rhythm);

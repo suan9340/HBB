@@ -92,6 +92,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythmY()
     {
+        data.isClear = true;
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
         Debug.Log("ENd!!!!!!");
@@ -129,11 +130,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     {
         //data = RhythmData.LoadData(_name);
         data = loadData;
+
         beatPerSec = 1f / data.BestPerSec;
         audioSource.clip = data.AudioClip;
 
         Invoke(nameof(StartRhythmGame), 1.5f);
     }
+
 
     public void StartRhythmGame()
     {
