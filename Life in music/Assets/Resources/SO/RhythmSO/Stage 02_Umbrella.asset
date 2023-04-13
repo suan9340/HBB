@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stage 02_Umbrella
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
+    isTuto: 1
+    isClear: 0
     name: Stage 02_Umbrella
     AudioClip: {fileID: 0}
     Bpm: 60

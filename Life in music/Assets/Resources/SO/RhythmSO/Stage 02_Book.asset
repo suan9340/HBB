@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stage 02_Book
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
+    isTuto: 1
+    isClear: 0
     name: Stage 02_Book
     AudioClip: {fileID: 0}
     Bpm: 60

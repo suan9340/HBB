@@ -11,6 +11,7 @@ public static class ConstantManager
     // UIManager
     public static string START_RHYTHM = "StartRhythm";
     public static string START_RHYTHM_PANEL = "StartRhythmPanel";
+    public static string COIN_UI = "CoinUIShow";
 
     // Stage_01
     public static string SHELLFISH_MUSIC = "ShellfishMusic";

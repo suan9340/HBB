@@ -72,6 +72,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
         }
 
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         var _shellonjSelect = _cnt - 1;
         var _obj = noteObjList[_shellonjSelect].gameObject;
 

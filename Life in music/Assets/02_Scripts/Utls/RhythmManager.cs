@@ -92,6 +92,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythmY()
     {
+       
         data.isClear = true;
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
@@ -168,9 +169,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM);
         SoundManager.Instance.CheckYOnAudio(currentStage.clip);
 
-
+        EventManager.TriggerEvent(ConstantManager.COIN_UI);
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
+
         ChatMaanger.Instance.Text();
         SoundManager.Instance.PlayLoopSource(1f);
         yield break;
