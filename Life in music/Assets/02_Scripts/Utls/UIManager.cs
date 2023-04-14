@@ -26,12 +26,26 @@ public class UIManager : MonoSingleTon<UIManager>
     public Animator rhythmNotePanel = null;
     private bool isRhythmPanel = false;
 
+
+    [Space(20)]
+    [Header("StageEndAnimation")]
+    public Animator stageEnd = null;
+    private bool isStageEnd = false;
+
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
 
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
         EventManager.StartListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            stageEnd.SetTrigger("isStageEnd");
+        }
     }
 
     public void OnclickAudioUI()
@@ -109,5 +123,16 @@ public class UIManager : MonoSingleTon<UIManager>
         yield return rhythmEffectSec;
         rhythmEffectImage.enabled = false;
         yield break;
+    }
+
+    private void OnStartStageEnd()
+    {
+        if (isStageEnd)
+        {
+            return;
+        }
+
+        isStageEnd = true;
+        stageEnd.SetTrigger("isStageEnd");
     }
 }

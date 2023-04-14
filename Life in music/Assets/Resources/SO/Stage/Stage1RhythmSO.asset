@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Stage1RhythmSO
   m_EditorClassIdentifier: 
   infos:
-  - isClear: 1
-    stage1: 0
+  - stage1: 0
     stageRhythm: {fileID: 5363186388627015707, guid: 24f7abedec243a2428b5d7538839b660,
       type: 3}
     clip: {fileID: 8300000, guid: a5283f75080e59f4cae1a3787ea68cce, type: 3}
@@ -25,8 +24,7 @@ MonoBehaviour:
     chat:
     - "\uBD88\uAC00\uC0AC\uB9AC.... \uADC0\uC5FD\uB2E4...."
     - "\uC608\uC804\uC5D0 \uBC14\uB2F7\uAC00\uC5D0\uC11C \uC8FC\uC6B4\uC801 \uC788\uC5C8\uB294\uB370.."
-  - isClear: 0
-    stage1: 1
+  - stage1: 1
     stageRhythm: {fileID: 6777877845949713200, guid: caadd12e0d058e44eb4500fd4029b934,
       type: 3}
     clip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
@@ -36,8 +34,7 @@ MonoBehaviour:
       type: 3}
     chat:
     - "\uC870\uAC1C \uC18C\uB9AC\uAC00 \uC4F8 \uB370 \uC5C6\uC774 \uC88B\uB124\u2026."
-  - isClear: 0
-    stage1: 2
+  - stage1: 2
     stageRhythm: {fileID: 6643353951219872024, guid: cb366ef1df1f2b943bea1f210c84586b,
       type: 3}
     clip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
@@ -49,8 +46,7 @@ MonoBehaviour:
     - "\uBB50\uC9C0...?"
     - "\uC18C\uB77C\uACE0\uB3D9 \uC18C\uB9AC\uB97C \uB4E4\uC73C\uB2C8 \uBB54\uAC00
       \uB5A0\uC624\uB974\uB294 \uAC83 \uAC19\uC544"
-  - isClear: 0
-    stage1: 3
+  - stage1: 3
     stageRhythm: {fileID: 2600144270531631212, guid: 761721b8d14b9254397fe927bf11fb8e,
       type: 3}
     clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
@@ -61,8 +57,7 @@ MonoBehaviour:
     chat:
     - "\uAC00\uC871\uB4E4\uC774\uB791 \uBC14\uB2F7\uAC00 \uC640\uC11C \uB3CC\uB9F9\uC774\uB85C
       \uBB3C \uC218\uC81C\uBE44 \uD55C \uAC8C \uB5A0\uC624\uB978\uB2E4."
-  - isClear: 0
-    stage1: 4
+  - stage1: 4
     stageRhythm: {fileID: 2095509684888760273, guid: 9fb06c0d086b5a849b9c7cf0548052d7,
       type: 3}
     clip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
@@ -73,4 +68,4 @@ MonoBehaviour:
     chat:
     - "\uBBF8\uC5ED\uC774\uB124..?"
     - "\uACE0\uB4F1\uD559\uC0DD \uB54C \uC5C4\uB9C8\uAC00 \uB053\uC5EC\uC8FC\uC2E0
-      \uBBF8\uC5ED\uAD6D \uCC38 \uB9DB\uC788\uC5C8\uC740\uB370."
+      \uBBF8\uC5ED\uAD6D \uCC38 \uB9DB\uC788\uC5C8\uB294\uB370."

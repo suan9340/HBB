@@ -70,7 +70,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
             Debug.Log("List Count is Zerooo");
             return;
         }
-
+        UIManager.Instance.RhythmNoteEffect();
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         var _shellonjSelect = _cnt - 1;
@@ -84,6 +84,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
     public void AddNoteList(GameObject _obj)
     {
+        UIManager.Instance.RhythmNoteEffect();
         noteObjList.Add(_obj);
     }
 
