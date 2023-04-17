@@ -9,9 +9,17 @@ public class ObjectClear : MonoBehaviour
 
     public bool isCCC = false;
 
+    [Space(20)]
+    public StageCheckSO stageCheckSo = null;
+
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
+
+        if (stageCheckSo == null)
+        {
+            stageCheckSo = Resources.Load<StageCheckSO>("SO/RhythmCheck/CheckSO");
+        }
     }
 
     private void Update()
@@ -24,6 +32,11 @@ public class ObjectClear : MonoBehaviour
         {
             IsNotClear();
         }
+    }
+
+    private void CheckCurrentIsClear()
+    {
+
     }
 
     public void IsClear()
@@ -54,4 +67,18 @@ public class ObjectClear : MonoBehaviour
         return true;
     }
 
+    public bool CheckIsClear(int num)
+    {
+        var _isClearing = stageCheckSo.cObject[num].isClear;
+
+        //Debug.Log(_isClearing);
+        if (_isClearing)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

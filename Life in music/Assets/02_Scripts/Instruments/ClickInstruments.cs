@@ -10,12 +10,14 @@ public class ClickInstruments : MonoBehaviour
     [Header("AudioSound")]
     public AudioSource effectAudio = null;
     public AudioClip clip = null;
-    [Space(20)]
     public GameObject instrumetnsObj = null;
 
     [Space(20)]
     public int num;
-    public bool isClear = false;
+    public int plusNum = 0;
+
+    [Space(20)]
+    public ObjectClear objectClear = null;
 
     //public Canvas rhythmCanvas;
 
@@ -26,6 +28,8 @@ public class ClickInstruments : MonoBehaviour
     private void Start()
     {
         CheckAudioComponents();
+
+        CheckCurrnetClearState();
     }
 
     private void Update()
@@ -57,6 +61,10 @@ public class ClickInstruments : MonoBehaviour
         {
             var _effectobj = GameObject.Find("SoundManager");
             effectAudio = _effectobj.transform.GetChild(0)?.GetComponent<AudioSource>();
+        }
+        if (objectClear == null)
+        {
+            objectClear = GetComponent<ObjectClear>();
         }
     }
 
@@ -118,8 +126,43 @@ public class ClickInstruments : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
 
-        if (isClear) return;
+        if (BoolCurrnetIsClear())
+        {
+            LoadRhythmStart();
+        }
+        else
+        {
+            return;
+        }
 
+    }
+
+    private void CheckCurrnetClearState()
+    {
+        if (BoolCurrnetIsClear())
+        {
+            return;
+        }
+        else
+        {
+            objectClear.isCCC = true;
+        }
+    }
+
+    private bool BoolCurrnetIsClear()
+    {
+        if (objectClear.CheckIsClear(num + plusNum))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private void LoadRhythmStart()
+    {
         effectAudio.PlayOneShot(clip);
         GameManager.Instance.SettingGameState(DefineManager.GameState.Rhythm);
 

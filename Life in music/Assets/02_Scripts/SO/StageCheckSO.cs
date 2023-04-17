@@ -5,8 +5,16 @@ using UnityEngine;
 
 
 [Serializable]
-[CreateAssetMenu(fileName = "Stage1RhythmCheckSO", menuName = "ScriptableObject/STAGECheck/StageRhythmCheckSO")]
+[CreateAssetMenu(fileName = "CheckSO", menuName = "ScriptableObject/STAGECheck/CheckClear")]
 public class StageCheckSO : ScriptableObject
-{ 
-  
+{
+    public List<ClearObjInfo> cObject = new List<ClearObjInfo>();
 }
+
+[Serializable]
+public class ClearObjInfo
+{
+    public string name;
+    public bool isClear;
+}
+
