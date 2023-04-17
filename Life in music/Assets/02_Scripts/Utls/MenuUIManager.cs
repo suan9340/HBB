@@ -98,18 +98,32 @@ public class MenuUIManager : MonoBehaviour
     }
     #endregion
 
+
     private void Start()
     {
+
+        OnClickBoard();
+        OnClickStart();
+
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.lockState = CursorLockMode.None;
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+            
+    //    }
+    //}
+
     public void OnClickBoard()
     {
-        if (GameManager.Instance.GetGameState() == DefineManager.GameState.Start)
-        {
-            return;
-        }
+        //if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu)
+        //{
+        //    return;
+        //}
 
         if (isOut)
         {

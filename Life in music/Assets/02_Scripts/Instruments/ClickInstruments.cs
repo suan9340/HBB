@@ -37,6 +37,8 @@ public class ClickInstruments : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (GameManager.Instance.gameState == DefineManager.GameState.CantClick) return;
+
             rayOrigin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hit = Physics2D.Raycast(rayOrigin, Vector2.zero);
             if (hit.collider != null)
