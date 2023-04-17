@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
@@ -101,30 +100,11 @@ public class MenuUIManager : MonoBehaviour
 
     private void Start()
     {
-
-        OnClickBoard();
-        OnClickStart();
-
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.lockState = CursorLockMode.None;
     }
-
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-            
-    //    }
-    //}
-
     public void OnClickBoard()
     {
-        //if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu)
-        //{
-        //    return;
-        //}
-
         if (isOut)
         {
             return;
@@ -166,9 +146,22 @@ public class MenuUIManager : MonoBehaviour
         yield return null;
     }
 
-    public void OnClickStage()
+    public void OnClickStage(int num)
     {
-        SceneManager.LoadScene(1);
+        switch (num)
+        {
+            case 0:
+                GameSceneManager.Load(GameSceneManager.Scene.FirstTuto);
+                break;
+
+            case 1:
+                GameSceneManager.Load(GameSceneManager.Scene.Stage_02);
+                break;
+
+            case 2:
+                GameSceneManager.Load(GameSceneManager.Scene.Stage_03);
+                break;
+        }
     }
 
     private void SettingStageBtn(bool _isOn)
@@ -190,5 +183,6 @@ public class MenuUIManager : MonoBehaviour
     {
         startAnim.SetTrigger("isClickStartBtn");
         GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+        GameSceneManager.Load(GameSceneManager.Scene.Room);
     }
 }

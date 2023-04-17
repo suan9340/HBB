@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EndManager : MonoSingleTon<EndManager>
 {
@@ -60,16 +59,5 @@ public class EndManager : MonoSingleTon<EndManager>
         GameManager.Instance.SettingGameState(DefineManager.GameState.CantClick);
         isStageEnd = true;
         stageEnd.SetTrigger("isStageEnd");
-    }
-
-    public void OnClickEndButton()
-    {
-        Debug.Log("Menu GO");
-        SceneManager.LoadScene(0);
-    }
-
-    public void OnclickMenu()
-    {
-        SceneManager.LoadScene(0);
     }
 }

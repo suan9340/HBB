@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEngine.SceneManagement;
 
 public class EndChat : MonoBehaviour
 {
@@ -108,12 +107,12 @@ public class EndChat : MonoBehaviour
     {
         Debug.Log("qwe");
         blackImage.gameObject.SetActive(true);
-        blackImage.DOFade(1, 1);
+        //blackImage.DOFade(1, 1);
         Invoke(nameof(LoadScene), 1f);
     }
 
     private void LoadScene()
     {
-        SceneManager.LoadScene(0);
+        GameSceneManager.Load(GameSceneManager.Scene.Room);
     }
 }
