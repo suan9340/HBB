@@ -29,7 +29,7 @@ public class ClickInstruments : MonoBehaviour
     {
         CheckAudioComponents();
 
-        CheckCurrnetClearState();
+        //CheckCurrnetClearState();
     }
 
     private void Update()
@@ -62,10 +62,10 @@ public class ClickInstruments : MonoBehaviour
             var _effectobj = GameObject.Find("SoundManager");
             effectAudio = _effectobj.transform.GetChild(0)?.GetComponent<AudioSource>();
         }
-        if (objectClear == null)
-        {
-            objectClear = GetComponent<ObjectClear>();
-        }
+        //if (objectClear == null)
+        //{
+        //    objectClear = GetComponent<ObjectClear>();
+        //}
     }
 
     private void CheckStage()
@@ -126,14 +126,15 @@ public class ClickInstruments : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
 
-        if (BoolCurrnetIsClear())
-        {
-            LoadRhythmStart();
-        }
-        else
-        {
-            return;
-        }
+        LoadRhythmStart();
+
+        //if (BoolCurrnetIsClear())
+        //{
+        //}
+        //else
+        //{
+        //    return;
+        //}
 
     }
 
