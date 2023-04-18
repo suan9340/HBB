@@ -25,7 +25,7 @@ public static class DefineManager
     public enum Stage_02_School
     {
         Bell,
-        Water,
+        Ballon,
         Book,
         Umbrella,
         BroomStick,
