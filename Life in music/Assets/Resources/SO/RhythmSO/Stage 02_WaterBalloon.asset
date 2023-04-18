@@ -10,82 +10,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5b8c3aa21ca0ec4187e857f51593d3b, type: 3}
-  m_Name: Stage 02_BroomStick
+  m_Name: Stage 02_WaterBalloon
   m_EditorClassIdentifier: 
   myData:
     isTuto: 1
     isClear: 0
-    name: Stage 02_BroomStick
-    AudioClip: {fileID: 8300000, guid: e06be5130aa4a9b4ea4ffc34d3dd2f68, type: 3}
+    name: Stage 02_WaterBalloon
+    AudioClip: {fileID: 8300000, guid: 41423dadcfa6da14295edcd9ff041bba, type: 3}
     Bpm: 110
     BeatTrnCount: 3
     BestPerSec: 1
-    MusicPlayTime: 200
+    MusicPlayTime: 60
     NoteList:
-    - beatFlag: 000000
     - beatFlag: 010001
-    - beatFlag: 000000
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 000001
+    - beatFlag: 010001
+    - beatFlag: 000101
+    - beatFlag: 010001
     - beatFlag: 000101
     - beatFlag: 000000
-    - beatFlag: 000001
     - beatFlag: 000000
-    - beatFlag: 000001
     - beatFlag: 000000
-    - beatFlag: 010001
     - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 010001
-    - beatFlag: 000000
-    - beatFlag: 000101
-    - beatFlag: 000000
-    - beatFlag: 000001
-    - beatFlag: 000000
-    - beatFlag: 000001
     - beatFlag: 000000
     - beatFlag: 000000
     - beatFlag: 000000
