@@ -16,7 +16,7 @@ MonoBehaviour:
   - stage2: 0
     stageRhythm: {fileID: 6900794854004529759, guid: e368d324a430944479acfbd54722e3de,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9bae8a051e676a44cb67a192ecbe78e6, type: 3}
     noteObj: {fileID: 1456901333465604844, guid: a755e1d1a233ac4428e02d1e3e9651f5,
       type: 3}
     noteEndObj: {fileID: 1957958612552360812, guid: 645fd73a1fc4a144cb30461ae44700bc,
@@ -25,7 +25,7 @@ MonoBehaviour:
   - stage2: 1
     stageRhythm: {fileID: 5350606685092706600, guid: c5e830871c96f5849811cfd982602d18,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 41423dadcfa6da14295edcd9ff041bba, type: 3}
     noteObj: {fileID: 1604200108226648397, guid: 40be9c4453b2ff641a15de5e704d607c,
       type: 3}
     noteEndObj: {fileID: 1368886755882742587, guid: 20335042038cd344aae3e85d5cb2fb0b,
@@ -34,7 +34,7 @@ MonoBehaviour:
   - stage2: 2
     stageRhythm: {fileID: 8945753231260126718, guid: f560696b671aa644ebbb1a8d1dfb9fa2,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 74ecbcccf87ba7b4ca477c0ba02db94d, type: 3}
     noteObj: {fileID: 7034094833146380405, guid: c3f4f6e1e2873de4ca0ce6aee7e1b754,
       type: 3}
     noteEndObj: {fileID: 3578896200877195486, guid: 9f3313670e2326945a45805884eff86a,
@@ -43,7 +43,7 @@ MonoBehaviour:
   - stage2: 3
     stageRhythm: {fileID: 2509645745563083472, guid: 8f341ba773ce9a846b1b722af52c052e,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 8154091944a9d7d43a658143838102ac, type: 3}
     noteObj: {fileID: 2314981168970244705, guid: df0f1a64a4039084a9c2deb9334234c6,
       type: 3}
     noteEndObj: {fileID: 4175164232464151315, guid: fa6f8c7c09653664e97ae13755f7d0f5,
@@ -52,7 +52,7 @@ MonoBehaviour:
   - stage2: 4
     stageRhythm: {fileID: 5753192265653330423, guid: 812e960c00733df44a84e84c0ea0ae40,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: e06be5130aa4a9b4ea4ffc34d3dd2f68, type: 3}
     noteObj: {fileID: 2579449367408089196, guid: ad0369a651584b14fbb62729f9c8f505,
       type: 3}
     noteEndObj: {fileID: 7434819194312618724, guid: 746d3cf0b5f621a449e00ce95ed63edf,

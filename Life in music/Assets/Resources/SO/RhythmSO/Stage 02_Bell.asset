@@ -22,16 +22,33 @@ MonoBehaviour:
     BestPerSec: 2
     MusicPlayTime: 100
     NoteList:
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 01000001
@@ -39,34 +56,6 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 01000001
     - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 01000001
     - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 01000001
@@ -75,26 +64,9 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000001
     - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
@@ -102,35 +74,20 @@ MonoBehaviour:
     - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 01000001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 01000001
+    - beatFlag: 00000000
     - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 01000001
@@ -139,6 +96,14 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 01000001
+    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
@@ -146,10 +111,45 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000001
-    - beatFlag: 00000001
     - beatFlag: 00000000
-    - beatFlag: 00000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000

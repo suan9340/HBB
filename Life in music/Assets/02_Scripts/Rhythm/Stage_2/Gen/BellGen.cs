@@ -10,7 +10,22 @@ public class BellGen : MonoBehaviour, IGen
         {
             if (list[i])
             {
-                EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+                if (i == 0)
+                {
+                    BellMove.BellAdd(BellMove.BellPos.Left);
+                }
+                if (i == 1)
+                {
+                    BellMove.BellAdd(BellMove.BellPos.Mid);
+                }
+                if (i == 2)
+                {
+                    BellMove.BellAdd(BellMove.BellPos.Right );
+                }
+                if (i == 3)
+                {
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
+                }
             }
         }
     }

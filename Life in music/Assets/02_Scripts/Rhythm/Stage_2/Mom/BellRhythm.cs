@@ -14,6 +14,8 @@ public class BellRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.BELL_ADD, AddNoteList);
+
+        CheckingTuto();
     }
 
     protected override void Update()
@@ -23,14 +25,16 @@ public class BellRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
+        SetUpBell();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
     protected override void Tutoing()
     {
-
-
+        Tuto();
     }
+
+
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
@@ -41,6 +45,37 @@ public class BellRhythm : TutoMOM, IRhythmMom
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_BELL);
+    }
+
+    private void CheckingTuto()
+    {
+        var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_BELL);
+        if (_isTutoGo)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
+    public void SetUpBell()
+    {
+        var _cnt = noteObjList.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        var _bellSelect = _cnt - 1;
+        var _obj = noteObjList[_bellSelect].gameObject;
+
+        _obj.GetComponent<BellMove>().BellUp();
+        noteObjList.Remove(_obj);
     }
 
     public void Tuto()

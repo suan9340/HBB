@@ -47,15 +47,8 @@ public class TutoMOM : MonoBehaviour
             }
         }
     }
-    
-    protected virtual void Tutoing()
-    {
 
-    }
+    protected virtual void Tutoing() { }
 
-    protected virtual void RhythmGaming()
-    {
-
-    }
-
+    protected virtual void RhythmGaming() { }
 }

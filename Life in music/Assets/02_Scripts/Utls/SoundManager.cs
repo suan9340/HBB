@@ -9,7 +9,6 @@ public class SoundManager : MonoSingleTon<SoundManager>
     [Header("--- LoopStation Source ---")]
     public List<LoopInfo> loopStationsources = new List<LoopInfo>();
 
-    public AudioSource rhythmAudio = null;
 
     public int num = 1;
 
