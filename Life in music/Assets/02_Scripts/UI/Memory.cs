@@ -10,6 +10,7 @@ public class Memory : MonoBehaviour
 {
     public GameObject coinParent = null;
     public Text counterTxt;
+    public Image memoryImage = null;
 
     private Vector3[] coinPos;
     private Quaternion[] coinRotate;
@@ -63,8 +64,8 @@ public class Memory : MonoBehaviour
             coinParent.transform.GetChild(i).GetComponent<RectTransform>().DOAnchorPos(new Vector2(760f, 448f), 0.8f).SetDelay(_delay + 0.5f)
                 .SetEase(Ease.InBack);
 
-            coinParent.transform.GetChild(i).DORotate(Vector3.zero, 0.5f).SetDelay(_delay + 0.5f)
-                .SetEase(Ease.Flash);
+            coinParent.transform.GetChild(i).DORotate(Vector3.zero, 0.7f).SetDelay(_delay + 0.7f)
+                .SetEase(Ease.Flash).OnComplete(ImgeBig);
 
             coinParent.transform.GetChild(i).DOScale(0f, 0.3f).SetDelay(_delay + 1.8f)
                 .SetEase(Ease.OutBack).OnComplete(CountCoinNum);
@@ -77,8 +78,15 @@ public class Memory : MonoBehaviour
 
     private void CountCoinNum()
     {
+
         coinTxt += 1;
         counterTxt.text = coinTxt.ToString();
+    }
+
+    private void ImgeBig()
+    {
+        memoryImage.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        memoryImage.transform.DOScale(new Vector3(1f, 1f, 1f), 0.05f);
     }
 
     private IEnumerator CountCoin(int _coinNum)

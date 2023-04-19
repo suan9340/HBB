@@ -1137,7 +1137,7 @@ RectTransform:
   - {fileID: 448106504}
   - {fileID: 877031830}
   m_Father: {fileID: 520809754}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1870,6 +1870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinParent: {fileID: 585827513}
   counterTxt: {fileID: 303790876}
+  memoryImage: {fileID: 673100135}
   coinNum: 0
   coinTxt: 0
 --- !u!1 &414539898
@@ -2777,8 +2778,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1737979639}
-  - {fileID: 258279468}
   - {fileID: 1640101897}
+  - {fileID: 258279468}
   - {fileID: 810500826}
   m_Father: {fileID: 396096703}
   m_RootOrder: 1
@@ -3946,7 +3947,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1ac0d036ae355484f9549f48a1e5ebaf, type: 3}
   instrumetnsObj: {fileID: 797171050616133370}
   num: 0
-  isClear: 0
+  plusNum: 0
   objectClear: {fileID: 878777896}
 --- !u!60 &878777895
 PolygonCollider2D:
@@ -4190,7 +4191,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
   instrumetnsObj: {fileID: 797171050928764302}
   num: 4
-  isClear: 0
+  plusNum: 0
   objectClear: {fileID: 928578001}
 --- !u!60 &928578000
 PolygonCollider2D:
@@ -4943,7 +4944,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
   instrumetnsObj: {fileID: 797171051238278162}
   num: 1
-  isClear: 0
+  plusNum: 0
   objectClear: {fileID: 1059360913}
 --- !u!60 &1059360912
 PolygonCollider2D:
@@ -5626,7 +5627,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 9f3fc8bcec70af4488e4f586f8300f5e, type: 3}
   instrumetnsObj: {fileID: 797171051204083096}
   num: 3
-  isClear: 0
+  plusNum: 0
   objectClear: {fileID: 1281244503}
 --- !u!60 &1281244502
 PolygonCollider2D:
@@ -6278,7 +6279,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 98a029474e1fd0642a12670a011d082c, type: 3}
   instrumetnsObj: {fileID: 797171050733291734}
   num: 2
-  isClear: 0
+  plusNum: 0
   objectClear: {fileID: 1512047738}
 --- !u!60 &1512047737
 PolygonCollider2D:
@@ -6733,7 +6734,7 @@ RectTransform:
   - {fileID: 1614894663}
   - {fileID: 379930188}
   m_Father: {fileID: 520809754}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

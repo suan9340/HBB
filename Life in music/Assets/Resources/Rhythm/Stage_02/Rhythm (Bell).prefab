@@ -110,3 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 0}
   loadnum: 5
+  noteObjList: []
+  tutoTxt:
+  - "\uC73C\uC545"
+  tutoObj: []
