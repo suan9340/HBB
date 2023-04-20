@@ -14,6 +14,8 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.BROOMSTICK_ADD, AddNoteList);
+
+        CheckingTuto();
     }
 
     protected override void Update()
@@ -23,12 +25,13 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
+        SetUpBroomStick();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
     protected override void Tutoing()
     {
-
+        Tuto();
     }
 
     public void AddNoteList(GameObject _obj)
@@ -41,6 +44,37 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_BROOMSTICK);
+    }
+
+    private void CheckingTuto()
+    {
+        var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_BROOMSTICK);
+        if (_isTutoGo)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
+    private void SetUpBroomStick()
+    {
+        var _cnt = noteObjList.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        var _broomStickSelect = _cnt - 1;
+        var _obj = noteObjList[_broomStickSelect].gameObject;
+
+        _obj.GetComponent<BellMove>().BellUp();
+        noteObjList.Remove(_obj);
     }
 
     public void Tuto()
