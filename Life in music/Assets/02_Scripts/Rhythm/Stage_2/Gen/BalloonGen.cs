@@ -12,13 +12,9 @@ public class BalloonGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
-                    BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Left);
+                    BalloonMove.BalloonAdd();
                 }
                 if (i == 1)
-                {
-                    BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Right);
-                }
-                if (i == 2)
                 {
                     EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
                 }

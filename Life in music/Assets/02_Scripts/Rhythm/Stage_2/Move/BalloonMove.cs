@@ -9,7 +9,7 @@ public class BalloonMove : MonoBehaviour
         Left,
         Right,
     }
-    public static void BalloonAdd(BalloonPos _pos)
+    public static void BalloonAdd()
     {
         if (mom == null)
         {
@@ -22,7 +22,7 @@ public class BalloonMove : MonoBehaviour
         {
             var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
 
-            _inst.balloonPos = _pos;
+            //_inst.balloonPos = _pos;
 
             var _randX = Random.Range(-7f, 7f);
             var _randY = Random.Range(-3f, 1.3f);
@@ -100,6 +100,6 @@ public class BalloonMove : MonoBehaviour
 
     public void BalloonUp()
     {
-        Debug.Log("Ballonremove");
+        Destroy(gameObject);
     }
 }
