@@ -26,7 +26,7 @@ public static class DefineManager
     {
         Bell,
         Ballon,
-        Book,
+        Locker,
         Umbrella,
         BroomStick,
     }

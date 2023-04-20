@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6784152835597095848}
   - component: {fileID: 5350335209114103692}
   m_Layer: 7
-  m_Name: Image (Book)
+  m_Name: Image (Locker)
   m_TagString: rhythmNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 407, y: 0}
-  m_SizeDelta: {x: 196.66666, y: 86.666664}
+  m_SizeDelta: {x: 166.66666, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2505802240033559449
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 895769243, guid: 233007c5180804a40bf967646cea7f66, type: 3}
+  m_Sprite: {fileID: 1501825430, guid: 81963102e23ff1b44b83236c71a096ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
