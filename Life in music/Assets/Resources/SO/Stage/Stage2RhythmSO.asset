@@ -16,7 +16,7 @@ MonoBehaviour:
   - stage2: 0
     stageRhythm: {fileID: 6900794854004529759, guid: e368d324a430944479acfbd54722e3de,
       type: 3}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9bae8a051e676a44cb67a192ecbe78e6, type: 3}
     noteObj: {fileID: 1456901333465604844, guid: a755e1d1a233ac4428e02d1e3e9651f5,
       type: 3}
     noteEndObj: {fileID: 1957958612552360812, guid: 645fd73a1fc4a144cb30461ae44700bc,

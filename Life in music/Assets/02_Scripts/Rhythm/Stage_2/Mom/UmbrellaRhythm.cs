@@ -8,12 +8,14 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     private void Awake()
     {
         NoteGen.Instance.IGenUmbrella();
+      
     }
     protected override void Start()
     {
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.UMBRELLA_ADD, AddNoteList);
+        CheckingTuto();
     }
 
     protected override void Update()
@@ -21,14 +23,57 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         base.Update();
     }
 
+    protected override void Tutoing()
+    {
+        Tuto();
+    }
+
+
     protected override void RhythmGaming()
     {
+        SetupUmbrella();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
-    protected override void Tutoing()
+    private void CheckingTuto()
     {
+        var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_UMBRELLA);
+        if (_isTutoGO)
+        {
+            Invoke(nameof(Tutoing), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
 
+    private void StartRhythm()
+    {
+        RhythmManager.Instance.TutoClear();
+        TutoManager.Instance.SetActiveFalseText();
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_UMBRELLA);
+    }
+
+    public void SetupUmbrella()
+    {
+        var _cnt = noteObjList.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        UIManager.Instance.RhythmNoteEffect();
+
+        var _umonjSelect = _cnt - 1;
+        var _obj = noteObjList[_umonjSelect].gameObject;
+
+        _obj.GetComponent<UmbrellaMove>().UmbrellaDown();
+        noteObjList.Remove(_obj);
+        Debug.Log(_obj.ToString());
     }
 
 
@@ -38,12 +83,7 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     }
 
 
-    private void StartRhythm()
-    {
-        RhythmManager.Instance.TutoClear();
-        TutoManager.Instance.SetActiveFalseText();
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_UMBRELLA);
-    }
+  
 
     public void Tuto()
     {
