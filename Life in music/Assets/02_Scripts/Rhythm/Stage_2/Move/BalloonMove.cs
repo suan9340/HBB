@@ -100,6 +100,6 @@ public class BalloonMove : MonoBehaviour
 
     public void BalloonUp()
     {
-        Destroy(gameObject);
+        myAnim.SetTrigger("isPop");
     }
 }
