@@ -12,13 +12,11 @@ public class BalloonGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
-                    Debug.Log("1");
-                    //BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Left);
+                    BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Left);
                 }
                 if (i == 1)
                 {
-                    Debug.Log("2");
-                    //BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Right);
+                    BalloonMove.BalloonAdd(BalloonMove.BalloonPos.Right);
                 }
                 if (i == 2)
                 {

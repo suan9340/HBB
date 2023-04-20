@@ -68,7 +68,7 @@ public class NoteGen : MonoSingleTon<NoteGen>
         igen = new BellGen();
     }
 
-    public void IGenWater()
+    public void IGenBalloon()
     {
         igen = new BalloonGen();
     }

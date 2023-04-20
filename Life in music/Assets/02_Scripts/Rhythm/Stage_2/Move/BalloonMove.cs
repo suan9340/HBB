@@ -24,33 +24,63 @@ public class BalloonMove : MonoBehaviour
 
             _inst.balloonPos = _pos;
 
+            var _randX = Random.Range(-7.83f, 7.83f);
+            _inst.transform.position = new Vector3(_randX, 8f, 0f);
+
             switch (_pos)
             {
                 case BalloonPos.Left:
-
+                    _inst.endPos = -2f;
                     break;
 
                 case BalloonPos.Right:
-
+                    _inst.endPos = 1f;
                     break;
             }
+
         }
     }
 
+
+
+    public BalloonPos balloonPos;
+    public float endPos;
+    public float moveSpeed = 4f;
+
+    private static GameObject mom;
+
+    public static bool isFirst = true;
+
+    private Transform myTrn = null;
+    private Animator myAnim = null;
+
+    private bool isStop = false;
     private void Start()
     {
-
+        myTrn = GetComponent<Transform>();
+        myAnim = GetComponentInChildren<Animator>();
+        endPos = -1f;
     }
 
     private void Update()
     {
-
+        MoveBalloon();
     }
 
-    public BalloonPos balloonPos;
-    private static GameObject mom;
+    private void MoveBalloon()
+    {
+        if (isStop) return;
 
-    public static bool isFirst = true;
+        if (myTrn.position.y <= endPos)
+        {
+            myAnim.SetTrigger("isEndB");
+            isStop = true;
+            myTrn.position = new Vector2(myTrn.position.x, endPos);
+            Addlist(gameObject);
+        }
+
+        myTrn.position += new Vector3(0, -1, 0) * moveSpeed * Time.deltaTime;
+    }
 
     private void Addlist(GameObject _obj)
     {

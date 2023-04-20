@@ -7,7 +7,7 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
 {
     private void Awake()
     {
-        NoteGen.Instance.IGenWater();
+        NoteGen.Instance.IGenBalloon();
     }
 
     protected override void Start()
@@ -15,6 +15,7 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.BALLOON_ADD, AddNoteList);
+        CheckingTuto();
     }
 
     protected override void Update()
@@ -43,7 +44,7 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
     {
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_WATER);
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_BALLOON);
     }
 
     private void SetupBalloon()
@@ -61,6 +62,21 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
 
         _obj.GetComponent<BalloonMove>().BalloonUp();
         noteObjList.Remove(_obj);
+    }
+
+    private void CheckingTuto()
+    {
+        var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_BALLOON);
+
+        if (_isTutoGo)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
     }
 
     public void Tuto()
