@@ -24,19 +24,23 @@ public class BalloonMove : MonoBehaviour
 
             _inst.balloonPos = _pos;
 
-            var _randX = Random.Range(-7.83f, 7.83f);
+            var _randX = Random.Range(-7f, 7f);
+            var _randY = Random.Range(-3f, 1.3f);
+
             _inst.transform.position = new Vector3(_randX, 8f, 0f);
 
-            switch (_pos)
-            {
-                case BalloonPos.Left:
-                    _inst.endPos = -2f;
-                    break;
+            _inst.endPos = _randY;
 
-                case BalloonPos.Right:
-                    _inst.endPos = 1f;
-                    break;
-            }
+            //switch (_pos)
+            //{
+            //    case BalloonPos.Left:
+            //        _inst.endPos = -2f;
+            //        break;
+
+            //    case BalloonPos.Right:
+            //        _inst.endPos = 1f;
+            //        break;
+            //}
 
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BookRhythm : TutoMOM, IRhythmMom
+public class LockerRhythm : TutoMOM, IRhythmMom
 {
     private void Awake()
     {
@@ -13,7 +13,9 @@ public class BookRhythm : TutoMOM, IRhythmMom
     {
         base.Start();
 
-        EventManager<GameObject>.StartListening(ConstantManager.BOOK_ADD, AddNoteList);
+        EventManager<GameObject>.StartListening(ConstantManager.LOCKER_ADD, AddNoteList);
+
+        CheckingTuto();
     }
 
     protected override void Update()
@@ -23,12 +25,13 @@ public class BookRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
+        SetupLocker();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
     protected override void Tutoing()
     {
-
+        Tuto();
     }
 
 
@@ -41,7 +44,38 @@ public class BookRhythm : TutoMOM, IRhythmMom
     {
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
-        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_BOOK);
+        RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_LOCKER);
+    }
+
+    private void CheckingTuto()
+    {
+        var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_LOCKER);
+        if (_isTutoGo)
+        {
+            Invoke(nameof(Tuto), 1.5f);
+        }
+        else
+        {
+            isTuto = false;
+            StartRhythm();
+        }
+    }
+
+    public void SetupLocker()
+    {
+        var _cnt = noteObjList.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        var _lockerSelect = _cnt - 1;
+        var _obj = noteObjList[_lockerSelect].gameObject;
+
+        _obj.GetComponent<LockerMove>().LockerUP();
+        noteObjList.Remove(_obj);
     }
 
     public void Tuto()

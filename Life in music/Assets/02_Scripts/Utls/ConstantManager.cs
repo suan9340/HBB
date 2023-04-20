@@ -25,8 +25,8 @@ public static class ConstantManager
 
     // Stage_02
     public static string BELL_ADD = "BellListAdd";
-    public static string BALLOON_ADD = "WaterListAdd";
-    public static string BOOK_ADD = "BookListAdd";
+    public static string BALLOON_ADD = "BalloonListAdd";
+    public static string LOCKER_ADD = "LockerListAdd";
     public static string UMBRELLA_ADD = "UmbrellaListAdd";
     public static string BROOMSTICK_ADD = "BroomStickListAdd";
 
@@ -39,7 +39,7 @@ public static class ConstantManager
 
     public static string SO_STAGE02_BELL = "Stage 02_Bell";
     public static string SO_STAGE02_BALLOON = "Stage 02_WaterBalloon";
-    public static string SO_STAGE02_BOOK = "Stage 02_Book";
+    public static string SO_STAGE02_LOCKER = "Stage 02_Locker";
     public static string SO_STAGE02_UMBRELLA = "Stage 02_Umbrella";
     public static string SO_STAGE02_BROOMSTICK = "Stage 02_BroomStick";
 

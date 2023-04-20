@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balloonPos: 0
   endPos: 0
-  moveSpeed: 2
+  moveSpeed: 4
 --- !u!1 &5871280266844930485
 GameObject:
   m_ObjectHideFlags: 0

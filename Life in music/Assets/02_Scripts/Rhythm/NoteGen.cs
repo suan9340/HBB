@@ -75,7 +75,7 @@ public class NoteGen : MonoSingleTon<NoteGen>
 
     public void IGenBook()
     {
-        igen = new BookGen();
+        igen = new LockerGen();
     }
 
     public void IGenUmbrella()
