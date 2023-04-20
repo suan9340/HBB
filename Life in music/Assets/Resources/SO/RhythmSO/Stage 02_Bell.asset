@@ -28,18 +28,18 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00010001
+    - beatFlag: 00000000
+    - beatFlag: 00000101
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00000000
+    - beatFlag: 00010001
     - beatFlag: 01000001
     - beatFlag: 00000000
-    - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 01000001
-    - beatFlag: 01000001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 01000001
+    - beatFlag: 00000101
     - beatFlag: 01000001
     - beatFlag: 00000000
     - beatFlag: 00000000

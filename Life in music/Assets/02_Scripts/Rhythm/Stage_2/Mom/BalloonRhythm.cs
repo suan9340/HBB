@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterRhythm : TutoMOM, IRhythmMom
+public class BalloonRhythm : TutoMOM, IRhythmMom
 {
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class WaterRhythm : TutoMOM, IRhythmMom
     {
         base.Start();
 
-        EventManager<GameObject>.StartListening(ConstantManager.WATER_ADD, AddNoteList);
+        EventManager<GameObject>.StartListening(ConstantManager.BALLOON_ADD, AddNoteList);
     }
 
     protected override void Update()
@@ -24,12 +24,13 @@ public class WaterRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
+        SetupBalloon();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
     protected override void Tutoing()
     {
-
+        Tuto();
     }
 
 
@@ -43,6 +44,23 @@ public class WaterRhythm : TutoMOM, IRhythmMom
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_WATER);
+    }
+
+    private void SetupBalloon()
+    {
+        var _cnt = noteObjList.Count;
+        if (_cnt == 0)
+        {
+            Debug.Log("List Count is Zerooo");
+            return;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        var _shellonjSelect = _cnt - 1;
+        var _obj = noteObjList[_shellonjSelect].gameObject;
+
+        _obj.GetComponent<BalloonMove>().BalloonUp();
+        noteObjList.Remove(_obj);
     }
 
     public void Tuto()

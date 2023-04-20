@@ -70,7 +70,7 @@ public class NoteGen : MonoSingleTon<NoteGen>
 
     public void IGenWater()
     {
-        igen = new WaterGen();
+        igen = new BalloonGen();
     }
 
     public void IGenBook()

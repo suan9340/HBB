@@ -25,7 +25,7 @@ public static class ConstantManager
 
     // Stage_02
     public static string BELL_ADD = "BellListAdd";
-    public static string WATER_ADD = "WaterListAdd";
+    public static string BALLOON_ADD = "WaterListAdd";
     public static string BOOK_ADD = "BookListAdd";
     public static string UMBRELLA_ADD = "UmbrellaListAdd";
     public static string BROOMSTICK_ADD = "BroomStickListAdd";

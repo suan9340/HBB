@@ -84,7 +84,6 @@ public class BellMove : MonoBehaviour
     {
         if (isFirst)
         {
-            Debug.Log("qwe");
             RhythmManager.Instance.StartMusic();
             EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
             isFirst = false;
@@ -95,8 +94,6 @@ public class BellMove : MonoBehaviour
 
     public void BellUp()
     {
-        Debug.Log("ewew");
-
-
+        Debug.Log("Bellremove");
     }
 }

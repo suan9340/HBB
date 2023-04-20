@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5350606685092707031}
   - component: {fileID: -7605324521367274761}
   m_Layer: 7
-  m_Name: Rhythm (Water)
+  m_Name: Rhythm (Balloon)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
