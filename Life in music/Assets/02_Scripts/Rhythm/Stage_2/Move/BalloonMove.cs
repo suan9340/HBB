@@ -27,27 +27,28 @@ public class BalloonMove : MonoBehaviour
             {
                 case 0:
                     _posX = -1;
-                    _inst.endPos = -0.26f;
+                    _inst.endPos = -1.1f;
                     break;
 
                 case 1:
                     _posX = 0;
-                    _inst.endPos = -1.76f;
-                   
+                    _inst.endPos = -2.6f;
+
                     break;
 
                 case 2:
                     _posX = 0;
-                    _inst.endPos = 1.14f;
+                    _inst.endPos = -0.02f;
                     break;
 
                 case 3:
                     _posX = 1;
-                    _inst.endPos = -0.26f;
+                    _inst.endPos = -1.08f;
                     break;
             }
 
-            _inst.transform.position = new Vector2(_posX, _inst.transform.position.y);
+            //_inst.transform.position = new Vector2(_posX + 8, _inst.transform.position.y);
+            _inst.transform.position = new Vector2(_posX, _inst.endPos + 8f);
         }
 
         if (num >= 3)
@@ -113,6 +114,7 @@ public class BalloonMove : MonoBehaviour
             isFirst = false;
         }
 
+        UIManager.Instance.RhythmNoteEffect();
         EventManager<GameObject>.TriggerEvent(ConstantManager.BALLOON_ADD, _obj);
     }
 
