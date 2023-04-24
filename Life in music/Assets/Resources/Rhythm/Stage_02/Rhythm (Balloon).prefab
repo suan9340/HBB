@@ -108,3 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbc5e93f442b7c4eb643a7dc138b3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClip: {fileID: 0}
+  loadnum: 0
+  noteObjList: []
+  tutoTxt: []
+  tutoObj: []

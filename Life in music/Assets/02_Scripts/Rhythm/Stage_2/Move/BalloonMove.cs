@@ -11,40 +11,55 @@ public class BalloonMove : MonoBehaviour
     }
     public static void BalloonAdd()
     {
+
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Balloon)(Clone)");
         }
 
         var _obj = Resources.Load<BalloonMove>("Notes/Stage_02/BalloonNote");
-
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
+            var _posX = 0f;
 
-            //_inst.balloonPos = _pos;
+            switch (num)
+            {
+                case 0:
+                    _posX = -1;
+                    _inst.endPos = -0.26f;
+                    break;
 
-            var _randX = Random.Range(-7f, 7f);
-            var _randY = Random.Range(-3f, 1.3f);
+                case 1:
+                    _posX = 0;
+                    _inst.endPos = -1.76f;
+                   
+                    break;
 
-            _inst.transform.position = new Vector3(_randX, 8f, 0f);
+                case 2:
+                    _posX = 0;
+                    _inst.endPos = 1.14f;
+                    break;
 
-            _inst.endPos = _randY;
+                case 3:
+                    _posX = 1;
+                    _inst.endPos = -0.26f;
+                    break;
+            }
 
-            //switch (_pos)
-            //{
-            //    case BalloonPos.Left:
-            //        _inst.endPos = -2f;
-            //        break;
-
-            //    case BalloonPos.Right:
-            //        _inst.endPos = 1f;
-            //        break;
-            //}
-
+            _inst.transform.position = new Vector2(_posX, _inst.transform.position.y);
         }
-    }
 
+        if (num >= 3)
+        {
+            num = 0;
+        }
+        else
+        {
+            num++;
+        }
+
+    }
 
 
     public BalloonPos balloonPos;
@@ -54,16 +69,19 @@ public class BalloonMove : MonoBehaviour
     private static GameObject mom;
 
     public static bool isFirst = true;
+    private static int num;
 
     private Transform myTrn = null;
     private Animator myAnim = null;
 
     private bool isStop = false;
+    private BalloonRhythm ballMOM;
+
     private void Start()
     {
+        ballMOM = GetComponent<BalloonRhythm>();
         myTrn = GetComponent<Transform>();
         myAnim = GetComponentInChildren<Animator>();
-        endPos = -1f;
     }
 
     private void Update()
