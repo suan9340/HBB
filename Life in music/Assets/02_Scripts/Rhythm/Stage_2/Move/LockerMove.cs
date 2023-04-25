@@ -27,7 +27,14 @@ public class LockerMove : MonoBehaviour
 
     private void Start()
     {
+        //StartCoroutine(a());
+    }
+
+    private IEnumerator a()
+    {
+        yield return new WaitForSeconds(2f);
         AddList(gameObject);
+        yield break;
     }
 
     private void AddList(GameObject _obj)

@@ -89,6 +89,7 @@ public class BellMove : MonoBehaviour
             isFirst = false;
         }
 
+        UIManager.Instance.RhythmNoteEffect();
         EventManager<GameObject>.TriggerEvent(ConstantManager.BELL_ADD, _obj);
     }
 
