@@ -19,7 +19,7 @@ public class GameManager : MonoSingleTon<GameManager>
             currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
         }
     }
-
+    
     public DefineManager.StageNames GetCurrentStage()
     {
         return currentStage.stageName;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab414875852eadb46bbf5ea967843853, type: 3}
   m_Name: CurrentstageSO
   m_EditorClassIdentifier: 
-  stageName: 1
+  stageName: 0
   clip: {fileID: 8300000, guid: a5283f75080e59f4cae1a3787ea68cce, type: 3}

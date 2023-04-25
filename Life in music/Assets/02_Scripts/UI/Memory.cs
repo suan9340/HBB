@@ -2,7 +2,6 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,8 +14,11 @@ public class Memory : MonoBehaviour
     private Vector3[] coinPos;
     private Quaternion[] coinRotate;
     public int coinNum;
-    public int coinTxt;
+    public float coinTxt;
 
+    [Space(20)]
+    public Image memoryImageSlider = null;
+    public int maxmemoryNum = 30;
 
     private void Start()
     {
@@ -32,6 +34,11 @@ public class Memory : MonoBehaviour
         }
 
         EventManager.StartListening(ConstantManager.COIN_UI, ShowMemoryUI);
+    }
+
+    private void Update()
+    {
+        memoryImageSlider.fillAmount = coinTxt / maxmemoryNum;
     }
 
     private void Reset()
@@ -78,7 +85,6 @@ public class Memory : MonoBehaviour
 
     private void CountCoinNum()
     {
-
         coinTxt += 1;
         counterTxt.text = coinTxt.ToString();
     }
@@ -87,6 +93,11 @@ public class Memory : MonoBehaviour
     {
         memoryImage.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
         memoryImage.transform.DOScale(new Vector3(1f, 1f, 1f), 0.05f);
+    }
+
+    private void MemorySlider()
+    {
+
     }
 
     private IEnumerator CountCoin(int _coinNum)
