@@ -30,11 +30,9 @@ public class LockerMove : MonoBehaviour
         //StartCoroutine(a());
     }
 
-    private IEnumerator a()
+    private void OpenDoor()
     {
-        yield return new WaitForSeconds(2f);
-        AddList(gameObject);
-        yield break;
+
     }
 
     private void AddList(GameObject _obj)

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class LockerRhythm : TutoMOM, IRhythmMom
 {
+    [Space(20)]
+    public GameObject lockerObj = null;
+
+    [Space(20)]
+    public List<GameObject> lockerList = new List<GameObject>();
     private void Awake()
     {
         NoteGen.Instance.IGenBook();
@@ -45,6 +50,7 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE02_LOCKER);
+        Invoke(nameof(StartLockerMOM), 1.5f);
     }
 
     private void CheckingTuto()
@@ -59,6 +65,16 @@ public class LockerRhythm : TutoMOM, IRhythmMom
             isTuto = false;
             StartRhythm();
         }
+    }
+
+    private void StartLockerMOM()
+    {
+        if (lockerObj == null)
+        {
+            Debug.Log("LocerObject is NULL!!!");
+        }
+
+        lockerObj.gameObject.SetActive(true);
     }
 
     public void SetupLocker()
