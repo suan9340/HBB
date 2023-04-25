@@ -6780,7 +6780,7 @@ MonoBehaviour:
   readyRhythmAnimator: {fileID: 1640101898}
   rhythmEffectImage: {fileID: 146249214}
   rhythmNotePanel: {fileID: 448106505}
-  changePanelImage: {fileID: 0}
+  changePanelImage: {fileID: 1250618262}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0

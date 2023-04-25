@@ -104,6 +104,7 @@ MonoBehaviour:
   myanim: {fileID: 0}
   bulletSpeed: 23
   isStop: 0
+  isRock: 1
 --- !u!95 &5145446170700757132
 Animator:
   serializedVersion: 5

@@ -18,6 +18,8 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
         CheckingTuto();
+
+        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -37,7 +39,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
 
-   
+
     private void CheckingTuto()
     {
         var _isTutoGO = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE01_SHELLFISH);
@@ -80,6 +82,17 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
+
+        if (noteObjList.Count == 9)
+        {
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
+        }
+        else
+        {
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
+        }
+
+        Debug.Log(noteObjList.Count);
     }
 
     public void Tuto()

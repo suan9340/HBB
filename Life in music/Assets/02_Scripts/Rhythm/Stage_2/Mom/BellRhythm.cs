@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
 public class BellRhythm : TutoMOM, IRhythmMom
@@ -16,6 +17,7 @@ public class BellRhythm : TutoMOM, IRhythmMom
         EventManager<GameObject>.StartListening(ConstantManager.BELL_ADD, AddNoteList);
 
         CheckingTuto();
+        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -38,6 +40,15 @@ public class BellRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
+
+        if (noteObjList.Count == 3)
+        {
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
+        }
+        else
+        {
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
+        }
     }
 
     private void StartRhythm()
