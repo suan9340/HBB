@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BalloonRhythm : TutoMOM, IRhythmMom
 {
-    int num = 0;
     private void Awake()
     {
         NoteGen.Instance.IGenBalloon();

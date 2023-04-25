@@ -77,6 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10067bd07dabc2f40849e8af31d78327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClip: {fileID: 0}
+  loadnum: 0
+  noteObjList: []
+  tutoTxt: []
+  tutoObj: []
+  rhythmnum: 00000000
 --- !u!1 &8945753231427139324
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,9 @@ public class TutoMOM : MonoBehaviour
     public List<GameObject> tutoObj = new List<GameObject>();
     [Header("-----------------")]
 
+    [Space(20)]
+    public List<int> rhythmnum = new List<int>();
+
     protected int tutoNum = 0;
     protected bool isTuto = false;
 

@@ -94,6 +94,6 @@ public class BellMove : MonoBehaviour
 
     public void BellUp()
     {
-        Debug.Log("Bellremove");
+        myAnim.SetTrigger("upBell");
     }
 }

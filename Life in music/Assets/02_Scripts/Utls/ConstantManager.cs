@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security;
-using UnityEngine;
 
 public static class ConstantManager
 {
@@ -12,6 +8,7 @@ public static class ConstantManager
     public static string START_RHYTHM = "StartRhythm";
     public static string START_RHYTHM_PANEL = "StartRhythmPanel";
     public static string COIN_UI = "CoinUIShow";
+    public static string RHYTHM_CHANGE_UI = "RhythmChange";
 
     // Stage_01
     public static string SHELLFISH_MUSIC = "ShellfishMusic";

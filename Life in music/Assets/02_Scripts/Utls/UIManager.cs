@@ -26,6 +26,10 @@ public class UIManager : MonoSingleTon<UIManager>
     public Animator rhythmNotePanel = null;
     private bool isRhythmPanel = false;
 
+    [Space(20)]
+    [Header("RhythmChangeImage")]
+    public Image changePanelImage = null;
+
 
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
 
@@ -33,6 +37,7 @@ public class UIManager : MonoSingleTon<UIManager>
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
         EventManager.StartListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
+        EventManager<bool>.StartListening(ConstantManager.RHYTHM_CHANGE_UI, PannelChange);
     }
 
     public void OnclickAudioUI()
@@ -106,9 +111,22 @@ public class UIManager : MonoSingleTon<UIManager>
 
     private IEnumerator EffectNoteCoroutine()
     {
-        rhythmEffectImage.enabled = true;
+        rhythmEffectImage.enabled 
+            = true;
         yield return rhythmEffectSec;
         rhythmEffectImage.enabled = false;
         yield break;
+    }
+
+    private void PannelChange(bool _isBlack)
+    {
+        if (_isBlack)
+        {
+            changePanelImage.color = new Color(0, 0, 0);
+        }
+        else
+        {
+            changePanelImage.color = new Color(1, 1, 1);
+        }
     }
 }
