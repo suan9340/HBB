@@ -21,6 +21,8 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     protected override void Update()
     {
         base.Update();
+
+      
     }
 
     protected override void Tutoing()
@@ -58,7 +60,10 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
     public void SetupUmbrella()
     {
+
         var _cnt = noteObjList.Count;
+
+
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -83,8 +88,7 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     }
 
 
-  
-
+ 
     public void Tuto()
     {
         if (TutoManager.Instance.IsTyping) return;
