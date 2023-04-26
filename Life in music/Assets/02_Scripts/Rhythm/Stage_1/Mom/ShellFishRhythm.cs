@@ -82,7 +82,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
-        AAA();
+        CheckCanClickRhythm();
     }
 
     public void Tuto()

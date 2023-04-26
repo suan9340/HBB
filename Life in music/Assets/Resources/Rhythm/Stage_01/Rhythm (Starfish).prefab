@@ -132,8 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 1ac0d036ae355484f9549f48a1e5ebaf, type: 3}
   loadnum: 0
-  starfishNoteObj: []
-  starFIshImg: {fileID: 6763965520656665928}
+  noteObjList: []
   tutoTxt:
   - "\uC774\uAC8C \uBB50\uC9C0? \uBD88\uAC00\uC0AC\uB9AC\uAD6C\uB098!"
   - "\uBD88\uAC00\uC0AC\uB9AC..? \uD55C \uBC88\uB3C4 \uB9CC\uC838\uBCF4\uC9C0 \uBABB\uD588\uB294\uB370"
@@ -142,6 +141,8 @@ MonoBehaviour:
   tutoObj:
   - {fileID: 188759892067856831}
   - {fileID: 7473845434348005231}
+  rhythmnum: 0600000006000000
+  starFIshImg: {fileID: 6763965520656665928}
 --- !u!1 &5570233540049700209
 GameObject:
   m_ObjectHideFlags: 0

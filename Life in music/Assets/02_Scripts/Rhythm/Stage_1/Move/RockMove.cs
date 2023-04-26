@@ -93,8 +93,6 @@ public class RockMove : MonoBehaviour
     public static bool isFirst = true;
     public bool isStop = false;
 
-    public bool isRock = false;
-
     private void Start()
     {
         Cashing();
@@ -163,11 +161,6 @@ public class RockMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isRock == false)
-        {
-            return;
-        }
-
         if (collision.CompareTag("Crab"))
         {
             AddList(gameObject);

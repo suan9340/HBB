@@ -85,8 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
   loadnum: 4
-  seaWeednoteObj: []
-  seaWeedMOM: {fileID: 5088274813403086027}
+  noteObjList: []
   tutoTxt:
   - "\uB0B4\uAC00 \uC88B\uC544\uD558\uB294 \uBBF8\uC5ED\uC774\uB2E4!!"
   - "\uBBF8\uC5ED\uC744 \uBC14\uB2E4\uC18D\uC5D0\uC11C \uC9C1\uC811 \uBCF4\uB294\uAC74
@@ -97,6 +96,9 @@ MonoBehaviour:
   - {fileID: 5088274812792270959}
   - {fileID: 7676444528966524253}
   - {fileID: 5088274811729441337}
+  rhythmnum: 0700000007000000
+  timingnum: 0
+  seaWeedMOM: {fileID: 5088274813403086027}
 --- !u!1 &5088274811729441337
 GameObject:
   m_ObjectHideFlags: 0

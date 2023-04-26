@@ -19,7 +19,8 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.SEAWEED_ADD, AddNoteList);
         CheckingTuto();
-        
+
+        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -38,7 +39,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
         SetUpSeaweed();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
     }
-  
+
     private void StartRhythm()
     {
         RhythmManager.Instance.TutoClear();
@@ -85,6 +86,7 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
     {
         UIManager.Instance.RhythmNoteEffect();
         noteObjList.Add(_obj);
+        CheckCanClickRhythm();
     }
 
     private void SetUpSeaweedMOM()

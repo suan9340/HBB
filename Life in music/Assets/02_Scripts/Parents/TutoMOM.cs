@@ -27,7 +27,7 @@ public class TutoMOM : MonoBehaviour
     [Space(20)]
     public List<int> rhythmnum = new List<int>();
 
-    public int timingnum = -1;
+    public int timingnum = 0;
 
     protected int tutoNum = 0;
     protected bool isTuto = false;
@@ -58,7 +58,7 @@ public class TutoMOM : MonoBehaviour
         }
     }
 
-    protected void AAA()
+    protected void CheckCanClickRhythm()
     {
 
         if (noteObjList.Count == rhythmnum[timingnum])

@@ -20,6 +20,8 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.STARFISH_ADD, AddNoteList);
         CheckingTuto();
+
+        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -85,6 +87,7 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
+        CheckCanClickRhythm();
     }
 
     private void StarFishMOM()
@@ -119,7 +122,7 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
 
             case 3:
-                
+
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
