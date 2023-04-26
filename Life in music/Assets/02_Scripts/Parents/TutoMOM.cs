@@ -71,7 +71,7 @@ public class TutoMOM : MonoBehaviour
             isClickFalse = false;
 
 
-            Debug.Log("Click");
+            //Debug.Log("Click");
             EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
         }
         else
@@ -82,7 +82,7 @@ public class TutoMOM : MonoBehaviour
             isClickFalse = true;
             isClickTrue = false;
 
-            Debug.Log("Don't Click");
+            //Debug.Log("Don't Click");
             EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
         }
     }

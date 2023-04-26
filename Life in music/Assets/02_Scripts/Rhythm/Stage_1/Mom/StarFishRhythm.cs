@@ -66,6 +66,7 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
     public void SetUpStarfish()
     {
+        Debug.Log("qewqq");
         var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
@@ -80,7 +81,6 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
         var _starfishonjSelect = _cnt - 1;
         var _obj = noteObjList[_starfishonjSelect].gameObject;
 
-        _obj.GetComponent<StarFishMove>().StarfishDown();
         noteObjList.Remove(_obj);
     }
 
