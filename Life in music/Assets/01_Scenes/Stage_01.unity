@@ -1528,6 +1528,7 @@ MonoBehaviour:
   timingCheck: 0
   canUseRect: {fileID: 946670918}
   cantUseRect: {fileID: 829116139}
+  standardRect: {x: 269, y: -89, z: 0}
 --- !u!95 &373509253
 Animator:
   serializedVersion: 5
@@ -2673,6 +2674,7 @@ MonoBehaviour:
   timingCheck: 0
   canUseRect: {fileID: 946670918}
   cantUseRect: {fileID: 829116139}
+  standardRect: {x: 269, y: -89, z: 0}
 --- !u!95 &506324287
 Animator:
   serializedVersion: 5
@@ -2971,6 +2973,7 @@ MonoBehaviour:
   timingCheck: 0
   canUseRect: {fileID: 946670918}
   cantUseRect: {fileID: 829116139}
+  standardRect: {x: 269, y: -89, z: 0}
 --- !u!95 &577707007
 Animator:
   serializedVersion: 5
@@ -5291,6 +5294,7 @@ MonoBehaviour:
   timingCheck: 0
   canUseRect: {fileID: 946670918}
   cantUseRect: {fileID: 829116139}
+  standardRect: {x: 269, y: -89, z: 0}
 --- !u!95 &1234703695
 Animator:
   serializedVersion: 5

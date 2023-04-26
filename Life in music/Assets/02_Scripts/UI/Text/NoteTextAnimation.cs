@@ -14,6 +14,7 @@ public class NoteTextAnimation : MonoBehaviour
     public GameObject canUseRect = null;
     public GameObject cantUseRect = null;
 
+    public Vector3 standardRect = Vector3.zero;
     private void OnEnable()
     {
         myAnim = GetComponent<Animator>();
@@ -68,5 +69,6 @@ public class NoteTextAnimation : MonoBehaviour
     {
         gameObject.SetActive(false);
         myRect.SetParent(canUseRect.transform);
+        myRect.anchoredPosition = standardRect;
     }
 }
