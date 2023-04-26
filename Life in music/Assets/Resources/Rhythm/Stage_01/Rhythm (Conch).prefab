@@ -347,6 +347,8 @@ MonoBehaviour:
   tutoObj:
   - {fileID: 5256497633189710816}
   - {fileID: 1181281408731638191}
+  rhythmnum: 0300000003000000
+  timingnum: 0
   conchMOM: {fileID: 7807677243661936980}
 --- !u!1 &7068232904280151788
 GameObject:
