@@ -82,17 +82,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
-
-        if (noteObjList.Count == 9)
-        {
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
-        }
-        else
-        {
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
-        }
-
-        Debug.Log(noteObjList.Count);
+        AAA();
     }
 
     public void Tuto()

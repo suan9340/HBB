@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TutoMOM : MonoBehaviour
@@ -26,8 +27,14 @@ public class TutoMOM : MonoBehaviour
     [Space(20)]
     public List<int> rhythmnum = new List<int>();
 
+    public int timingnum = -1;
+
     protected int tutoNum = 0;
     protected bool isTuto = false;
+
+
+    protected bool isClickTrue = false;
+    protected bool isClickFalse = false;
 
     protected virtual void Start()
     {
@@ -48,6 +55,47 @@ public class TutoMOM : MonoBehaviour
             {
                 RhythmGaming();
             }
+        }
+    }
+
+    protected void AAA()
+    {
+
+        if (noteObjList.Count == rhythmnum[timingnum])
+        {
+            if (isClickTrue)
+                return;
+
+            ReturnTiming();
+            isClickTrue = true;
+            isClickFalse = false;
+
+
+            Debug.Log("Click");
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
+        }
+        else
+        {
+            if (isClickFalse)
+                return;
+
+            isClickFalse = true;
+            isClickTrue = false;
+
+            Debug.Log("Don't Click");
+            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
+        }
+    }
+
+    protected void ReturnTiming()
+    {
+        if (rhythmnum.Count - 1 <= timingnum)
+        {
+            return;
+        }
+        else
+        {
+            timingnum++;
         }
     }
 

@@ -70,6 +70,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
   loadnum: 0
+  noteObjList: []
+  tutoTxt: []
+  tutoObj: []
+  rhythmnum: 
+  timingnum: 0
 --- !u!1 &3938511597597537671
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myClip: {fileID: 8300000, guid: 47d7bd1cd3bfa7548bc2d7f5fb22a4e8, type: 3}
   loadnum: 1
-  shellfishnoteObj: []
+  noteObjList: []
   tutoTxt:
   - "\uC5B4? \uC870\uAC1C\uB124 "
   - "\uCCD0\uC11C \uC18C\uB9AC\uB0B4\uACE0\uC2F6\uC740\uB370..."
@@ -296,6 +301,8 @@ MonoBehaviour:
   tutoObj:
   - {fileID: 7104432339085170607}
   - {fileID: 861963465618975081}
+  rhythmnum: 0900000008000000
+  timingnum: 0
 --- !u!1 &7104432339085170607
 GameObject:
   m_ObjectHideFlags: 0
