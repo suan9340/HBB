@@ -66,7 +66,6 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
     public void SetUpStarfish()
     {
-        Debug.Log("qewqq");
         var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
