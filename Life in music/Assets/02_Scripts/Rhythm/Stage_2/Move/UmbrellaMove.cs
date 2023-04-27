@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
-using Unity.VisualScripting;
 
 public class UmbrellaMove : MonoBehaviour
 {
@@ -18,15 +14,14 @@ public class UmbrellaMove : MonoBehaviour
 
     public static void Add(State _dir)
     {
-
-        var _umbrellastandobj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaStandNote");
-        Debug.Log(_umbrellastandobj != null);
-       // Instantiate(_umbrellastandobj, mom.transform, false);
-        
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
         }
+
+        //  var _umbrellastandobj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaStandNote");
+        //    Debug.Log(_umbrellastandobj != null);
+        // Instantiate(_umbrellastandobj, mom.transform, false);
 
         var _obj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaNote");
 
@@ -71,7 +66,6 @@ public class UmbrellaMove : MonoBehaviour
 
     public static bool isFirst = true;
 
-    private Transform myTrn;
     private static GameObject mom;
 
 
@@ -86,8 +80,7 @@ public class UmbrellaMove : MonoBehaviour
     private void Start()
     {
 
-        myTrn = GetComponent<Transform>();
-        noteAnimation = GetComponent<Animator>();
+        
 
         Cashing();
          AddForceObject();
@@ -96,16 +89,21 @@ public class UmbrellaMove : MonoBehaviour
     private void Update()
     {
         MoveUmbrella();
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
        if(collision.gameObject.name == "UmbrellaStandNote")
         {
-         //   AddList(gameObject);
-            Destroy(gameObject);
-          
-           
+           AddList(gameObject);
+            gameObject.SetActive(false);
+           // Destroy(gameObject);
         }
      
     }
@@ -118,12 +116,6 @@ public class UmbrellaMove : MonoBehaviour
         switch (dir)
         {
             case State.Move:
-
-                if (myTrn.position.x >= 0)
-                {
-                    Debug.Log("Adf");
-                }
-                  
                 AddForceObject();
                 SettiingRotation();
 
@@ -134,20 +126,18 @@ public class UmbrellaMove : MonoBehaviour
 
     private void AddList(GameObject _obj)
     {
-        
-
         UIManager.Instance.RhythmNoteEffect();
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
             EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.UMBRELLA_ADD, _obj);
     }
 
     private Rigidbody2D myrigid;
-    public Animator myanim;
     private Transform mytrn;
 
     private void FixedUpdate()
@@ -160,14 +150,14 @@ public class UmbrellaMove : MonoBehaviour
 
     private void Cashing()
     {
+        noteAnimation = GetComponent<Animator>();
         myrigid = GetComponent<Rigidbody2D>();
         mytrn = GetComponent<Transform>();
-        myanim = GetComponent<Animator>();
     }
 
     private void AddForceObject()
     {
-       myrigid.AddForce(-mytrn.position * 1f);
+       myrigid.AddForce(-mytrn.position * 1.75f);
     }
 
     private void SettiingRotation()
@@ -178,6 +168,7 @@ public class UmbrellaMove : MonoBehaviour
 
     public void UmbrellaDown()
     {
+
         noteAnimation.SetTrigger("isMove");
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UmbrellaRhythm : TutoMOM, IRhythmMom
 {
+
     private void Awake()
     {
         NoteGen.Instance.IGenUmbrella();
@@ -75,10 +76,12 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
         var _umonjSelect = _cnt - 1;
         var _obj = noteObjList[_umonjSelect].gameObject;
+        //var _obj = gameObject;
 
         _obj.GetComponent<UmbrellaMove>().UmbrellaDown();
+       //GetComponent<UmbrellaStandMove>().SpriteChange();
         noteObjList.Remove(_obj);
-        Debug.Log(_obj.ToString());
+        //Debug.Log(_obj.ToString());
     }
 
 
