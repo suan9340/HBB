@@ -1875,7 +1875,7 @@ MonoBehaviour:
   coinNum: 0
   coinTxt: 0
   memoryImageSlider: {fileID: 1237928540}
-  maxmemoryNum: 30
+  maxmemoryNum: 25
 --- !u!1 &414539898
 GameObject:
   m_ObjectHideFlags: 0
@@ -7478,7 +7478,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2107058641, guid: 65a1e2bc38ad4004a86af1f42b63b21a,
+      objectReference: {fileID: -1520504258, guid: 578d2866071f4424cb0ec81c43e91257,
         type: 3}
     - target: {fileID: 8978774795111719307, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
@@ -7493,12 +7493,12 @@ PrefabInstance:
     - target: {fileID: 8978774795111719307, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 108.2
+      value: 103.31
       objectReference: {fileID: 0}
     - target: {fileID: 8978774795111719307, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 58.51
+      value: 55.85
       objectReference: {fileID: 0}
     - target: {fileID: 8978774795111719307, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
@@ -7523,12 +7523,12 @@ PrefabInstance:
     - target: {fileID: 8978774795176238728, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 106.81
+      value: 107.95
       objectReference: {fileID: 0}
     - target: {fileID: 8978774795176238728, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 106.81
+      value: 102.12
       objectReference: {fileID: 0}
     - target: {fileID: 8978774795176238728, guid: 577b628c255eb0b418fd2f77a6513480,
         type: 3}
