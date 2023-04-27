@@ -131,18 +131,11 @@ public class ConchRhythm : TutoMOM, IRhythmMom
 
 
             case 4:
-                TutoManager.Instance.TextingOut(tutoTxt[3]);
-                break;
-
-
-            case 5:
                 tutoObj[0].SetActive(false);
                 tutoObj[1].SetActive(true);
                 mySource.PlayOneShot(myClip);
-                TutoManager.Instance.TextingOut(tutoTxt[4]);
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
-
-
 
             default:
                 isTuto = false;

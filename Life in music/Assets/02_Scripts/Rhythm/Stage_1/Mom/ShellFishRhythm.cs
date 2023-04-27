@@ -100,25 +100,21 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
 
 
             case 2:
-
+                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
 
 
             case 3:
+              
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
-                tutoObj[0].SetActive(false);
-                tutoObj[1].SetActive(true);
+                
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
-                break;
-
-
-            case 5:
-                TutoManager.Instance.TextingOut(tutoTxt[4]);
                 break;
 
 

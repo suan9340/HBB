@@ -155,17 +155,21 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
 
             case 4:
-                tutoObj[1].SetActive(false);
-                tutoObj[2].SetActive(true);
+              
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
             case 5:
-                tutoObj[2].SetActive(false);
-                tutoObj[3].SetActive(true);
+                tutoObj[1].SetActive(false);
+                tutoObj[2].SetActive(true);
                 TutoManager.Instance.TextingOut(tutoTxt[4]);
                 break;
 
+            case 6:
+                tutoObj[2].SetActive(false);
+                tutoObj[3].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[5]);
+                break;
 
             default:
                 tutoObj[3].SetActive(false);
