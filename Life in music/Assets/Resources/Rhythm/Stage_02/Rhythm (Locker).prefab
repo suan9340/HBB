@@ -78,12 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10067bd07dabc2f40849e8af31d78327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: c3c0f3d78fb33a74492073a42d419a71, type: 3}
   loadnum: 0
   noteObjList: []
   tutoTxt: []
   tutoObj: []
   rhythmnum: 00000000
+  timingnum: 0
   lockerObj: {fileID: 2058507367853017838}
   lockerList:
   - {fileID: 2058507367273833125}
@@ -277,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 4481913326708171865, guid: dff566c71b6639849b86c1c8dc1c5e1a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4481913326719919512, guid: dff566c71b6639849b86c1c8dc1c5e1a,
         type: 3}

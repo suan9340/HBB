@@ -98,17 +98,23 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
         {
             case 1:
                 isTuto = true;
+                tutoObj[0].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
                 break;
 
             case 2:
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
 
 
             case 3:
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
+                mySource.PlayOneShot(myClip);
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
             default:

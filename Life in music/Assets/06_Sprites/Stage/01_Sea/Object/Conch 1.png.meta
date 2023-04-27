@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 65a1e2bc38ad4004a86af1f42b63b21a
+guid: 578d2866071f4424cb0ec81c43e91257
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,8 +36,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Conch_0
+      name: Conch 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 246
-        height: 123
+        y: 1
+        width: 238
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36351349a4c56404ab414b0e89fb9f0a
-      internalID: -2107058641
+      spriteID: 0fcc8028a26555a44bb12c8b09f1754c
+      internalID: -1520504258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Conch_1
+      name: Conch 1_1
       rect:
         serializedVersion: 2
-        x: 258
-        y: 16
-        width: 153
-        height: 105
+        x: 246
+        y: 4
+        width: 151
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef5bf2ac78fd8c540a1e05b1770c1c9b
-      internalID: 1673223070
+      spriteID: 47a49abdde794a545a3430b510081c12
+      internalID: -172691439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Conch_2
+      name: Conch 1_2
       rect:
         serializedVersion: 2
-        x: 416
-        y: 47
-        width: 65
-        height: 60
+        x: 410
+        y: 33
+        width: 67
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ec23be8df33ac46a14dd5e81119fd4
-      internalID: 1654747543
+      spriteID: f48791c67c9023543b0675bb53c54588
+      internalID: 133161134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Conch_3
+      name: Conch 1_3
       rect:
         serializedVersion: 2
-        x: 489
-        y: 62
-        width: 51
-        height: 39
+        x: 502
+        y: 40
+        width: 87
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,29 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa102fc45d414de4e923cdb1f81003ea
-      internalID: 1290183454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Conch_4
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 55
-        width: 60
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13b1e0aa473d76e459b7146a40d82815
-      internalID: -566986652
+      spriteID: 010d02375433bdb49a0616ef746bd598
+      internalID: -1210401505
       vertices: []
       indices: 
       edges: []
@@ -212,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d652027bf8ba1fd4fa8d085aad8d8dd6
+    spriteID: 7f469a6d83a8476428670f6ab3c33941
     internalID: 0
     vertices: []
     indices: 
@@ -220,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Conch_0: -2107058641
-      Conch_1: 1673223070
-      Conch_2: 1654747543
-      Conch_3: 1290183454
-      Conch_4: -566986652
+      Conch 1_0: -1520504258
+      Conch 1_1: -172691439
+      Conch 1_2: 133161134
+      Conch 1_3: -1210401505
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

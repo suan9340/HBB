@@ -15,14 +15,14 @@ public class LockerMove : MonoBehaviour
 
         if (_obj != null)
         {
-            var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
+            //var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
 
 
         }
     }
 
     private static GameObject mom;
-
+    
     public static bool isFirst = true;
 
     private void Start()
