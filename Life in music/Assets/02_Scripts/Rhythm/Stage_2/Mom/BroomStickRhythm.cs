@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BroomStickRhythm : TutoMOM, IRhythmMom
 {
+    
     private void Awake()
     {
         NoteGen.Instance.IGenBroomStick();

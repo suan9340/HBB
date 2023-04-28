@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UmbrellaRhythm : TutoMOM, IRhythmMom
 {
+    public GameObject umbrellaStand;
 
     private void Awake()
     {
@@ -22,16 +23,12 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     protected override void Update()
     {
         base.Update();
-
-      
     }
 
     protected override void Tutoing()
     {
         Tuto();
     }
-
-
     protected override void RhythmGaming()
     {
         SetupUmbrella();
@@ -79,19 +76,19 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         //var _obj = gameObject;
 
         _obj.GetComponent<UmbrellaMove>().UmbrellaDown();
-       //GetComponent<UmbrellaStandMove>().SpriteChange();
+
+        umbrellaStand.GetComponent<UmbrellaStandMove>().SpriteChange();
+
+        Debug.Log(umbrellaStand.gameObject.name);
         noteObjList.Remove(_obj);
         //Debug.Log(_obj.ToString());
     }
-
 
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
     }
 
-
- 
     public void Tuto()
     {
         if (TutoManager.Instance.IsTyping) return;
