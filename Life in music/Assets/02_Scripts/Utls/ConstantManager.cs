@@ -31,7 +31,7 @@ public static class ConstantManager
     public static string BROOMSTICK_ADD = "BroomStickListAdd";
 
     // RhythmSOName
-    public static string SO_STAGE01_SHELLFISH = "Stage01_Shellfish";
+    public static string SO_STAGE01_SHELLFISH = "Stage 01_Shellfish";
     public static string SO_STAGE01_Rock = "Stage 01_Rock";
     public static string SO_STAGE01_SEAWEED = "Stage 01_Seaweed";
     public static string SO_STAGE01_CONCH = "Stage 01_Conch";
