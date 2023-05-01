@@ -17,11 +17,8 @@ public class UmbrellaStandMove : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape))
-        {
-          
-        }
-        
+     
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

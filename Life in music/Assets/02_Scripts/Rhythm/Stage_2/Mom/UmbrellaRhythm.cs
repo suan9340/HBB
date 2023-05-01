@@ -79,7 +79,8 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
         umbrellaStand.GetComponent<UmbrellaStandMove>().SpriteChange();
 
-        Debug.Log(umbrellaStand.gameObject.name);
+        Debug.Log(umbrellaStand);
+
         noteObjList.Remove(_obj);
         //Debug.Log(_obj.ToString());
     }

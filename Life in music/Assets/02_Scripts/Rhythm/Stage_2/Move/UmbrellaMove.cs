@@ -24,10 +24,17 @@ public class UmbrellaMove : MonoBehaviour
         // Instantiate(_umbrellastandobj, mom.transform, false);
 
         var _obj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaNote");
+        var _standObj = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote");
+
+        Debug.Log(_standObj);
+
 
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
+
+            Instantiate(_standObj, mom.transform , false);
+
             _inst.dir = _dir;
 
             switch (_dir)
@@ -89,12 +96,6 @@ public class UmbrellaMove : MonoBehaviour
     private void Update()
     {
         MoveUmbrella();
-
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-
-        }
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -140,6 +141,7 @@ public class UmbrellaMove : MonoBehaviour
     private Rigidbody2D myrigid;
     private Transform mytrn;
 
+    
     private void FixedUpdate()
     {
         if (isStop)
