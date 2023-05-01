@@ -9,6 +9,9 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
     [Space(20)]
     public List<GameObject> lockerList = new List<GameObject>();
+
+    private int num;
+
     private void Awake()
     {
         NoteGen.Instance.IGenBook();
@@ -92,6 +95,13 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
         _obj.GetComponent<LockerMove>().LockerUP();
         noteObjList.Remove(_obj);
+    }
+
+    private void LocekerMoveAdd()
+    {
+        var _obj = lockerList[num].gameObject;
+
+
     }
 
     public void Tuto()
