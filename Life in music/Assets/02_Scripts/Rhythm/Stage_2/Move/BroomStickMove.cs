@@ -4,9 +4,9 @@ using UnityEngine;
 public class BroomStickMove : MonoBehaviour
 {
     private static GameObject mom;
-    public static float _spos = -220f;
+    public static bool isFirst = true;
 
-    public static void BroomStickAdd()
+    public static void Add()
     {
         if (mom == null)
         {
@@ -14,7 +14,6 @@ public class BroomStickMove : MonoBehaviour
         }                                                                        
 
         var _obj = Resources.Load<BroomStickMove>("Notes/Stage_02/BroomStickNote");
-
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
@@ -26,37 +25,36 @@ public class BroomStickMove : MonoBehaviour
         // 자동삭제
     }
 
-    public float moveSpeed = 4f;
-    public static bool isFirst = true;
+    public Animator myAnim;
 
-    private Transform myTrn = null;
-    private Animator myAnim = null;
-
-    private bool BroomStick_isFirst;
 
     private void Start()
     {
-        myTrn = GetComponent<Transform>();
-        myAnim = GetComponentInChildren<Animator>();
+        myAnim = GetComponent<Animator>();
+
+        AddList(gameObject);
     }
 
-    private void BroomStickListAdd(GameObject _obj)
+    private void AddList(GameObject _obj)
     {
-        UIManager.Instance.RhythmNoteEffect();
-
-        if (BroomStick_isFirst)
+        if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
             EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
-            BroomStick_isFirst = false;
+            isFirst = false;
         }
+
         EventManager<GameObject>.TriggerEvent(ConstantManager.BROOMSTICK_ADD, _obj);
+        myAnim.SetTrigger("BroomStickShow");
     }
 
     public void BroomStickDown()
     {
-
-       myAnim.SetTrigger("BroomStickShow");
-        BroomStickListAdd(gameObject);
+        myAnim.SetTrigger("BroomStickClick");
+        Invoke("BroomStickDestroy",1.5f);
+    }
+    
+    public void BroomStickDestroy() {
+        Destroy(gameObject);
     }
 }

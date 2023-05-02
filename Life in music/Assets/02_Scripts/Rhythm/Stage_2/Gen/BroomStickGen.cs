@@ -12,7 +12,7 @@ public class BroomStickGen : MonoBehaviour,IGen
             {
                 if (i == 0)
                 {
-                    BroomStickMove.BroomStickAdd();
+                    BroomStickMove.Add();
                 }
                 if (i == 1)
                 {

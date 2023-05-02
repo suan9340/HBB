@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BroomStickRhythm : TutoMOM, IRhythmMom
@@ -12,12 +13,8 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     }
     protected override void Start()
     {
-       
         base.Start();
-        Debug.Log("ÀÌº¥Æ® °«¾î!");
         EventManager<GameObject>.StartListening(ConstantManager.BROOMSTICK_ADD, AddNoteList);
-
-
         CheckingTuto();
     }
 
@@ -60,8 +57,8 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     //´­·¶À»¶§
     public void SetupBroomStick()
     {
+
         var _cnt = noteObjList.Count;
-        
 
         if (_cnt == 0)
         {
@@ -72,13 +69,10 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         UIManager.Instance.RhythmNoteEffect();
 
-        var _umonjSelect = _cnt - 1;
-        var _obj = noteObjList[_umonjSelect].gameObject;
+        var _BroomonjSelect = _cnt - 1;
+        var _obj = noteObjList[_BroomonjSelect].gameObject;
 
-        
-
-        
-
+        _obj.GetComponent<BroomStickMove>().BroomStickDown();
         noteObjList.Remove(_obj);
     }
 
@@ -86,6 +80,8 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     {
         noteObjList.Add(_obj);
     }
+
+
 
     public void Tuto()
     {

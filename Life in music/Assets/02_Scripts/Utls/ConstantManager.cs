@@ -30,8 +30,6 @@ public static class ConstantManager
     public static string UMBRELLA_ADD = "UmbrellaListAdd";
     public static string BROOMSTICK_ADD = "BroomStickListAdd";
 
-    public static string BROOMSTICK_ANIM = "BroomStickAnimation";
-
     // RhythmSOName
     public static string SO_STAGE01_SHELLFISH = "Stage 01_Shellfish";
     public static string SO_STAGE01_Rock = "Stage 01_Rock";
