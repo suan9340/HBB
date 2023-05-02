@@ -9,9 +9,13 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
     [Space(20)]
     public List<GameObject> lockerList = new List<GameObject>();
+    public List<GameObject> two = new List<GameObject>();
+
 
     private int num;
+    private readonly WaitForSeconds lockerSec = new WaitForSeconds(1f);
 
+    private bool isFirst = true;
     private void Awake()
     {
         NoteGen.Instance.IGenBook();
@@ -22,8 +26,9 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         base.Start();
 
         EventManager<GameObject>.StartListening(ConstantManager.LOCKER_ADD, AddNoteList);
-
+        EventManager.StartListening(ConstantManager.LOCKER_RH, LocekerMoveAdd);
         CheckingTuto();
+        SetUpList();
     }
 
     protected override void Update()
@@ -56,6 +61,18 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         Invoke(nameof(StartLockerMOM), 1.5f);
     }
 
+    private void SetUpList()
+    {
+        two.Clear();
+
+        for (int i = 0; i < lockerList.Count; i++)
+        {
+            two.Add(lockerList[i]);
+        }
+
+        SufferList(two);
+    }
+
     private void CheckingTuto()
     {
         var _isTutoGo = RhythmManager.Instance.CheckTuto(ConstantManager.SO_STAGE02_LOCKER);
@@ -80,6 +97,8 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         lockerObj.gameObject.SetActive(true);
     }
 
+
+
     public void SetupLocker()
     {
         var _cnt = noteObjList.Count;
@@ -93,15 +112,54 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         var _lockerSelect = _cnt - 1;
         var _obj = noteObjList[_lockerSelect].gameObject;
 
-        _obj.GetComponent<LockerMove>().LockerUP();
+        _obj.GetComponent<Animator>().SetTrigger("isDoorClose");
         noteObjList.Remove(_obj);
     }
 
     private void LocekerMoveAdd()
     {
-        var _obj = lockerList[num].gameObject;
+        if (two.Count <= 0)
+        {
+            SetUpList();
+        }
 
 
+
+        var _obj = two[0].gameObject;
+        _obj.GetComponent<Animator>().SetTrigger("isDoorOpen");
+        two.Remove(two[0].gameObject);
+
+        StartCoroutine(RemoveLockerObj(_obj));
+    }
+
+    private IEnumerator RemoveLockerObj(GameObject _obj)
+    {
+        yield return lockerSec;
+
+        if (isFirst)
+        {
+            RhythmManager.Instance.StartMusic();
+            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+            isFirst = false;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        AddNoteList(_obj);
+        yield break;
+    }
+
+    private List<GameObject> SufferList(List<GameObject> _list)
+    {
+        for (int i = _list.Count - 1; i > 0; i--)
+        {
+            int _rnd = Random.Range(0, i);
+
+            GameObject tmp = _list[i];
+            _list[i] = _list[_rnd];
+            _list[_rnd] = tmp;
+        }
+
+        return _list;
     }
 
     public void Tuto()

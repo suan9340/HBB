@@ -12,7 +12,8 @@ public class LockerGen : MonoBehaviour, IGen
             {
                 if (i == 0)
                 {
-                    LockerMove.Add();
+                    //LockerMove.Add();
+                    EventManager.TriggerEvent(ConstantManager.LOCKER_RH);
                 }
                 if (i == 1)
                 {
