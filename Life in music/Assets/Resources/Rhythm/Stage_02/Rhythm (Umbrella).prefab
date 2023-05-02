@@ -111,7 +111,15 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 7fa0dd7ababd5f143a81aaaf5e4a8f3b, type: 3}
   loadnum: 0
   noteObjList: []
-  tutoTxt: []
+  tutoTxt:
+  - "\uB09C \uBE44\uC62C\uB584\uAC00 \uC81C\uC77C \uC2EB\uC5B4"
+  - "\uAE30\uBD84\uC774 \uB108\uBB34 \uC6B0\uC6B8\uD574\uC838..."
+  - "\uADF8\uB798\uB3C4 \uCE5C\uAD6C\uB791 \uAC19\uC774 \uC6B0\uC0B0\uC4F0\uBA74\uC11C
+    \uD558\uAD50\uD588\uB358 \uAE30\uC5B5\uB09C\uB2E4"
+  - "\uADF8\uB54C \uBB3C\uC6C5\uB369\uC774 \uBC1F\uC544\uC11C \uC2E0\uBC1C \uB2E4
+    \uC816\uC5C8\uC5C8\uB294"
   tutoObj: []
+  rhythmnum: 
+  timingnum: 0
   umbrellaStand: {fileID: 1266886941110364467, guid: a6bbaf7282e2d8e49a4d40dfb51e2d7f,
     type: 3}

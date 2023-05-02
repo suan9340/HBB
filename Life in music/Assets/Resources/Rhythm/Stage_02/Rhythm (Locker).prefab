@@ -81,7 +81,13 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: c3c0f3d78fb33a74492073a42d419a71, type: 3}
   loadnum: 0
   noteObjList: []
-  tutoTxt: []
+  tutoTxt:
+  - "\uC774 \uC0AC\uBB3C\uD568 \uC9C4\uC9DC \uC624\uB79C\uB9CC\uC5D0\uBCF8\uB2E4"
+  - "\uCD08\uB529\uB54C \uC0AC\uBB3C\uD568 \uC548\uC5D0 \uBD88\uB7C9\uC2DD\uD488
+    \uC0AC\uC11C \uC790\uC8FC \uBA39\uC5C8\uC5C8\uB294\uB370 \u3160"
+  - "\uC120\uC0DD\uB2D8\uD55C\uD14C \uC548\uB4E4\uD0A4\uAC8C \uBAB0\uB798 \uBE7C\uBA39\uC5C8\uB358
+    \uAE30\uC5B5\uC774 \uB098\uB124 "
+  - "\uC544\uC787 \uAE5C\uC9DD\uC544 \uBC14\uB78C\uB54C\uB9E4 \uC384\uAC8C\uB2EB\uD614\uB098?"
   tutoObj: []
   rhythmnum: 00000000
   timingnum: 0
@@ -95,6 +101,7 @@ MonoBehaviour:
   - {fileID: 2058507366748896595}
   - {fileID: 2058507366654390854}
   - {fileID: 2058507366780257847}
+  two: []
 --- !u!1 &8945753231427139324
 GameObject:
   m_ObjectHideFlags: 0
