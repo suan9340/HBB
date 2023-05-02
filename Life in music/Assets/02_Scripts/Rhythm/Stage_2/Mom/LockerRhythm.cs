@@ -13,7 +13,7 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
 
     private int num;
-    private readonly WaitForSeconds lockerSec = new WaitForSeconds(1f);
+    private readonly WaitForSeconds lockerSec = new WaitForSeconds(0.4f);
 
     private bool isFirst = true;
     private void Awake()
