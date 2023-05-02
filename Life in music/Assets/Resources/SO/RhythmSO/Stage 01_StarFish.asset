@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 01_StarFish
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
+    isTuto: 1
     isClear: 0
     name: Stage 01_StarFish
     AudioClip: {fileID: 8300000, guid: a5283f75080e59f4cae1a3787ea68cce, type: 3}

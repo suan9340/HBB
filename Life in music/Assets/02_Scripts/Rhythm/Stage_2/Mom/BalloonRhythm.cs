@@ -114,6 +114,7 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
 
             case 4:
                 mySource.PlayOneShot(myClip);
+                tutoObj[0].GetComponent<Animator>().SetTrigger("isPop");
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
