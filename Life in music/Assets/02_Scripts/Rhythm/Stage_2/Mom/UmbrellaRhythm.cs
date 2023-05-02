@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class UmbrellaRhythm : TutoMOM, IRhythmMom
 {
+    public GameObject umbrellaStand;
+
     private void Awake()
     {
         NoteGen.Instance.IGenUmbrella();
@@ -27,8 +29,6 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     {
         Tuto();
     }
-
-
     protected override void RhythmGaming()
     {
         SetupUmbrella();
@@ -58,7 +58,10 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
     public void SetupUmbrella()
     {
+
         var _cnt = noteObjList.Count;
+
+
         if (_cnt == 0)
         {
             Debug.Log("List Count is Zerooo");
@@ -70,20 +73,22 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
         var _umonjSelect = _cnt - 1;
         var _obj = noteObjList[_umonjSelect].gameObject;
+        //var _obj = gameObject;
 
         _obj.GetComponent<UmbrellaMove>().UmbrellaDown();
-        noteObjList.Remove(_obj);
-        Debug.Log(_obj.ToString());
-    }
 
+        umbrellaStand.GetComponent<UmbrellaStandMove>().SpriteChange();
+
+        Debug.Log(umbrellaStand);
+
+        noteObjList.Remove(_obj);
+        //Debug.Log(_obj.ToString());
+    }
 
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
     }
-
-
-  
 
     public void Tuto()
     {

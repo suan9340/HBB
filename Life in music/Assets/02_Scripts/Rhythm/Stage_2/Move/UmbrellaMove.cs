@@ -1,46 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
-using Unity.VisualScripting;
 
 public class UmbrellaMove : MonoBehaviour
 {
     #region Interface
-    public enum Direction
+
+    public enum State
     {
-        left,
+        Move,
     }
 
     public static float targetpos;
-    public static float _pos = -1.2f;
+    public static float _pos = 1f;
 
-    public static void Add(Direction _dir)
+    public static void Add(State _dir)
     {
-        if (_pos >= 0.4f)
-        {
-            _pos = -1.2f;
-        }
-
-        _pos += 0.2f;
-        targetpos = _pos;
-
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
         }
 
+        //  var _umbrellastandobj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaStandNote");
+        //    Debug.Log(_umbrellastandobj != null);
+        // Instantiate(_umbrellastandobj, mom.transform, false);
+
         var _obj = Resources.Load<UmbrellaMove>("Notes/Stage_02/UmbrellaNote");
+        var _standObj = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote");
+
+        Debug.Log(_standObj);
+
 
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
+
+            Instantiate(_standObj, mom.transform , false);
+
             _inst.dir = _dir;
 
             switch (_dir)
             {
-                case Direction.left:
+                case State.Move:
                     _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
+                  
                     break;
 
             }
@@ -63,7 +64,7 @@ public class UmbrellaMove : MonoBehaviour
     public float moveSpeed = 1f;
     public float target;
 
-    private Direction dir;
+    private State dir;
     private bool isStop = false;
 
     [Header("NoteAnimation")]
@@ -72,8 +73,11 @@ public class UmbrellaMove : MonoBehaviour
 
     public static bool isFirst = true;
 
-    private Transform myTrn;
     private static GameObject mom;
+
+
+    public Sprite[] sprites = new Sprite[5];
+
 
     private void OnEnable()
     {
@@ -82,8 +86,11 @@ public class UmbrellaMove : MonoBehaviour
 
     private void Start()
     {
-        myTrn = GetComponent<Transform>();
-        noteAnimation = GetComponent<Animator>();
+
+        
+
+        Cashing();
+         AddForceObject();
     }
 
     private void Update()
@@ -91,24 +98,27 @@ public class UmbrellaMove : MonoBehaviour
         MoveUmbrella();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       if(collision.gameObject.name == "UmbrellaStandNote")
+        {
+           AddList(gameObject);
+            gameObject.SetActive(false);
+           // Destroy(gameObject);
+        }
+     
+    }
+
     private void MoveUmbrella()
     {
+
         if (isStop) return;
 
         switch (dir)
         {
-            case Direction.left:
-
-                if (myTrn.position.x <= 0)
-                {
-                    isStop = true;
-                    myTrn.position = new Vector2(0, target);
-                    AddList(gameObject);
-                }
-                else
-                {
-                    myTrn.position += new Vector3(-10, 0) * moveSpeed * Time.deltaTime;
-                }
+            case State.Move:
+                AddForceObject();
+                SettiingRotation();
 
                 break;
 
@@ -117,19 +127,50 @@ public class UmbrellaMove : MonoBehaviour
 
     private void AddList(GameObject _obj)
     {
-
         UIManager.Instance.RhythmNoteEffect();
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
             EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.UMBRELLA_ADD, _obj);
     }
 
+    private Rigidbody2D myrigid;
+    private Transform mytrn;
+
+    
+    private void FixedUpdate()
+    {
+        if (isStop)
+        {
+            return;
+        }
+    }
+
+    private void Cashing()
+    {
+        noteAnimation = GetComponent<Animator>();
+        myrigid = GetComponent<Rigidbody2D>();
+        mytrn = GetComponent<Transform>();
+    }
+
+    private void AddForceObject()
+    {
+       myrigid.AddForce(-mytrn.position * 1.75f);
+    }
+
+    private void SettiingRotation()
+    {
+       // float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
+       // mytrn.eulerAngles = new Vector3(0, 0, angle);
+    }
+
     public void UmbrellaDown()
     {
-        noteAnimation.SetTrigger("isDown");
+
+        noteAnimation.SetTrigger("isMove");
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   myData:
     isTuto: 0
     isClear: 0
-    name: Stage01_Shellfish
+    name: Stage 01_Shellfish
     AudioClip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
     Bpm: 100
     BeatTrnCount: 5

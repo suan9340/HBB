@@ -26,7 +26,6 @@ public class StarFishMove : MonoBehaviour
         }
     }
 
-
     public static void Remove()
     {
         // 자동삭제
