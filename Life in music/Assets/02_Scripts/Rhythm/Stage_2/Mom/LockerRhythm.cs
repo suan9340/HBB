@@ -129,7 +129,17 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         _obj.GetComponent<Animator>().SetTrigger("isDoorOpen");
         two.Remove(two[0].gameObject);
 
-        StartCoroutine(RemoveLockerObj(_obj));
+        if (isFirst)
+        {
+            RhythmManager.Instance.StartMusic();
+            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+            isFirst = false;
+        }
+        UIManager.Instance.RhythmNoteEffect();
+        EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
+        AddNoteList(_obj);
+
+        //StartCoroutine(RemoveLockerObj(_obj));
     }
 
     private IEnumerator RemoveLockerObj(GameObject _obj)

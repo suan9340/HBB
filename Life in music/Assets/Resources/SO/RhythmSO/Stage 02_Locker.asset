@@ -22,138 +22,138 @@ MonoBehaviour:
     BestPerSec: 2
     MusicPlayTime: 60
     NoteList:
-    - beatFlag: 0101
-    - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0001
     - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0101
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
     - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
+    - beatFlag: 0100
+    - beatFlag: 0001
     - beatFlag: 0101
     - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0001
+    - beatFlag: 0100
     - beatFlag: 0101
     - beatFlag: 0000
-    - beatFlag: 0000
+    - beatFlag: 0100
     - beatFlag: 0001
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0001
+    - beatFlag: 0101
     - beatFlag: 0000
     - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0001
     - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
+    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
