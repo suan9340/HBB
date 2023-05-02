@@ -130,6 +130,7 @@ MonoBehaviour:
     type: 3}
   UmbrellaStand02Sprite: {fileID: 726857787, guid: 05479f04bbf014049880662f7585941a,
     type: 3}
+  umbrellaStand: {fileID: 1266886941110364467}
 --- !u!95 &216595924
 Animator:
   serializedVersion: 5

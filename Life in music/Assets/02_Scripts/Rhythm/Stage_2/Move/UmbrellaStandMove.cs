@@ -8,19 +8,9 @@ public class UmbrellaStandMove : MonoBehaviour
 
     public Sprite UmbrellaStand01sprite;
     public Sprite UmbrellaStand02Sprite;
+
+    public GameObject umbrellaStand;
    
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-     
-
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         spriteRenderer.sprite = UmbrellaStand02Sprite;
@@ -28,6 +18,16 @@ public class UmbrellaStandMove : MonoBehaviour
 
    public void SpriteChange()
     {
-        spriteRenderer.sprite = UmbrellaStand01sprite;
+       spriteRenderer.sprite = UmbrellaStand01sprite;
+    }
+
+    private void Update()
+    {
+        //Test
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            spriteRenderer.sprite = UmbrellaStand01sprite;
+        }
+        
     }
 }
