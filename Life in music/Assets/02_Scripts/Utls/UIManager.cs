@@ -123,12 +123,13 @@ public class UIManager : MonoSingleTon<UIManager>
         if (_isBlack)
         {
             changePanelImage.color = new Color(0, 0, 0, 0.3f);
+
         }
         else
         {
             changePanelImage.color = new Color(1, 1, 1, 0.3f);
         }
     }
-        
-   
+
+
 }

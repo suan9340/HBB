@@ -183,6 +183,6 @@ public class MenuUIManager : MonoBehaviour
     {
         startAnim.SetTrigger("isClickStartBtn");
         GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
-        GameSceneManager.Load(GameSceneManager.Scene.Room);
+        //GameSceneManager.Load(GameSceneManager.Scene.Room);
     }
 }
