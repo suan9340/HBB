@@ -90,7 +90,6 @@ public class UmbrellaMove : MonoBehaviour
     private Rigidbody2D myrigid;
     private Transform mytrn;
 
-    
     private void FixedUpdate()
     {
         if (isStop)

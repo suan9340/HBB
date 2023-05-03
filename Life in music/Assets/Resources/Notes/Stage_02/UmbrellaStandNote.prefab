@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1417071229, guid: 05479f04bbf014049880662f7585941a, type: 3}
+  m_Sprite: {fileID: 726857787, guid: 05479f04bbf014049880662f7585941a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.8666667}
+  m_Size: {x: 1.5, y: 1.87}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -104,8 +104,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.87}
-    newSize: {x: 1.3, y: 1.8666667}
+    oldSize: {x: 1.59, y: 2.16}
+    newSize: {x: 1.5, y: 1.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
     type: 3}
   UmbrellaStand02Sprite: {fileID: 726857787, guid: 05479f04bbf014049880662f7585941a,
     type: 3}
-  umbrellaStand: {fileID: 1266886941110364467}
 --- !u!95 &216595924
 Animator:
   serializedVersion: 5

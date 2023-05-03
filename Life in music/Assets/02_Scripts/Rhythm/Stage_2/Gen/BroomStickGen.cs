@@ -16,6 +16,7 @@ public class BroomStickGen : MonoBehaviour,IGen
                 }
                 if (i == 1)
                 {
+
                 }
                 if (i == 2)
                 {
