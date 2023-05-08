@@ -12,13 +12,10 @@ public class UmbrellaStandMove : MonoBehaviour
     {
         if (collision.gameObject.name == "UmbrellaNote(Clone)")
         {
-            //isStandNull = true;
             spriteRenderer.sprite = UmbrellaStand02Sprite;
-            //SpriteChange();
 
         }
     }
-
     public void SpriteChange()
     {
           spriteRenderer.sprite = UmbrellaStand01sprite;

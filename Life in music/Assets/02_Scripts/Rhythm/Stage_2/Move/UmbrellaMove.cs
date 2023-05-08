@@ -9,7 +9,6 @@ public class UmbrellaMove : MonoBehaviour
 
     public static void Add()
     {
-
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
@@ -20,14 +19,11 @@ public class UmbrellaMove : MonoBehaviour
         {
             var _inst = Instantiate(_obj, mom.transform, false);
             _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
-        
         }
-
         else
         {
             Debug.LogError("UmbrellaNote NULL");
         }
-
     }
 
     public static void Remove()
@@ -54,35 +50,29 @@ public class UmbrellaMove : MonoBehaviour
     {
         Cashing();
         AddForceObject();
-     
-
     }
 
     private void Update()
     {
         MoveUmbrella();
-        SettiingRotation();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AddList(gameObject);
-        //  Destroy(gameObject);
+       gameObject.SetActive(false);
     }
 
-    void ReMove()
+   public void ReMoveUmbrella()
     {
-        gameObject.transform.position = transform.position + new Vector3(-6f, 2f, 0f);
+        gameObject.transform.localPosition = new Vector3(-2.5f, 0f, 0f);
         gameObject.SetActive(true);
-        //   noteAnimation.SetTrigger("isMove");
-
+        ReAddForceObject();
     }
 
     private void MoveUmbrella()
     {
         if (isStop) return;
-
-        AddForceObject();
     }
 
     private void AddList(GameObject _obj)
@@ -106,6 +96,7 @@ public class UmbrellaMove : MonoBehaviour
         {
             return;
         }
+        SettiingRotation();
     }
 
     private void Cashing()
@@ -117,24 +108,18 @@ public class UmbrellaMove : MonoBehaviour
 
     private void AddForceObject()
     {
-        myrigid.AddForce(-mytrn.position * 1.75f);
+        myrigid.AddForce(-mytrn.position *60f);
+    }
+
+    private void ReAddForceObject()
+    {
+       // myrigid.AddForce(mytrn.position * 60f);
+        myrigid.AddForce(new Vector3(mytrn.position.x*3, mytrn.position.y*-1f, mytrn.position.z) * 60f);
     }
 
     private void SettiingRotation()
     {
-        float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
-        mytrn.eulerAngles = new Vector3(0, 0, angle);
-    }
-
-    public void RemoveObj()
-    {
-        Destroy(gameObject);
-    }
-
- 
-
-    public static void UmbrellaDown()
-    {
-        // noteAnimation.SetTrigger("isMove");
+        // float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
+       // mytrn.eulerAngles = new Vector3(0, 0, angle);
     }
 }

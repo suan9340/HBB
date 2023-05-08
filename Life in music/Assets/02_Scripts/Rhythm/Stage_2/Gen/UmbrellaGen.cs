@@ -16,8 +16,8 @@ public class UmbrellaGen : MonoBehaviour,IGen
                 }
                 if (i == 1)
                 {
+
                 }
-                
             }
         }
     }
