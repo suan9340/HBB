@@ -9,6 +9,7 @@ public class UmbrellaMove : MonoBehaviour
 
     public static void Add()
     {
+
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
@@ -18,13 +19,15 @@ public class UmbrellaMove : MonoBehaviour
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
-          _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
+            _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
+        
         }
 
         else
         {
             Debug.LogError("UmbrellaNote NULL");
         }
+
     }
 
     public static void Remove()
@@ -34,16 +37,13 @@ public class UmbrellaMove : MonoBehaviour
     #endregion
 
     public float moveSpeed = 1f;
-    //public float target;
-
     private bool isStop = false;
 
     [Header("NoteAnimation")]
-    public Animator noteAnimation = null;
+    public static Animator noteAnimation = null;
 
     public static bool isFirst = true;
     private static GameObject mom;
-    public Sprite[] sprites = new Sprite[5];
 
     private void OnEnable()
     {
@@ -54,25 +54,35 @@ public class UmbrellaMove : MonoBehaviour
     {
         Cashing();
         AddForceObject();
+     
+
     }
 
     private void Update()
     {
         MoveUmbrella();
+        SettiingRotation();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AddList(gameObject);
-        Destroy(gameObject);
+        //  Destroy(gameObject);
+    }
+
+    void ReMove()
+    {
+        gameObject.transform.position = transform.position + new Vector3(-6f, 2f, 0f);
+        gameObject.SetActive(true);
+        //   noteAnimation.SetTrigger("isMove");
+
     }
 
     private void MoveUmbrella()
     {
         if (isStop) return;
 
-       AddForceObject();
-       SettiingRotation();
+        AddForceObject();
     }
 
     private void AddList(GameObject _obj)
@@ -107,17 +117,24 @@ public class UmbrellaMove : MonoBehaviour
 
     private void AddForceObject()
     {
-       myrigid.AddForce(-mytrn.position * 1.75f);
+        myrigid.AddForce(-mytrn.position * 1.75f);
     }
 
     private void SettiingRotation()
     {
-       // float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
-        //mytrn.eulerAngles = new Vector3(0, 0, angle);
+        float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
+        mytrn.eulerAngles = new Vector3(0, 0, angle);
     }
 
-    public void UmbrellaDown()
+    public void RemoveObj()
     {
-       // noteAnimation.SetTrigger("isMove");
+        Destroy(gameObject);
+    }
+
+ 
+
+    public static void UmbrellaDown()
+    {
+        // noteAnimation.SetTrigger("isMove");
     }
 }

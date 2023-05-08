@@ -1,9 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UmbrellaRhythm : TutoMOM, IRhythmMom
 {
     public GameObject umbrellaStand;
     private static GameObject mom;
+    public UmbrellaStandMove umMove;
+
 
     private void Awake()
     {
@@ -16,6 +19,9 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         var _standObj = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote");
         mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
         Instantiate(_standObj, mom.transform, false);
+
+        umMove = GameObject.Find("UmbrellaStandNote(Clone)").GetComponent<UmbrellaStandMove>();
+
     }
 
     protected override void Start()
@@ -70,13 +76,20 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
             Debug.Log("List Count is Zerooo");
             return;
         }
-
+        Debug.Log(gameObject.name);
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         UIManager.Instance.RhythmNoteEffect();
 
+        //스프라이트 바꾸기
+        umbrellaStand.GetComponent<UmbrellaStandMove>().SpriteChange();
+
+
         var _umonjSelect = _cnt - 1;
         var _obj = noteObjList[_umonjSelect].gameObject;
-        umbrellaStand.GetComponent<UmbrellaStandMove>().SpriteChange();
+
+        _obj.GetComponent<UmbrellaMove>().RemoveObj();
+        umMove.ResetUm();
+
         noteObjList.Remove(_obj);
     }
 

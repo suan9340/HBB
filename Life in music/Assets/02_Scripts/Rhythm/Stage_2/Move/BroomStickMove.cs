@@ -51,7 +51,8 @@ public class BroomStickMove : MonoBehaviour
     public void BroomStickDown()
     {
         myAnim.SetTrigger("BroomStickClick");
-        Invoke("BroomStickDestroy",1.2f);
+        BroomStickDestroy();
+      //  Invoke("BroomStickDestroy",1.2f);
     }
     
     public void BroomStickDestroy() {
