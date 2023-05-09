@@ -57,7 +57,6 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     //눌렀을때
     public void SetupBroomStick()
     {
-        Debug.Log("클릭");
         var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
