@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BroomStickGen : MonoBehaviour,IGen
+public class BroomStickGen : MonoBehaviour, IGen
 {
     public void Gen(List<bool> list)
     {
@@ -20,9 +20,7 @@ public class BroomStickGen : MonoBehaviour,IGen
                 }
                 if (i == 2)
                 {
-                }
-                if (i == 3)
-                {
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
                 }
             }
         }

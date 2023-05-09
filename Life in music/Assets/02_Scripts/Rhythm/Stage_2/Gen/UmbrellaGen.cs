@@ -16,7 +16,7 @@ public class UmbrellaGen : MonoBehaviour,IGen
                 }
                 if (i == 1)
                 {
-
+                    EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
                 }
             }
         }
