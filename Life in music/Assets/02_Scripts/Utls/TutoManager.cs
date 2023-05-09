@@ -11,6 +11,8 @@ public class TutoManager : MonoSingleTon<TutoManager>
     private bool isTyping = false;
 
     private readonly WaitForSeconds textWait = new WaitForSeconds(2f);
+
+    
     public void SetActiveTrueText()
     {
         tutoTxt.text = "0";

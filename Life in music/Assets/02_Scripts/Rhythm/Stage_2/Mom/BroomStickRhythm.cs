@@ -57,7 +57,6 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     //´­·¶À»¶§
     public void SetupBroomStick()
     {
-
         var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
@@ -92,20 +91,26 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
         {
             case 1:
                 isTuto = true;
+                tutoObj[0].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
                 break;
 
             case 2:
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
 
 
             case 3:
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 
             default:
+                tutoObj[0].SetActive(false);
                 isTuto = false;
                 StartRhythm();
                 break;

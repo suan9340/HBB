@@ -9,11 +9,11 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
     [Space(20)]
     public List<GameObject> lockerList = new List<GameObject>();
-    public List<GameObject> two = new List<GameObject>();
+    private List<GameObject> two = new List<GameObject>();
 
 
     private int num;
-    private readonly WaitForSeconds lockerSec = new WaitForSeconds(1f);
+    private readonly WaitForSeconds lockerSec = new WaitForSeconds(0.4f);
 
     private bool isFirst = true;
     private void Awake()
@@ -176,25 +176,43 @@ public class LockerRhythm : TutoMOM, IRhythmMom
     {
         if (TutoManager.Instance.IsTyping) return;
 
+        var _obj1 = tutoObj[1].gameObject.GetComponent<Animator>();
+        var _obj2 = tutoObj[2].gameObject.GetComponent<Animator>();
+
         tutoNum++;
         switch (tutoNum)
         {
             case 1:
                 isTuto = true;
+                tutoObj[0].SetActive(true);
+                TutoManager.Instance.TextingOut(tutoTxt[0]);
                 break;
 
             case 2:
+                _obj1.SetTrigger("isDoorOpen");
+                _obj2.SetTrigger("isDoorOpen");
+
+                TutoManager.Instance.TextingOut(tutoTxt[1]);
                 break;
 
 
             case 3:
+                TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
+                TutoManager.Instance.TextingOut(tutoTxt[3]);
+                break;
+
+            case 5:
+                _obj1.SetTrigger("isDoorClose");
+                _obj2.SetTrigger("isDoorClose");
+                TutoManager.Instance.TextingOut(tutoTxt[4]);
                 break;
 
             default:
+                tutoObj[0].SetActive(false);
                 isTuto = false;
                 StartRhythm();
                 break;
