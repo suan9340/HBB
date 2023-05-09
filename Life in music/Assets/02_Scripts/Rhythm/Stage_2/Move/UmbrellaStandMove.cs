@@ -1,32 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UmbrellaStandMove : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-
     public Sprite UmbrellaStand01sprite;
     public Sprite UmbrellaStand02Sprite;
-   
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-     
-
-    }
+    private bool isStandNull;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        spriteRenderer.sprite = UmbrellaStand02Sprite;
+        if (collision.gameObject.name == "UmbrellaNote(Clone)")
+        {
+            spriteRenderer.sprite = UmbrellaStand02Sprite;
+
+        }
+    }
+    public void SpriteChange()
+    {
+          spriteRenderer.sprite = UmbrellaStand01sprite;
     }
 
-   public void SpriteChange()
+    public void ResetUm()
     {
         spriteRenderer.sprite = UmbrellaStand01sprite;
     }

@@ -57,7 +57,6 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     //´­·¶À»¶§
     public void SetupBroomStick()
     {
-
         var _cnt = noteObjList.Count;
 
         if (_cnt == 0)
