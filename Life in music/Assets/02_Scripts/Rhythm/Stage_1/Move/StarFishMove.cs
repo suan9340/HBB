@@ -60,4 +60,9 @@ public class StarFishMove : MonoBehaviour
         myanim.SetTrigger("isStarfishClick");
         AddList(gameObject);
     }
+
+    public void  StarFishAnim()
+    {
+        myanim.SetTrigger("isStarfishClick");
+    }
 }

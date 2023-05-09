@@ -79,6 +79,7 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
 
         var _starfishonjSelect = _cnt - 1;
         var _obj = noteObjList[_starfishonjSelect].gameObject;
+        _obj.GetComponent<StarFishMove>().StarFishAnim();
 
         noteObjList.Remove(_obj);
     }

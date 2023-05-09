@@ -22,38 +22,38 @@ MonoBehaviour:
     BestPerSec: 4
     MusicPlayTime: 20
     NoteList:
-    - beatFlag: 0100000001
+    - beatFlag: 0100000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000010001
+    - beatFlag: 0000010000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0100000001
+    - beatFlag: 0100000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000010001
+    - beatFlag: 0000010000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000000101
+    - beatFlag: 0000000100
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
-    - beatFlag: 0100000001
+    - beatFlag: 0001000000
+    - beatFlag: 0100000000
     - beatFlag: 0000000001
     - beatFlag: 0000000000
     - beatFlag: 0000000000
@@ -86,37 +86,37 @@ MonoBehaviour:
     - beatFlag: 0000000000
     - beatFlag: 0000000001
     - beatFlag: 0000000001
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000010001
+    - beatFlag: 0000010000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000000101
+    - beatFlag: 0000000100
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0100000001
+    - beatFlag: 0100000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0000010001
+    - beatFlag: 0000010000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
     - beatFlag: 0000000000
-    - beatFlag: 0001000001
+    - beatFlag: 0001000000
     - beatFlag: 0000000000
     - beatFlag: 0000000001
     - beatFlag: 0000000000

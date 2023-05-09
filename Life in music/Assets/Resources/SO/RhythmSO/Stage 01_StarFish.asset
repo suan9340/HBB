@@ -22,17 +22,9 @@ MonoBehaviour:
     BestPerSec: 4
     MusicPlayTime: 60
     NoteList:
-    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
@@ -54,49 +46,17 @@ MonoBehaviour:
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0101
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0101
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0001
     - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
@@ -118,6 +78,22 @@ MonoBehaviour:
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
     - beatFlag: 0101
     - beatFlag: 0000
     - beatFlag: 0000
@@ -134,17 +110,41 @@ MonoBehaviour:
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0001
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
-    - beatFlag: 0001
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0101
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
+    - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000

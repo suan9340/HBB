@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage 01_Seaweed
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
-    isClear: 0
+    isTuto: 1
+    isClear: 1
     name: Stage 01_Seaweed
     AudioClip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
     Bpm: 100
@@ -22,31 +22,28 @@ MonoBehaviour:
     BestPerSec: 3
     MusicPlayTime: 20
     NoteList:
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
-    - beatFlag: 00000000
-    - beatFlag: 00000000
-    - beatFlag: 00000001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000001
@@ -61,6 +58,9 @@ MonoBehaviour:
     - beatFlag: 00000001
     - beatFlag: 00000000
     - beatFlag: 00000000
+    - beatFlag: 00000001
+    - beatFlag: 00000000
+    - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
@@ -70,28 +70,28 @@ MonoBehaviour:
     - beatFlag: 00000001
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000001

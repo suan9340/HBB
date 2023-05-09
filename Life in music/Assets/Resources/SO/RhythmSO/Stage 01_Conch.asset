@@ -22,11 +22,11 @@ MonoBehaviour:
     BestPerSec: 1
     MusicPlayTime: 20
     NoteList:
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
@@ -38,11 +38,11 @@ MonoBehaviour:
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
-    - beatFlag: 01000001
+    - beatFlag: 01000000
     - beatFlag: 00000000
-    - beatFlag: 00010001
+    - beatFlag: 00010000
     - beatFlag: 00000000
-    - beatFlag: 00000101
+    - beatFlag: 00000100
     - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 00000000
