@@ -10,6 +10,9 @@ public class DoorController : MonoBehaviour
     public GameObject openDoor = null;
     public GameObject closeDoor = null;
 
+    [Space(20)]
+    public GameObject gameQuestObj = null;
+
     private void OnMouseOver()
     {
         OnDoorMouseUP();
@@ -34,13 +37,13 @@ public class DoorController : MonoBehaviour
 
         openDoor.SetActive(true);
         closeDoor.SetActive(false);
-
+        gameQuestObj.SetActive(true);
         Debug.Log("Eixt Game");
     }
 
     private void OnDoorMouseDown()
     {
-        
+
     }
 
     private void OnDoorMouseExit()
