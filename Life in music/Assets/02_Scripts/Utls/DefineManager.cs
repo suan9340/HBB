@@ -36,10 +36,16 @@ public static class DefineManager
         Start,
         Playing,
         Setting,
-        Menu,
-        Menu_Set,
+        //Menu,
+        //Menu_Set,
         Rhythm,
         CantClick,
+    }
+
+    public enum MenuState
+    {
+        Playing,
+        Clicking,
     }
 
     public enum Stage_01_MoveType

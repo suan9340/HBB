@@ -28,16 +28,25 @@ public class MenuControllerMOM : MonoBehaviour
 
     private void OnMouseOver()
     {
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+            return;
+
         OnObjectMouseOver();
     }
 
     private void OnMouseDown()
     {
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+            return;
+
         OnObjectMouseDown();
     }
 
     private void OnMouseExit()
     {
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+            return;
+
         OnObjectMouseExit();
     }
 

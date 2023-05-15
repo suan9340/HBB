@@ -10,6 +10,10 @@ public static class ConstantManager
     public static string COIN_UI = "CoinUIShow";
     public static string RHYTHM_CHANGE_UI = "RhythmChange";
 
+
+    // MenuUI
+    public static string CLOSE_DOOR = "CloseDoor";
+
     // Stage_01
     public static string SHELLFISH_MUSIC = "ShellfishMusic";
     public static string STARFISH_ANIM = "StarfishAnimation";

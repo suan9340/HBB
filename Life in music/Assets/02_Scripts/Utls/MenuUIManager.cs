@@ -39,10 +39,10 @@ public class MenuUIManager : MonoBehaviour
     public void OnClickDoorExit()
     {
 
-        if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
-        {
-            return;
-        }
+        //if (GameManager.Instance.GetGameState() == DefineManager.GameState.Menu_Set)
+        //{
+        //    return;
+        //}
 
         lastState = GameManager.Instance.GetGameState();
 
@@ -77,7 +77,7 @@ public class MenuUIManager : MonoBehaviour
         if (isOut)
         {
             audioSource.PlayOneShot(openDoor);
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
+            //GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
 
             GameOutAnim.SetBool("isGameOut", true);
 
@@ -126,7 +126,7 @@ public class MenuUIManager : MonoBehaviour
         if (isBoardZoomIn)
         {
             BoardAnim.SetBool("isBoardClick", true);
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
+            //GameManager.Instance.SettingGameState(DefineManager.GameState.Menu_Set);
 
             yield return boardSec;
             isMoving = false;
@@ -139,7 +139,7 @@ public class MenuUIManager : MonoBehaviour
 
 
             yield return boardSec;
-            GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+            //GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
             isMoving = false;
         }
 
@@ -182,7 +182,7 @@ public class MenuUIManager : MonoBehaviour
     public void OnClickStart()
     {
         startAnim.SetTrigger("isClickStartBtn");
-        GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
+        //GameManager.Instance.SettingGameState(DefineManager.GameState.Menu);
         //GameSceneManager.Load(GameSceneManager.Scene.Room);
     }
 }

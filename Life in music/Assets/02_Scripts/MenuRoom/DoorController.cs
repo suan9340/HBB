@@ -13,6 +13,10 @@ public class DoorController : MonoBehaviour
     [Space(20)]
     public GameObject gameQuestObj = null;
 
+    private void Start()
+    {
+        EventManager.StartListening(ConstantManager.CLOSE_DOOR, CheckDoor);
+    }
     private void OnMouseOver()
     {
         OnDoorMouseUP();
@@ -29,24 +33,48 @@ public class DoorController : MonoBehaviour
 
     private void OnDoorMouseUP()
     {
-        if (isDoorOn || isDoorOpening)
+        //if (isDoorOn || isDoorOpening)
+        //    return;
+
+        if (isDoorOn)
+        {
             return;
+        }
+
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+        {
+            return;
+        }
+
+        CheckDoor();
 
         isDoorOn = true;
         isDoorOpening = true;
 
         openDoor.SetActive(true);
         closeDoor.SetActive(false);
-        gameQuestObj.SetActive(true);
+
         Debug.Log("Eixt Game");
     }
 
     private void OnDoorMouseDown()
     {
-
+        if (isDoorOn)
+        {
+            gameQuestObj.SetActive(true);
+            MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
+        }
     }
 
     private void OnDoorMouseExit()
+    {
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+            return;
+
+        CheckDoor();
+    }
+
+    private void CheckDoor()
     {
         isDoorOn = false;
         isDoorOpening = false;
