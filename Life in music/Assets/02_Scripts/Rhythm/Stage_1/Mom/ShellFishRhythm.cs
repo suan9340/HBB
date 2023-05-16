@@ -68,7 +68,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
             Debug.Log("List Count is Zerooo");
             return;
         }
-
+        
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         UIManager.Instance.RhythmNoteEffect();
 

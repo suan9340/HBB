@@ -35,6 +35,7 @@ public class BoardController : MonoBehaviour
     {
         if (isBoardZoom) return;
 
+
         boardCol.enabled = false;
         isBoardZoom = true;
 
