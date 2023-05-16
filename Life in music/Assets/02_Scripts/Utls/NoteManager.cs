@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,10 +20,13 @@ public class NoteManager : MonoSingleTon<NoteManager>
     public List<RectTransform> timingRect = new List<RectTransform>();
     private Vector2[] timingBoxs = null;
 
+    [Space(20)]
+    public List<CheckingNote> timingList = new List<CheckingNote>();
+
 
     private GameObject noteEndImage = null;
     private GameObject noteObj = null;
-    
+
 
     private DefineManager.NoteTimingCheck noteTiming;
     private string timingText;
@@ -84,16 +88,19 @@ public class NoteManager : MonoSingleTon<NoteManager>
                         case 0:
                             noteTiming = DefineManager.NoteTimingCheck.Perfect;
                             timingText = "Perfect";
+                            timingList[0].num++;
                             break;
 
                         case 1:
                             noteTiming = DefineManager.NoteTimingCheck.Good;
                             timingText = "Good";
+                            timingList[1].num++;
                             break;
 
                         case 2:
                             noteTiming = DefineManager.NoteTimingCheck.Bad;
                             timingText = "Bad";
+                            timingList[2].num++;
                             break;
                     }
 
@@ -103,6 +110,12 @@ public class NoteManager : MonoSingleTon<NoteManager>
             }
         }
     }
+
+    public void RemovebadNote()
+    {
+
+    }
+
 
     public void RemoveNote()
     {
@@ -127,4 +140,11 @@ public class NoteManager : MonoSingleTon<NoteManager>
         return noteTiming;
     }
 
+}
+
+[Serializable]
+public class CheckingNote
+{
+    public string name;
+    public int num;
 }
