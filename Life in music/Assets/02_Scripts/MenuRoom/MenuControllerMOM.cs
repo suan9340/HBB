@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MenuControllerMOM : MonoBehaviour
 {
+    public AudioSource audioSource = null;
+    public AudioClip objectsound = null;
+
+    [Space(20)]
     public GameObject defalutObj = null;
     public GameObject changeObj = null;
 
@@ -56,6 +60,8 @@ public class MenuControllerMOM : MonoBehaviour
         {
             return;
         }
+
+        audioSource.PlayOneShot(objectsound);
 
         isClick = true;
         defalutObj.SetActive(false);
