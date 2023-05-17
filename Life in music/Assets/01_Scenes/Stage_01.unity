@@ -6984,6 +6984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 1
   currentStage: {fileID: 0}
+  canClick: 0
 --- !u!4 &1648519385
 Transform:
   m_ObjectHideFlags: 0

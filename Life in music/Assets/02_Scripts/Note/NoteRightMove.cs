@@ -8,6 +8,8 @@ public class NoteRightMove : MonoBehaviour
 
     private RectTransform rect;
 
+    private bool isClear = false;
+
     private void Start()
     {
         rect = GetComponent<RectTransform>();
@@ -15,6 +17,15 @@ public class NoteRightMove : MonoBehaviour
 
     private void Update()
     {
+        if (isClear)
+            return;
+
+        if (rect.anchoredPosition.x >= 1800f)
+        {
+            isClear = true;
+            EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+        }
+
         rect.anchoredPosition += new Vector2(10, 0) * moveSpeed * Time.deltaTime;
     }
 }
