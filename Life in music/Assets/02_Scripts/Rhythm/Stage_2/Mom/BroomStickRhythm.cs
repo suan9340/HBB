@@ -29,8 +29,13 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
     }
     protected override void RhythmGaming()
     {
-        SetupBroomStick();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetupBroomStick();
+        }
     }
 
     private void CheckingTuto()

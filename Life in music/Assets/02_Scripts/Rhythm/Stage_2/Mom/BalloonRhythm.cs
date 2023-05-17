@@ -27,8 +27,13 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetupBalloon();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetupBalloon();
+        }
     }
 
     protected override void Tutoing()

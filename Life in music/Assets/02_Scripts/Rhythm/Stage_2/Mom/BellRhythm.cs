@@ -27,8 +27,13 @@ public class BellRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetUpBell();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetUpBell();
+        }
     }
 
     protected override void Tutoing()

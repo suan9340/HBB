@@ -36,8 +36,13 @@ public class ConchRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetupConch();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetupConch();
+        }
     }
 
     private void CheckingTuto()

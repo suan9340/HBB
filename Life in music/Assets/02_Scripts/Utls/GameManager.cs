@@ -6,6 +6,7 @@ public class GameManager : MonoSingleTon<GameManager>
 {
     public DefineManager.GameState gameState;
     public CurrnetstageSO currentStage;
+    public bool canClick = false;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class GameManager : MonoSingleTon<GameManager>
             currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
         }
     }
-    
+
     public DefineManager.StageNames GetCurrentStage()
     {
         return currentStage.stageName;

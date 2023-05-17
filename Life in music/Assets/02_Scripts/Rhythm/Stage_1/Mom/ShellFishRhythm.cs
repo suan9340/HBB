@@ -35,8 +35,13 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetUpShellfish();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetUpShellfish();
+        }
     }
 
 
@@ -68,7 +73,7 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
             Debug.Log("List Count is Zerooo");
             return;
         }
-        
+
         EventManager.TriggerEvent(ConstantManager.CAMERA_SHAKE);
         UIManager.Instance.RhythmNoteEffect();
 
@@ -107,13 +112,13 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
 
 
             case 3:
-              
+
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 break;
 
 
             case 4:
-                
+
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 

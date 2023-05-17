@@ -5371,6 +5371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 1
   currentStage: {fileID: 0}
+  canClick: 0
 --- !u!4 &1648519385
 Transform:
   m_ObjectHideFlags: 0
@@ -7821,6 +7822,13 @@ MonoBehaviour:
   - {fileID: 1689019644}
   - {fileID: 1409865349}
   - {fileID: 932726373}
+  timingList:
+  - name: Perfect
+    num: 0
+  - name: Good
+    num: 0
+  - name: Bad
+    num: 0
 --- !u!4 &2144652123
 Transform:
   m_ObjectHideFlags: 0

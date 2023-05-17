@@ -44,9 +44,15 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetUpRockFish();
-        StartCoroutine(CrabMove());
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetUpRockFish();
+            StartCoroutine(CrabMove());
+
+        }
     }
 
 
@@ -155,7 +161,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
 
 
             case 4:
-              
+
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
                 break;
 

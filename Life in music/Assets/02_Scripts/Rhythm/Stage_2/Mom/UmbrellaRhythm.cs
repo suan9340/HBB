@@ -39,8 +39,13 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     }
     protected override void RhythmGaming()
     {
-        SetupUmbrella();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetupUmbrella();
+        }
     }
 
     private void CheckingTuto()

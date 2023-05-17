@@ -73,6 +73,7 @@ public class NoteManager : MonoSingleTon<NoteManager>
         }
 
         for (int j = 0; j < noteList.Count; j++)
+
         {
             var _notepos = noteList[j].transform.localPosition.x - 920f;
 
@@ -80,6 +81,7 @@ public class NoteManager : MonoSingleTon<NoteManager>
             {
                 if (timingBoxs[i].x <= _notepos && _notepos <= timingBoxs[i].y)
                 {
+                    GameManager.Instance.canClick = true;
                     noteList[j].SetActive(false);
                     noteList.RemoveAt(j);
 

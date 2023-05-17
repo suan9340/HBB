@@ -38,8 +38,13 @@ public class LockerRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetupLocker();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetupLocker();
+        }
     }
 
     protected override void Tutoing()

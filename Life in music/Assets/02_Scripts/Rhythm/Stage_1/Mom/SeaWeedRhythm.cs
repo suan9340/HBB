@@ -36,8 +36,13 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
 
     protected override void RhythmGaming()
     {
-        SetUpSeaweed();
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);
+
+        if (GameManager.Instance.canClick)
+        {
+            GameManager.Instance.canClick = false;
+            SetUpSeaweed();
+        }
     }
 
     private void StartRhythm()
