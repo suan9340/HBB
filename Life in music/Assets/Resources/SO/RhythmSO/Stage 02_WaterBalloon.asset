@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 0
     name: Stage 02_WaterBalloon
-    AudioClip: {fileID: 8300000, guid: 41423dadcfa6da14295edcd9ff041bba, type: 3}
+    AudioClip: {fileID: 8300000, guid: 3c12f8fea8cec7e4abb128de3957faa1, type: 3}
     Bpm: 110
     BeatTrnCount: 3
     BestPerSec: 3

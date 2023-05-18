@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 0
     name: Stage 02_Umbrella
-    AudioClip: {fileID: 8300000, guid: 8154091944a9d7d43a658143838102ac, type: 3}
+    AudioClip: {fileID: 8300000, guid: 2b8f462533ee3254fb0ed54ebc99dfe6, type: 3}
     Bpm: 110
     BeatTrnCount: 2
     BestPerSec: 1

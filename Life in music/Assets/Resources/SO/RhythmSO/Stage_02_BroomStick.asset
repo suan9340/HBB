@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 0
     name: Stage 02_BroomStick
-    AudioClip: {fileID: 8300000, guid: e06be5130aa4a9b4ea4ffc34d3dd2f68, type: 3}
+    AudioClip: {fileID: 8300000, guid: 0f6d01f6a1f0b364cba301f886f09332, type: 3}
     Bpm: 110
     BeatTrnCount: 3
     BestPerSec: 1
