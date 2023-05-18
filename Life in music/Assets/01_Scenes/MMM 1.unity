@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 0.819
+  weight: 1
   sharedProfile: {fileID: 11400000, guid: 7fda1beab328bad4abd3e4e2f93f66f0, type: 2}
 --- !u!1 &460665544
 GameObject:
@@ -2830,7 +2830,7 @@ Animator:
   m_GameObject: {fileID: 644001493}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86dee6e6050de204b91a1f8843bc6b44, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5c5ca9f8ce0d7bf4f83e245d426730f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4683,6 +4683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 644001494}
+  - {fileID: 1195773204}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4779,7 +4780,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157236450}
-  - component: {fileID: 1157236449}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -4787,33 +4787,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!320 &1157236449
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157236448}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3a97175046bf70b429a2007829378f1b, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 7093684251373214806, guid: 087b6ce3c0f8bf547a1ad79569df512d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4798835033674788345, guid: 087b6ce3c0f8bf547a1ad79569df512d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 421368498081544603, guid: 087b6ce3c0f8bf547a1ad79569df512d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 4637342236714566537, guid: 3a97175046bf70b429a2007829378f1b, type: 2}
-    value: {fileID: 644001495}
-  m_ExposedReferences:
-    m_References: []
 --- !u!4 &1157236450
 Transform:
   m_ObjectHideFlags: 0
@@ -5035,6 +5008,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1195773203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195773204}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195773204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195773203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1152981357}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199049978
 GameObject:
   m_ObjectHideFlags: 0
@@ -7329,6 +7333,7 @@ GameObject:
   - component: {fileID: 2059906771}
   - component: {fileID: 2059906770}
   - component: {fileID: 2059906772}
+  - component: {fileID: 2059906773}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -7414,6 +7419,36 @@ MonoBehaviour:
   speed: 0.2
   textList:
   - "\uC548\uB155\uB09C\uC5F0\u3134"
+--- !u!114 &2059906773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059906768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 0}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2059906772}
+          m_TargetAssemblyTypeName: MenuText, Assembly-CSharp
+          m_MethodName: Text
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2070055972
 GameObject:
   m_ObjectHideFlags: 0

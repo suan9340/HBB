@@ -16,7 +16,7 @@ public class MenuText : MonoBehaviour
         Text();
     }
 
-    private void Text()
+    public void Text()
     {
         StartCoroutine(Typing(typingText, textList[0], speed));
 
