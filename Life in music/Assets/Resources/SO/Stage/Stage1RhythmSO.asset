@@ -16,7 +16,7 @@ MonoBehaviour:
   - stage1: 0
     stageRhythm: {fileID: 5363186388627015707, guid: 24f7abedec243a2428b5d7538839b660,
       type: 3}
-    clip: {fileID: 8300000, guid: a5283f75080e59f4cae1a3787ea68cce, type: 3}
+    clip: {fileID: 8300000, guid: 981d7bd98520f974b801c737fd827198, type: 3}
     noteObj: {fileID: 5397540457462237569, guid: 6d4edb15552615d468ed41da53e3f5aa,
       type: 3}
     noteEndObj: {fileID: 4129381342916783207, guid: 8743ca97c866a514cb524fa2d09c784e,
@@ -28,7 +28,7 @@ MonoBehaviour:
   - stage1: 1
     stageRhythm: {fileID: 6777877845949713200, guid: caadd12e0d058e44eb4500fd4029b934,
       type: 3}
-    clip: {fileID: 8300000, guid: acf92b89f3e4b8145a2f7d51a0ce5a2e, type: 3}
+    clip: {fileID: 8300000, guid: ab7e1d11e027dd042a070c642b083a4c, type: 3}
     noteObj: {fileID: 2197310107535397376, guid: 4a38ca408db57904aac711a7dd538070,
       type: 3}
     noteEndObj: {fileID: 6939795860134074587, guid: 7b557df13fdf8884d82cfb5448a756c6,
@@ -38,7 +38,7 @@ MonoBehaviour:
   - stage1: 2
     stageRhythm: {fileID: 6643353951219872024, guid: cb366ef1df1f2b943bea1f210c84586b,
       type: 3}
-    clip: {fileID: 8300000, guid: cf14437922b97f74fa446825971657ab, type: 3}
+    clip: {fileID: 8300000, guid: 56eaf27841fa2ca47b4937867972327f, type: 3}
     noteObj: {fileID: 5793928616832132482, guid: 243f5f00f18938e468c28d6c7148e71c,
       type: 3}
     noteEndObj: {fileID: 966402483036469579, guid: d8864c64757454743801595c898ad428,
@@ -49,7 +49,7 @@ MonoBehaviour:
   - stage1: 3
     stageRhythm: {fileID: 2600144270531631212, guid: 761721b8d14b9254397fe927bf11fb8e,
       type: 3}
-    clip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
+    clip: {fileID: 8300000, guid: 8487304bf3129364cb12f87c6554b458, type: 3}
     noteObj: {fileID: 644878289164705110, guid: b258878f99c392f479670af0c03ecf26,
       type: 3}
     noteEndObj: {fileID: 3723577050308351577, guid: bc6c07469712f0443a9721d8f757e736,
@@ -61,7 +61,7 @@ MonoBehaviour:
   - stage1: 4
     stageRhythm: {fileID: 2095509684888760273, guid: 9fb06c0d086b5a849b9c7cf0548052d7,
       type: 3}
-    clip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
+    clip: {fileID: 8300000, guid: 62ebb4321dd333c45bb64b6123bd05b8, type: 3}
     noteObj: {fileID: 3890609369124476559, guid: 8416a22f8a4b26a4a9b904b2242141b0,
       type: 3}
     noteEndObj: {fileID: 3684012898452488951, guid: 71363ca0d89951448bfa8a4770ad836c,

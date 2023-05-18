@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 1
     name: Stage 01_Seaweed
-    AudioClip: {fileID: 8300000, guid: af1503d3f8b6cc74996482501b0de984, type: 3}
+    AudioClip: {fileID: 8300000, guid: 62ebb4321dd333c45bb64b6123bd05b8, type: 3}
     Bpm: 100
     BeatTrnCount: 4
     BestPerSec: 3

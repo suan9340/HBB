@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 0
     name: Stage 01_Rock
-    AudioClip: {fileID: 8300000, guid: 47da8c7e678b14e44a749df65743ee50, type: 3}
+    AudioClip: {fileID: 8300000, guid: 8487304bf3129364cb12f87c6554b458, type: 3}
     Bpm: 100
     BeatTrnCount: 2
     BestPerSec: 3
