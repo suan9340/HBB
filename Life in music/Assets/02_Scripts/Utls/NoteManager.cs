@@ -40,7 +40,6 @@ public class NoteManager : MonoSingleTon<NoteManager>
     }
 
 
-
     public void SettingNoteObj(GameObject _obj)
     {
         noteObj = _obj;
