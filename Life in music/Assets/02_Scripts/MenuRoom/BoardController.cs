@@ -22,6 +22,11 @@ public class BoardController : MonoBehaviour
     }
     public void OnClickCheckStage(int num)
     {
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+            return;
+
+
+
         Debug.Log("SceneLoad");
         SceneManager.LoadScene(num);
     }
@@ -33,7 +38,8 @@ public class BoardController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isBoardZoom) return;
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking || isBoardZoom)
+            return;
 
 
         boardCol.enabled = false;
