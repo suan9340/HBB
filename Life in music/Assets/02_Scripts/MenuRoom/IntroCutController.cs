@@ -19,7 +19,8 @@ public class IntroCutController : MonoBehaviour
     private void Start()
     {
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
-        Invoke(nameof(Text), 5f);
+        Invoke(nameof(Text), 5.27f);
+        PlayerPrefs.SetInt("CheckFirst", 1);
     }
 
     private void Update()

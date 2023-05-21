@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData:
     isTuto: 1
-    isClear: 1
+    isClear: 0
     name: Stage 02_Bell
     AudioClip: {fileID: 8300000, guid: a7a8673c025a59c45a85faeabae49815, type: 3}
     Bpm: 110

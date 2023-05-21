@@ -8809,6 +8809,7 @@ MonoBehaviour:
     num: 0
   - name: Bad
     num: 0
+  rhythmCheck: {fileID: 11400000, guid: 94568d77e7e0b4c4f8a6e8c5bb6425e3, type: 2}
 --- !u!4 &2144652123
 Transform:
   m_ObjectHideFlags: 0

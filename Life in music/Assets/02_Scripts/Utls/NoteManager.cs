@@ -22,6 +22,7 @@ public class NoteManager : MonoSingleTon<NoteManager>
 
     [Space(20)]
     public List<CheckingNote> timingList = new List<CheckingNote>();
+    public RhythmCheck rhythmCheck = null;
 
 
     private GameObject noteEndImage = null;
@@ -89,19 +90,19 @@ public class NoteManager : MonoSingleTon<NoteManager>
                         case 0:
                             noteTiming = DefineManager.NoteTimingCheck.Perfect;
                             timingText = "Perfect";
-                            timingList[0].num++;
+                            rhythmCheck.checkingNote[0].num++;
                             break;
 
                         case 1:
                             noteTiming = DefineManager.NoteTimingCheck.Good;
                             timingText = "Good";
-                            timingList[1].num++;
+                            rhythmCheck.checkingNote[1].num++;
                             break;
 
                         case 2:
                             noteTiming = DefineManager.NoteTimingCheck.Bad;
                             timingText = "Bad";
-                            timingList[2].num++;
+                            rhythmCheck.checkingNote[2].num++;
                             break;
                     }
 

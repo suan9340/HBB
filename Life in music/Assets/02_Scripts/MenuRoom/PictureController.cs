@@ -21,6 +21,7 @@ public class PictureController : MonoBehaviour
         switch (sceneNum)
         {
             case 1:
+
                 currentSO.stageName = DefineManager.StageNames.Sea_01;
                 break;
 

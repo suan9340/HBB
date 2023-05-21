@@ -62,10 +62,10 @@ public class ClickInstruments : MonoBehaviour
             var _effectobj = GameObject.Find("SoundManager");
             effectAudio = _effectobj.transform.GetChild(0)?.GetComponent<AudioSource>();
         }
-        //if (objectClear == null)
-        //{
-        //    objectClear = GetComponent<ObjectClear>();
-        //}
+        if (objectClear == null)
+        {
+            objectClear = GetComponent<ObjectClear>();
+        }
     }
 
     private void CheckStage()
@@ -125,6 +125,12 @@ public class ClickInstruments : MonoBehaviour
     public void OnClickEvent()
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
+
+        if (objectClear.isCCC == true)
+        {
+            Debug.Log("NONO");
+            return;
+        }
 
         LoadRhythmStart();
 

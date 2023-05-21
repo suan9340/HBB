@@ -22,6 +22,11 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     [Space(20)]
     [Header("--- RhythmNodeList ---")]
 
+
+    [Space(20)]
+    [Header("--- RhythmCheck ---")]
+    public RhythmCheck RhythmCheckSO = null;
+
     private int currentIndex = 0;
 
     private float currentTime = 0f;
@@ -92,6 +97,13 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythmY()
     {
+        if (RhythmCheckSO.checkingNote[1].num > 7)
+        {
+
+        }
+
+        Debug.Log(RhythmCheckSO.checkingNote[0].num);
+
         data.isClear = true;
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
