@@ -96,7 +96,6 @@ public class UmbrellaMove : MonoBehaviour
         {
             return;
         }
-        SettiingRotation();
     }
 
     private void Cashing()
@@ -113,13 +112,6 @@ public class UmbrellaMove : MonoBehaviour
 
     private void ReAddForceObject()
     {
-       // myrigid.AddForce(mytrn.position * 60f);
         myrigid.AddForce(new Vector3(mytrn.position.x*3, mytrn.position.y*-1f, mytrn.position.z) * 60f);
-    }
-
-    private void SettiingRotation()
-    {
-        // float angle = Mathf.Atan2(myrigid.velocity.y, myrigid.velocity.x) * Mathf.Rad2Deg;
-       // mytrn.eulerAngles = new Vector3(0, 0, angle);
     }
 }
