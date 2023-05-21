@@ -24,8 +24,8 @@ MonoBehaviour:
     NoteList:
     - beatFlag: 00000000
     - beatFlag: 01000000
-    - beatFlag: 00000000
     - beatFlag: 00000100
+    - beatFlag: 00000000
     - beatFlag: 00000000
     - beatFlag: 01000000
     - beatFlag: 00000000
