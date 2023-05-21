@@ -8019,7 +8019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectAudio: {fileID: 440273608}
-  clip: {fileID: 8300000, guid: 7fa0dd7ababd5f143a81aaaf5e4a8f3b, type: 3}
+  clip: {fileID: 8300000, guid: 7da2d2224f69487438f7804ef6e31093, type: 3}
   instrumetnsObj: {fileID: 797171050733291734}
   num: 3
   plusNum: 0
@@ -8138,7 +8138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 922309795}
-  isCCC: 1
+  isCCC: 0
   stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &2135291215
 GameObject:
