@@ -16,7 +16,7 @@ MonoBehaviour:
     isTuto: 1
     isClear: 0
     name: Stage 02_Bell
-    AudioClip: {fileID: 8300000, guid: a7a8673c025a59c45a85faeabae49815, type: 3}
+    AudioClip: {fileID: 8300000, guid: 1b683156a96b0b54cb0b24aaf4ba14b7, type: 3}
     Bpm: 110
     BeatTrnCount: 4
     BestPerSec: 2
