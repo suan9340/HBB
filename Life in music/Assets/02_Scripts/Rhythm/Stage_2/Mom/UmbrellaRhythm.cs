@@ -126,10 +126,6 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
                 mySource.PlayOneShot(myClip);
                 break;
 
-            case 5:
-                TutoManager.Instance.TextingOut(tutoTxt[4]);
-                break;
-
             default:
                 tutoObj[0].SetActive(false);
                 isTuto = false;

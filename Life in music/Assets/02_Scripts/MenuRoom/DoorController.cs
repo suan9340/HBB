@@ -13,6 +13,11 @@ public class DoorController : MonoBehaviour
     [Space(20)]
     public GameObject gameQuestObj = null;
 
+
+    [Space(20)]
+    public AudioSource audioSorce = null;
+    public AudioClip openDoorclip = null;
+    public AudioClip closeeDoorclip = null;
     private void Start()
     {
         EventManager.StartListening(ConstantManager.CLOSE_DOOR, CheckDoor);
@@ -46,6 +51,7 @@ public class DoorController : MonoBehaviour
             return;
         }
 
+        audioSorce.PlayOneShot(openDoorclip);
         CheckDoor();
 
         isDoorOn = true;
@@ -78,6 +84,7 @@ public class DoorController : MonoBehaviour
     {
         isDoorOn = false;
         isDoorOpening = false;
+        audioSorce.PlayOneShot(closeeDoorclip);
 
         openDoor.SetActive(false);
         closeDoor.SetActive(true);

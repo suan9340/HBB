@@ -203,6 +203,9 @@ MonoBehaviour:
   openDoor: {fileID: 1565321325}
   closeDoor: {fileID: 918496317}
   gameQuestObj: {fileID: 1507716582}
+  audioSorce: {fileID: 1181040563}
+  openDoorclip: {fileID: 8300000, guid: 66a775bd9066af0499c6863831e2ea5a, type: 3}
+  closeeDoorclip: {fileID: 8300000, guid: 94a2b73b9ac488149bb4084dc42279fa, type: 3}
 --- !u!1 &45546561
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,21 +21,17 @@ public class BoardController : MonoBehaviour
         {
             Debug.LogWarning("BoardZoomAnim is NULL!!!!!!!");
         }
+
+        SettingPicture(false);
     }
+
     public void OnClickCheckStage(int num)
     {
         if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
             return;
 
-
-
         Debug.Log("SceneLoad");
         SceneManager.LoadScene(num);
-    }
-
-    public void OnClickBoardZoom()
-    {
-
     }
 
     private void OnMouseDown()
@@ -50,14 +46,16 @@ public class BoardController : MonoBehaviour
 
         if (isBoardZoom)
         {
+            SettingPicture(false);
+
             isBoardZoom = false;
             boardZoomAnim.SetTrigger("isBoardZoomOut");
         }
         else
         {
-            //boardCol.enabled = false;
-            isBoardZoom = true;
+            SettingPicture(true);
 
+            isBoardZoom = true;
             boardZoomAnim.SetTrigger("isBoardZoomIn");
         }
 
@@ -67,5 +65,17 @@ public class BoardController : MonoBehaviour
     private void MovingSet()
     {
         isMoving = false;
+    }
+
+    private void SettingPicture(bool _bolen)
+    {
+        if (picCol[0] == null || picCol[1] == null)
+        {
+            Debug.LogError("picCol is NULL!!");
+            return;
+        }
+
+        picCol[0].enabled = _bolen;
+        picCol[1].enabled = _bolen;
     }
 }
