@@ -13,6 +13,8 @@ public class BoardController : MonoBehaviour
     public List<BoxCollider2D> picCol = new List<BoxCollider2D>();
     public BoxCollider2D boardCol = null;
 
+    private bool isMoving = false;
+
     private void Start()
     {
         if (boardZoomAnim == null)
@@ -38,14 +40,32 @@ public class BoardController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking || isBoardZoom)
+        if (isMoving)
             return;
 
+        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking /*|| isBoardZoom*/)
+            return;
 
-        boardCol.enabled = false;
-        isBoardZoom = true;
+        isMoving = true;
 
-        boardZoomAnim.SetTrigger("isBoardZoomIn");
+        if (isBoardZoom)
+        {
+            isBoardZoom = false;
+            boardZoomAnim.SetTrigger("isBoardZoomOut");
+        }
+        else
+        {
+            //boardCol.enabled = false;
+            isBoardZoom = true;
+
+            boardZoomAnim.SetTrigger("isBoardZoomIn");
+        }
+
+        Invoke(nameof(MovingSet), 1f);
     }
 
+    private void MovingSet()
+    {
+        isMoving = false;
+    }
 }
