@@ -62,7 +62,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
         {
 
-            Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
+            //Debug.Log($"{currentIndex}  /  {data.NoteList.Count}");
 
 
             if (currentIndex >= data.NoteList.Count)
@@ -97,10 +97,6 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythmY()
     {
-        if (RhythmCheckSO.checkingNote[1].num > 7)
-        {
-
-        }
 
         Debug.Log(RhythmCheckSO.checkingNote[0].num);
 

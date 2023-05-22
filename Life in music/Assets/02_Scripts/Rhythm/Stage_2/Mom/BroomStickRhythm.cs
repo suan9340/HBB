@@ -111,11 +111,17 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
 
 
             case 4:
+                tutoObj[0].SetActive(false);
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
+                tutoObj[1].SetActive(true);
+                break;
+
+            case 5:
+                TutoManager.Instance.TextingOut(tutoTxt[4]);
                 break;
 
             default:
-                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(false);
                 isTuto = false;
                 StartRhythm();
                 break;

@@ -11,7 +11,7 @@ public class BroomStickMove : MonoBehaviour
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (BroomStick)(Clone)");
-        }                                                                        
+        }
 
         var _obj = Resources.Load<BroomStickMove>("Notes/Stage_02/BroomStickNote");
         if (_obj != null)
@@ -25,7 +25,7 @@ public class BroomStickMove : MonoBehaviour
         // 자동삭제
     }
 
-    public Animator myAnim;
+    private Animator myAnim;
 
 
     private void Start()
@@ -52,10 +52,11 @@ public class BroomStickMove : MonoBehaviour
     {
         myAnim.SetTrigger("BroomStickClick");
         BroomStickDestroy();
-      //  Invoke("BroomStickDestroy",1.2f);
+        //  Invoke("BroomStickDestroy",1.2f);
     }
-    
-    public void BroomStickDestroy() {
+
+    public void BroomStickDestroy()
+    {
         Destroy(gameObject);
     }
 }

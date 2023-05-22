@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 02_Umbrella
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 1
+    isTuto: 0
     isClear: 1
     name: Stage 02_Umbrella
     AudioClip: {fileID: 8300000, guid: 2b8f462533ee3254fb0ed54ebc99dfe6, type: 3}

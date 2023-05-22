@@ -8256,6 +8256,7 @@ MonoBehaviour:
     MusicPlayTime: 60
     NoteList: []
   curRhy: {fileID: 0}
+  RhythmCheckSO: {fileID: 0}
 --- !u!4 &1988767932
 Transform:
   m_ObjectHideFlags: 0

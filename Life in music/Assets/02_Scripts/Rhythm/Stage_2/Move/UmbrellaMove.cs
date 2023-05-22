@@ -19,6 +19,7 @@ public class UmbrellaMove : MonoBehaviour
         {
             var _inst = Instantiate(_obj, mom.transform, false);
             _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
+            Debug.Log("qwe");
         }
         else
         {
@@ -35,8 +36,9 @@ public class UmbrellaMove : MonoBehaviour
     public float moveSpeed = 1f;
     private bool isStop = false;
 
-    [Header("NoteAnimation")]
-    public static Animator noteAnimation = null;
+    private Animator noteAnimation = null;
+    private Rigidbody2D myrigid;
+    private Transform mytrn;
 
     public static bool isFirst = true;
     private static GameObject mom;
@@ -45,6 +47,11 @@ public class UmbrellaMove : MonoBehaviour
     {
         //target = targetpos;
     }
+
+    //private void Awake()
+    //{
+    //    transform.localPosition = new Vector3(11f, 1f, 0f);
+    //}
 
     private void Start()
     {
@@ -60,10 +67,10 @@ public class UmbrellaMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AddList(gameObject);
-       gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
-   public void ReMoveUmbrella()
+    public void ReMoveUmbrella()
     {
         gameObject.transform.localPosition = new Vector3(-2.5f, 0f, 0f);
         gameObject.SetActive(true);
@@ -87,8 +94,7 @@ public class UmbrellaMove : MonoBehaviour
         EventManager<GameObject>.TriggerEvent(ConstantManager.UMBRELLA_ADD, _obj);
     }
 
-    private Rigidbody2D myrigid;
-    private Transform mytrn;
+
 
     private void FixedUpdate()
     {
@@ -107,11 +113,11 @@ public class UmbrellaMove : MonoBehaviour
 
     private void AddForceObject()
     {
-        myrigid.AddForce(-mytrn.position *60f);
+        myrigid.AddForce(-mytrn.position * 60f);
     }
 
     private void ReAddForceObject()
     {
-        myrigid.AddForce(new Vector3(mytrn.position.x*3, mytrn.position.y*-1f, mytrn.position.z) * 60f);
+        myrigid.AddForce(new Vector3(mytrn.position.x * 3, mytrn.position.y * -1f, mytrn.position.z) * 60f);
     }
 }

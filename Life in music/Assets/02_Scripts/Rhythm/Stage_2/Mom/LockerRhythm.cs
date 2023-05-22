@@ -213,6 +213,7 @@ public class LockerRhythm : TutoMOM, IRhythmMom
             case 5:
                 _obj1.SetTrigger("isDoorClose");
                 _obj2.SetTrigger("isDoorClose");
+                mySource.PlayOneShot(myClip);
                 TutoManager.Instance.TextingOut(tutoTxt[4]);
                 break;
 
