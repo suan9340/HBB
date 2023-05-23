@@ -69,6 +69,7 @@ public class IsFirstTuto : MonoBehaviour
 
 
             case 5:
+                PlayerPrefs.SetInt("Stage01Check", 1);
                 SceneManager.LoadScene("Stage_01");
                 break;
         }
