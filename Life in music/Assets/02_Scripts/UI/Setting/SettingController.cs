@@ -37,17 +37,15 @@ public class SettingController : MonoBehaviour
         if (isSettingOn)
         {
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
-            //Debug.Log("isSetting");
             myAnim.SetTrigger("SettingOn");
         }
         else
         {
-            //Debug.Log("SettingEnd");
             myAnim.SetTrigger("SettingOff");
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         }
 
-        Invoke(nameof(ResetSettincChanging), 1.5f);
+        Invoke(nameof(ResetSettincChanging), 1f);
     }
 
     public void OnClickMenu()
