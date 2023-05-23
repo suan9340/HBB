@@ -69,7 +69,7 @@ public class IsFirstTuto : MonoBehaviour
 
 
             case 5:
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("Stage_01");
                 break;
         }
     }
