@@ -97,9 +97,6 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
     public void StopRhythmY()
     {
-
-        Debug.Log(RhythmCheckSO.checkingNote[0].num);
-
         data.isClear = true;
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();

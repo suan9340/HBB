@@ -8632,7 +8632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 652637154}
-  isCCC: 0
+  isCCC: 1
   stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &2043529940
 GameObject:
