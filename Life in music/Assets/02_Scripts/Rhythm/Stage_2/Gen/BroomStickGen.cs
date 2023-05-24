@@ -16,10 +16,6 @@ public class BroomStickGen : MonoBehaviour, IGen
                 }
                 if (i == 1)
                 {
-
-                }
-                if (i == 2)
-                {
                     EventManager.TriggerEvent(ConstantManager.NOTE_IMAGE_INSTANCE);
                 }
             }
