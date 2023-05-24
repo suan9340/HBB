@@ -108,7 +108,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
                 _source.Stop();
                 yield break;
             }
-            _source.volume -= Time.deltaTime * 3f;
+            _source.volume -= Time.deltaTime * 4f;
             yield return soundSec;
         }
 
