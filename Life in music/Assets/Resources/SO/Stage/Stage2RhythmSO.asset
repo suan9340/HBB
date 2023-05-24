@@ -23,7 +23,6 @@ MonoBehaviour:
       type: 3}
     chat:
     - "\uBCA8\uC18C\uB9AC \uB418\uAC8C \uC798\uC5B4\uC6B8\uB9AC\uB124"
-    - 
   - stage2: 1
     stageRhythm: {fileID: 5350606685092706600, guid: c5e830871c96f5849811cfd982602d18,
       type: 3}
@@ -43,7 +42,8 @@ MonoBehaviour:
     noteEndObj: {fileID: 3578896200877195486, guid: 9f3313670e2326945a45805884eff86a,
       type: 3}
     chat:
-    - "\uC0AC\uBB3C"
+    - "\uC0AC\uBB3C\uD568\uC744 \uAC00\uB054 \uC384\uAC8C \uB2EB\uC544\uC11C \uD63C\uB0AC\uB358
+      \uAE30\uC5B5\uC774 \uB09C\uB2E4"
   - stage2: 3
     stageRhythm: {fileID: 2509645745563083472, guid: 8f341ba773ce9a846b1b722af52c052e,
       type: 3}
@@ -53,7 +53,8 @@ MonoBehaviour:
     noteEndObj: {fileID: 4175164232464151315, guid: fa6f8c7c09653664e97ae13755f7d0f5,
       type: 3}
     chat:
-    - "\uC6B0\uC0B0"
+    - "\uC6B0\uC0B0 \uD1B5\uC5D0 \uB358\uC9C0\uAE30 \uB180\uC774 \uD588\uB358 \uAE30\uC5B5\uC774
+      \uB098"
   - stage2: 4
     stageRhythm: {fileID: 5753192265653330423, guid: 812e960c00733df44a84e84c0ea0ae40,
       type: 3}
@@ -63,4 +64,4 @@ MonoBehaviour:
     noteEndObj: {fileID: 7434819194312618724, guid: 746d3cf0b5f621a449e00ce95ed63edf,
       type: 3}
     chat:
-    - "\uBE57\uC790\uB8E8"
+    - "\uBE57\uC790\uB8E8 \uC4F0\uB294 \uC18C\uB9AC\uAC00 \uB418\uAC8C \uC88B\uB2E4"

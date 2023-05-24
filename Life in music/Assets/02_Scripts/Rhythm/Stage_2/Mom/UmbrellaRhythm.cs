@@ -115,6 +115,7 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
 
             case 3:
+                mySource.PlayOneShot(myClip);
                 tutoObj[0].SetActive(false);
                 TutoManager.Instance.TextingOut(tutoTxt[2]);
                 tutoObj[1].SetActive(true);
@@ -123,11 +124,10 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
 
             case 4:
                 TutoManager.Instance.TextingOut(tutoTxt[3]);
-                mySource.PlayOneShot(myClip);
                 break;
 
             default:
-                tutoObj[0].SetActive(false);
+                tutoObj[1].SetActive(false);
                 isTuto = false;
                 StartRhythm();
                 break;

@@ -68,7 +68,7 @@ public class Memory : MonoBehaviour
             coinParent.transform.GetChild(i).DOScale(1f, 0.3f).SetDelay(_delay)
                 .SetEase(Ease.OutBack);
 
-            coinParent.transform.GetChild(i).GetComponent<RectTransform>().DOAnchorPos(new Vector2(562f, 450f), 0.8f).SetDelay(_delay + 0.5f)
+            coinParent.transform.GetChild(i).GetComponent<RectTransform>().DOAnchorPos(new Vector2(440f, 442f), 0.8f).SetDelay(_delay + 0.5f)
                 .SetEase(Ease.InBack);
 
             coinParent.transform.GetChild(i).DORotate(Vector3.zero, 0.7f).SetDelay(_delay + 0.7f)
