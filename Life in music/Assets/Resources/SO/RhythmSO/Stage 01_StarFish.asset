@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myData:
     isTuto: 1
-    isClear: 0
+    isClear: 1
     name: Stage 01_StarFish
     AudioClip: {fileID: 8300000, guid: 981d7bd98520f974b801c737fd827198, type: 3}
     Bpm: 100
@@ -137,10 +137,6 @@ MonoBehaviour:
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0101
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
-    - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
     - beatFlag: 0000
