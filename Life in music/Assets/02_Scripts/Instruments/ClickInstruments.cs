@@ -126,9 +126,11 @@ public class ClickInstruments : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == DefineManager.GameState.Rhythm) return;
 
+        RhythmManager.Instance.SetObjectClearObj(objectClear);
+
         if (objectClear.isCCC == true)
         {
-            Debug.Log("NONO");
+            //Debug.Log("NONO");
             return;
         }
 

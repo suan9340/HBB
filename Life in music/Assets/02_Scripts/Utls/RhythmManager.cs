@@ -27,6 +27,11 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
     [Header("--- RhythmCheck ---")]
     public RhythmCheck RhythmCheckSO = null;
 
+
+    [Space(20)]
+    [Header("--- RhythmCheckClearObj ---")]
+    public ObjectClear objClear = null;
+
     private int currentIndex = 0;
 
     private float currentTime = 0f;
@@ -67,6 +72,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
             if (currentIndex >= data.NoteList.Count)
             {
+
                 StopRhythmY();
                 return;
             }
@@ -179,6 +185,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
 
         ChatMaanger.Instance.Text();
         SoundManager.Instance.PlayLoopSource(1f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        objClear.isCCC = true;
         yield break;
     }
 
@@ -196,5 +206,10 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         TutoManager.Instance.SetActiveFalseText();
         SoundManager.Instance.PlayLoopSource(1f);
         yield break;
+    }
+
+    public void SetObjectClearObj(ObjectClear _objClear)
+    {
+        objClear = _objClear;
     }
 }

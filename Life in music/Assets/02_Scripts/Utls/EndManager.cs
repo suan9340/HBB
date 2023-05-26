@@ -25,15 +25,15 @@ public class EndManager : MonoSingleTon<EndManager>
         {
             endChat = GameObject.Find("EndChat").GetComponent<EndChat>();
         }
-        //SetStageText();
+        SetStageText();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetStageText();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SetStageText();
+        //}
     }
 
     private void SetStageText()
