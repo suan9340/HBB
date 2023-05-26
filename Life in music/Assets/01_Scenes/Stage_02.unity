@@ -5175,7 +5175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4509804}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6025,9 +6025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioUIAnimator: {fileID: 1228239908}
   readyRhythmAnimator: {fileID: 1640101898}
+  inGameUIs: {fileID: 300808373}
   rhythmEffectImage: {fileID: 146249214}
   rhythmNotePanel: {fileID: 448106505}
-  changePanelImage: {fileID: 1250618262}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0
@@ -6200,7 +6200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1988767931}
         m_TargetAssemblyTypeName: RhythmManager, Assembly-CSharp
         m_MethodName: OnClickStopRhythm
         m_Mode: 1
@@ -8258,6 +8258,7 @@ MonoBehaviour:
     NoteList: []
   curRhy: {fileID: 0}
   RhythmCheckSO: {fileID: 11400000, guid: 94568d77e7e0b4c4f8a6e8c5bb6425e3, type: 2}
+  objClear: {fileID: 0}
 --- !u!4 &1988767932
 Transform:
   m_ObjectHideFlags: 0
