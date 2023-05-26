@@ -108,7 +108,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
                 _source.Stop();
                 yield break;
             }
-            _source.volume -= Time.deltaTime * 4f;
+            _source.volume -= Time.deltaTime * 5f;
             yield return soundSec;
         }
 
@@ -127,7 +127,7 @@ public class SoundManager : MonoSingleTon<SoundManager>
                 isFadeIn = false;
                 yield break;
             }
-            _source.volume += Time.deltaTime * 3f;
+            _source.volume += Time.deltaTime * 5f;
             //Debug.Log(_source.volume);
             yield return soundSec;
         }
