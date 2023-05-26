@@ -58,35 +58,6 @@ public class TutoMOM : MonoBehaviour
         }
     }
 
-    protected void CheckCanClickRhythm()
-    {
-
-        if (noteObjList.Count == rhythmnum[timingnum])
-        {
-            if (isClickTrue)
-                return;
-
-            ReturnTiming();
-            isClickTrue = true;
-            isClickFalse = false;
-
-
-            //Debug.Log("Click");
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
-        }
-        else
-        {
-            if (isClickFalse)
-                return;
-
-            isClickFalse = true;
-            isClickTrue = false;
-
-            //Debug.Log("Don't Click");
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
-        }
-    }
-
     protected void ReturnTiming()
     {
         if (rhythmnum.Count - 1 <= timingnum)

@@ -16,8 +16,6 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.BALLOON_ADD, AddNoteList);
         CheckingTuto();
-
-        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -45,14 +43,6 @@ public class BalloonRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
-        if (noteObjList.Count == 4)
-        {
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, false);
-        }
-        else
-        {
-            EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
-        }
     }
 
     private void StartRhythm()

@@ -18,8 +18,6 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
 
         EventManager<GameObject>.StartListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
         CheckingTuto();
-
-        EventManager<bool>.TriggerEvent(ConstantManager.RHYTHM_CHANGE_UI, true);
     }
 
     protected override void Update()
@@ -87,7 +85,6 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);
-        CheckCanClickRhythm();
     }
 
     public void Tuto()
