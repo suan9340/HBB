@@ -13,6 +13,7 @@ public class UIManager : MonoSingleTon<UIManager>
     [Space(10)]
     [Header("ReadyRhythmUI")]
     public Animator readyRhythmAnimator = null;
+    public GameObject inGameUIs = null;
     private bool isReadyRhythm = false;
 
 
@@ -61,7 +62,7 @@ public class UIManager : MonoSingleTon<UIManager>
     private void ReadyRhythm()
     {
 
-        if (readyRhythmAnimator == null)
+        if (readyRhythmAnimator == null || inGameUIs == null)
         {
             Debug.LogWarning("readyRhythmAnimator ((ReadyRhythmUI)) is NULL!!!");
             return;
@@ -70,10 +71,12 @@ public class UIManager : MonoSingleTon<UIManager>
         isReadyRhythm = !isReadyRhythm;
         if (isReadyRhythm)
         {
+            inGameUIs.SetActive(false);
             readyRhythmAnimator.SetBool("OnReady", true);
         }
         else
         {
+            inGameUIs.SetActive(true);
             readyRhythmAnimator.SetBool("OnReady", false);
         }
     }
