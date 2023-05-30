@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 435485c74d84e7d4fa2b4209a0dbd49f
+guid: 785f411a061d5884aaf6d803673c8a04
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Camera_0
+      name: menuPicture_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 110
-        height: 182
+        y: 251
+        width: 205
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a07c4cf315ff0a6419969512e0505f28
-      internalID: 262224736
+      spriteID: 54eea267bbccbf8498bd79a44397b694
+      internalID: 654366219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camera_1
+      name: menuPicture_1
       rect:
         serializedVersion: 2
-        x: 122
-        y: 0
-        width: 110
-        height: 182
+        x: 216
+        y: 251
+        width: 71
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86825940e4590ca448587fb751e3ad97
-      internalID: 932296535
+      spriteID: 7e959044126c22a4585943539ba01ff2
+      internalID: 551414738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menuPicture_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 134
+        width: 103
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1bce9928d6e904c846e977e9fa6f90
+      internalID: 1270653325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menuPicture_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 52
+        width: 109
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50be7031e8573f344a5c0020505010ea
+      internalID: 1073206654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menuPicture_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 16
+        width: 185
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed635d979f8c334ebca09c4b292809e
+      internalID: -1613612894
       vertices: []
       indices: 
       edges: []
@@ -149,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bc031ecd40287a045a2819dbce691608
+    spriteID: 8f249bd608f5d38409838c67f1f8e194
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Camera_0: 262224736
-      Camera_1: 932296535
+      menuPicture_0: 654366219
+      menuPicture_1: 551414738
+      menuPicture_2: 1270653325
+      menuPicture_3: 1073206654
+      menuPicture_4: -1613612894
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

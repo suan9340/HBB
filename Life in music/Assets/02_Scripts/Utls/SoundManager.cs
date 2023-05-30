@@ -51,6 +51,14 @@ public class SoundManager : MonoSingleTon<SoundManager>
         }
     }
 
+    public void CheckStageEndMusic()
+    {
+        if (num == 6)
+        {
+            Debug.Log("StageENd");
+        }
+    }
+
     /// <summary>
     /// if false, cant clip, true can clip
     /// </summary>
@@ -159,6 +167,8 @@ public class SoundManager : MonoSingleTon<SoundManager>
             loop.source.volume = 1f;
         }
     }
+
+
 }
 
 [Serializable]

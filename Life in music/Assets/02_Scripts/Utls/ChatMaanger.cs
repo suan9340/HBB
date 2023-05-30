@@ -82,6 +82,8 @@ public class ChatMaanger : MonoSingleTon<ChatMaanger>
         isTyping = false;
         isChatStarting = false;
 
+        SoundManager.Instance.CheckStageEndMusic();
+
         yield break;
     }
 
