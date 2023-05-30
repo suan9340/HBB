@@ -8,21 +8,30 @@ public class PictureController : MonoBehaviour
     public int sceneNum = 0;
     public CurrnetstageSO currentSO = null;
 
+    [Space(20)]
+    [Header("-- Objects --")]
+    public GameObject lockObj = null;
+    public StageClearCheck stageClearCheckSo = null;
+
     private int stage01Check = 0;
     private string sceneName;
+    private bool isStage = false;
 
     private void Start()
     {
         stage01Check = PlayerPrefs.GetInt("Stage01Check");
 
-        if (currentSO == null)
-        {
-            Debug.LogError("CurrentSo is NULL");
-        }
+        CashingObj();
+        CheckLockStage();
     }
 
     private void OnMouseDown()
     {
+        if (isStage == false)
+        {
+            return;
+        }
+
         switch (sceneNum)
         {
             case 1:
@@ -48,5 +57,39 @@ public class PictureController : MonoBehaviour
 
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void CashingObj()
+    {
+        if (currentSO == null)
+        {
+            Debug.LogError("CurrentSo is NULL");
+        }
+
+        if (stageClearCheckSo == null)
+        {
+            stageClearCheckSo = Resources.Load<StageClearCheck>("SO/StageCheck/StageClearCheckSo");
+        }
+    }
+
+
+    private void CheckLockStage()
+    {
+        if (lockObj == null)
+        {
+            Debug.LogError("lockObj is NULL!!");
+            return;
+        }
+
+        if (stageClearCheckSo.stageCheckList[sceneNum - 1].stage == true)
+        {
+            lockObj.SetActive(false);
+            isStage = true;
+        }
+        else
+        {
+            lockObj.SetActive(true);
+            isStage = false;
+        }
     }
 }

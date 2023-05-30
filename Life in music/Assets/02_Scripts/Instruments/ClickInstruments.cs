@@ -146,30 +146,6 @@ public class ClickInstruments : MonoBehaviour
 
     }
 
-    private void CheckCurrnetClearState()
-    {
-        if (BoolCurrnetIsClear())
-        {
-            return;
-        }
-        else
-        {
-            objectClear.isCCC = true;
-        }
-    }
-
-    private bool BoolCurrnetIsClear()
-    {
-        if (objectClear.CheckIsClear(num + plusNum))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-
     private void LoadRhythmStart()
     {
         effectAudio.PlayOneShot(clip);
