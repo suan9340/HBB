@@ -13,6 +13,7 @@ public class PictureController : MonoBehaviour
     public GameObject lockObj = null;
     public StageClearCheck stageClearCheckSo = null;
 
+
     private int stage01Check = 0;
     private string sceneName;
     private bool isStage = false;
@@ -29,6 +30,9 @@ public class PictureController : MonoBehaviour
     {
         if (isStage == false)
         {
+            MenuManager.Instance.ShowOrHideLockMessage(true);
+            Invoke(nameof(ResetLockMessage), 2f);
+
             return;
         }
 
@@ -83,13 +87,20 @@ public class PictureController : MonoBehaviour
 
         if (stageClearCheckSo.stageCheckList[sceneNum - 1].stage == true)
         {
-            lockObj.SetActive(false);
             isStage = true;
+            lockObj.SetActive(false);
         }
         else
         {
-            lockObj.SetActive(true);
             isStage = false;
+            lockObj.SetActive(true);
+
         }
+    }
+
+
+    private void ResetLockMessage()
+    {
+        MenuManager.Instance.ShowOrHideLockMessage(false);
     }
 }
