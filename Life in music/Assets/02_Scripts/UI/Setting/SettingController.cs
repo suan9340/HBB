@@ -36,13 +36,15 @@ public class SettingController : MonoBehaviour
 
         if (isSettingOn)
         {
+            GameManager.Instance.gameState = DefineManager.GameState.CantClick;
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
             myAnim.SetTrigger("SettingOn");
         }
         else
         {
-            myAnim.SetTrigger("SettingOff");
+            GameManager.Instance.gameState = DefineManager.GameState.Playing;
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+            myAnim.SetTrigger("SettingOff");
         }
 
         Invoke(nameof(ResetSettincChanging), 1f);
@@ -50,7 +52,9 @@ public class SettingController : MonoBehaviour
 
     public void OnClickMenu()
     {
-        SceneManager.LoadScene("Menu");
+        GameManager.Instance.gameState = DefineManager.GameState.Playing;
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+        SceneManager.LoadScene("Room");
     }
 
     private void ResetSettincChanging()

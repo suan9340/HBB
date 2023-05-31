@@ -18,6 +18,9 @@ public class PictureController : MonoBehaviour
     [Header("-- UI --")]
     public GameObject stageSulmungUI = null;
 
+    [Space(20)]
+    public GameObject lockMessageUIObject = null;
+
     private int stage01Check = 0;
     private string sceneName;
     private bool isStage = false;
@@ -34,7 +37,7 @@ public class PictureController : MonoBehaviour
     {
         if (isStage == false)
         {
-            MenuManager.Instance.ShowOrHideLockMessage(true);
+            ShowOrHideLockMessages(true);
             Invoke(nameof(ResetLockMessage), 2f);
 
             return;
@@ -125,6 +128,26 @@ public class PictureController : MonoBehaviour
 
     private void ResetLockMessage()
     {
-        MenuManager.Instance.ShowOrHideLockMessage(false);
+        ShowOrHideLockMessages(false);
+    }
+
+    private void ShowOrHideLockMessages(bool _isOn)
+    {
+        if (lockMessageUIObject == null)
+        {
+            Debug.LogError("lockMessageUI is NULL!!!");
+            return;
+        }
+
+        if (_isOn)
+        {
+            MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
+            lockMessageUIObject.SetActive(true);
+        }
+        else
+        {
+            MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+            lockMessageUIObject?.SetActive(false);
+        }
     }
 }

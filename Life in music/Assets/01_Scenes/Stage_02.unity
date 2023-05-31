@@ -1657,7 +1657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1230473438}
   isCCC: 0
-  stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &234455888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,7 +3218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBA54\uB274\uB85C \uB098\uAC00\uAE30"
+  m_Text: "\uBC29\uC73C\uB85C \uB098\uAC00\uAE30"
 --- !u!222 &612181047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4202,7 +4201,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 893104759}
   isCCC: 0
-  stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &938730472
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,7 +7523,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1826714092}
   isCCC: 0
-  stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &1826714092
 GameObject:
   m_ObjectHideFlags: 0
@@ -8634,7 +8631,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 652637154}
   isCCC: 0
-  stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &2043529940
 GameObject:
   m_ObjectHideFlags: 0
@@ -9291,7 +9287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 922309795}
   isCCC: 0
-  stageCheckSo: {fileID: 11400000, guid: decbdac23b8e03a4b92077b791810051, type: 2}
 --- !u!1 &2135291215
 GameObject:
   m_ObjectHideFlags: 0

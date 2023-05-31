@@ -3334,6 +3334,7 @@ MonoBehaviour:
   lockObj: {fileID: 1056804797}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 55270800}
+  lockMessageUIObject: {fileID: 1504552629}
 --- !u!1 &434015564
 GameObject:
   m_ObjectHideFlags: 0
@@ -7759,6 +7760,7 @@ MonoBehaviour:
   lockObj: {fileID: 1047535796}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 1549090600}
+  lockMessageUIObject: {fileID: 1504552629}
 --- !u!1 &1117094672
 GameObject:
   m_ObjectHideFlags: 0
@@ -11530,7 +11532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuState: 0
-  lockMessageUIObject: {fileID: 1504552629}
 --- !u!4 &1764801553
 Transform:
   m_ObjectHideFlags: 0
