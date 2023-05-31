@@ -14,6 +14,10 @@ public class PictureController : MonoBehaviour
     public StageClearCheck stageClearCheckSo = null;
 
 
+    [Space(20)]
+    [Header("-- UI --")]
+    public GameObject stageSulmungUI = null;
+
     private int stage01Check = 0;
     private string sceneName;
     private bool isStage = false;
@@ -35,6 +39,20 @@ public class PictureController : MonoBehaviour
 
             return;
         }
+
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
+        stageSulmungUI.SetActive(true);
+    }
+
+    public void OnclickStages()
+    {
+        //if (isStage == false)
+        //{
+        //    MenuManager.Instance.ShowOrHideLockMessage(true);
+        //    Invoke(nameof(ResetLockMessage), 2f);
+
+        //    return;
+        //}
 
         switch (sceneNum)
         {
@@ -61,6 +79,12 @@ public class PictureController : MonoBehaviour
 
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void OnclickOutStageUI()
+    {
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+        stageSulmungUI.SetActive(false);
     }
 
     private void CashingObj()
