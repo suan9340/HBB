@@ -14,7 +14,8 @@ public class SoundManager : MonoSingleTon<SoundManager>
 
     private readonly WaitForSeconds soundSec = new WaitForSeconds(0.05f);
 
-    private bool isFadeIn, isFadeOut = false;
+    private bool isFadeIn = false;
+    private bool isFadeOut = false;
 
     private void Start()
     {

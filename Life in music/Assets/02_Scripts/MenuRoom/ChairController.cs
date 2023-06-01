@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuControllerMOM : MonoBehaviour
+public class ChairController : MonoBehaviour
 {
     public AudioSource audioSource = null;
     public AudioClip objectsound = null;
@@ -11,10 +11,14 @@ public class MenuControllerMOM : MonoBehaviour
     public GameObject defalutObj = null;
     public GameObject changeObj = null;
 
+    [Space(20)]
+    public Animator cardAnim = null;
+
     private bool isClick = false;
     private bool isMouseOn = false;
+    private bool isShowCard = false;
 
-    protected void Start()
+    private void Start()
     {
         if (defalutObj == null)
         {
@@ -46,29 +50,34 @@ public class MenuControllerMOM : MonoBehaviour
         OnObjectMouseDown();
     }
 
-    private void OnMouseExit()
-    {
-        if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
-            return;
+    //private void OnMouseExit()
+    //{
+    //    if (MenuManager.Instance.menuState == DefineManager.MenuState.Clicking)
+    //        return;
 
-        OnObjectMouseExit();
-    }
+    //    OnObjectMouseExit();
+    //}
 
-    protected virtual void OnObjectMouseDown()
+    private void OnObjectMouseDown()
     {
         if (isClick)
         {
             return;
         }
 
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
+
         audioSource.PlayOneShot(objectsound);
 
         isClick = true;
+        isShowCard = true;
         defalutObj.SetActive(false);
         changeObj.SetActive(true);
+
+        cardAnim.SetBool("isShow", true);
     }
 
-    protected virtual void OnObjectMouseOver()
+    private void OnObjectMouseOver()
     {
         if (isMouseOn)
             return;
@@ -79,8 +88,11 @@ public class MenuControllerMOM : MonoBehaviour
         isMouseOn = true;
     }
 
-    protected virtual void OnObjectMouseExit()
+    public void OnClick_OnObjectMouseExit()
     {
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+        cardAnim.SetBool("isShow", false);
+
         isClick = false;
         isMouseOn = false;
 
