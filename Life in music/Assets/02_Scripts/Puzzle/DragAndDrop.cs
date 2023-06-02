@@ -1,61 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DragAndDrop : MonoBehaviour
 {
     public GameObject selectObj = null;
+    int OIL = 1;
+
     private RaycastHit hit;
+    private Vector3 mousePos = Vector3.zero;
+    private Camera maincam;
+
+    private void Start()
+    {
+        maincam = Camera.main;
+    }
 
     private void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    if(Physics.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition),Vector3.zero))
-        //    {
-
-        //    }
-        //    RaycastHit hit = Physics2.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        //    {
-        //        if (hit.transform.CompareTag("Puzzle"))
-        //        {
-        //            selectObj = hit.transform.gameObject;
-        //        }
-        //    }
-        //}
-
-        //if (selectObj != null)
-        //{
-        //    selectObj.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //}
-
         if (Input.GetMouseButtonDown(0))
         {
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            mousePos = Input.mousePosition;
+            mousePos = maincam.ScreenToWorldPoint(mousePos);
 
-            //if (Physics.Raycast(ray, out hit))
-            //{
-            //    Debug.Log(hit.transform);
-            //}
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 15f);
+            Debug.DrawRay(mousePos, transform.forward * 15f, Color.red);
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (hit.transform.CompareTag("Puzzle"))
             {
-                Debug.Log(hit.transform.name);
+                if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
+                {
+                    selectObj = hit.transform.gameObject;
+                    selectObj.GetComponent<PuzzlePieces>().isSelected = true;
+                    selectObj.GetComponent<SortingGroup>().sortingOrder = OIL;
+                    OIL++;
+                }
+
             }
         }
-    }
 
-    void OnDrawGizmos()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Gizmos.color = Color.red;
-
-        bool ishit = Physics.Raycast(transform.position, transform.forward, out hit, 100f);
-        if (ishit)
+        if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("qwe");
-            Gizmos.DrawRay(transform.position, transform.forward * 100f);
+            if (selectObj != null)
+            {
+                selectObj.GetComponent<PuzzlePieces>().isSelected = false;
+                selectObj = null;
+            }
+        }
+
+        if (selectObj != null)
+        {
+            Vector3 _mousePosition = maincam.ScreenToWorldPoint(Input.mousePosition);
+            selectObj.transform.position = new Vector3(_mousePosition.x, _mousePosition.y, 0f);
         }
     }
+
 }

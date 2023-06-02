@@ -109,18 +109,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1207
-        width: 797
-        height: 501
+        y: 135
+        width: 520
+        height: 539
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee93a163e3b81ec46a84013cedc88059
-      internalID: -776713208
+      spriteID: 4c6765fc8895f2347a30ed455e67eaa5
+      internalID: 1647382922
       vertices: []
       indices: 
       edges: []
@@ -129,19 +129,19 @@ TextureImporter:
       name: Stage01_Puzzle_1
       rect:
         serializedVersion: 2
-        x: 938
-        y: 1187
-        width: 1079
-        height: 521
+        x: 549
+        y: 170
+        width: 807
+        height: 507
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bb74334c6a59254588033964e683a24
-      internalID: 779170198
+      spriteID: 0a89c4a8284529e428397b730a032744
+      internalID: 90290680
       vertices: []
       indices: 
       edges: []
@@ -150,19 +150,19 @@ TextureImporter:
       name: Stage01_Puzzle_2
       rect:
         serializedVersion: 2
-        x: 2156
-        y: 1138
-        width: 572
-        height: 531
+        x: 1375
+        y: 132
+        width: 582
+        height: 545
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2fa79a5602080f47aeffed174b29b9f
-      internalID: -287447412
+      spriteID: 1baf5a1be9cdd014eb0fea2757cfbe13
+      internalID: 696883856
       vertices: []
       indices: 
       edges: []
@@ -171,19 +171,19 @@ TextureImporter:
       name: Stage01_Puzzle_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 625
-        width: 513
-        height: 516
+        x: 1995
+        y: 103
+        width: 469
+        height: 574
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 840d223ba7b7aa842b8a9cbcfc7df278
-      internalID: -1663560201
+      spriteID: 30d85701b6a236645a8eed049c99321d
+      internalID: 2111433964
       vertices: []
       indices: 
       edges: []
@@ -192,19 +192,19 @@ TextureImporter:
       name: Stage01_Puzzle_4
       rect:
         serializedVersion: 2
-        x: 938
-        y: 511
-        width: 445
-        height: 555
+        x: 2484
+        y: 39
+        width: 674
+        height: 638
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbf89dfbde2b4fd4b987bbbb354b6c9b
-      internalID: 1620761376
+      spriteID: b40e5030d1554a44bafc27db3e94afe6
+      internalID: 1550378734
       vertices: []
       indices: 
       edges: []
@@ -213,19 +213,19 @@ TextureImporter:
       name: Stage01_Puzzle_5
       rect:
         serializedVersion: 2
-        x: 1742
-        y: 0
-        width: 721
-        height: 628
+        x: 3197
+        y: 356
+        width: 1253
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d47372263aa52a746bf879d68d1edca5
-      internalID: 3932604
+      spriteID: 2e65daf480b2a414a8d652b7e2e82132
+      internalID: 532819822
       vertices: []
       indices: 
       edges: []
@@ -234,40 +234,40 @@ TextureImporter:
       name: Stage01_Puzzle_6
       rect:
         serializedVersion: 2
-        x: 2727
-        y: 511
-        width: 664
-        height: 628
+        x: 4578
+        y: 135
+        width: 1106
+        height: 529
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a1127ec1d55784d96e9152c3842c47
-      internalID: -1461856363
+      spriteID: f020d56a730a4954688e5e6281e14e2c
+      internalID: 1362276834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stage01_Puzzle_7
+      name: Stage01_Puzzle_8
       rect:
         serializedVersion: 2
-        x: 44
-        y: 15
-        width: 1240
-        height: 300
+        x: 5812
+        y: 16
+        width: 733
+        height: 642
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ecdcfc29d118774bb4f56a786f8a69b
-      internalID: -1406441935
+      spriteID: b4de24568e58ea54a8d1e39986322de5
+      internalID: -513693355
       vertices: []
       indices: 
       edges: []
@@ -275,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 83e83e7005a677c4eb67c558110f4b7e
+    spriteID: 2f08c95f330e9ff48a8494dd58927105
     internalID: 0
     vertices: []
     indices: 
@@ -283,14 +283,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Stage01_Puzzle_0: -776713208
-      Stage01_Puzzle_1: 779170198
-      Stage01_Puzzle_2: -287447412
-      Stage01_Puzzle_3: -1663560201
-      Stage01_Puzzle_4: 1620761376
-      Stage01_Puzzle_5: 3932604
-      Stage01_Puzzle_6: -1461856363
-      Stage01_Puzzle_7: -1406441935
+      Stage01_Puzzle_0: 1647382922
+      Stage01_Puzzle_1: 90290680
+      Stage01_Puzzle_2: 696883856
+      Stage01_Puzzle_3: 2111433964
+      Stage01_Puzzle_4: 1550378734
+      Stage01_Puzzle_5: 532819822
+      Stage01_Puzzle_6: 1362276834
+      Stage01_Puzzle_7: 1536498931
+      Stage01_Puzzle_8: -513693355
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
