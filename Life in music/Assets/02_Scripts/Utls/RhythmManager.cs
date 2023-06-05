@@ -118,7 +118,7 @@ public class RhythmManager : MonoSingleTon<RhythmManager>
         loadData = RhythmData.LoadData(_name);
         if (loadData == null)
         {
-            Debug.Log($"Cant Load {_name}");
+            Debug.LogError($"Cant Load {_name}");
             return false;
         }
 

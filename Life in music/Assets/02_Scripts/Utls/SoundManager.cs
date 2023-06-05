@@ -23,6 +23,13 @@ public class SoundManager : MonoSingleTon<SoundManager>
         EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StageEndEvent();
+        }
+    }
 
     public void GoGoSound(float _vol)
     {
@@ -56,8 +63,13 @@ public class SoundManager : MonoSingleTon<SoundManager>
     {
         if (num == 6)
         {
-            Debug.Log("StageENd");
+            StageEndEvent();
         }
+    }
+
+    public void StageEndEvent()
+    {
+        Debug.Log("StageENd");
     }
 
     /// <summary>
