@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageCheckList:
   - stage: 1
-  - stage: 1
+  - stage: 0
   - stage: 0

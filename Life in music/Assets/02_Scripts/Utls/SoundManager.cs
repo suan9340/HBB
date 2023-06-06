@@ -102,6 +102,7 @@ public class SoundManager : MonoBehaviour
         {
             case 1:
                 stageClearCheckSo.stageCheckList[1].stage = true;
+                PlayerPrefs.SetInt(ConstantManager.STAGE_02_CHECK, 1);
                 break;
 
 

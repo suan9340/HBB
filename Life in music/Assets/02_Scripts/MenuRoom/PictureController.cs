@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PictureController : MonoBehaviour
 {
     public int sceneNum = 0;
-    public CurrnetstageSO currentSO = null;
 
     [Space(20)]
     [Header("-- Objects --")]
@@ -61,8 +60,6 @@ public class PictureController : MonoBehaviour
         {
             case 1:
 
-                currentSO.stageName = DefineManager.StageNames.Sea_01;
-
                 if (stage01Check == 0)
                 {
                     sceneName = "FirstTuto";
@@ -75,8 +72,6 @@ public class PictureController : MonoBehaviour
                 break;
 
             case 2:
-                currentSO.stageName = DefineManager.StageNames.School_02;
-
                 sceneName = "Stage_02";
                 break;
         }
@@ -93,11 +88,6 @@ public class PictureController : MonoBehaviour
 
     private void CashingObj()
     {
-        if (currentSO == null)
-        {
-            Debug.LogError("CurrentSo is NULL");
-        }
-
         if (stageClearCheckSo == null)
         {
             stageClearCheckSo = Resources.Load<StageClearCheck>("SO/StageCheck/StageClearCheckSo");
@@ -113,6 +103,10 @@ public class PictureController : MonoBehaviour
             return;
         }
 
+        var _a = PlayerPrefs.GetInt(ConstantManager.STAGE_02_CHECK);
+
+
+
         if (stageClearCheckSo.stageCheckList[sceneNum - 1].stage == true)
         {
             isStage = true;
@@ -123,6 +117,13 @@ public class PictureController : MonoBehaviour
             isStage = false;
             lockObj.SetActive(true);
 
+        }
+
+        if (_a == 1)
+        {
+            Debug.Log(_a);
+            isStage = true;
+            lockObj.SetActive(false);
         }
     }
 

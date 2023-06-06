@@ -63,4 +63,8 @@ public static class ConstantManager
 
     // NoteText
     public static string NOTE_CHECKING_TXT = "NoteCheckText";
+
+
+    // PlayerPrefabs
+    public static string STAGE_02_CHECK = "Stage02CanCheck";
 }
