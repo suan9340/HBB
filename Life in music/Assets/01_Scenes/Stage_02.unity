@@ -2221,7 +2221,7 @@ MonoBehaviour:
   coinNum: 0
   coinTxt: 0
   memoryImageSlider: {fileID: 1999302333}
-  maxmemoryNum: 30
+  maxmemoryNum: 25
 --- !u!1 &414539898
 GameObject:
   m_ObjectHideFlags: 0
