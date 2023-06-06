@@ -8,6 +8,7 @@ public class GameManager : MonoSingleTon<GameManager>
     public CurrnetstageSO currentStage;
     public bool canClick = false;
 
+
     private void Start()
     {
         SettingSO();
@@ -23,6 +24,7 @@ public class GameManager : MonoSingleTon<GameManager>
 
     public DefineManager.StageNames GetCurrentStage()
     {
+        SettingSO();
         return currentStage.stageName;
     }
 

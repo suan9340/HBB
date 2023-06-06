@@ -5,8 +5,29 @@ using UnityEngine.UI;
 using DG.Tweening;
 using Unity.VisualScripting;
 
-public class TutoManager : MonoSingleTon<TutoManager>
+public class TutoManager : MonoBehaviour
 {
+    #region SingleTon
+
+    private static TutoManager _instance = null;
+    public static TutoManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<TutoManager>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("TutoManager").AddComponent<TutoManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
+
     public Text tutoTxt = null;
     private bool isTyping = false;
 

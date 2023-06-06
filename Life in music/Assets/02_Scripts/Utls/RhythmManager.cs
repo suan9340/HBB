@@ -3,8 +3,28 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
-public class RhythmManager : MonoSingleTon<RhythmManager>
+public class RhythmManager : MonoBehaviour
 {
+    #region SingleTon
+
+    private static RhythmManager _instance = null;
+    public static RhythmManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<RhythmManager>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("RhythmManager").AddComponent<RhythmManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
     private Vector3 pos;
     //public float gap = 1;
     public AudioSource audioSource;

@@ -4,8 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NoteManager : MonoSingleTon<NoteManager>
+public class NoteManager :MonoBehaviour
 {
+    #region SingleTon
+
+    private static NoteManager _instance = null;
+    public static NoteManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<NoteManager>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("NoteManager").AddComponent<NoteManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
     [Header("--- NoteTrnYObject ---")]
     public RectTransform noteTrn = null;
 

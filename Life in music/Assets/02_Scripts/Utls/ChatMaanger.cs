@@ -4,8 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class ChatMaanger : MonoSingleTon<ChatMaanger>
+public class ChatMaanger : MonoBehaviour
 {
+    #region SingleTon
+
+    private static ChatMaanger _instance = null;
+    public static ChatMaanger Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<ChatMaanger>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("ChatMaanger").AddComponent<ChatMaanger>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
+
     [Header("--- Chatings List ---")]
     public GameObject messageObj = null;
     public Text messagetxt = null;

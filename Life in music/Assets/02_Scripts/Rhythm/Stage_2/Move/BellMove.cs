@@ -23,7 +23,7 @@ public class BellMove : MonoBehaviour
 
         if (_obj != null)
         {
-            var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);
+            var _inst = Instantiate(_obj, mom.transform.GetChild(0), false);    
 
             _inst.bellPos = _pos;
 

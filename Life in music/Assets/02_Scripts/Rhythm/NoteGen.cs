@@ -3,8 +3,30 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NoteGen : MonoSingleTon<NoteGen>
+public class NoteGen : MonoBehaviour
 {
+    #region SingleTon
+
+    private static NoteGen _instance = null;
+    public static NoteGen Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<NoteGen>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("NoteGen").AddComponent<NoteGen>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
+
+
     // todo 나중에 스크립터블 오브젝트로 옮길 코드
     public DefineManager.Stage_01_MoveType moveType;
 

@@ -3,8 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoSingleTon<UIManager>
+public class UIManager : MonoBehaviour
 {
+    #region SingleTon
+
+    private static UIManager _instance = null;
+    public static UIManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<UIManager>();
+                if (_instance == null)
+                {
+                    _instance = new GameObject("UIManager").AddComponent<UIManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    #endregion
+
     [Header("AudioUI")]
     [Tooltip("Audios BackGround Image!")]
     public Animator audioUIAnimator = null;
