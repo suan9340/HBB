@@ -76,6 +76,7 @@ public class PictureController : MonoBehaviour
 
             case 2:
                 currentSO.stageName = DefineManager.StageNames.School_02;
+
                 sceneName = "Stage_02";
                 break;
         }

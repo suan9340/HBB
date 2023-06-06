@@ -16,11 +16,20 @@ public class IsFirstTuto : MonoBehaviour
     public AudioSource mySource = null;
     public AudioClip myClip = null;
 
+
+    [Space(20)]
+    public CurrnetstageSO currentSO = null;
+
     private int tutoNum = 0;
 
     private GameObject currentTutoObj = null;
     private void Start()
     {
+        if (currentSO == null)
+        {
+            Debug.LogError("CurrentSo is NULL");
+        }
+
         tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
     }
@@ -69,7 +78,9 @@ public class IsFirstTuto : MonoBehaviour
 
 
             case 5:
+                currentSO.stageName = DefineManager.StageNames.Sea_01;
                 PlayerPrefs.SetInt("Stage01Check", 1);
+
                 SceneManager.LoadScene("Stage_01");
                 break;
         }

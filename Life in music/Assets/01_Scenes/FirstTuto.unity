@@ -1608,6 +1608,7 @@ MonoBehaviour:
   - {fileID: 673870665}
   mySource: {fileID: 1762361935}
   myClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
+  currentSO: {fileID: 11400000, guid: 88c42916b829ea443baa0a1e6b2bd2ff, type: 2}
 --- !u!1 &897284447
 GameObject:
   m_ObjectHideFlags: 0

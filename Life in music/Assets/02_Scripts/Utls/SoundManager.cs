@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class SoundManager : MonoBehaviour
 
 
     public int num = 1;
+
+
+    [Space(20)]
+    public StageClearCheck stageClearCheckSo = null;
+    public int stageNum = 0;
 
     private readonly WaitForSeconds soundSec = new WaitForSeconds(0.05f);
 
@@ -89,7 +95,27 @@ public class SoundManager : MonoBehaviour
 
     public void StageEndEvent()
     {
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         Debug.Log("StageENd");
+
+        switch (stageNum)
+        {
+            case 1:
+                stageClearCheckSo.stageCheckList[1].stage = true;
+                break;
+
+
+            case 2:
+
+                break;
+
+
+            default:
+                Debug.Log("????Que?");
+                break;
+        }
+
+        SceneManager.LoadScene("Room");
     }
 
     /// <summary>
