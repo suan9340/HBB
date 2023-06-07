@@ -36,6 +36,11 @@ public class LockerRhythm : TutoMOM, IRhythmMom
         base.Update();
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.LOCKER_RH, LocekerMoveAdd);
+    }
+
     protected override void RhythmGaming()
     {
         EventManager.TriggerEvent(ConstantManager.NOTE_LIST_REMOVE);

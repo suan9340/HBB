@@ -57,6 +57,11 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        EventManager<float>.StopListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+    }
+
     public void GoGoSound(float _vol)
     {
         PlayLoopSource(_vol);

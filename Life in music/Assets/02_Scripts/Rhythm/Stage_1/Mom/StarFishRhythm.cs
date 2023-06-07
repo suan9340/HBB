@@ -22,6 +22,11 @@ public class StarFishRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.STARFISH_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

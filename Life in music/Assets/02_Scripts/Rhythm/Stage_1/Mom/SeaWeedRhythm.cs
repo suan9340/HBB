@@ -21,6 +21,11 @@ public class SeaWeedRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.SEAWEED_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

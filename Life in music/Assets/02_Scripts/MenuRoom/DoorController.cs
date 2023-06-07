@@ -22,6 +22,12 @@ public class DoorController : MonoBehaviour
     {
         EventManager.StartListening(ConstantManager.CLOSE_DOOR, CheckDoor);
     }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.CLOSE_DOOR, CheckDoor);
+    }
+
     private void OnMouseOver()
     {
         OnDoorMouseUP();

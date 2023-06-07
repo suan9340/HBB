@@ -40,6 +40,11 @@ public class StarFishMove : MonoBehaviour
         EventManager.StartListening(ConstantManager.STARFISH_ANIM, StarfishDown);
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.STARFISH_ANIM, StarfishDown);
+    }
+
     private void AddList(GameObject _obj)
     {
         UIManager.Instance.RhythmNoteEffect();

@@ -33,6 +33,11 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         base.Update();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.UMBRELLA_ADD, AddNoteList);
+    }
+
     protected override void Tutoing()
     {
         Tuto();

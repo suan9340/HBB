@@ -22,6 +22,11 @@ public class ConchRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.CONCHLIST_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

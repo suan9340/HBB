@@ -41,6 +41,11 @@ public class Memory : MonoBehaviour
         memoryImageSlider.fillAmount = coinTxt / maxmemoryNum;
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.COIN_UI, ShowMemoryUI);
+    }
+
     private void Reset()
     {
         for (int i = 0; i < coinNum; i++)

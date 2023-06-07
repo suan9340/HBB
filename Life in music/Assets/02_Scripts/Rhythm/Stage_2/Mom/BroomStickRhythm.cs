@@ -18,6 +18,11 @@ public class BroomStickRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.BROOMSTICK_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

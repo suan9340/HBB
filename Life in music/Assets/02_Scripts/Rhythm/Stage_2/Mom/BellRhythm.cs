@@ -19,6 +19,11 @@ public class BellRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.BELL_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

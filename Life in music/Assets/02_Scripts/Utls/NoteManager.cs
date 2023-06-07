@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NoteManager :MonoBehaviour
+public class NoteManager : MonoBehaviour
 {
     #region SingleTon
 
@@ -60,6 +60,11 @@ public class NoteManager :MonoBehaviour
         SettingBox();
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.NOTE_IMAGE_INSTANCE, InstantiateNote);
+        EventManager.StopListening(ConstantManager.NOTE_LIST_REMOVE, CheckTiming);
+    }
 
     public void SettingNoteObj(GameObject _obj)
     {
@@ -68,6 +73,11 @@ public class NoteManager :MonoBehaviour
 
     public void InstantiateNote()
     {
+        if (noteObj == null)
+        {
+            return;
+        }
+
         var _obj = Instantiate(noteObj, noteTrn);
         _obj.transform.SetParent(noteTrn.transform);
         _obj.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);

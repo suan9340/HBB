@@ -20,6 +20,11 @@ public class ShellFishRhythm : TutoMOM, IRhythmMom
         CheckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.SHELLFISHLIST_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();

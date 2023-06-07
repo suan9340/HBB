@@ -14,6 +14,11 @@ public class InstanceText : MonoBehaviour
         EventManager<string>.StartListening(ConstantManager.NOTE_CHECKING_TXT, ShowTextObj);
     }
 
+    private void OnDisable()
+    {
+        EventManager<string>.StopListening(ConstantManager.NOTE_CHECKING_TXT, ShowTextObj);
+    }
+
     public void ShowTextObj(string _s)
     {
         var _cnt = momObj.childCount;

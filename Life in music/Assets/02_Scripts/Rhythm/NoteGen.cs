@@ -55,8 +55,15 @@ public class NoteGen : MonoBehaviour
         //}
     }
 
+    private void OnDisable()
+    {
+        EventManager<List<bool>>.StopListening(ConstantManager.BEAT, Gen);
+    }
+
     private void Gen(List<bool> list)
     {
+        if (igen == null) return;
+
         igen.Gen(list);
     }
 

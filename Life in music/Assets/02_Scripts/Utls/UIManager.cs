@@ -56,6 +56,12 @@ public class UIManager : MonoBehaviour
         EventManager.StartListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.START_RHYTHM, ReadyRhythm);
+        EventManager.StopListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
+    }
+
     public void OnclickAudioUI()
     {
         if (audioUIAnimator == null)

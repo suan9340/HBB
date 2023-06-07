@@ -48,6 +48,7 @@ public class ConchMove : MonoBehaviour
         MoveConch();
     }
 
+
     private void MoveConch()
     {
         switch (conchDirection)
@@ -97,6 +98,7 @@ public class ConchMove : MonoBehaviour
 
         EventManager<GameObject>.TriggerEvent(ConstantManager.CONCHLIST_ADD, _obj);
     }
+
 
     public void ConchDown()
     {

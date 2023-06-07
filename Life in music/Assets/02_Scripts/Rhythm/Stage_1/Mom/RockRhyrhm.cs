@@ -31,6 +31,11 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
         CHeckingTuto();
     }
 
+    private void OnDisable()
+    {
+        EventManager<GameObject>.StopListening(ConstantManager.ROCK_ADD, AddNoteList);
+    }
+
     protected override void Update()
     {
         base.Update();
