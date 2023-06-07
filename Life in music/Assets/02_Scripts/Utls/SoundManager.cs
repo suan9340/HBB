@@ -38,6 +38,10 @@ public class SoundManager : MonoBehaviour
     public StageClearCheck stageClearCheckSo = null;
     public int stageNum = 0;
 
+
+    [Space(20)]
+    public GameObject stageEndObj = null;
+
     private readonly WaitForSeconds soundSec = new WaitForSeconds(0.05f);
 
     private bool isFadeIn = false;
@@ -47,6 +51,7 @@ public class SoundManager : MonoBehaviour
     {
         PlayLoopSource(1f);
         EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+        stageEndObj.SetActive(false);
     }
 
     private void Update()
@@ -101,6 +106,7 @@ public class SoundManager : MonoBehaviour
     public void StageEndEvent()
     {
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+        stageEndObj.SetActive(true);
         Debug.Log("StageENd");
 
         switch (stageNum)
@@ -121,7 +127,7 @@ public class SoundManager : MonoBehaviour
                 break;
         }
 
-        SceneManager.LoadScene("Room");
+        //SceneManager.LoadScene("Room");
     }
 
     /// <summary>

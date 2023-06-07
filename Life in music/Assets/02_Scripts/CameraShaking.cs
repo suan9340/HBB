@@ -15,6 +15,11 @@ public class CameraShaking : MonoBehaviour
         EventManager.StartListening(ConstantManager.CAMERA_SHAKE, Shaking);
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening(ConstantManager.CAMERA_SHAKE, Shaking);
+    }
+
     //public void Update()
     //{
     //    if (Input.GetMouseButtonDown(0))
