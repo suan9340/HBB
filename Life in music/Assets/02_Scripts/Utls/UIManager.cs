@@ -48,12 +48,19 @@ public class UIManager : MonoBehaviour
     public Animator rhythmNotePanel = null;
     private bool isRhythmPanel = false;
 
+
+    [Space(20)]
+    [Header("StageEnd")]
+    public GameObject stageEndObj = null;
+
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
 
     private void Start()
     {
         EventManager.StartListening(ConstantManager.START_RHYTHM, ReadyRhythm);
         EventManager.StartListening(ConstantManager.START_RHYTHM_PANEL, ReadyRhythmPanel);
+
+        stageEndObj.SetActive(false);
     }
 
     private void OnDisable()
@@ -140,5 +147,10 @@ public class UIManager : MonoBehaviour
         yield return rhythmEffectSec;
         rhythmEffectImage.enabled = false;
         yield break;
+    }
+
+    public void OnClickStageEnd(bool _isTrue)
+    {
+        stageEndObj.SetActive(_isTrue);
     }
 }
