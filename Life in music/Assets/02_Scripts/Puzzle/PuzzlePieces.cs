@@ -11,9 +11,12 @@ public class PuzzlePieces : MonoBehaviour
     public bool inRightPos = false;
     public bool isSelected = false;
 
+    [Space(20)]
+    public Vector3 defaultVec = Vector3.zero;
+
     private void Start()
     {
-        rightPos = transform.position;
+        rightPos = defaultVec;
 
 
         transform.position = new Vector3(Random.Range(11f, 17f), Random.Range(8f, -8f));
