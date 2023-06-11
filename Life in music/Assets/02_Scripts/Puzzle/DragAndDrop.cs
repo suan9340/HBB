@@ -27,13 +27,17 @@ public class DragAndDrop : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 15f);
             Debug.DrawRay(mousePos, transform.forward * 15f, Color.red);
 
+            if (hit.collider == null)
+                return;
+
             if (hit.transform.CompareTag("Puzzle"))
             {
                 if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
                 {
                     selectObj = hit.transform.gameObject;
-                    selectObj.GetComponent<PuzzlePieces>().isSelected = true;
-                    selectObj.GetComponent<SortingGroup>().sortingOrder = OIL;
+                    //selectObj.GetComponent<PuzzlePieces>().isSelected = true;
+                    //selectObj.GetComponent<SortingGroup>().sortingOrder = OIL;
+                    selectObj.GetComponent<PuzzlePieces>().OnClickPuzzle(OIL);
                     OIL++;
                 }
 
@@ -44,7 +48,8 @@ public class DragAndDrop : MonoBehaviour
         {
             if (selectObj != null)
             {
-                selectObj.GetComponent<PuzzlePieces>().isSelected = false;
+                //selectObj.GetComponent<PuzzlePieces>().isSelected = false;
+                selectObj.GetComponent<PuzzlePieces>().OnUpPuzzle();
                 selectObj = null;
             }
         }

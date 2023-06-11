@@ -12,14 +12,25 @@ public class PuzzlePieces : MonoBehaviour
     public bool isSelected = false;
 
     [Space(20)]
+    [Header("Puzzle Default Position")]
     public Vector3 defaultVec = Vector3.zero;
+
+    [Space(20)]
+    [Header("Puzzle Big Y Small Size")]
+    public Vector3 smallVec = Vector3.zero;
+    public Vector3 bigVec = Vector3.zero;
+
+
+    private SortingGroup sortingGroup;
+    private Animator myAnim;
 
     private void Start()
     {
         rightPos = defaultVec;
 
 
-        transform.position = new Vector3(Random.Range(11f, 17f), Random.Range(8f, -8f));
+        sortingGroup = GetComponent<SortingGroup>();
+        myAnim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,10 +42,25 @@ public class PuzzlePieces : MonoBehaviour
                 if (inRightPos == false)
                 {
                     transform.position = rightPos;
+                    myAnim.SetTrigger("isCorrect");
+
                     inRightPos = true;
-                    GetComponent<SortingGroup>().sortingOrder = 0;
+                    sortingGroup.sortingOrder = 0;
                 }
             }
         }
+    }
+
+    public void OnClickPuzzle(int _OIL)
+    {
+        myAnim.SetTrigger("isBig");
+        isSelected = true;
+        sortingGroup.sortingOrder = _OIL;
+    }
+
+    public void OnUpPuzzle()
+    {
+        myAnim.SetTrigger("isSmall");
+        isSelected = false;
     }
 }
