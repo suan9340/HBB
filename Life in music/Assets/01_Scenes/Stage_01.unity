@@ -4433,6 +4433,9 @@ MonoBehaviour:
   messageObj: {fileID: 1737979638}
   messagetxt: {fileID: 1856781340}
   messagesList: []
+  defaultSpeed: 0.08
+  fastSpeed: 0.03
+  isStoryStart: 0
 --- !u!4 &757419027
 Transform:
   m_ObjectHideFlags: 0

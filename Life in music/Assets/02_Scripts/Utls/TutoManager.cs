@@ -55,7 +55,7 @@ public class TutoManager : MonoBehaviour
     {
         isStroyStarting = false;
         tutoTxt.text = " ";
-        tutoTxt.gameObject.SetActive(false);
+        //tutoTxt.gameObject.SetActive(false);
     }
 
     public bool IsTyping

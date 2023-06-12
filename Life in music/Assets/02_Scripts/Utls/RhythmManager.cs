@@ -203,7 +203,8 @@ public class RhythmManager : MonoBehaviour
         EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
 
-        ChatMaanger.Instance.Text();
+        //ChatMaanger.Instance.Text();
+        ChatMaanger.Instance.FirstSetText();
         SoundManager.Instance.PlayLoopSource(1f);
 
         yield return new WaitForSeconds(0.5f);

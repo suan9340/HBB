@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage 01_Conch
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
-    isClear: 0
+    isTuto: 1
+    isClear: 1
     name: Stage 01_Conch
     AudioClip: {fileID: 8300000, guid: 56eaf27841fa2ca47b4937867972327f, type: 3}
     Bpm: 100

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using static UnityEngine.Rendering.DebugUI;
 
 public class ChatMaanger : MonoBehaviour
 {
@@ -34,11 +35,17 @@ public class ChatMaanger : MonoBehaviour
     [Space(20)]
     public List<string> messagesList = new List<string>();
 
-    private bool isChatStarting = false;
-    private bool isTyping = false;
-    private bool isClick = false;
+    public float defaultSpeed = 0.03f;
+    public float fastSpeed = 0.08f;
 
-    private readonly WaitForSeconds textTime = new WaitForSeconds(2f);
+    private string message;
+    private float currentSpeed = 0f;
+
+    private int textNum = 0;
+
+    private bool isTyping = false;
+    public bool isStoryStart = false;
+
 
     private void Start()
     {
@@ -46,81 +53,110 @@ public class ChatMaanger : MonoBehaviour
         {
             messagesList.Clear();
         }
-
-        SetActiveTrueText();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isChatStarting)
+        if (Input.GetMouseButtonDown(0) && isStoryStart)
         {
             if (isTyping)
             {
-                return;
+                currentSpeed = fastSpeed;
             }
+            else
+            {
+                if (textNum >= messagesList.Count - 1)
+                {
+                    textNum = 0;
+                    messageObj.SetActive(false);
+                    isStoryStart = false;
+                    GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
+                    return;
+                }
 
-            isClick = true;
+                textNum++;
+                StartCoroutine(Typing(messagetxt, messagesList[textNum]));
+            }
         }
     }
 
+    public void FirstSetText()
+    {
+        isStoryStart = true;
+        messageObj.SetActive(true);
+        StartCoroutine(Typing(messagetxt, messagesList[textNum]));
+    }
 
     public void SetChatting(List<string> _list)
     {
         messagesList = _list;
+        textNum = 0;
+
     }
 
-    public void Text()
+    //public void Text()
+    //{
+    //    if (messageObj == null)
+    //    {
+    //        Debug.LogError("messageObj is NULL!!!!");
+    //        return;
+    //    }
+
+    //    //isChatStarting = true;
+    //    //StartCoroutine(TextCor());
+    //}
+
+    private IEnumerator Typing(Text _text, string _message)
     {
-        if (messageObj == null)
-        {
-            Debug.LogError("messageObj is NULL!!!!");
-            return;
-        }
-
-        isChatStarting = true;
-        StartCoroutine(TextCor());
-    }
-
-    private void SetActiveTrueText()
-    {
-        messagetxt.text = " ";
-    }
-
-    private IEnumerator TextCor()
-    {
-        messageObj.SetActive(true);
-
-        for (int i = 0; i < messagesList.Count; i++)
-        {
-            yield return TextOutCor(messagesList[i]);
-            yield return new WaitUntil(() => isClick == true);
-        }
-
-        GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
 
 
-        messageObj.SetActive(false);
-        isTyping = false;
-        isChatStarting = false;
-
-        SoundManager.Instance.CheckStageEndMusic();
-
-        yield break;
-    }
-
-    private IEnumerator TextOutCor(string _input)
-    {
-        isClick = false;
         isTyping = true;
-        SetActiveTrueText();
+        currentSpeed = defaultSpeed;
 
-        messagetxt.DOText(_input, 2f);
+        for (int i = 0; i < _message.Length; i++)
+        {
+            messagetxt.text = _message.Substring(0, i + 1);
+            yield return new WaitForSeconds(currentSpeed);
+        }
 
-        yield return textTime;
 
         isTyping = false;
-        yield break;
     }
+
+    //private IEnumerator TextCor()
+    //{
+    //    messageObj.SetActive(true);
+
+    //    for (int i = 0; i < messagesList.Count; i++)
+    //    {
+    //        yield return TextOutCor(messagesList[i]);
+    //        yield return new WaitUntil(() => isClick == true);
+    //    }
+
+    //    GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
+
+
+    //    messageObj.SetActive(false);
+    //    isTyping = false;
+    //    isChatStarting = false;
+
+    //    SoundManager.Instance.CheckStageEndMusic();
+
+    //    yield break;
+    //}
+
+    //private IEnumerator TextOutCor(string _input)
+    //{
+    //    isClick = false;
+    //    isTyping = true;
+
+    //    messagetxt.DOText(_input, 2f);
+
+    //    yield return textTime;
+
+    //    isTyping = false;
+    //    yield break;
+    //}
 
 
 }
