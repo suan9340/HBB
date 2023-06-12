@@ -48,6 +48,12 @@ public static class DefineManager
         Clicking,
     }
 
+    public enum PuzzleState
+    {
+        CanClick,
+        CantClick,
+    }
+
     public enum Stage_01_MoveType
     {
         StarfishMove,

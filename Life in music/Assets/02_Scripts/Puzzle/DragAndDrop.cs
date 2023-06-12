@@ -21,6 +21,11 @@ public class DragAndDrop : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (PuzzleManager.Instance.GetPuzzleState() == DefineManager.PuzzleState.CantClick)
+            {
+                return;
+            }
+
             mousePos = Input.mousePosition;
             mousePos = maincam.ScreenToWorldPoint(mousePos);
 
@@ -29,7 +34,7 @@ public class DragAndDrop : MonoBehaviour
 
             if (hit.collider == null)
                 return;
-
+                
             if (hit.transform.CompareTag("Puzzle"))
             {
                 if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
@@ -50,6 +55,7 @@ public class DragAndDrop : MonoBehaviour
             {
                 //selectObj.GetComponent<PuzzlePieces>().isSelected = false;
                 selectObj.GetComponent<PuzzlePieces>().OnUpPuzzle();
+                selectObj.GetComponent<PuzzlePieces>().PuzzleRight();
                 selectObj = null;
             }
         }

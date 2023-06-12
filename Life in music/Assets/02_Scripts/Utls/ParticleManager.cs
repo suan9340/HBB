@@ -30,15 +30,15 @@ public class ParticleManager : MonoBehaviour
 
     #region 인터페이스
 
-    private GameObject momobj;
+    //private GameObject momobj;
     public enum ParticleType
     {
-        BubbleParticle,
+        puzzleEffect,
     }
 
     private void Start()
     {
-        momobj = GameObject.Find("Canvas (Effect)");
+        //momobj = GameObject.Find("Canvas (Effect)");
     }
 
     /// <summary>
@@ -52,10 +52,10 @@ public class ParticleManager : MonoBehaviour
     {
         switch (pt)
         {
-            case ParticleType.BubbleParticle:
+            case ParticleType.puzzleEffect:
                 if (false == particleDic.ContainsKey(pt))
                 {
-                    particleDic[pt] = Resources.Load<GameObject>("VFX/Bubble");
+                    particleDic[pt] = Resources.Load<GameObject>("VFX/puzzleCorrect");
                 }
                 break;
 
@@ -72,7 +72,7 @@ public class ParticleManager : MonoBehaviour
 
         // 해당 파티클의 복사본 생성!
         GameObject go = Instantiate<GameObject>(particleDic[pt], pos, particleDic[pt].transform.rotation);
-        go.transform.SetParent(momobj.transform, false);
+        //go.transform.SetParent(momobj.transform, false);
 
         return 0;
     }

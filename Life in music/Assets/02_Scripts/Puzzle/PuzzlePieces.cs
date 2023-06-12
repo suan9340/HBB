@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.Rendering;
 
 public class PuzzlePieces : MonoBehaviour
@@ -20,6 +21,9 @@ public class PuzzlePieces : MonoBehaviour
     public Vector3 smallVec = Vector3.zero;
     public Vector3 bigVec = Vector3.zero;
 
+    public float puzzleMoveSpeed = 1f;
+
+    private Vector3 lastPos = Vector3.zero;
 
     private SortingGroup sortingGroup;
     private Animator myAnim;
@@ -33,26 +37,12 @@ public class PuzzlePieces : MonoBehaviour
         myAnim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Vector3.Distance(transform.position, rightPos) < 0.5f)
-        {
-            if (!isSelected)
-            {
-                if (inRightPos == false)
-                {
-                    transform.position = rightPos;
-                    myAnim.SetTrigger("isCorrect");
-
-                    inRightPos = true;
-                    sortingGroup.sortingOrder = 0;
-                }
-            }
-        }
-    }
 
     public void OnClickPuzzle(int _OIL)
     {
+        PuzzleManager.Instance.SettingPuzzleState(DefineManager.PuzzleState.CantClick);
+        lastPos = transform.position;
+
         myAnim.SetTrigger("isBig");
         isSelected = true;
         sortingGroup.sortingOrder = _OIL;
@@ -62,5 +52,42 @@ public class PuzzlePieces : MonoBehaviour
     {
         myAnim.SetTrigger("isSmall");
         isSelected = false;
+    }
+
+    public void PuzzleRight()
+    {
+        if (Vector3.Distance(transform.position, rightPos) < 0.5f)
+        {
+            if (!isSelected)
+            {
+                if (inRightPos == false)
+                {
+                    PuzzleManager.Instance.SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+                    transform.position = rightPos;
+
+                    inRightPos = true;
+                    sortingGroup.sortingOrder = 0;
+
+                    myAnim.SetTrigger("isCorrect");
+                    ParticleManager.Instance.AddParticle(ParticleManager.ParticleType.puzzleEffect, transform.position);
+                }
+
+            }
+        }
+        else
+        {
+            transform.DOMove(lastPos, puzzleMoveSpeed);
+
+            Invoke(nameof(SetState), puzzleMoveSpeed);
+            //transform.position = lastPos;
+        }
+
+    }
+
+    private void SetState()
+    {
+        PuzzleManager.Instance.SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+
+        //transform.localScale = smallVec;
     }
 }
