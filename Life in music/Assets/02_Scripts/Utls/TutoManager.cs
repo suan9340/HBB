@@ -31,18 +31,29 @@ public class TutoManager : MonoBehaviour
     public Text tutoTxt = null;
     private bool isTyping = false;
 
-    private readonly WaitForSeconds textWait = new WaitForSeconds(2f);
+    [Space(20)]
+    public float defaultSpeed = 0.08f;
+    public float fastSpeed = 0.03f;
 
-    
-    public void SetActiveTrueText()
+    [Space(20)]
+    public bool isStroyStarting = false;
+
+    private float currentSpeed = 0f;
+
+    private void Update()
     {
-        tutoTxt.text = "0";
-        if (!tutoTxt.gameObject.activeSelf)
-            tutoTxt.gameObject.SetActive(true);
+        if (Input.GetMouseButtonDown(0) && isStroyStarting)
+        {
+            if (isTyping)
+            {
+                currentSpeed = fastSpeed;
+            }
+        }
     }
 
     public void SetActiveFalseText()
     {
+        isStroyStarting = false;
         tutoTxt.text = " ";
         tutoTxt.gameObject.SetActive(false);
     }
@@ -64,17 +75,22 @@ public class TutoManager : MonoBehaviour
 
     private IEnumerator TextOutCor(string _input)
     {
+        CheckingStart();
         isTyping = true;
+        currentSpeed = defaultSpeed;
 
-        SetActiveTrueText();
+        for (int i = 0; i < _input.Length; i++)
+        {
+            tutoTxt.text = _input.Substring(0, i + 1);
+            yield return new WaitForSeconds(currentSpeed);
+        }
 
-        tutoTxt.DOText(_input, 2f);
-
-        yield return textWait;
         isTyping = false;
-
-        yield break;
     }
 
-
+    private void CheckingStart()
+    {
+        if (!isStroyStarting)
+            isStroyStarting = true;
+    }
 }

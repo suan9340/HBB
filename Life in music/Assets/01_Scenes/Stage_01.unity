@@ -4541,7 +4541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &810500824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5624,6 +5624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutoTxt: {fileID: 810500824}
+  defaultSpeed: 0.08
+  fastSpeed: 0.03
+  isStroyStarting: 0
 --- !u!4 &1002105922
 Transform:
   m_ObjectHideFlags: 0
