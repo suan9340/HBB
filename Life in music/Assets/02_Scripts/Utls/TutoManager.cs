@@ -38,6 +38,9 @@ public class TutoManager : MonoBehaviour
     [Space(20)]
     public bool isStroyStarting = false;
 
+    [Space(20)]
+    public AudioSource typingAudio = null;
+
     private float currentSpeed = 0f;
 
     private void Update()
@@ -47,6 +50,7 @@ public class TutoManager : MonoBehaviour
             if (isTyping)
             {
                 currentSpeed = fastSpeed;
+                typingAudio.pitch = 1.3f;
             }
         }
     }
@@ -77,6 +81,8 @@ public class TutoManager : MonoBehaviour
     {
         CheckingStart();
         isTyping = true;
+        typingAudio.Play();
+
         currentSpeed = defaultSpeed;
 
         for (int i = 0; i < _input.Length; i++)
@@ -85,6 +91,7 @@ public class TutoManager : MonoBehaviour
             yield return new WaitForSeconds(currentSpeed);
         }
 
+        typingAudio.Stop();
         isTyping = false;
     }
 

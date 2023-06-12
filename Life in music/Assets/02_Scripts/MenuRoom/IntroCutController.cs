@@ -12,6 +12,9 @@ public class IntroCutController : MonoBehaviour
     [Space(20)]
     public List<string> textList = new List<string>();
 
+    [Space(20)]
+    public AudioSource typingSound = null;
+
     private string message;
     private float currentSpeed = 0f;
 
@@ -35,11 +38,13 @@ public class IntroCutController : MonoBehaviour
             if (isTyping)
             {
                 currentSpeed = fastSpeed;
+                typingSound.pitch = 1.3f;
             }
             else
             {
                 if (textNum >= textList.Count - 1)
                 {
+                    isStroyStart = false;
                     isTyping = false;
                     menuAnim.SetTrigger("isClose");
                     MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
@@ -67,6 +72,8 @@ public class IntroCutController : MonoBehaviour
     private IEnumerator Typing(Text _text, string _message)
     {
         isTyping = true;
+        typingSound.Play();
+
         currentSpeed = defaultSpeed;
 
         for (int i = 0; i < _message.Length; i++)
@@ -75,11 +82,13 @@ public class IntroCutController : MonoBehaviour
             yield return new WaitForSeconds(currentSpeed);
         }
 
+        typingSound.Stop();
         isTyping = false;
     }
 
     private void NextText()
     {
         textNum++;
+        typingSound.pitch = 1;
     }
 }

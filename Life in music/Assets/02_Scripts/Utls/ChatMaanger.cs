@@ -38,6 +38,10 @@ public class ChatMaanger : MonoBehaviour
     public float defaultSpeed = 0.03f;
     public float fastSpeed = 0.08f;
 
+    [Space(20)]
+    public AudioSource typingAudio = null;
+
+
     private string message;
     private float currentSpeed = 0f;
 
@@ -61,6 +65,7 @@ public class ChatMaanger : MonoBehaviour
         {
             if (isTyping)
             {
+                typingAudio.pitch = 1.3f;
                 currentSpeed = fastSpeed;
             }
             else
@@ -75,6 +80,7 @@ public class ChatMaanger : MonoBehaviour
                 }
 
                 textNum++;
+                typingAudio.pitch = 1;
                 StartCoroutine(Typing(messagetxt, messagesList[textNum]));
             }
         }
@@ -108,9 +114,10 @@ public class ChatMaanger : MonoBehaviour
 
     private IEnumerator Typing(Text _text, string _message)
     {
-
-
         isTyping = true;
+        typingAudio.Play();
+
+
         currentSpeed = defaultSpeed;
 
         for (int i = 0; i < _message.Length; i++)
@@ -120,6 +127,7 @@ public class ChatMaanger : MonoBehaviour
         }
 
 
+        typingAudio.Stop();
         isTyping = false;
     }
 
