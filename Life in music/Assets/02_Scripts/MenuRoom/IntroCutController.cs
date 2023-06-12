@@ -6,55 +6,76 @@ using UnityEngine.UI;
 public class IntroCutController : MonoBehaviour
 {
     public Text typingText = null;
-    public float speed = 0.2f;
+    public float defaultSpeed = 0.03f;
+    public float fastSpeed = 0.03f;
+
+    [Space(20)]
     public List<string> textList = new List<string>();
 
     private string message;
+    private float currentSpeed = 0f;
 
     private int textNum = 0;
 
-    private bool isTextStart = false;
+    private bool isTyping = false;
+    private bool isStroyStart = false;
 
     public Animator menuAnim = null;
     private void Start()
     {
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
-        Invoke(nameof(Text), 5.27f);
+        Invoke(nameof(SettingTutoTextStart), 5.27f);
         PlayerPrefs.SetInt("CheckFirst", 1);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isTextStart)
+        if (Input.GetMouseButtonDown(0) && isStroyStart)
         {
-            if (textNum >= textList.Count - 1)
+            if (isTyping)
             {
-                isTextStart = false;
-                menuAnim.SetTrigger("isClose");
-                MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
-                return;
+                currentSpeed = fastSpeed;
             }
+            else
+            {
+                if (textNum >= textList.Count - 1)
+                {
+                    isTyping = false;
+                    menuAnim.SetTrigger("isClose");
+                    MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+                    return;
+                }
 
-            NextText();
-            Text();
+                NextText();
+                Text();
+
+            }
         }
+    }
+
+    public void SettingTutoTextStart()
+    {
+        isStroyStart = true;
+        StartCoroutine(Typing(typingText, textList[textNum]));
     }
 
     public void Text()
     {
-        StartCoroutine(Typing(typingText, textList[textNum], speed));
+        StartCoroutine(Typing(typingText, textList[textNum]));
     }
 
-    private IEnumerator Typing(Text _text, string _message, float _speeed)
+    private IEnumerator Typing(Text _text, string _message)
     {
-        isTextStart = false;
+        isTyping = true;
+        currentSpeed = defaultSpeed;
+
         for (int i = 0; i < _message.Length; i++)
         {
             typingText.text = _message.Substring(0, i + 1);
-            yield return new WaitForSeconds(_speeed);
+            yield return new WaitForSeconds(currentSpeed);
         }
 
-        isTextStart = true;
+        isTyping = false;
     }
 
     private void NextText()

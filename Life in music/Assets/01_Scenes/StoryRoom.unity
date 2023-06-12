@@ -2197,7 +2197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingText: {fileID: 2059906770}
-  speed: 0.1
+  defaultSpeed: 0.08
+  fastSpeed: 0.03
   textList:
   - "\uC73C\uC544.. \uC9C0\uAE08 \uBA87\uC2DC\uC9C0?"
   - "\uB9E4\uC77C \uB611\uAC19\uC774 \uC0AC\uB294 \uAC83 \uAC19\uC544.. \uB108\uBB34
@@ -3646,7 +3647,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNum: 2
-  currentSO: {fileID: 11400000, guid: 88c42916b829ea443baa0a1e6b2bd2ff, type: 2}
   lockObj: {fileID: 1056804797}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 55270800}
@@ -8486,7 +8486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNum: 1
-  currentSO: {fileID: 11400000, guid: 88c42916b829ea443baa0a1e6b2bd2ff, type: 2}
   lockObj: {fileID: 1047535796}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 1549090600}
