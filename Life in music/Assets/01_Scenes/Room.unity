@@ -861,7 +861,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bf4a32e5db019d346a7ea65765019a94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f3fcd517d622c794781cdf80f9aefc22, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3151,7 +3151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNum: 2
-  currentSO: {fileID: 11400000, guid: 88c42916b829ea443baa0a1e6b2bd2ff, type: 2}
   lockObj: {fileID: 1931807844}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 720507864}
@@ -7275,7 +7274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNum: 1
-  currentSO: {fileID: 11400000, guid: 88c42916b829ea443baa0a1e6b2bd2ff, type: 2}
   lockObj: {fileID: 1173567232}
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 1504971815}
