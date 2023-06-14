@@ -27,6 +27,19 @@ public class PuzzleManager : MonoBehaviour
 
     public DefineManager.PuzzleState puzzleState;
 
+    [Space(20)]
+    public List<string> puzzleEndTxt = new List<string>();
+
+    public int curNum = 0;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+
+        }
+    }
+
     public DefineManager.PuzzleState GetPuzzleState()
     {
         return puzzleState;
@@ -35,5 +48,16 @@ public class PuzzleManager : MonoBehaviour
     public void SettingPuzzleState(DefineManager.PuzzleState _puzzleState)
     {
         puzzleState = _puzzleState;
+    }
+
+    public void PuzzleCorrect()
+    {
+        SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+        PuzzleText.Instance.TextingOut(puzzleEndTxt[curNum]);
+    }
+
+    public void CanClickPuzzles()
+    {
+        SettingPuzzleState(DefineManager.PuzzleState.CanClick);
     }
 }
