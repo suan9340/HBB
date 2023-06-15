@@ -78,6 +78,7 @@ public class PuzzlePieces : MonoBehaviour
         else
         {
             transform.DOMove(lastPos, puzzleMoveSpeed);
+            PuzzleManager.Instance.SettingPuzzleState(DefineManager.PuzzleState.CanClick);
         }
 
     }

@@ -40,8 +40,6 @@ public class DragAndDrop : MonoBehaviour
                 if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
                 {
                     selectObj = hit.transform.gameObject;
-                    //selectObj.GetComponent<PuzzlePieces>().isSelected = true;
-                    //selectObj.GetComponent<SortingGroup>().sortingOrder = OIL;
                     selectObj.GetComponent<PuzzlePieces>().OnClickPuzzle(OIL);
                     OIL++;
                 }
@@ -53,7 +51,6 @@ public class DragAndDrop : MonoBehaviour
         {
             if (selectObj != null)
             {
-                //selectObj.GetComponent<PuzzlePieces>().isSelected = false;
                 selectObj.GetComponent<PuzzlePieces>().OnUpPuzzle();
                 selectObj.GetComponent<PuzzlePieces>().PuzzleRight();
                 selectObj = null;

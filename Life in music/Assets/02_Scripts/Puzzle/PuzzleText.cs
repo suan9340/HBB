@@ -79,6 +79,7 @@ public class PuzzleText : MonoBehaviour
     private IEnumerator TextOutCor(string _input)
     {
         CheckingStart();
+        typingAudio.pitch = 1f;
         isTyping = true;
         typingAudio.Play();
 

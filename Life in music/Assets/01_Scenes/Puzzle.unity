@@ -410,7 +410,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 95a4f59334e80f2488c41b6cd94c2be3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3854,12 +3854,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleState: 0
   puzzleEndTxt:
-  - "\uC5B4\uB9B4\uB584 \uAE30\uC5B5\uC774 \uAC70\uBB47\uAC70\uBB47 \uB5A0\uC624\uB978\uB2E4"
+  - "\uC5B4\uB9B4\uB54C \uAE30\uC5B5\uC774 \uAC70\uBB47\uAC70\uBB47 \uB5A0\uC624\uB978\uB2E4"
   - "\uC774\uB54C \uD574\uC218\uC695\uC7A5\uC5D0\uC11C \uB3D7\uC790\uB9AC \uD53C\uACE0
     \uC544\uC774\uC2A4\uD06C\uB9BC \uBA39\uC5C8\uC5C8\uB294\uB370"
   - "\uC5B8\uB2C8\uB791 \uAC19\uC774 \uBAA8\uB798\uB180\uC774\uB3C4 \uD588\uB358\uAC70
     \uAE30\uC5B5\uB09C\uB2E4!"
-  curNum: 0
+  - 4444
+  - 5555555
+  - 6666666666
+  - 777777777777
+  - enddddd
+  curNum: -1
 --- !u!4 &975867910
 Transform:
   m_ObjectHideFlags: 0

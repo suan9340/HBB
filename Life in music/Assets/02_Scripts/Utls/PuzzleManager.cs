@@ -30,15 +30,8 @@ public class PuzzleManager : MonoBehaviour
     [Space(20)]
     public List<string> puzzleEndTxt = new List<string>();
 
-    public int curNum = 0;
+    public int curNum = -1;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-
-        }
-    }
 
     public DefineManager.PuzzleState GetPuzzleState()
     {
@@ -52,8 +45,17 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
-        SettingPuzzleState(DefineManager.PuzzleState.CanClick);
-        PuzzleText.Instance.TextingOut(puzzleEndTxt[curNum]);
+        if (curNum >= puzzleEndTxt.Count - 1)
+        {
+            Debug.Log("end");
+            return;
+        }
+        else
+        {
+            curNum++;
+            SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+            PuzzleText.Instance.TextingOut(puzzleEndTxt[curNum]);
+        }
     }
 
     public void CanClickPuzzles()
