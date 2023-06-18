@@ -28,7 +28,6 @@ public class PuzzleManager : MonoBehaviour
     public DefineManager.PuzzleState puzzleState;
 
     [Space(20)]
-    public List<string> puzzleEndTxt = new List<string>();
     public PuzzleStageEndSO stageEndText = null;
 
     public int curNum = -1;
@@ -91,16 +90,13 @@ public class PuzzleManager : MonoBehaviour
             Debug.Log("end");
             return;
         }
-        //if (curNum >= puzzleEndTxt.Count - 1)
-        //{
-        //    Debug.Log("end");
-        //    return;
-        //}
         else
         {
             curNum++;
+            var _input = stageEndText.stagesEndTxt[curStageEnd + 1].stageEndPuzzleList[curNum];
+
             SettingPuzzleState(DefineManager.PuzzleState.CanClick);
-            PuzzleText.Instance.TextingOut(puzzleEndTxt[curNum]);
+            PuzzleText.Instance.TextingOut(_input);
         }
     }
 
