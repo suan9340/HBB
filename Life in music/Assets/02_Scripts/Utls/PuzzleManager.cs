@@ -29,9 +29,50 @@ public class PuzzleManager : MonoBehaviour
 
     [Space(20)]
     public List<string> puzzleEndTxt = new List<string>();
+    public PuzzleStageEndSO stageEndText = null;
 
     public int curNum = -1;
+    public int curStageEnd = 0;
 
+
+    [Space(50)]
+    public GameObject stage01Puzzle = null;
+    public GameObject stage02Puzzle = null;
+
+    private void Awake()
+    {
+        CheckPuzzle();
+        CheckStageSOData();
+        curNum = -1;
+    }
+
+    private void CheckPuzzle()
+    {
+        switch (curStageEnd)
+        {
+            case 1:
+                stage01Puzzle.SetActive(true);
+                break;
+
+
+            case 2:
+                stage02Puzzle.SetActive(true);
+                break;
+
+            default:
+                Debug.Log($"Enable!!{curStageEnd}   <- this Stage!!");
+                break;
+        }
+    }
+
+    private void CheckStageSOData()
+    {
+        if (stageEndText == null)
+        {
+            Debug.Log("stageEndTextSo is NULL Y Connectingggg....");
+            stageEndText = Resources.Load<PuzzleStageEndSO>("SO/PuzzleStageEndSO");
+        }
+    }
 
     public DefineManager.PuzzleState GetPuzzleState()
     {
@@ -45,11 +86,16 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
-        if (curNum >= puzzleEndTxt.Count - 1)
+        if (curNum >= stageEndText.stagesEndTxt[curStageEnd + 1].stageEndPuzzleList.Count - 1)
         {
             Debug.Log("end");
             return;
         }
+        //if (curNum >= puzzleEndTxt.Count - 1)
+        //{
+        //    Debug.Log("end");
+        //    return;
+        //}
         else
         {
             curNum++;

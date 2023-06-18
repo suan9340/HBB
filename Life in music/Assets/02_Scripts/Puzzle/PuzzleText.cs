@@ -59,6 +59,7 @@ public class PuzzleText : MonoBehaviour
         }
     }
 
+
     public void SetActiveFalseText()
     {
         isStroyStarting = false;

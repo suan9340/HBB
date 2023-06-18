@@ -3864,7 +3864,11 @@ MonoBehaviour:
   - 6666666666
   - 777777777777
   - enddddd
+  stageEndText: {fileID: 11400000, guid: df262643e5e01854e926291cb5db9c9d, type: 2}
   curNum: -1
+  curStageEnd: 0
+  stage01Puzzle: {fileID: 1053011705}
+  stage02Puzzle: {fileID: 1589435386}
 --- !u!4 &975867910
 Transform:
   m_ObjectHideFlags: 0
