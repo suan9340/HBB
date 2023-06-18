@@ -123,7 +123,7 @@ public class SoundManager : MonoBehaviour
                 break;
         }
 
-        //SceneManager.LoadScene("Room");
+        SceneManager.LoadScene("Puzzle");
     }
 
     /// <summary>
