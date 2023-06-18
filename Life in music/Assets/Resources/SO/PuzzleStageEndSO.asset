@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5365f4bd1008a4a93083c3ad666719, type: 3}
+  m_Name: PuzzleStageEndSO
+  m_EditorClassIdentifier: 
+  stagesEndTxt:
+  - stageName: Stage01
+    stageEndPuzzleList:
+    - "\uC5B4\uB9B4\uB54C \uAE30\uC5B5\uC774 \uAC70\uBB47\uAC70\uBB47 \uB5A0\uC624\uB978\uB2E4"
+    - "\uC774\uB54C \uD574\uC218\uC695\uC7A5\uC5D0\uC11C \uB3D7\uC790\uB9AC \uD53C\uACE0
+      \uC544\uC774\uC2A4\uD06C\uB9BC \uBA39\uC5C8\uC5C8\uB294\uB370"
+    - "\uC5B8\uB2C8\uB791 \uAC19\uC774 \uBAA8\uB798\uB180\uC774\uB3C4 \uD588\uB358\uAC70
+      \uAE30\uC5B5\uB09C\uB2E4!"
+    - "\uCC98\uC74C\uC73C\uB85C \uAC00\uC871\uB4E4\uC774\uB791 \uB180\uB7EC\uAC04
+      \uBC14\uB2E4\uC600\uC5C8\uB294\uB370"
+    - "\uC774\uB54C \uB0B4\uAC00 \uB108\uBB34 \uC5B4\uB824\uC11C \uBC14\uB2E4\uC5D0
+      \uCC98\uC74C \uB4E4\uC5B4\uAC00\uAE30 \uBB34\uC11C\uC6E0\uC5C8\uB358 \uAE30\uC5B5\uB09C\uB2E4"
+    - "\uADF8\uB798\uC11C \uB9C9\uC0C1 \uB2E4\uC2DC \uC0DD\uAC01\uD574\uBCF4\uB2C8\uAE4C
+      \uCD94\uC5B5\uB3CB\uB294\uB2E4!.."
+    - "\uB3CC\uBA69\uC774\uB85C \uBB3C\uC218\uC81C\uBE44\uB3C4 \uD574\uBCF4\uACE0"
+    - "\uC544 ~~! \uB2E4\uC2DC \uB3CC\uC544\uAC00\uACE0 \uC2F6\uB2E4 !"
+  - stageName: Stage02
+    stageEndPuzzleList:
+    - 00000
+    - 1111111
+    - 2222222222
+    - 3333333
+    - 444444444
+    - 5555555
+    - 666666666666
+    - 77777777777
+    - 888888888888
+    - 999999999999
