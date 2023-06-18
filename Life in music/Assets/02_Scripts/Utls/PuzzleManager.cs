@@ -47,6 +47,8 @@ public class PuzzleManager : MonoBehaviour
 
     private void CheckPuzzle()
     {
+        curStageEnd = PlayerPrefs.GetInt(ConstantManager.STAGE_END_Y_CHECKINGPUZLLE);
+
         switch (curStageEnd)
         {
             case 1:
