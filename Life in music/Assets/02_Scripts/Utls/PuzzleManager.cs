@@ -85,7 +85,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
-        if (curNum >= stageEndText.stagesEndTxt[curStageEnd + 1].stageEndPuzzleList.Count - 1)
+        if (curNum >= stageEndText.stagesEndTxt[curStageEnd].stageEndPuzzleList.Count - 1)
         {
             Debug.Log("end");
             return;
@@ -93,7 +93,7 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             curNum++;
-            var _input = stageEndText.stagesEndTxt[curStageEnd + 1].stageEndPuzzleList[curNum];
+            var _input = stageEndText.stagesEndTxt[curStageEnd].stageEndPuzzleList[curNum];
 
             SettingPuzzleState(DefineManager.PuzzleState.CanClick);
             PuzzleText.Instance.TextingOut(_input);
