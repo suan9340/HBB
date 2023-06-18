@@ -6166,7 +6166,7 @@ MonoBehaviour:
     isOn: 0
   - source: {fileID: 1655823534}
     isOn: 0
-  num: 1
+  num: 2
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageNum: 2
 --- !u!1 &1557171634
