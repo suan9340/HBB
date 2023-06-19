@@ -57,6 +57,7 @@ public class PuzzleText : MonoBehaviour
                 PuzzleManager.Instance.CanClickPuzzles();
             }
         }
+        
     }
 
 
@@ -64,7 +65,6 @@ public class PuzzleText : MonoBehaviour
     {
         isStroyStarting = false;
         tutoTxt.text = " ";
-        //tutoTxt.gameObject.SetActive(false);
     }
 
     public void TextingOut(string _input)

@@ -120,17 +120,19 @@ public class PuzzleManager : MonoBehaviour
 
         SettingPuzzleState(DefineManager.PuzzleState.CanClick);
         PuzzleText.Instance.TextingOut(_input);
+        //Debug.Log($"{puzzlecurCnt}   /    {puzzleMaxCnt}");
+    }
 
+    public void CanClickPuzzles()
+    {
         if (puzzlecurCnt == puzzleMaxCnt)
         {
             Debug.Log("end");
             SceneManager.LoadScene("Room");
         }
-        Debug.Log($"{puzzlecurCnt}   /    {puzzleMaxCnt}");
-    }
-
-    public void CanClickPuzzles()
-    {
-        SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+        else
+        {
+            SettingPuzzleState(DefineManager.PuzzleState.CanClick);
+        }
     }
 }
