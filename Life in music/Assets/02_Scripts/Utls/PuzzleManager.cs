@@ -31,7 +31,7 @@ public class PuzzleManager : MonoBehaviour
     public PuzzleStageEndSO stageEndText = null;
 
     public int curNum = -1;
-    public int curStageEnd = 0;
+    private int curStageEnd = 0;
 
     private int puzzleMaxCnt = 0;
     private int puzzlecurCnt = 0;
@@ -68,7 +68,6 @@ public class PuzzleManager : MonoBehaviour
         }
 
         puzzleMaxCnt = stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList.Count;
-        Debug.Log(puzzleMaxCnt);
     }
 
     private void CheckStageSOData()
@@ -92,7 +91,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
-        if(puzzlecurCnt >= puzzleMaxCnt)
+        if (puzzlecurCnt >= puzzleMaxCnt)
         {
             Debug.Log("end");
             return;
@@ -105,11 +104,13 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             curNum++;
+            puzzlecurCnt++;
             var _input = stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList[curNum];
 
             SettingPuzzleState(DefineManager.PuzzleState.CanClick);
             PuzzleText.Instance.TextingOut(_input);
-            puzzlecurCnt++;
+
+            Debug.Log($"{puzzlecurCnt}   /    {puzzleMaxCnt}");
         }
     }
 
