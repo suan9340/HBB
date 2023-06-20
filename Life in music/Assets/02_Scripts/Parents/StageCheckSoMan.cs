@@ -24,6 +24,10 @@ public class StageCheckSoMan : MonoBehaviour
                 currentSO.stageName = DefineManager.StageNames.School_02;
                 break;
 
+            case 3:
+                currentSO.stageName = DefineManager.StageNames.Band_03;
+                break;
+
         }
     }
 

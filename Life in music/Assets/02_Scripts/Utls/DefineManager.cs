@@ -8,7 +8,7 @@ public static class DefineManager
     {
         Sea_01,
         School_02,
-        PlayGround_03,
+        Band_03,
         Cafe_04,
     }
 
@@ -29,6 +29,11 @@ public static class DefineManager
         Locker,
         Umbrella,
         BroomStick,
+    }
+
+    public enum Stage_03_Band
+    {
+
     }
 
     public enum GameState

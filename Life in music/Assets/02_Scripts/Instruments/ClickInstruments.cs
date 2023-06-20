@@ -109,7 +109,7 @@ public class ClickInstruments : MonoBehaviour
 
 
 
-            case DefineManager.StageNames.PlayGround_03:
+            case DefineManager.StageNames.Band_03:
 
 
                 break;
