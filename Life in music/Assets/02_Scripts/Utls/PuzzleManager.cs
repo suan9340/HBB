@@ -92,28 +92,6 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
-        //if (puzzlecurCnt >= puzzleMaxCnt)
-        //{
-        //    Debug.Log("end");
-        //    return;
-        //}
-        ////if (curNum >= stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList.Count - 1)
-        ////{
-        ////    Debug.Log("end");
-        ////    return;
-        ////}
-        //else
-        //{
-        //    curNum++;
-        //    puzzlecurCnt++;
-        //    var _input = stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList[curNum];
-
-        //    SettingPuzzleState(DefineManager.PuzzleState.CanClick);
-        //    PuzzleText.Instance.TextingOut(_input);
-
-        //    Debug.Log($"{puzzlecurCnt}   /    {puzzleMaxCnt}");
-        //}
-
         curNum++;
         puzzlecurCnt++;
         var _input = stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList[curNum];
