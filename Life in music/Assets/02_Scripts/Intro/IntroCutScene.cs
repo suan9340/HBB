@@ -31,6 +31,7 @@ public class IntroCutScene : MonoBehaviour
 
     [Space(20)]
     public List<GameObject> introObj = new List<GameObject>();
+    public GameObject IntroObj = null;
 
     [Space(20)]
     public List<AudioClip> introClip = new List<AudioClip>();
@@ -46,6 +47,7 @@ public class IntroCutScene : MonoBehaviour
         ShowText();
         ShowIntroObj();
         mySource.PlayOneShot(introClip[0]);
+        MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
     }
 
 
@@ -75,6 +77,10 @@ public class IntroCutScene : MonoBehaviour
     {
         switch (introTextnum)
         {
+            case 1:
+                mySource.Stop();
+                break;
+
             case 2:
                 FadeInIntroObj(introObj[1]);
                 break;
@@ -92,11 +98,23 @@ public class IntroCutScene : MonoBehaviour
                 break;
 
             case 14:
-                FadeInIntroObj(introObj[4]);
+                foreach (var _introOb in introObj)
+                {
+                    _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                }
+
                 break;
 
             default:
                 break;
+        }
+
+
+        if (introTextnum >= introText.Count - 1)
+        {
+            IntroObj.SetActive(false);
+            MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
+            return;
         }
 
         introTextnum++;
