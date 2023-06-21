@@ -5513,7 +5513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Leave Game?
+  m_Text: "\uBC29\uC744 \uB098\uAC08\uAE4C?"
 --- !u!222 &748810396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8833,6 +8833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingObj: {fileID: 1416338913}
   myAnim: {fileID: 1416338915}
+  mySource: {fileID: 0}
+  btnClickClip: {fileID: 0}
 --- !u!4 &1218213213
 Transform:
   m_ObjectHideFlags: 0
