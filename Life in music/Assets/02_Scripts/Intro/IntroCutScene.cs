@@ -32,7 +32,9 @@ public class IntroCutScene : MonoBehaviour
     [Space(20)]
     public List<GameObject> introObj = new List<GameObject>();
 
-
+    [Space(20)]
+    public List<AudioClip> introClip = new List<AudioClip>();
+    public AudioSource mySource = null;
 
     [Space(20)]
     public int introTextnum = 0;
@@ -43,6 +45,7 @@ public class IntroCutScene : MonoBehaviour
     {
         ShowText();
         ShowIntroObj();
+        mySource.PlayOneShot(introClip[0]);
     }
 
 
@@ -54,8 +57,8 @@ public class IntroCutScene : MonoBehaviour
             return;
         }
 
-        _obj.SetActive(true);
         _obj.GetComponent<Animator>().SetTrigger("isIntroFadeIn");
+        mySource.Stop();
     }
 
     private void ShowText()
@@ -72,8 +75,24 @@ public class IntroCutScene : MonoBehaviour
     {
         switch (introTextnum)
         {
-            case 1:
+            case 2:
                 FadeInIntroObj(introObj[1]);
+                break;
+
+            case 4:
+                mySource.PlayOneShot(introClip[1]);
+                break;
+
+            case 6:
+                FadeInIntroObj(introObj[2]);
+                break;
+
+            case 10:
+                FadeInIntroObj(introObj[3]);
+                break;
+
+            case 14:
+                FadeInIntroObj(introObj[4]);
                 break;
 
             default:
