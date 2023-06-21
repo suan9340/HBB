@@ -370,6 +370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingObj: {fileID: 831305153}
   myAnim: {fileID: 831305155}
+  mySource: {fileID: 1181040563}
+  btnClickClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
 --- !u!1 &78676546
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362323cc59e0fbf45a97bd124ded32ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySource: {fileID: 1181040563}
+  btnClickClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
 --- !u!4 &215039500
 Transform:
   m_ObjectHideFlags: 0

@@ -55,7 +55,6 @@ public class IntroText : MonoBehaviour
             {
                 SetActiveFalseText();
                 IntroCutScene.Instance.CheckNum();
-                Debug.Log("Pas");
             }
         }
 

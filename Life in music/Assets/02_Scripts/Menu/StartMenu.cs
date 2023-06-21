@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     private int checkFirst;
+    public AudioSource mySource = null;
+    public AudioClip btnClickClip = null;
 
     private void Start()
     {
@@ -14,6 +16,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnClickStart()
     {
+        mySource.PlayOneShot(btnClickClip);
         if (checkFirst == 0)        // First Game
         {
             SceneManager.LoadScene("StoryRoom");
@@ -28,6 +31,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnClickOut()
     {
+        mySource.PlayOneShot(btnClickClip);
         Application.Quit();
     }
 }

@@ -78,11 +78,14 @@ public class IntroCutScene : MonoBehaviour
         switch (introTextnum)
         {
             case 1:
+                Debug.Log("qwe");
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 mySource.Stop();
                 break;
 
             case 2:
-                FadeInIntroObj(introObj[1]);
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
+                FadeInIntroObj(introObj[2]);
                 break;
 
             case 4:
@@ -90,11 +93,12 @@ public class IntroCutScene : MonoBehaviour
                 break;
 
             case 6:
-                FadeInIntroObj(introObj[2]);
+                FadeInIntroObj(introObj[3]);
+                introObj[1].SetActive(false);
                 break;
 
             case 10:
-                FadeInIntroObj(introObj[3]);
+                FadeInIntroObj(introObj[4]);
                 break;
 
             case 14:

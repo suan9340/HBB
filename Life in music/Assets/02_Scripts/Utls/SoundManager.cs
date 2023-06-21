@@ -102,6 +102,7 @@ public class SoundManager : MonoBehaviour
     {
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         UIManager.Instance.OnClickStageEnd(true);
+        EventManager.TriggerEvent(ConstantManager.END_CAM_SHAKE);
         Debug.Log("StageENd");
 
         switch (stageNum)
@@ -123,7 +124,7 @@ public class SoundManager : MonoBehaviour
                 break;
         }
 
-        SceneManager.LoadScene("Puzzle");
+        //SceneManager.LoadScene("Puzzle");
     }
 
     /// <summary>

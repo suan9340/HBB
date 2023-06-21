@@ -16,6 +16,9 @@ public class SettingController : MonoBehaviour
     private bool isSettingOn = false;
     private bool isSettingChanging = false;
 
+    public AudioSource mySource = null;
+    public AudioClip btnClickClip = null;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -31,6 +34,7 @@ public class SettingController : MonoBehaviour
             return;
         }
 
+        mySource.PlayOneShot(btnClickClip);
         isSettingOn = !isSettingOn;
         isSettingChanging = true;
 
