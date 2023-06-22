@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -152,5 +153,10 @@ public class UIManager : MonoBehaviour
     public void OnClickStageEnd(bool _isTrue)
     {
         stageEndObj.SetActive(_isTrue);
+    }
+
+    public void OnClickPuzzle()
+    {
+        SceneManager.LoadScene("Puzzle");
     }
 }
