@@ -63,7 +63,7 @@ public class PuzzlePieces : MonoBehaviour
                 if (inRightPos == false)
                 {
                     PuzzleManager.Instance.PuzzleCorrect();
-                    
+
                     transform.position = rightPos;
 
                     inRightPos = true;
@@ -77,6 +77,7 @@ public class PuzzlePieces : MonoBehaviour
         }
         else
         {
+            PuzzleManager.Instance.PuzzleFail();
             transform.DOMove(lastPos, puzzleMoveSpeed);
             PuzzleManager.Instance.SettingPuzzleState(DefineManager.PuzzleState.CanClick);
         }

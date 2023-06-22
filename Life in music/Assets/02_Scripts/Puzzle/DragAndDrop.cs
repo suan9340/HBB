@@ -39,6 +39,7 @@ public class DragAndDrop : MonoBehaviour
             {
                 if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
                 {
+                    PuzzleManager.Instance.PuzzleClick();
                     selectObj = hit.transform.gameObject;
                     selectObj.GetComponent<PuzzlePieces>().OnClickPuzzle(OIL);
                     OIL++;

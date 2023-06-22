@@ -48,6 +48,7 @@ public class IntroCutScene : MonoBehaviour
         ShowIntroObj();
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
+        PlayerPrefs.SetInt("CheckFirst", 1);
     }
 
 

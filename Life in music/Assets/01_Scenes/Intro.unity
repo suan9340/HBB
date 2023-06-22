@@ -1708,8 +1708,9 @@ MonoBehaviour:
   - {fileID: 1488667500}
   - {fileID: 582007279}
   - {fileID: 661805591}
+  IntroObj: {fileID: 0}
   introClip:
-  - {fileID: 8300000, guid: 8bb9caa5f3a8fed4ca6bc087dc510d53, type: 3}
+  - {fileID: 8300000, guid: f922c814c4fea7944ad3335764be629d, type: 3}
   - {fileID: 8300000, guid: a2b624c3f1b51dc4b8ea9058c0cf149a, type: 3}
   mySource: {fileID: 1123283646}
   introTextnum: 0

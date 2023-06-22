@@ -41,6 +41,12 @@ public class PuzzleManager : MonoBehaviour
     public GameObject stage01Puzzle = null;
     public GameObject stage02Puzzle = null;
 
+    [Space(30)]
+    public AudioSource myAudioSource = null;
+    public AudioClip puzzle_Correct = null;
+    public AudioClip puzzle_Click = null;
+    public AudioClip puzzle_Fail = null;
+
     private void Awake()
     {
         CheckPuzzle();
@@ -92,6 +98,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void PuzzleCorrect()
     {
+        myAudioSource.PlayOneShot(puzzle_Correct);
         curNum++;
         puzzlecurCnt++;
         var _input = stageEndText.stagesEndTxt[curStageEnd - 1].stageEndPuzzleList[curNum];
@@ -113,4 +120,15 @@ public class PuzzleManager : MonoBehaviour
             SettingPuzzleState(DefineManager.PuzzleState.CanClick);
         }
     }
+
+    public void PuzzleFail()
+    {
+        myAudioSource.PlayOneShot(puzzle_Fail);
+    }
+
+    public void PuzzleClick()
+    {
+        myAudioSource.PlayOneShot(puzzle_Click);
+    }
+
 }

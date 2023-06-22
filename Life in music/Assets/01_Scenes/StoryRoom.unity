@@ -1926,37 +1926,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &246672215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 246672216}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &246672216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246672215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7745743, y: -1.1758399, z: 1.9499365}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250768629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,7 +2701,7 @@ MonoBehaviour:
   - {fileID: 851412916}
   IntroObj: {fileID: 960318958}
   introClip:
-  - {fileID: 8300000, guid: 991a65ab3478d56408ec89ee2456a164, type: 3}
+  - {fileID: 8300000, guid: f922c814c4fea7944ad3335764be629d, type: 3}
   - {fileID: 8300000, guid: a2b624c3f1b51dc4b8ea9058c0cf149a, type: 3}
   mySource: {fileID: 1007207049}
   introTextnum: 0
