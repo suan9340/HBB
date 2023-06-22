@@ -94,6 +94,7 @@ public class SoundManager : MonoBehaviour
     {
         if (num == 6)
         {
+
             StageEndEvent();
         }
     }
