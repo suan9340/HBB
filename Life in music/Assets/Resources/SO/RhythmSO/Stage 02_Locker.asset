@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 02_Locker
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
+    isTuto: 1
     isClear: 0
     name: Stage 02_Locker
     AudioClip: {fileID: 8300000, guid: 273b7ef9d427b904ebc5a88c2ac9e85b, type: 3}

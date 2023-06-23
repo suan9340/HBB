@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 01_Rock
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 0
+    isTuto: 1
     isClear: 0
     name: Stage 01_Rock
     AudioClip: {fileID: 8300000, guid: 8487304bf3129364cb12f87c6554b458, type: 3}

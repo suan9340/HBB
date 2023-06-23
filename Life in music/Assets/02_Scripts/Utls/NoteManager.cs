@@ -44,6 +44,9 @@ public class NoteManager : MonoBehaviour
     public List<CheckingNote> timingList = new List<CheckingNote>();
     public RhythmCheck rhythmCheck = null;
 
+    [Space(20)]
+    public ParticleSystem noteClickEffectObj = null;
+    public RectTransform effectRect = null;
 
     private GameObject noteEndImage = null;
     private GameObject noteObj = null;
@@ -103,7 +106,6 @@ public class NoteManager : MonoBehaviour
         }
 
         for (int j = 0; j < noteList.Count; j++)
-
         {
             var _notepos = noteList[j].transform.localPosition.x - 920f;
 
@@ -113,6 +115,9 @@ public class NoteManager : MonoBehaviour
                 {
                     GameManager.Instance.canClick = true;
                     noteList[j].SetActive(false);
+
+                    //effectRect.anchoredPosition = noteList[j].transform.position;
+                    noteClickEffectObj.Play();
                     noteList.RemoveAt(j);
 
                     switch (i)
