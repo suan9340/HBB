@@ -44,7 +44,7 @@ public class TutoMOM : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.gameState != DefineManager.GameState.CantClick))
         {
             if (isTuto)
             {
