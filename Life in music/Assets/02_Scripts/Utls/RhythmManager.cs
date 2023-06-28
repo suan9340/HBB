@@ -71,6 +71,7 @@ public class RhythmManager : MonoBehaviour
     {
         if (isRhythm == false)
         {
+            currentTime = 0;
             return;
         }
         else
