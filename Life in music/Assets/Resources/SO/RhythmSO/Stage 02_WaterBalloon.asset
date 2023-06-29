@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 02_WaterBalloon
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 1
+    isTuto: 0
     isClear: 0
     name: Stage 02_WaterBalloon
     AudioClip: {fileID: 8300000, guid: 3c12f8fea8cec7e4abb128de3957faa1, type: 3}

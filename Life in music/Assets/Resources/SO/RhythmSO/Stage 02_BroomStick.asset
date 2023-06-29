@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 02_BroomStick
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 1
+    isTuto: 0
     isClear: 0
     name: Stage 02_BroomStick
     AudioClip: {fileID: 8300000, guid: 0f6d01f6a1f0b364cba301f886f09332, type: 3}

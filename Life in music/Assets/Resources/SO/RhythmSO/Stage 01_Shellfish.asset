@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 01_Shellfish
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 1
+    isTuto: 0
     isClear: 0
     name: Stage 01_Shellfish
     AudioClip: {fileID: 8300000, guid: ab7e1d11e027dd042a070c642b083a4c, type: 3}

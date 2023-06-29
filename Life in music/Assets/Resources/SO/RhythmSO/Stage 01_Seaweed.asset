@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage 01_Seaweed
   m_EditorClassIdentifier: 
   myData:
-    isTuto: 1
+    isTuto: 0
     isClear: 0
     name: Stage 01_Seaweed
     AudioClip: {fileID: 8300000, guid: 62ebb4321dd333c45bb64b6123bd05b8, type: 3}

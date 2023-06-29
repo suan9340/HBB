@@ -22,8 +22,8 @@ MonoBehaviour:
     noteEndObj: {fileID: 4129381342916783207, guid: 8743ca97c866a514cb524fa2d09c784e,
       type: 3}
     chat:
-    - "\uC608\uC804\uC5D0 \uBC14\uB2E4 \uC18D\uC5D0\uC11C \uB9CC\uC9C4 \uC801\uC774
-      \uC788\uC5C8\uB294\uB370"
+    - "\uC608\uC804\uC758 \uBC14\uB2E4 \uC18D\uC5D0\uC11C \uB9CC\uC9C4 \uC801\uC774
+      \uC788\uC5C8\uB294\uB370."
     - "\uB290\uB08C\uC774 \uC2E0\uAE30\uD588\uB358 \uAE30\uC5B5\uC774 \uB098\u2026.."
   - stage1: 1
     stageRhythm: {fileID: 6777877845949713200, guid: caadd12e0d058e44eb4500fd4029b934,
@@ -44,7 +44,7 @@ MonoBehaviour:
     noteEndObj: {fileID: 966402483036469579, guid: d8864c64757454743801595c898ad428,
       type: 3}
     chat:
-    - "\uC18C\uB77C \uACE0\uB465\uC5D0 \uBC14\uB78C\uC744 \uBD88\uBA74"
+    - "\uC18C\uB77C\uACE0\uB465\uC5D0 \uBC14\uB78C\uC744 \uBD88\uBA74"
     - "\uC774\uB7F0 \uC18C\uB9AC\uAC00 \uB0AC\uC5C8\uB098\u2026..?"
   - stage1: 3
     stageRhythm: {fileID: 2600144270531631212, guid: 761721b8d14b9254397fe927bf11fb8e,
@@ -67,7 +67,7 @@ MonoBehaviour:
     noteEndObj: {fileID: 3684012898452488951, guid: 71363ca0d89951448bfa8a4770ad836c,
       type: 3}
     chat:
-    - "\uC544 \uCC38! \uADF8 \uBC14\uB2F7\uAC00\uC5D0\uC11C\uB294 \uBBF8\uC5ED\uC774
+    - "\uC544\uCC38! \uADF8 \uBC14\uB2F7\uAC00\uC5D0\uC11C\uB294 \uBBF8\uC5ED\uC774
       \uB9CE\uC558\uC5C8\uC9C0!\u2026"
     - "\uADF8 \uC0AC\uC774\uB85C \uBB3C\uACE0\uAE30 \uB5BC\uB4E4\uC774 \uC9C0\uB098\uAC14\uC5C8\uB294\uB370.. "
     - "\uC9C0\uAE08 \uB4E4\uC5B4\uBCF4\uB2C8 \uBBF8\uC5ED\uC758 \uC18C\uB9AC\uAC00
