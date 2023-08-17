@@ -130,20 +130,10 @@ public class ClickInstruments : MonoBehaviour
 
         if (objectClear.isCCC == true)
         {
-            //Debug.Log("NONO");
             return;
         }
 
         LoadRhythmStart();
-
-        //if (BoolCurrnetIsClear())
-        //{
-        //}
-        //else
-        //{
-        //    return;
-        //}
-
     }
 
     private void LoadRhythmStart()

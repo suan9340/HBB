@@ -9,6 +9,9 @@ public class ObjectClear : MonoBehaviour
 
     public bool isCCC = false;
 
+    [Header("Color")]
+    public Sprite[] colorSprite = null;
+
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
@@ -30,8 +33,9 @@ public class ObjectClear : MonoBehaviour
     {
         if (CheckingNull())
         {
-            obj.SetActive(true);
-            mySprite.color = new Color(0.67f, 0.67f, 0.67f);
+            //obj.SetActive(true);    
+            //mySprite.color = new Color(0.67f, 0.67f, 0.67f);
+            mySprite.sprite = colorSprite[0];
         }
     }
 

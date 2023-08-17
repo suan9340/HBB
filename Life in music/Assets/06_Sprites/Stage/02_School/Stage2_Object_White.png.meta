@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d783a47d2117a3e498f2ad1cc3201cef
+guid: 901d3f260a86f1142bd928cbb09d0b4d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SeaObject_0
+      name: Stage2_Object_White_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 26
-        width: 333
-        height: 268
+        x: 34
+        y: 140
+        width: 116
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8dd05c8c01a6f5419580282887ac4fb
-      internalID: -1043762974
+      spriteID: f0a2d4f91239e484fbabd86c13486343
+      internalID: 2032014896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SeaObject_3
+      name: Stage2_Object_White_1
       rect:
         serializedVersion: 2
-        x: 407
+        x: 183
+        y: 0
+        width: 152
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31088ec665d7a547b38fd98af9fbfab
+      internalID: 678637297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage2_Object_White_2
+      rect:
+        serializedVersion: 2
+        x: 357
         y: 42
-        width: 158
-        height: 145
+        width: 184
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68bf937d1d3eede4eb28ce6ee42f0673
-      internalID: 978876679
+      spriteID: 21950f4603f09ac458538ec4d0bb4098
+      internalID: -242134746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SeaObject_4
+      name: Stage2_Object_White_3
       rect:
         serializedVersion: 2
-        x: 829
-        y: 19
-        width: 334
-        height: 169
+        x: 567
+        y: 96
+        width: 207
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d50c8235a8374b4458a86f4016c0936d
-      internalID: 370931083
+      spriteID: 75671d59ab133d542b52f4647e501228
+      internalID: 422662660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SeaObject_5
+      name: Stage2_Object_White_4
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 31
-        width: 173
-        height: 177
+        x: 827
+        y: 52
+        width: 213
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,71 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a5acf22bdea93a43b5a9196e4d4bf02
-      internalID: -1122670809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SeaObject_6
-      rect:
-        serializedVersion: 2
-        x: 1442
-        y: 26
-        width: 157
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c026031070be5e43a51d7656d510a65
-      internalID: -89288361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SeaObject_8
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 34
-        width: 133
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 292a87b7dc01a8340a8c68c758f6c3c3
-      internalID: -651918182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SeaObject_9
-      rect:
-        serializedVersion: 2
-        x: 1667
-        y: 42
-        width: 179
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c5eae9ef4ae99c44be04f11c60ee963
-      internalID: 547999778
+      spriteID: 495f3b852dab7034180e8be4bd40a9f6
+      internalID: 1056457224
       vertices: []
       indices: 
       edges: []
@@ -254,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6d6d12810fba73e418538a5d5fc36588
+    spriteID: d5e27046e868a864784e3f2578242f51
     internalID: 0
     vertices: []
     indices: 
@@ -262,19 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SeaObject_0: -1043762974
-      SeaObject_1: 1355575423
-      SeaObject_10: 626264116
-      SeaObject_11: -1327710960
-      SeaObject_12: -1091809809
-      SeaObject_2: -2093278385
-      SeaObject_3: 978876679
-      SeaObject_4: 370931083
-      SeaObject_5: -1122670809
-      SeaObject_6: -89288361
-      SeaObject_7: 477358875
-      SeaObject_8: -651918182
-      SeaObject_9: 547999778
+      Stage2_Object_White_0: 2032014896
+      Stage2_Object_White_1: 678637297
+      Stage2_Object_White_2: -242134746
+      Stage2_Object_White_3: 422662660
+      Stage2_Object_White_4: 1056457224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
