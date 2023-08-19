@@ -4711,6 +4711,7 @@ GameObject:
   - component: {fileID: 878777894}
   - component: {fileID: 878777895}
   - component: {fileID: 878777896}
+  - component: {fileID: 878777897}
   m_Layer: 0
   m_Name: StarFish
   m_TagString: Untagged
@@ -4863,6 +4864,28 @@ MonoBehaviour:
   isCCC: 1
   colorSprite:
   - {fileID: -1122670809, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  myAnim: {fileID: 0}
+--- !u!95 &878777897
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878777891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52e6ce0180e8eec4684ac8e15601973f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &928577996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,6 +4899,7 @@ GameObject:
   - component: {fileID: 928577999}
   - component: {fileID: 928578000}
   - component: {fileID: 928578001}
+  - component: {fileID: 928578002}
   m_Layer: 0
   m_Name: SeaWeed
   m_TagString: Untagged
@@ -5033,6 +5057,28 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -1043762974, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  myAnim: {fileID: 0}
+--- !u!95 &928578002
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928577996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bebe478f64b8fb9419a26285bdceaba1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &932726372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +5708,7 @@ GameObject:
   - component: {fileID: 1059360911}
   - component: {fileID: 1059360912}
   - component: {fileID: 1059360913}
+  - component: {fileID: 1059360914}
   m_Layer: 0
   m_Name: ShellFish
   m_TagString: Untagged
@@ -5807,6 +5854,28 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -651918182, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  myAnim: {fileID: 0}
+--- !u!95 &1059360914
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059360907}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 068a80d0f39b7424cb6768ce77134c3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1121695724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6640,6 +6709,7 @@ GameObject:
   - component: {fileID: 1281244501}
   - component: {fileID: 1281244502}
   - component: {fileID: 1281244503}
+  - component: {fileID: 1281244504}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -6785,6 +6855,28 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 978876679, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  myAnim: {fileID: 0}
+--- !u!95 &1281244504
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281244498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b987dbd26597c104e83f7df11593558c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1282816656
 GameObject:
   m_ObjectHideFlags: 0
@@ -7771,6 +7863,7 @@ GameObject:
   - component: {fileID: 1512047736}
   - component: {fileID: 1512047737}
   - component: {fileID: 1512047738}
+  - component: {fileID: 1512047739}
   m_Layer: 0
   m_Name: Conch
   m_TagString: Untagged
@@ -7919,6 +8012,28 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 370931083, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  myAnim: {fileID: 0}
+--- !u!95 &1512047739
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512047733}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f159293deb726c4294cf2d6c1f98e80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1535050898
 GameObject:
   m_ObjectHideFlags: 0

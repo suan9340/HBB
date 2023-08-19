@@ -12,9 +12,13 @@ public class ObjectClear : MonoBehaviour
     [Header("Color")]
     public Sprite[] colorSprite = null;
 
+    [Header("Animation")]
+    public Animator myAnim = null;
+
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
+        myAnim = GetComponent<Animator>();
     }
 
     private void Update()
