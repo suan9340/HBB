@@ -4861,10 +4861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 468737636}
-  isCCC: 1
+  isCCC: 0
   colorSprite:
   - {fileID: -1122670809, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  myAnim: {fileID: 0}
 --- !u!95 &878777897
 Animator:
   serializedVersion: 5
@@ -5057,7 +5056,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -1043762974, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  myAnim: {fileID: 0}
 --- !u!95 &928578002
 Animator:
   serializedVersion: 5
@@ -5854,7 +5852,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -651918182, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  myAnim: {fileID: 0}
 --- !u!95 &1059360914
 Animator:
   serializedVersion: 5
@@ -6855,7 +6852,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 978876679, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  myAnim: {fileID: 0}
 --- !u!95 &1281244504
 Animator:
   serializedVersion: 5
@@ -8012,7 +8008,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 370931083, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  myAnim: {fileID: 0}
 --- !u!95 &1512047739
 Animator:
   serializedVersion: 5

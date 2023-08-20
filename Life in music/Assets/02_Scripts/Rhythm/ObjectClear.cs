@@ -5,15 +5,16 @@ using UnityEngine;
 public class ObjectClear : MonoBehaviour
 {
     public GameObject obj = null;
-    private SpriteRenderer mySprite = null;
 
     public bool isCCC = false;
 
     [Header("Color")]
     public Sprite[] colorSprite = null;
 
-    [Header("Animation")]
-    public Animator myAnim = null;
+
+    private Animator myAnim = null;
+    private SpriteRenderer mySprite = null;
+
 
     private void Start()
     {
