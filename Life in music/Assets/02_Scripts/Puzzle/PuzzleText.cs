@@ -44,7 +44,7 @@ public class PuzzleText : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isStroyStarting)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && isStroyStarting)
         {
             if (isTyping)
             {
@@ -57,7 +57,7 @@ public class PuzzleText : MonoBehaviour
                 PuzzleManager.Instance.CanClickPuzzles();
             }
         }
-        
+
     }
 
 

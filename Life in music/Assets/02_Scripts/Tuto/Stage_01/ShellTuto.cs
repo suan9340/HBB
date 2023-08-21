@@ -6,7 +6,7 @@ public class ShellTuto : TutoMOM
 {
     protected override void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             if (isClick) return;
 

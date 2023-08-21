@@ -6,25 +6,29 @@ public class ChangePicture : MonoBehaviour
 {
     private SpriteRenderer mySprite = null;
 
-    public Sprite[] Sprites;
+    public Sprite[] chSprite;
 
+    private int spriteNum = 0;
     private readonly WaitForSeconds second = new WaitForSeconds(1);
 
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
 
+        spriteNum = chSprite.Length;
         StartCoroutine(ChangeCor());
+
     }
 
     private IEnumerator ChangeCor()
     {
         while (true)
         {
-            mySprite.sprite = Sprites[0];
-            yield return second;
-            mySprite.sprite = Sprites[1];
-            yield return second;
+            for (int i = 0; i < spriteNum; i++)
+            {
+                yield return second;
+                mySprite.sprite = chSprite[i];
+            }
         }
     }
 }

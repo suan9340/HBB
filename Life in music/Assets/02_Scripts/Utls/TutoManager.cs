@@ -43,9 +43,9 @@ public class TutoManager : MonoBehaviour
 
     private float currentSpeed = 0f;
 
-    private void Update()
+    private void Update()   
     {
-        if (Input.GetMouseButtonDown(0) && isStroyStarting)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && isStroyStarting)
         {
             if (isTyping)
             {
