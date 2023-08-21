@@ -21856,7 +21856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b299d6acebcdf4db23c8eaa10252c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythmCheck: {fileID: 0}
+  rhythmCheck: {fileID: 11400000, guid: 94568d77e7e0b4c4f8a6e8c5bb6425e3, type: 2}
   perfectTxt: {fileID: 536961929}
   goodTxt: {fileID: 1736778636}
   badTxt: {fileID: 1131913876}
@@ -28667,7 +28667,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640101896}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

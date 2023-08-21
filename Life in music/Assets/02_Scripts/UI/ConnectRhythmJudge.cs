@@ -23,7 +23,7 @@ public class ConnectRhythmJudge : MonoBehaviour
     private void Update()
     {
         perfectTxt.text = $"{rhythmCheck.checkingNote[0].num}";
-        perfectTxt.text = $"{rhythmCheck.checkingNote[1].num}";
-        perfectTxt.text = $"{rhythmCheck.checkingNote[2].num}";
+        goodTxt.text = $"{rhythmCheck.checkingNote[1].num}";
+        badTxt.text = $"{rhythmCheck.checkingNote[2].num}";
     }
 }
