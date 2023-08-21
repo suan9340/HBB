@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class RhythmManager : MonoBehaviour
 {
@@ -65,6 +64,13 @@ public class RhythmManager : MonoBehaviour
         {
             currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
         }
+
+        if (RhythmCheckSO == null)
+        {
+            RhythmCheckSO = Resources.Load<RhythmCheck>("SO/RhythmCheck");
+        }
+
+        ResetRhythmCheckSO();
     }
 
     private void Update()
@@ -131,6 +137,7 @@ public class RhythmManager : MonoBehaviour
         SoundManager.Instance.StopLoopSource();
         isRhythm = false;
 
+
         StartCoroutine(GoHomeYPlayMusic());
     }
 
@@ -182,6 +189,8 @@ public class RhythmManager : MonoBehaviour
         isRhythm = false;
         currentIndex = 0;
         audioSource.clip = null;
+
+        ResetRhythmCheckSO();
     }
 
     public void StartMusic()
@@ -235,5 +244,12 @@ public class RhythmManager : MonoBehaviour
     public void SetObjectClearObj(ObjectClear _objClear)
     {
         objClear = _objClear;
+    }
+
+    private void ResetRhythmCheckSO()
+    {
+        RhythmCheckSO.checkingNote[0].num = 0;
+        RhythmCheckSO.checkingNote[1].num = 0;
+        RhythmCheckSO.checkingNote[2].num = 0;
     }
 }
