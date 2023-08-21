@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2235028712925017012}
   - component: {fileID: 2235028712925017014}
   - component: {fileID: 5196867934626616880}
-  - component: {fileID: 1710053801257945145}
   m_Layer: 7
   m_Name: SeaWeedTuto
   m_TagString: Untagged
@@ -78,19 +77,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1710053801257945145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2235028712925017013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6019c1539f5e9b84cb5f9a5d14917a49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myClip: {fileID: 8300000, guid: ee88dfdb1b2efa54dae77d2126d12645, type: 3}
 --- !u!1 &4590152765071590033
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +170,7 @@ MonoBehaviour:
   myanim: {fileID: 918209453907934306}
 --- !u!95 &918209453907934306
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -201,4 +187,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
