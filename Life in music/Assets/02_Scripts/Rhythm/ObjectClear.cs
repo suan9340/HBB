@@ -15,14 +15,15 @@ public class ObjectClear : MonoBehaviour
     private Animator myAnim = null;
     private SpriteRenderer mySprite = null;
 
-
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
+
+        CheckingISClear();
     }
 
-    private void Update()
+    private void CheckingISClear()
     {
         if (isCCC)
         {
@@ -38,10 +39,9 @@ public class ObjectClear : MonoBehaviour
     {
         if (CheckingNull())
         {
-            //obj.SetActive(true);    
-            //mySprite.color = new Color(0.67f, 0.67f, 0.67f);
             mySprite.color = new Color(1, 1, 1, 1);
             mySprite.sprite = colorSprite[0];
+            Debug.Log("qq");
         }
     }
 
@@ -62,5 +62,14 @@ public class ObjectClear : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    public void CompleteRhythm()
+    {
+        isCCC = true;
+
+        mySprite.color = new Color(1, 1, 1, 1);
+        mySprite.sprite = colorSprite[0];
+
     }
 }

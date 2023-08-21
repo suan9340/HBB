@@ -210,7 +210,7 @@ public class RhythmManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        objClear.isCCC = true;
+        objClear.CompleteRhythm();
 
 
         yield break;

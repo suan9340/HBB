@@ -108,8 +108,8 @@ TextureImporter:
       name: SeaObject_Black_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 26
+        x: 53
+        y: 24
         width: 333
         height: 268
       alignment: 0
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7c26f97d6acd44791af90d3ffb4176
-      internalID: -226335180
+      spriteID: 0671588743cac704e9fcb37a8761238e
+      internalID: -2073842198
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c7e61827c024ac49a75f16d0d9a2a16
-      internalID: -1883427246
+      spriteID: dca8e32d45e353d4fa3d2042d96bef4a
+      internalID: 190919075
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 507392cbebf576d4ab428c0e55593d6c
-      internalID: -1736789152
+      spriteID: 232dd637427de1247af66bee8021642d
+      internalID: -153642187
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4d6d1595059cb4592a3d05d6e586da
-      internalID: 656220877
+      spriteID: 24cfc8fab03a760488673cd6112c2260
+      internalID: 809541248
       vertices: []
       indices: 
       edges: []
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 352d294f5ebf6de418dc05e2704256a6
-      internalID: -849509848
+      spriteID: b7e17bc78a558104793e1e6d312d85c2
+      internalID: -716032481
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf04e98dab4e43141b18f8f0d9935389
-      internalID: -1754329570
+      spriteID: 71e75f1aa6f482f4bbf9a15d33c269b1
+      internalID: -1520253107
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 273542809d971e6499c68cc7b4da43a0
-      internalID: -551495331
+      spriteID: 84dd949a57f26404c8f23879c7fc643a
+      internalID: -2041505971
       vertices: []
       indices: 
       edges: []
@@ -254,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 040609dfa2879154ebe51cbf1d6bac85
+    spriteID: 7a10d4c87dba98d4d8cd41e25d39cce8
     internalID: 0
     vertices: []
     indices: 
@@ -262,19 +262,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SeaObject_Black_0: -226335180
-      SeaObject_Black_1: 954827000
-      SeaObject_Black_10: -1756735569
-      SeaObject_Black_11: -834569767
-      SeaObject_Black_12: -486442292
-      SeaObject_Black_2: -200129566
-      SeaObject_Black_3: -1883427246
-      SeaObject_Black_4: -1736789152
-      SeaObject_Black_5: 656220877
-      SeaObject_Black_6: -849509848
-      SeaObject_Black_7: -735744490
-      SeaObject_Black_8: -1754329570
-      SeaObject_Black_9: -551495331
+      SeaObject_Black_0: -2073842198
+      SeaObject_Black_1: -1709939419
+      SeaObject_Black_10: 629860643
+      SeaObject_Black_11: 981294937
+      SeaObject_Black_12: 901911752
+      SeaObject_Black_2: 1546520100
+      SeaObject_Black_3: 190919075
+      SeaObject_Black_4: -153642187
+      SeaObject_Black_5: 809541248
+      SeaObject_Black_6: -716032481
+      SeaObject_Black_7: 1616188502
+      SeaObject_Black_8: -1520253107
+      SeaObject_Black_9: -2041505971
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
