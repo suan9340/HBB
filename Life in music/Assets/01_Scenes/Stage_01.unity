@@ -21820,7 +21820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1279918562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23665,6 +23665,7 @@ MonoBehaviour:
   rhythmEffectImage: {fileID: 146249214}
   rhythmNotePanel: {fileID: 448106505}
   stageEndObj: {fileID: 447672478}
+  JudgmentObj: {fileID: 1279918561}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0

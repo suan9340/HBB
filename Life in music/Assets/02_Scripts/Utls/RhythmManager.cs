@@ -163,6 +163,8 @@ public class RhythmManager : MonoBehaviour
     public void TutoClear()
     {
         loadData.isTuto = true;
+
+        UIManager.Instance.JudgmentObj.SetActive(true);
     }
 
     public void ReadyRhythm(string _name)
@@ -248,6 +250,7 @@ public class RhythmManager : MonoBehaviour
 
     private void ResetRhythmCheckSO()
     {
+        UIManager.Instance.JudgmentObj.SetActive(false);
         RhythmCheckSO.checkingNote[0].num = 0;
         RhythmCheckSO.checkingNote[1].num = 0;
         RhythmCheckSO.checkingNote[2].num = 0;

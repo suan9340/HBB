@@ -26028,6 +26028,7 @@ MonoBehaviour:
   rhythmEffectImage: {fileID: 146249214}
   rhythmNotePanel: {fileID: 448106505}
   stageEndObj: {fileID: 548504550}
+  JudgmentObj: {fileID: 1759596595}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0

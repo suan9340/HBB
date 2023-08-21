@@ -80,7 +80,7 @@ public class RockRhyrhm : TutoMOM, IRhythmMom
         RhythmManager.Instance.TutoClear();
         TutoManager.Instance.SetActiveFalseText();
         RhythmManager.Instance.ReadyRhythm(ConstantManager.SO_STAGE01_Rock);
-
+        UIManager.Instance.JudgmentObj.SetActive(true);
         Invoke(nameof(SetUpCrab), 1.5f);
     }
     public void SetUpRockFish()

@@ -61,7 +61,7 @@ public class ChatMaanger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isStoryStart)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && isStoryStart)
         {
             if (isTyping)
             {
