@@ -131,12 +131,12 @@ public class RhythmManager : MonoBehaviour
     public void StopRhythmY()
     {
         data.isClear = true;
+        CheckPerfect();
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
         Debug.Log("ENd!!!!!!");
         SoundManager.Instance.StopLoopSource();
         isRhythm = false;
-
 
         StartCoroutine(GoHomeYPlayMusic());
     }
@@ -157,6 +157,20 @@ public class RhythmManager : MonoBehaviour
         else
         {
             return true;
+        }
+    }
+
+    private void CheckPerfect()
+    {
+        var _a = RhythmCheckSO.checkingNote[0].num;
+        var _b = RhythmCheckSO.checkingNote[1].num;
+        var _c = RhythmCheckSO.checkingNote[2].num;
+
+        //Debug.Log($"Perfect : {_a} / Good : {_b} / Bad : {_c}");
+
+        if ((_b == 0) && (_c == 0))
+        {
+            Debug.Log("!!!!!!!PerfectClear!!!!!!!");
         }
     }
 

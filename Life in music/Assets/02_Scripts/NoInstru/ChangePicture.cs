@@ -20,7 +20,6 @@ public class ChangePicture : MonoBehaviour
 
     private void OnDisable()
     {
-        Debug.Log("qwe");
         StopCoroutine(ChangeCor());
     }
 
