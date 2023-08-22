@@ -13383,7 +13383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553245423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a68130a507ef0d3448aab6a418e44e2a, type: 3}
   m_Name: 
@@ -23555,6 +23555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568940699}
   - component: {fileID: 1568940698}
+  - component: {fileID: 1568940700}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -23629,6 +23630,21 @@ Transform:
   m_Father: {fileID: 2043529941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568940700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568940697}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7762abe6071fc4459f38ee1cdec39b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chSprite:
+  - {fileID: 21300000, guid: 06a598dd1ce81ba46ac692f6ae66ee48, type: 3}
+  - {fileID: 21300000, guid: 6a72f990b2854ea43abd64dedc983a47, type: 3}
 --- !u!1 &1596654329
 GameObject:
   m_ObjectHideFlags: 0
@@ -23666,6 +23682,7 @@ MonoBehaviour:
   rhythmNotePanel: {fileID: 448106505}
   stageEndObj: {fileID: 447672478}
   JudgmentObj: {fileID: 1279918561}
+  backPicture: {fileID: 1568940700}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0

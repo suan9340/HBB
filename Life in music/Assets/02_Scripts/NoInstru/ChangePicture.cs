@@ -14,10 +14,14 @@ public class ChangePicture : MonoBehaviour
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
-
         spriteNum = chSprite.Length;
         StartCoroutine(ChangeCor());
+    }
 
+    private void OnDisable()
+    {
+        Debug.Log("qwe");
+        StopCoroutine(ChangeCor());
     }
 
     private IEnumerator ChangeCor()

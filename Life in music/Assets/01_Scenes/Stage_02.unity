@@ -6584,10 +6584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1230473438}
   isCCC: 0
   colorSprite:
   - {fileID: 422662660, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
+  size: {x: 0, y: 0, z: 0}
 --- !u!95 &215974362
 Animator:
   serializedVersion: 5
@@ -19219,10 +19219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 893104759}
   isCCC: 0
   colorSprite:
   - {fileID: 1056457224, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
+  size: {x: 0, y: 0, z: 0}
 --- !u!95 &936502024
 Animator:
   serializedVersion: 5
@@ -25838,6 +25838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568940699}
   - component: {fileID: 1568940698}
+  - component: {fileID: 1568940700}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -25912,6 +25913,21 @@ Transform:
   m_Father: {fileID: 2043529941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568940700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568940697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7762abe6071fc4459f38ee1cdec39b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chSprite:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1580773990
 GameObject:
   m_ObjectHideFlags: 0
@@ -26029,6 +26045,7 @@ MonoBehaviour:
   rhythmNotePanel: {fileID: 448106505}
   stageEndObj: {fileID: 548504550}
   JudgmentObj: {fileID: 1759596595}
+  backPicture: {fileID: 1568940700}
 --- !u!4 &1596654331
 Transform:
   m_ObjectHideFlags: 0
@@ -37596,10 +37613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1826714092}
   isCCC: 0
   colorSprite:
   - {fileID: 678637297, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
+  size: {x: 0, y: 0, z: 0}
 --- !u!95 &1824238070
 Animator:
   serializedVersion: 5
@@ -39056,10 +39073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 652637154}
   isCCC: 0
   colorSprite:
   - {fileID: 2032014896, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
+  size: {x: 0, y: 0, z: 0}
 --- !u!95 &2018861980
 Animator:
   serializedVersion: 5
@@ -44564,10 +44581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 922309795}
   isCCC: 0
   colorSprite:
   - {fileID: -242134746, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
+  size: {x: 0, y: 0, z: 0}
 --- !u!95 &2114106498
 Animator:
   serializedVersion: 5
