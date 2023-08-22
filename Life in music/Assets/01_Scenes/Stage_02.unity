@@ -25926,8 +25926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chSprite:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: e4adb01bc4818b84a87c90dd4a397ba5, type: 3}
+  - {fileID: 21300000, guid: e4adb01bc4818b84a87c90dd4a397ba5, type: 3}
 --- !u!1 &1580773990
 GameObject:
   m_ObjectHideFlags: 0
@@ -44514,7 +44514,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.84, y: 2.34}
+  m_Size: {x: 1.68, y: 2.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -44538,7 +44538,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.84, y: 2.34}
-    newSize: {x: 1.84, y: 2.34}
+    newSize: {x: 1.68, y: 2.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -44583,8 +44583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCCC: 0
   colorSprite:
-  - {fileID: -242134746, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 0, y: 0, z: 0}
+  - {fileID: 427863559, guid: f9c7a642eb3becf40bf896ce98f0e356, type: 3}
+  - {fileID: 448424037, guid: f9c7a642eb3becf40bf896ce98f0e356, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &2114106498
 Animator:
   serializedVersion: 5

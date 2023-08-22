@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class IsFirstTuto : MonoBehaviour
 {
-    [Header("AudioUI")]
-    [Tooltip("Audios BackGround Image!")]
-    public Animator audioUIAnimator = null;
     private bool isOnAudioUI = false;
     private int tutoCnt;
 
@@ -50,7 +47,6 @@ public class IsFirstTuto : MonoBehaviour
         switch (tutoNum)
         {
             case 1:
-                audioUIAnimator.SetBool("OnButton", false);
                 CheckCurrentGameObj(tutoObj[0]);
                 break;
 
@@ -58,7 +54,6 @@ public class IsFirstTuto : MonoBehaviour
 
             case 2:
                 isOnAudioUI = true;
-                audioUIAnimator.SetBool("OnButton", true);
                 CheckCurrentGameObj(tutoObj[1]);
                 break;
 
@@ -66,13 +61,11 @@ public class IsFirstTuto : MonoBehaviour
 
             case 3:
                 if (!isOnAudioUI)
-                    audioUIAnimator.SetBool("OnButton", true);
                 CheckCurrentGameObj(tutoObj[2]);
                 break;
 
             case 4:
                 isOnAudioUI = false;
-                audioUIAnimator.SetBool("OnButton", false);
                 CheckCurrentGameObj(tutoObj[3]);
                 break;
 
