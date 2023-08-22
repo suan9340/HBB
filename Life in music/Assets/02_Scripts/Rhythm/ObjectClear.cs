@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObjectClear : MonoBehaviour
 {
-    public GameObject obj = null;
-
     public bool isCCC = false;
 
     [Header("Color")]
     public Sprite[] colorSprite = null;
 
+    [Header("CompleteSize")]
+    public Vector3 size = Vector3.zero;
 
     private Animator myAnim = null;
     private SpriteRenderer mySprite = null;
@@ -21,6 +21,14 @@ public class ObjectClear : MonoBehaviour
         myAnim = GetComponent<Animator>();
 
         CheckingISClear();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            CompleteRhythm();
+        }
     }
 
     private void CheckingISClear()
@@ -37,39 +45,17 @@ public class ObjectClear : MonoBehaviour
 
     public void IsClear()
     {
-        if (CheckingNull())
-        {
-            mySprite.color = new Color(1, 1, 1, 1);
-            mySprite.sprite = colorSprite[0];
-            Debug.Log("qq");
-        }
+        transform.localScale = size;
     }
 
     public void IsNotClear()
     {
-        if (CheckingNull())
-        {
-            obj.SetActive(false);
-            mySprite.color = new Color(1f, 1f, 1f);
-        }
-    }
 
-    private bool CheckingNull()
-    {
-        if (obj == null)
-        {
-            Debug.Log("OBj is NULL");
-            return false;
-        }
-        return true;
     }
 
     public void CompleteRhythm()
     {
-        isCCC = true;
-
-        mySprite.color = new Color(1, 1, 1, 1);
-        mySprite.sprite = colorSprite[0];
-
+        IsClear();
+        myAnim.SetTrigger("isCom");
     }
 }

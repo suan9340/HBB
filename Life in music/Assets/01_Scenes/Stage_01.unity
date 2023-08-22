@@ -14905,7 +14905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878777891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.378, y: -2.487, z: 0}
+  m_LocalPosition: {x: 2.57, y: -2.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15038,10 +15038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 468737636}
   isCCC: 0
   colorSprite:
   - {fileID: -1122670809, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &878777897
 Animator:
   serializedVersion: 5
@@ -15230,10 +15230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 563815922}
   isCCC: 0
   colorSprite:
   - {fileID: -1043762974, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &928578002
 Animator:
   serializedVersion: 5
@@ -16062,10 +16062,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 608852269}
   isCCC: 0
   colorSprite:
   - {fileID: -651918182, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1059360914
 Animator:
   serializedVersion: 5
@@ -21943,7 +21943,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.58, y: 1.45}
+  m_Size: {x: 1.6454545, y: 1.5181818}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -21985,7 +21985,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.58, y: 1.45}
-    newSize: {x: 1.58, y: 1.45}
+    newSize: {x: 1.6454545, y: 1.5181818}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -22015,10 +22015,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1122322503}
   isCCC: 0
   colorSprite:
   - {fileID: 978876679, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1281244504
 Animator:
   serializedVersion: 5
@@ -23042,8 +23042,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512047733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.736, y: -3.113, z: 0}
-  m_LocalScale: {x: 1.1446203, y: 1.1446203, z: 1.1446203}
+  m_LocalPosition: {x: 5.398, y: -2.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 278818101}
@@ -23090,7 +23090,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2107182029, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23171,10 +23171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6f116a2e95ff8408041d86db09253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 278818100}
   isCCC: 0
   colorSprite:
   - {fileID: 370931083, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1512047739
 Animator:
   serializedVersion: 5
@@ -23361,7 +23361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535333386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -2.27, z: 0}
+  m_LocalPosition: {x: 8.57, y: -2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
