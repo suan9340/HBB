@@ -6587,7 +6587,7 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 422662660, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 0, y: 0, z: 0}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &215974362
 Animator:
   serializedVersion: 5
@@ -13384,6 +13384,7 @@ MonoBehaviour:
   chSprite:
   - {fileID: -2115337978, guid: 5d57465322a283340809b51d181ecebb, type: 3}
   - {fileID: 263930560, guid: 5d57465322a283340809b51d181ecebb, type: 3}
+  - {fileID: -2115337978, guid: 5d57465322a283340809b51d181ecebb, type: 3}
   - {fileID: 1205330555, guid: 5d57465322a283340809b51d181ecebb, type: 3}
 --- !u!212 &679316650
 SpriteRenderer:
@@ -37598,7 +37599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824238064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75, y: 2.38, z: 0}
+  m_LocalPosition: {x: -5.532, y: 2.289, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37735,7 +37736,7 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 678637297, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 0, y: 0, z: 0}
+  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1824238070
 Animator:
   serializedVersion: 5
@@ -44563,7 +44564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114106492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 1.61, z: 0}
+  m_LocalPosition: {x: -4.656, y: 1.719, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
