@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RhythmManager : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class RhythmManager : MonoBehaviour
     [Space(20)]
     [Header("--- RhythmCheckClearObj ---")]
     public ObjectClear objClear = null;
+    public Text perfectClearTxt = null;
 
     private int currentIndex = 0;
 
@@ -57,6 +59,7 @@ public class RhythmManager : MonoBehaviour
     private float beatPerSec = 0;
 
     private bool isRhythm = false;
+    public bool isPerfectClear = false;
 
     private void Start()
     {
@@ -134,11 +137,19 @@ public class RhythmManager : MonoBehaviour
         CheckPerfect();
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
-        Debug.Log("ENd!!!!!!");
+        //Debug.Log("ENd!!!!!!");
         SoundManager.Instance.StopLoopSource();
         isRhythm = false;
 
-        StartCoroutine(GoHomeYPlayMusic());
+
+        if (isPerfectClear)
+        {
+            StartCoroutine(PerFectCor());
+        }
+        else
+        {
+            StartCoroutine(GoHomeYPlayMusic());
+        }
     }
 
     public bool CheckTuto(string _name)
@@ -170,7 +181,11 @@ public class RhythmManager : MonoBehaviour
 
         if ((_b == 0) && (_c == 0))
         {
-            Debug.Log("!!!!!!!PerfectClear!!!!!!!");
+            isPerfectClear = true;
+        }
+        else
+        {
+            isPerfectClear = false;
         }
     }
 
@@ -219,6 +234,15 @@ public class RhythmManager : MonoBehaviour
         curRhy = _obj;
     }
 
+    private IEnumerator PerFectCor()
+    {
+        perfectClearTxt.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+        perfectClearTxt.gameObject.SetActive(false);
+
+        yield return GoHomeYPlayMusic();
+    }
     private IEnumerator GoHomeYPlayMusic()
     {
         yield return new WaitForSeconds(3f);

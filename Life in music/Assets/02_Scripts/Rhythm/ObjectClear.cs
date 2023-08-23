@@ -29,7 +29,7 @@ public class ObjectClear : MonoBehaviour
         {
             CompleteRhythm();
         }
-    }
+    } 
 
     private void CheckingISClear()
     {
