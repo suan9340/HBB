@@ -29,6 +29,7 @@ public class IntroText : MonoBehaviour
 
     public Text tutoTxt = null;
     private bool isTyping = false;
+    public bool isChoice = true;
 
     [Space(20)]
     public float defaultSpeed = 0.08f;
@@ -42,9 +43,13 @@ public class IntroText : MonoBehaviour
 
     private float currentSpeed = 0f;
 
+    private void Awake()
+    {
+        isChoice = true;
+    }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isStroyStarting)
+        if (Input.GetMouseButtonDown(0) && isStroyStarting && isChoice)
         {
             if (isTyping)
             {

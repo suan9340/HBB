@@ -121,7 +121,7 @@ public class PictureController : MonoBehaviour
 
         if (_a == 1)
         {
-            Debug.Log(_a);
+           // Debug.Log(_a);
             isStage = true;
             lockObj.SetActive(false);
         }
