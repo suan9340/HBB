@@ -29,7 +29,7 @@ public class ObjectClear : MonoBehaviour
         {
             CompleteRhythm();
         }
-    } 
+    }
 
     private void CheckingISClear()
     {
@@ -45,6 +45,7 @@ public class ObjectClear : MonoBehaviour
 
     public void IsClear()
     {
+        isCCC = true;
         transform.localScale = size;
     }
 
