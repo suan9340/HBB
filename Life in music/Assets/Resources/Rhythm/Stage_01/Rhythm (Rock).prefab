@@ -318,8 +318,8 @@ MonoBehaviour:
   timingnum: 0
   crab: {fileID: 5047119942203341396}
   crabSprite:
-  - {fileID: 727204705, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
-  - {fileID: -1656282857, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
+  - {fileID: 1410421180, guid: 46d106d6e55ff0545be857c848a61251, type: 3}
+  - {fileID: -1663456386, guid: 46d106d6e55ff0545be857c848a61251, type: 3}
 --- !u!1 &3019271251680271645
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,8 +489,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.825, y: 1.2}
-    newSize: {x: 1.825, y: 1.2}
+    oldSize: {x: 1.89, y: 1.2}
+    newSize: {x: 1.74, y: 1.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -539,12 +539,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1656282857, guid: 13daaa5b2b8bc164a8770b80992308b2, type: 3}
+  m_Sprite: {fileID: -1663456386, guid: 46d106d6e55ff0545be857c848a61251, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.825, y: 1.2}
+  m_Size: {x: 1.74, y: 1.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
