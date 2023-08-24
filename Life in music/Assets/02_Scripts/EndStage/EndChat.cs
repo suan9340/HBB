@@ -34,7 +34,7 @@ public class EndChat : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isChatStarting)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && isChatStarting)
         {
             if (isTyping)
             {

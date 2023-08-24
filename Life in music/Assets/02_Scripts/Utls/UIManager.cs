@@ -54,6 +54,10 @@ public class UIManager : MonoBehaviour
     [Header("StageEnd")]
     public GameObject stageEndObj = null;
 
+    [Space(20)]
+    public GameObject JudgmentObj = null;
+    public ChangePicture backPicture = null;
+
     private readonly WaitForSeconds rhythmEffectSec = new WaitForSeconds(0.1f);
 
     private void Start()

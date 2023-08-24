@@ -130,6 +130,7 @@ public class ClickInstruments : MonoBehaviour
 
         if (objectClear.isCCC == true)
         {
+            Debug.Log("이미 클리어했어 !");
             return;
         }
 

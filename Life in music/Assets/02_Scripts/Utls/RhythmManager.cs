@@ -1,7 +1,7 @@
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class RhythmManager : MonoBehaviour
 {
@@ -51,6 +51,7 @@ public class RhythmManager : MonoBehaviour
     [Space(20)]
     [Header("--- RhythmCheckClearObj ---")]
     public ObjectClear objClear = null;
+    public Text perfectClearTxt = null;
 
     private int currentIndex = 0;
 
@@ -58,6 +59,7 @@ public class RhythmManager : MonoBehaviour
     private float beatPerSec = 0;
 
     private bool isRhythm = false;
+    public bool isPerfectClear = false;
 
     private void Start()
     {
@@ -65,6 +67,13 @@ public class RhythmManager : MonoBehaviour
         {
             currentStage = Resources.Load<CurrnetstageSO>("SO/CurrentstageSO");
         }
+
+        if (RhythmCheckSO == null)
+        {
+            RhythmCheckSO = Resources.Load<RhythmCheck>("SO/RhythmCheck");
+        }
+
+        ResetRhythmCheckSO();
     }
 
     private void Update()
@@ -125,13 +134,22 @@ public class RhythmManager : MonoBehaviour
     public void StopRhythmY()
     {
         data.isClear = true;
+        CheckPerfect();
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
-        Debug.Log("ENd!!!!!!");
+        //Debug.Log("ENd!!!!!!");
         SoundManager.Instance.StopLoopSource();
         isRhythm = false;
 
-        StartCoroutine(GoHomeYPlayMusic());
+
+        if (isPerfectClear)
+        {
+            StartCoroutine(PerFectCor());
+        }
+        else
+        {
+            StartCoroutine(GoHomeYPlayMusic());
+        }
     }
 
     public bool CheckTuto(string _name)
@@ -153,9 +171,29 @@ public class RhythmManager : MonoBehaviour
         }
     }
 
+    private void CheckPerfect()
+    {
+        var _a = RhythmCheckSO.checkingNote[0].num;
+        var _b = RhythmCheckSO.checkingNote[1].num;
+        var _c = RhythmCheckSO.checkingNote[2].num;
+
+        //Debug.Log($"Perfect : {_a} / Good : {_b} / Bad : {_c}");
+
+        if ((_b == 0) && (_c == 0))
+        {
+            isPerfectClear = true;
+        }
+        else
+        {
+            isPerfectClear = false;
+        }
+    }
+
     public void TutoClear()
     {
         loadData.isTuto = true;
+
+        UIManager.Instance.JudgmentObj.SetActive(true);
     }
 
     public void ReadyRhythm(string _name)
@@ -182,6 +220,8 @@ public class RhythmManager : MonoBehaviour
         isRhythm = false;
         currentIndex = 0;
         audioSource.clip = null;
+
+        ResetRhythmCheckSO();
     }
 
     public void StartMusic()
@@ -194,6 +234,15 @@ public class RhythmManager : MonoBehaviour
         curRhy = _obj;
     }
 
+    private IEnumerator PerFectCor()
+    {
+        perfectClearTxt.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+        perfectClearTxt.gameObject.SetActive(false);
+
+        yield return GoHomeYPlayMusic();
+    }
     private IEnumerator GoHomeYPlayMusic()
     {
         yield return new WaitForSeconds(3f);
@@ -210,7 +259,7 @@ public class RhythmManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        objClear.isCCC = true;
+        objClear.CompleteRhythm();
 
 
         yield break;
@@ -235,5 +284,13 @@ public class RhythmManager : MonoBehaviour
     public void SetObjectClearObj(ObjectClear _objClear)
     {
         objClear = _objClear;
+    }
+
+    private void ResetRhythmCheckSO()
+    {
+        UIManager.Instance.JudgmentObj.SetActive(false);
+        RhythmCheckSO.checkingNote[0].num = 0;
+        RhythmCheckSO.checkingNote[1].num = 0;
+        RhythmCheckSO.checkingNote[2].num = 0;
     }
 }

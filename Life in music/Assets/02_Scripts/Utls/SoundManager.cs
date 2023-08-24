@@ -94,16 +94,16 @@ public class SoundManager : MonoBehaviour
     {
         if (num == 6)
         {
-
             StageEndEvent();
         }
     }
 
     public void StageEndEvent()
     {
+        UIManager.Instance.backPicture.enabled = true;
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         UIManager.Instance.OnClickStageEnd(true);
-        EventManager.TriggerEvent(ConstantManager.END_CAM_SHAKE);
+        //EventManager.TriggerEvent(ConstantManager.END_CAM_SHAKE);
         Debug.Log("StageENd");
 
         switch (stageNum)

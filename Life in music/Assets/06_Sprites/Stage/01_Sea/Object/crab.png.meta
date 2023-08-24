@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 13daaa5b2b8bc164a8770b80992308b2
+guid: 46d106d6e55ff0545be857c848a61251
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,8 +36,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -47,11 +47,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crab 1_0
+      name: Crab_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 73
-        height: 48
+        y: 1
+        width: 174
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 083a3ebd53f21d64e9c9424928dfc462
-      internalID: 727204705
+      spriteID: 3c507da2810e65946a4b669ed6b4833f
+      internalID: 1410421180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab 1_1
+      name: Crab_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 231
         y: 0
-        width: 73
-        height: 48
+        width: 189
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc6de8b6779a85f49aceeb55aa25314f
-      internalID: -1656282857
+      spriteID: a1d0247b76cdd444ab51b0a61f64a408
+      internalID: -1663456386
       vertices: []
       indices: 
       edges: []
@@ -149,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dcf0f3ff12546bc40bc3915ce510f997
+    spriteID: 111eff8537250f94ea1b96f56d6490be
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crab 1_0: 727204705
-      crab 1_1: -1656282857
+      Crab_0: 1410421180
+      Crab_1: -1663456386
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
