@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,8 +36,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -47,11 +47,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -108,10 +120,10 @@ TextureImporter:
       name: rock_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 44
-        height: 39
+        x: 0
+        y: 35
+        width: 183
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 745c48efd83d42c43bbcc425b79d4bb8
-      internalID: 1253777842
+      spriteID: d406207a05600a241ac9abaeb13bb527
+      internalID: -2138195985
       vertices: []
       indices: 
       edges: []
@@ -129,10 +141,10 @@ TextureImporter:
       name: rock_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 8
-        width: 44
-        height: 39
+        x: 201
+        y: 35
+        width: 183
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540faa301e8adbd42a91f766708b11d0
-      internalID: 968270813
+      spriteID: ec3bcc29c26493242ba90649f43cc365
+      internalID: -983155217
       vertices: []
       indices: 
       edges: []
@@ -150,10 +162,10 @@ TextureImporter:
       name: rock_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 8
-        width: 56
-        height: 39
+        x: 424
+        y: 35
+        width: 235
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd95434e1b9e82428286b8d68279030
-      internalID: 1930313005
+      spriteID: 491ba4ce7a2fd814684b1a62d6d6145e
+      internalID: 1200478240
       vertices: []
       indices: 
       edges: []
@@ -170,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ee25b714df1dd6740bca1739bc1af11a
+    spriteID: c2d520d039d997a4ca926ecf07303779
     internalID: 0
     vertices: []
     indices: 
@@ -178,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rock_2: 1930313005
-      rock_0: 1253777842
-      rock_1: 968270813
+      rock_0: -2138195985
+      rock_1: -983155217
+      rock_2: 1200478240
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
