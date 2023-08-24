@@ -6587,7 +6587,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 422662660, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &215974362
 Animator:
   serializedVersion: 5
@@ -6596,7 +6595,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215974356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bdc12e88dbc759248a319dded20ad0ed, type: 2}
   m_CullingMode: 0
@@ -19223,7 +19222,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 1056457224, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 0, y: 0, z: 0}
 --- !u!95 &936502024
 Animator:
   serializedVersion: 5
@@ -19232,7 +19230,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936502018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b68069a589ef07a418743693be87c904, type: 2}
   m_CullingMode: 0
@@ -37736,7 +37734,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 678637297, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1824238070
 Animator:
   serializedVersion: 5
@@ -37745,7 +37742,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824238064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a4abbeed1f90f3b4389a04bcfb9d3559, type: 2}
   m_CullingMode: 0
@@ -39198,7 +39195,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 2032014896, guid: 901d3f260a86f1142bd928cbb09d0b4d, type: 3}
-  size: {x: 0, y: 0, z: 0}
 --- !u!95 &2018861980
 Animator:
   serializedVersion: 5
@@ -39207,7 +39203,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018861974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 80174d94c9cc73b47a96a9afb9828b34, type: 2}
   m_CullingMode: 0
@@ -44707,7 +44703,6 @@ MonoBehaviour:
   colorSprite:
   - {fileID: 427863559, guid: f9c7a642eb3becf40bf896ce98f0e356, type: 3}
   - {fileID: 448424037, guid: f9c7a642eb3becf40bf896ce98f0e356, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &2114106498
 Animator:
   serializedVersion: 5
@@ -44716,7 +44711,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114106492}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 023c94281cfb0f04c98d5566262a78df, type: 2}
   m_CullingMode: 0

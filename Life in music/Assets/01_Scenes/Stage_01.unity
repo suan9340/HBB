@@ -12892,7 +12892,6 @@ GameObject:
   m_Component:
   - component: {fileID: 515388884}
   - component: {fileID: 515388886}
-  - component: {fileID: 515388885}
   m_Layer: 0
   m_Name: Grass_2
   m_TagString: Untagged
@@ -12915,21 +12914,6 @@ Transform:
   m_Father: {fileID: 2118177502}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &515388885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515388883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7762abe6071fc4459f38ee1cdec39b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chSprite:
-  - {fileID: 1565845509, guid: 80052d58a1dfc774fa1508033494d02d, type: 3}
-  - {fileID: -1561195863, guid: 80052d58a1dfc774fa1508033494d02d, type: 3}
 --- !u!212 &515388886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13153,7 +13137,6 @@ GameObject:
   m_Component:
   - component: {fileID: 538598950}
   - component: {fileID: 538598952}
-  - component: {fileID: 538598951}
   m_Layer: 0
   m_Name: Grass_1
   m_TagString: Untagged
@@ -13176,21 +13159,6 @@ Transform:
   m_Father: {fileID: 2118177502}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &538598951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538598949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7762abe6071fc4459f38ee1cdec39b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chSprite:
-  - {fileID: 1672148717, guid: 80052d58a1dfc774fa1508033494d02d, type: 3}
-  - {fileID: -1480023281, guid: 80052d58a1dfc774fa1508033494d02d, type: 3}
 --- !u!212 &538598952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15160,7 +15128,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -1122670809, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &878777897
 Animator:
   serializedVersion: 5
@@ -15169,7 +15136,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878777891}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 52e6ce0180e8eec4684ac8e15601973f, type: 2}
   m_CullingMode: 0
@@ -15352,7 +15319,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -1043762974, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &928578002
 Animator:
   serializedVersion: 5
@@ -15361,7 +15327,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928577996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bebe478f64b8fb9419a26285bdceaba1, type: 2}
   m_CullingMode: 0
@@ -16184,7 +16150,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: -651918182, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1059360914
 Animator:
   serializedVersion: 5
@@ -16193,7 +16158,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059360907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 068a80d0f39b7424cb6768ce77134c3e, type: 2}
   m_CullingMode: 0
@@ -22137,7 +22102,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 978876679, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1281244504
 Animator:
   serializedVersion: 5
@@ -22146,7 +22110,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281244498}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b987dbd26597c104e83f7df11593558c, type: 2}
   m_CullingMode: 0
@@ -23293,7 +23257,6 @@ MonoBehaviour:
   isCCC: 0
   colorSprite:
   - {fileID: 370931083, guid: d783a47d2117a3e498f2ad1cc3201cef, type: 3}
-  size: {x: 1, y: 1, z: 1}
 --- !u!95 &1512047739
 Animator:
   serializedVersion: 5
@@ -23302,7 +23265,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512047733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0f159293deb726c4294cf2d6c1f98e80, type: 2}
   m_CullingMode: 0

@@ -9,8 +9,6 @@ public class ObjectClear : MonoBehaviour
     [Header("Color")]
     public Sprite[] colorSprite = null;
 
-    [Header("CompleteSize")]
-    public Vector3 size = Vector3.zero;
 
     private Animator myAnim = null;
     private SpriteRenderer mySprite = null;
@@ -35,28 +33,15 @@ public class ObjectClear : MonoBehaviour
     {
         if (isCCC)
         {
-            IsClear();
+            CompleteRhythm();
         }
-        else
-        {
-            IsNotClear();
-        }
-    }
-
-    public void IsClear()
-    {
-        isCCC = true;
-        transform.localScale = size;
-    }
-
-    public void IsNotClear()
-    {
 
     }
 
     public void CompleteRhythm()
     {
-        IsClear();
-        myAnim.SetTrigger("isCom");
+        mySprite.sprite = colorSprite[0];
+        isCCC = true;
+        //myAnim.SetTrigger("isCom");
     }
 }
