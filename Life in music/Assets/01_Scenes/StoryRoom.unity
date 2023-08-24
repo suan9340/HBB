@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1952,8 +1952,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   - 
   - "\uC774 \uB9C8\uC74C\uC774 \uBB50\uB784\uAE4C.. \uBB50\uB77C\uACE0 \uC124\uBA85\uD574\uC57C\uD558\uC9C0?"
   - "\uC544!! \uBB34\uC5B8\uAC00\uAC00 \uBB49\uCCD0\uC788\uB294 \uB2F5\uB2F5\uD568\uC774\uC57C..."
-  - "\uAFC8\uC774\uB77C\uB3C4 \uB2E4\uC2DC \uC774\uB807\uAC8C \uC74C\uC545\uC744
+  - "\uAFC8\uC5D0\uC11C\uB77C\uB3C4 \uB2E4\uC2DC \uC774\uB807\uAC8C \uC74C\uC545\uC744
     \uB4E4\uC5B4\uC11C \uC88B\uC740 \uAC78 \uBCF4\uBA74"
   - "\uC0AC\uC2E4 \uB098\uB294 \uC74C\uC545\uC744 \uACC4\uC18D \uD558\uACE0 \uC2F6\uC740\uAC00\uBD10"
   - 
@@ -3118,26 +3118,23 @@ MonoBehaviour:
     \uC5BC\uB978 \uC77C\uC5B4\uB098\uC790."
   - "\uB0B4\uAC00 \uB2E4\uC2DC \uC74C\uC545\uC744 \uD558\uBA74.. "
   - 
-  - "\uC785\uC2DC \uAE30\uC900\uC5D0 \uB9DE\uCD94\uC5B4 \uC74C\uC545 \uC2A4\uD0C0\uC77C\uC744
-    \uAC15\uC81C\uB85C \uBC14\uAFD4\uC11C"
-  - "\uB0B4\uAC00 \uC81C\uC77C \uC88B\uC544\uD588\uB358 \uC74C\uC545\uC774 \uC2EB\uC5B4\uC84C\uC5C8\uC796\uC544"
+  - "\uC7A0\uC2DC\uB9CC! \uD558... \uB2E4\uC2DC \uC785\uC2DC\uB97C \uD574\uC57C\uD558\uC796\uC544.."
+  - "\uC785\uC2DC \uCCB4\uC81C\uB77C\uB294 \uD2C0\uC5D0\uB9CC \uB9DE\uB294 \uC74C\uC545\uB9CC
+    \uD588\uC5C8\uC9C0! "
   - "\uADF8\uB798\uC11C \uD3EC\uAE30\uD55C \uAC70\uC600\uB294\uB370 \uB0B4\uAC00
-    \uC7A0\uC2DC \uD5DB \uAFC8\uC744 \uAFB8\uC5C8\uB124"
+    \uC7A0\uC2DC \uD5DB \uB41C \uAFC8\uC744 \uAFB8\uC5C8\uB124"
   - "\uB2E4\uC2DC \uC5F4\uC2EC\uD788 \uC0B4\uC544\uBCF4\uC790!"
+  - "\uBC29\uC740 \uB610 \uC65C\uC774\uB9AC \uB354\uB7EC\uC6B4\uAC70\uC57C!"
   - "\uC774 \uB9C8\uC74C \uAC00\uC9D0\uC73C\uB85C \uBC29 \uCCAD\uC18C\uBD80\uD130
     \uC2DC\uC791\uD574\uBCFC\uAE4C? "
-  - "\uC640 \uC800 \uBCF4\uB4DC\uD310\uC5D0 \uBD99\uC5B4 \uC788\uB294 \uC0AC\uC9C4\uC740
-    \uBB50\uC9C0!?"
-  - "\uB0B4\uAC00 \uC800\uB54C \uBB58 \uD588\uC5C8\uC5C8\uC9C0..? \uC624\uB79C\uB9CC\uC5D0
-    \uC0B4\uD3B4\uBCFC\uAE4C..."
+  - "\uC77C\uB2E8 \uBC29 \uC880 \uB458\uB7EC\uBCF4\uBA74\uC11C \uC815\uB9AC\uD574\uBCF4\uC790."
   selectText:
   - "\uC544.. \uC878\uB9B0\uB370.. \uADF8\uB0E5 \uB354 \uC790\uBC84\uB9B4\uAE4C..?"
-  - "\uC544\uB0D0. \uADF8\uB798\uB3C4 \uC77C\uC5B4\uB098\uC57C\uD574."
-  - "\uB4A4\uC22D\uC22D\uD558\uB124.."
-  - "\uC548\uC815\uB418\uB294 \uB290\uB08C\uC774\uC57C!"
+  - "\uC544\uB2C8\uC57C!!! \uD798\uB4E4\uC9C0\uB9CC \uADF8\uB798\uB3C4 \uC77C\uC5B4\uB098\uC57C\uD574."
+  - "\uB4A4\uC22D\uC22D\uD558\uB124.. \uAE30\uBD84\uC774 \uC88B\uC9C0 \uC54A\uC544.."
+  - "\uC548\uC815\uB418\uB294 \uB290\uB08C\uC774\uC57C! "
   - "\uADF8\uB54C\uB85C \uB2E4\uC2DC \uB3CC\uC544\uAC08 \uC218 \uC788\uC744\uAE4C?"
-  - "\uC544\uB0D0! \uC774\uBBF8 \uC9C0\uB098\uC628 \uAE38! \uB2E4\uC2DC \uB3CC\uC544\uAC08
-    \uC218\uB294 \uC5C6\uC5B4"
+  - "\uC544\uB0D0.... \uC774\uBBF8 \uC9C0\uB098\uC628 \uAE38\uC778\uB370.. \uC78A\uC790!"
   - "\uBD84\uBA85 \uADF8\uB54C \uCC98\uB7FC \uB420\uAC70\uC57C,,,"
   - "\uC544\uB2C8\uC57C! \uC774\uB7F0 \uC0DD\uAC01 \uD558\uC9C0\uB9D0\uC790!! "
   introObj:
@@ -11195,8 +11192,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -11505,8 +11502,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -12339,8 +12336,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -12621,8 +12618,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -16638,8 +16635,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -17556,8 +17553,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.740566, b: 0.740566, a: 1}
+    m_PressedColor: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

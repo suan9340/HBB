@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.PostProcessing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IsFirstTuto : MonoBehaviour
 {
@@ -20,9 +22,26 @@ public class IsFirstTuto : MonoBehaviour
     [Space(20)]
     public CurrnetstageSO currentSO = null;
 
+
+    [Space(20)]
+    public Text tutoText_1;
+    public Text tutoText_2;
+    public Text tutoText_3;
+    public Text tutoText_4;
+
     private int tutoNum = 0;
 
     private GameObject currentTutoObj = null;
+
+
+    [Space(20)]
+    public AudioSource typingAudio = null;
+    private float currentSpeed = 0f;
+    [Space(20)]
+    public float defaultSpeed = 0.08f;
+    public float fastSpeed = 0.03f;
+
+    private bool isTyping = false;
     private void Start()
     {
         if (currentSO == null)
@@ -44,14 +63,27 @@ public class IsFirstTuto : MonoBehaviour
         CheckNum(false);
     }
 
+    private void Update()
+    {
 
+        if (isTyping)
+        {
+            currentSpeed = fastSpeed;
+            typingAudio.pitch = 1.3f;
+        }
+
+
+    }
     private void Tuto()
     {
+
         switch (tutoNum)
         {
             case 1:
                 audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[0]);
+                CheckCurrentGameObj(tutoObj[0], tutoText_1);
+
+
                 break;
 
 
@@ -59,7 +91,7 @@ public class IsFirstTuto : MonoBehaviour
             case 2:
                 isOnAudioUI = true;
                 audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[1]);
+                CheckCurrentGameObj(tutoObj[1], tutoText_2);
                 break;
 
 
@@ -67,13 +99,13 @@ public class IsFirstTuto : MonoBehaviour
             case 3:
                 if (!isOnAudioUI)
                     audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[2]);
+                CheckCurrentGameObj(tutoObj[2], tutoText_3);
                 break;
 
             case 4:
                 isOnAudioUI = false;
                 audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[3]);
+                CheckCurrentGameObj(tutoObj[3], tutoText_4);
                 break;
 
 
@@ -110,15 +142,48 @@ public class IsFirstTuto : MonoBehaviour
         Tuto();
     }
 
-    private void CheckCurrentGameObj(GameObject _obj)
+    private void CheckCurrentGameObj(GameObject _obj, Text _input)
     {
+
+        if (isTyping)
+        {
+            return;
+        }
+        string _text = _input.text;
+        Debug.Log(_input.ToString());
+
+
+        StartCoroutine(TextOutCor(_text, _input));
+
         mySource.PlayOneShot(myClip);
         if (currentTutoObj != null)
         {
             currentTutoObj.SetActive(false);
         }
 
+
+
         currentTutoObj = _obj;
         currentTutoObj.SetActive(true);
+    }
+
+
+
+    private IEnumerator TextOutCor(string _input, Text tutoTxt)
+    {
+        typingAudio.pitch = 1f;
+        isTyping = true;
+        typingAudio.Play();
+
+        currentSpeed = defaultSpeed;
+
+        for (int i = 0; i < _input.Length; i++)
+        {
+            tutoTxt.text = _input.Substring(0, i + 1);
+            yield return new WaitForSeconds(currentSpeed);
+        }
+
+        typingAudio.Stop();
+        isTyping = false;
     }
 }
