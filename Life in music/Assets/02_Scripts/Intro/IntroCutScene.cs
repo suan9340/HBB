@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class IntroCutScene : MonoBehaviour
 {
@@ -50,12 +51,20 @@ public class IntroCutScene : MonoBehaviour
     public Button selecButton2 = null;
     public Button selecButton3 = null;
     public Button selecButton4 = null;
-    [Space(20)]
+    public Button selecButton5 = null;
+    public Button selecButton6 = null;
+    public Button selecButton7 = null;
+    public Button selecButton8 = null;
 
-    public Text selecButtonText1 = null;
-    public Text selecButtonText2 = null;
-    public Text selecButtonText3 = null;
-    public Text selecButtonText4 = null;
+    [Space(20)]
+    public TextMeshProUGUI selecButtonText1 = null;
+    public TextMeshProUGUI selecButtonText2 = null;
+    public TextMeshProUGUI selecButtonText3 = null;
+    public TextMeshProUGUI selecButtonText4 = null;
+    public TextMeshProUGUI selecButtonText5 = null;
+    public TextMeshProUGUI selecButtonText6 = null;
+    public TextMeshProUGUI selecButtonText7 = null;
+    public TextMeshProUGUI selecButtonText8 = null;
 
     public IntroText introTextScript;
 
@@ -70,27 +79,77 @@ public class IntroCutScene : MonoBehaviour
 
     private void Update()
     {
-        switch(introTextnum)
+        switch (introTextnum)
         {
             case 2:
+
+                #region SetActive
                 selecButton1.gameObject.SetActive(true);
                 selecButton2.gameObject.SetActive(true);
                 selecButton3.gameObject.SetActive(false);
                 selecButton4.gameObject.SetActive(false);
+                selecButton5.gameObject.SetActive(false);
+                selecButton6.gameObject.SetActive(false);
+                selecButton7.gameObject.SetActive(false);
+                selecButton8.gameObject.SetActive(false);
 
-                selecButton1.onClick.AddListener(() => AddButtonClickListener(selecButton1, 4));
-                selecButton2.onClick.AddListener(() => AddButtonClickListener(selecButton2, 3));
+                #endregion
+
+                selecButton1.onClick.AddListener(() => AddButtonClickListener(5));
+                selecButton2.onClick.AddListener(() => AddButtonClickListener(3));
                 break;
 
             case 8:
+
+                #region SetActive
                 selecButton1.gameObject.SetActive(false);
                 selecButton2.gameObject.SetActive(false);
                 selecButton3.gameObject.SetActive(true);
                 selecButton4.gameObject.SetActive(true);
+                selecButton5.gameObject.SetActive(false);
+                selecButton6.gameObject.SetActive(false);
+                selecButton7.gameObject.SetActive(false);
+                selecButton8.gameObject.SetActive(false);
+                #endregion
 
-                selecButton3.onClick.AddListener(() => AddButtonClickListener(selecButton3, 9));
-                selecButton4.onClick.AddListener(() => AddButtonClickListener(selecButton4, 10));
+                selecButton3.onClick.AddListener(() => AddButtonClickListener(9));
+                selecButton4.onClick.AddListener(() => AddButtonClickListener(11));
+                break;
 
+            case 13:
+
+                #region SetActive
+                selecButton1.gameObject.SetActive(false);
+                selecButton2.gameObject.SetActive(false);
+                selecButton3.gameObject.SetActive(false);
+                selecButton4.gameObject.SetActive(false);
+                selecButton5.gameObject.SetActive(true);
+                selecButton6.gameObject.SetActive(true);
+                selecButton7.gameObject.SetActive(false);
+                selecButton8.gameObject.SetActive(false);
+
+                #endregion
+
+                selecButton5.onClick.AddListener(() => AddButtonClickListener(14));
+                selecButton6.onClick.AddListener(() => AddButtonClickListener(16));
+                break;
+
+            case 21:
+
+                #region SetActive
+                selecButton1.gameObject.SetActive(false);
+                selecButton2.gameObject.SetActive(false);
+                selecButton3.gameObject.SetActive(false);
+                selecButton4.gameObject.SetActive(false);
+                selecButton5.gameObject.SetActive(false);
+                selecButton6.gameObject.SetActive(false);
+                selecButton7.gameObject.SetActive(true);
+                selecButton8.gameObject.SetActive(true);
+                #endregion
+
+
+                selecButton7.onClick.AddListener(() => AddButtonClickListener(22));
+                selecButton8.onClick.AddListener(() => AddButtonClickListener(25));
                 break;
         };
     }
@@ -117,15 +176,12 @@ public class IntroCutScene : MonoBehaviour
         FadeInIntroObj(introObj[introObjNum]);
     }
 
-    private void AddButtonClickListener(Button button, int newIntroTextnum)
+    private void AddButtonClickListener(int newIntroTextnum)
     {
-        button.onClick.AddListener(() =>
-        {
-            introTextScript.gameObject.GetComponent<IntroText>().isChoice = true;
-            CutSceneSelect(false);
-            introTextnum = newIntroTextnum;
-            CheckNum();
-        });
+
+        CutSceneSelect(false);
+        introTextnum = newIntroTextnum;
+        CheckNum();
     }
 
     private void CutSceneSelect(bool setActive)
@@ -144,12 +200,16 @@ public class IntroCutScene : MonoBehaviour
                 selecButtonText2.text = selectText[1];
                 break;
 
-            case 4:
-                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
+            case 3:
                 mySource.Stop();
                 break;
 
             case 5:
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
+                FadeInIntroObj(introObj[1]);
+                break;
+
+            case 6:
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 FadeInIntroObj(introObj[2]);
                 break;
@@ -160,35 +220,53 @@ public class IntroCutScene : MonoBehaviour
                 selecButtonText4.text = selectText[3];
                 break;
 
-            case 9:
-                introTextnum++;
-                break;
-
-            case 11:
-                Debug.Log("11");
-                break;
-
-            case 12:
-                Debug.Log("12");
-                break;
-
             case 13:
-                Debug.Log("13");
+                CutSceneSelect(true);
+                selecButtonText5.text = selectText[4];
+                selecButtonText6.text = selectText[5];
                 break;
 
-            case 14:
-                Debug.Log("14");
-                //foreach (var _introOb in introObj)
-                //{
-                //    _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
-                //}
+            case 15:
+
+                mySource.PlayOneShot(introClip[1]);
+                break;
+
+            case 16:
+                FadeInIntroObj(introObj[3]);
+                break;
+
+
+            case 18:
+                FadeInIntroObj(introObj[4]);
+               
+                break;
+
+            case 20:
+                FadeInIntroObj(introObj[5]);
 
                 break;
 
-            default:    
+            case 21:
+                CutSceneSelect(true);
+                selecButtonText7.text = selectText[6];
+                selecButtonText8.text = selectText[7];
+                break;
+
+            case 24:
+                FadeInIntroObj(introObj[6]);
+                introObj[6].SetActive(true);
+                break;
+
+            case 26:
+                foreach (var _introOb in introObj)
+                {
+                    _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                }
+
+                break;
+            default:
                 break;
         }
-
 
         if (introTextnum >= introText.Count - 1)
         {
@@ -196,7 +274,6 @@ public class IntroCutScene : MonoBehaviour
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
             return;
         }
-        Debug.Log(introTextnum);
         introTextnum++;
         ShowText();
     }
