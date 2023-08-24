@@ -49,7 +49,7 @@ public class IntroText : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isStroyStarting && isChoice)
+        if ((Input.GetMouseButtonDown(0) || (Input.GetKeyDown(KeyCode.Space))) && isStroyStarting && isChoice)
         {
             if (isTyping)
             {
