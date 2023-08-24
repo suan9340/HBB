@@ -44,6 +44,8 @@ public class IntroCutScene : MonoBehaviour
     public int introTextnum = 0;
     public int introObjNum = 0;
 
+    public TextMeshProUGUI backText;
+
     public GameObject selectUI = null;
 
     [Space(20)]
@@ -186,6 +188,8 @@ public class IntroCutScene : MonoBehaviour
 
     private void CutSceneSelect(bool setActive)
     {
+        var _a = introTextnum;
+        backText.text = introText[_a];
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
     }
