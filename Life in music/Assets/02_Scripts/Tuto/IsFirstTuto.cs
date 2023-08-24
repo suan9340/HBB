@@ -7,10 +7,6 @@ using UnityEngine.UI;
 
 public class IsFirstTuto : MonoBehaviour
 {
-    [Header("AudioUI")]
-    [Tooltip("Audios BackGround Image!")]
-    public Animator audioUIAnimator = null;
-    private bool isOnAudioUI = false;
     private int tutoCnt;
 
     [Space(30)]
@@ -24,11 +20,7 @@ public class IsFirstTuto : MonoBehaviour
 
 
     [Space(20)]
-    public Text tutoText_1;
-    public Text tutoText_2;
-    public Text tutoText_3;
-    public Text tutoText_4;
-
+    public Text tutoText;
     private int tutoNum = 0;
 
     private GameObject currentTutoObj = null;
@@ -73,15 +65,14 @@ public class IsFirstTuto : MonoBehaviour
         }
 
 
-    }
+    }   
     private void Tuto()
     {
 
         switch (tutoNum)
         {
             case 1:
-                audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[0], tutoText_1);
+                CheckCurrentGameObj(tutoObj[0], tutoText);
 
 
                 break;
@@ -89,23 +80,17 @@ public class IsFirstTuto : MonoBehaviour
 
 
             case 2:
-                isOnAudioUI = true;
-                audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[1], tutoText_2);
+                CheckCurrentGameObj(tutoObj[1], tutoText);
                 break;
 
 
 
             case 3:
-                if (!isOnAudioUI)
-                    audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[2], tutoText_3);
+                CheckCurrentGameObj(tutoObj[2], tutoText);
                 break;
 
             case 4:
-                isOnAudioUI = false;
-                audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[3], tutoText_4);
+                CheckCurrentGameObj(tutoObj[3], tutoText);
                 break;
 
 
