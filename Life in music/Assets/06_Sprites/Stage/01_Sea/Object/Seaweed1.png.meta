@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -346,25 +358,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Seaweed1_2: 637048456
-      Seaweed1_10: 1391733626
-      Seaweed1_8: -716124393
-      Seaweed1_13: -1344103921
-      Seaweed1_15: 1855246052
-      Seaweed1_12: -1373124403
-      Seaweed1_16: -2061186750
-      Seaweed1_4: 738572282
-      Seaweed1_9: 1771505836
-      Seaweed1_17: 2110349318
-      Seaweed1_11: 145132615
-      Seaweed1_18: 1693577240
-      Seaweed1_6: -1895017719
       Seaweed1_0: 258683187
-      Seaweed1_7: 1916983954
-      Seaweed1_14: 1886982275
-      Seaweed1_5: -1630824694
-      Seaweed1_3: -674747108
       Seaweed1_1: 1508797443
+      Seaweed1_10: 1391733626
+      Seaweed1_11: 145132615
+      Seaweed1_12: -1373124403
+      Seaweed1_13: -1344103921
+      Seaweed1_14: 1886982275
+      Seaweed1_15: 1855246052
+      Seaweed1_16: -2061186750
+      Seaweed1_17: 2110349318
+      Seaweed1_18: 1693577240
+      Seaweed1_2: 637048456
+      Seaweed1_3: -674747108
+      Seaweed1_4: 738572282
+      Seaweed1_5: -1630824694
+      Seaweed1_6: -1895017719
+      Seaweed1_7: 1916983954
+      Seaweed1_8: -716124393
+      Seaweed1_9: 1771505836
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
