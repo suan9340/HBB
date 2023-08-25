@@ -154,7 +154,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1486,6 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutoTxt: {fileID: 690695767}
+  isChoice: 1
   defaultSpeed: 0.08
   fastSpeed: 0.03
   isStroyStarting: 0
@@ -1702,6 +1703,7 @@ MonoBehaviour:
   - "\uC774\uC81C \uB098\uC774\uB3C4 28\uC0B4\uC774 \uB418\uB2E4 \uBCF4\uB2C8 \uC810\uC810
     \uAE30\uC5B5\uB3C4 \uC548 \uB098\uB124..."
   - "\uB0B4\uAC00 \uC800 \uB54C \uBB58 \uD588\uC5C8\uC9C0..?"
+  selectText: []
   introObj:
   - {fileID: 463061002}
   - {fileID: 883674029}
@@ -1715,6 +1717,25 @@ MonoBehaviour:
   mySource: {fileID: 1123283646}
   introTextnum: 0
   introObjNum: 0
+  backText: {fileID: 0}
+  selectUI: {fileID: 0}
+  selecButton1: {fileID: 0}
+  selecButton2: {fileID: 0}
+  selecButton3: {fileID: 0}
+  selecButton4: {fileID: 0}
+  selecButton5: {fileID: 0}
+  selecButton6: {fileID: 0}
+  selecButton7: {fileID: 0}
+  selecButton8: {fileID: 0}
+  selecButtonText1: {fileID: 0}
+  selecButtonText2: {fileID: 0}
+  selecButtonText3: {fileID: 0}
+  selecButtonText4: {fileID: 0}
+  selecButtonText5: {fileID: 0}
+  selecButtonText6: {fileID: 0}
+  selecButtonText7: {fileID: 0}
+  selecButtonText8: {fileID: 0}
+  introTextScript: {fileID: 0}
 --- !u!1 &883674029
 GameObject:
   m_ObjectHideFlags: 0
