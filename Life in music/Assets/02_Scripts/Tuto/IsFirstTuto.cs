@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class IsFirstTuto : MonoBehaviour
 {
-    [Header("AudioUI")]
-    [Tooltip("Audios BackGround Image!")]
-    public Animator audioUIAnimator = null;
-    private bool isOnAudioUI = false;
     private int tutoCnt;
 
     [Space(30)]
@@ -17,30 +13,32 @@ public class IsFirstTuto : MonoBehaviour
     public AudioSource mySource = null;
     public AudioClip myClip = null;
 
-
     [Space(20)]
     public CurrnetstageSO currentSO = null;
 
-
     [Space(20)]
-    public Text tutoText_1;
-    public Text tutoText_2;
-    public Text tutoText_3;
-    public Text tutoText_4;
-
+    public Text tutoText;
     private int tutoNum = 0;
-
     private GameObject currentTutoObj = null;
-
 
     [Space(20)]
     public AudioSource typingAudio = null;
     private float currentSpeed = 0f;
+
     [Space(20)]
     public float defaultSpeed = 0.08f;
     public float fastSpeed = 0.03f;
 
     private bool isTyping = false;
+    public bool isShellTuto = false;
+    public Button backButton;
+
+
+
+
+    [Space(20)]
+    public List<string> firstTutoText = new List<string>();
+
     private void Start()
     {
         if (currentSO == null)
@@ -48,13 +46,22 @@ public class IsFirstTuto : MonoBehaviour
             Debug.LogError("CurrentSo is NULL");
         }
 
+      
+
         tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
     }
 
     public void OnClickTutoNext()
     {
+        if(isTyping)
+        {
+            return;
+        }
+
         CheckNum(true);
+     
+
     }
 
     public void OnClickTutoBack()
@@ -72,49 +79,51 @@ public class IsFirstTuto : MonoBehaviour
         }
 
 
-    }
+    }   
     private void Tuto()
     {
-
         switch (tutoNum)
         {
             case 1:
-                audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[0], tutoText_1);
+                CheckCurrentGameObj(tutoObj[0], firstTutoText[0]);
 
-
+                backButton.gameObject.SetActive(false);
                 break;
-
-
 
             case 2:
-                isOnAudioUI = true;
-                audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[1], tutoText_2);
+                CheckCurrentGameObj(tutoObj[1], firstTutoText[1]);
+
+                backButton.gameObject.SetActive(true);
                 break;
 
-
-
             case 3:
-                if (!isOnAudioUI)
-                    audioUIAnimator.SetBool("OnButton", true);
-                CheckCurrentGameObj(tutoObj[2], tutoText_3);
+                CheckCurrentGameObj(tutoObj[2], firstTutoText[2]);
                 break;
 
             case 4:
-                isOnAudioUI = false;
-                audioUIAnimator.SetBool("OnButton", false);
-                CheckCurrentGameObj(tutoObj[3], tutoText_4);
+                isShellTuto = true;
+                CheckCurrentGameObj(tutoObj[3], firstTutoText[3]);
                 break;
 
-
             case 5:
+                CheckCurrentGameObj(tutoObj[4], firstTutoText[4]);
+                break;
+
+            case 6:
+                CheckCurrentGameObj(tutoObj[5], firstTutoText[5]);
+                break;
+
+            case 7:
                 currentSO.stageName = DefineManager.StageNames.Sea_01;
                 PlayerPrefs.SetInt("Stage01Check", 1);
 
                 SceneManager.LoadScene("Stage_01");
                 break;
+
+             
         }
+
+        Debug.Log(tutoNum);
     }
 
     private void CheckNum(bool _isPlus)
@@ -141,15 +150,14 @@ public class IsFirstTuto : MonoBehaviour
         Tuto();
     }
 
-    private void CheckCurrentGameObj(GameObject _obj, Text _input)
+    private void CheckCurrentGameObj(GameObject _obj, string _input)
     {
 
         if (isTyping)
         {
             return;
         }
-        string _text = _input.text;
-        Debug.Log(_input.ToString());
+        string _text = _input;
 
 
         StartCoroutine(TextOutCor(_text, _input));
@@ -168,8 +176,9 @@ public class IsFirstTuto : MonoBehaviour
 
 
 
-    private IEnumerator TextOutCor(string _input, Text tutoTxt)
+    private IEnumerator TextOutCor(string _input, string firstTutoText)
     {
+        tutoText.text = _input;
         typingAudio.pitch = 1f;
         isTyping = true;
         typingAudio.Play();
@@ -178,7 +187,7 @@ public class IsFirstTuto : MonoBehaviour
 
         for (int i = 0; i < _input.Length; i++)
         {
-            tutoTxt.text = _input.Substring(0, i + 1);
+            tutoText.text = _input.Substring(0, i + 1);
             yield return new WaitForSeconds(currentSpeed);
         }
 
