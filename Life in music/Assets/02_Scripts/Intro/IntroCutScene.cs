@@ -132,8 +132,8 @@ public class IntroCutScene : MonoBehaviour
 
                 #endregion
 
-                selecButton5.onClick.AddListener(() => AddButtonClickListener(14));
-                selecButton6.onClick.AddListener(() => AddButtonClickListener(16));
+                selecButton5.onClick.AddListener(() => AddButtonClickListener(16));
+                selecButton6.onClick.AddListener(() => AddButtonClickListener(14));
                 break;
 
             case 21:
@@ -180,7 +180,6 @@ public class IntroCutScene : MonoBehaviour
 
     private void AddButtonClickListener(int newIntroTextnum)
     {
-
         CutSceneSelect(false);
         introTextnum = newIntroTextnum;
         CheckNum();
@@ -242,7 +241,7 @@ public class IntroCutScene : MonoBehaviour
 
             case 18:
                 FadeInIntroObj(introObj[4]);
-               
+                mySource.PlayOneShot(introClip[1]);
                 break;
 
             case 20:
@@ -261,7 +260,7 @@ public class IntroCutScene : MonoBehaviour
                 introObj[6].SetActive(true);
                 break;
 
-            case 26:
+            case 25:
                 foreach (var _introOb in introObj)
                 {
                     _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");

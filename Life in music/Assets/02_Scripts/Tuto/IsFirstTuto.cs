@@ -32,6 +32,10 @@ public class IsFirstTuto : MonoBehaviour
 
     private bool isTyping = false;
     public bool isShellTuto = false;
+    public Button backButton;
+
+
+
 
     [Space(20)]
     public List<string> firstTutoText = new List<string>();
@@ -43,13 +47,22 @@ public class IsFirstTuto : MonoBehaviour
             Debug.LogError("CurrentSo is NULL");
         }
 
+      
+
         tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
     }
 
     public void OnClickTutoNext()
     {
+        if(isTyping)
+        {
+            return;
+        }
+
         CheckNum(true);
+     
+
     }
 
     public void OnClickTutoBack()
@@ -74,10 +87,14 @@ public class IsFirstTuto : MonoBehaviour
         {
             case 1:
                 CheckCurrentGameObj(tutoObj[0], firstTutoText[0]);
+
+                backButton.gameObject.SetActive(false);
                 break;
 
             case 2:
                 CheckCurrentGameObj(tutoObj[1], firstTutoText[1]);
+
+                backButton.gameObject.SetActive(true);
                 break;
 
             case 3:
@@ -93,11 +110,18 @@ public class IsFirstTuto : MonoBehaviour
                 CheckCurrentGameObj(tutoObj[4], firstTutoText[4]);
                 break;
 
+            case 6:
+                CheckCurrentGameObj(tutoObj[5], firstTutoText[5]);
+                break;
 
-                //currentSO.stageName = DefineManager.StageNames.Sea_01;
-                //PlayerPrefs.SetInt("Stage01Check", 1);
+            case 7:
+                currentSO.stageName = DefineManager.StageNames.Sea_01;
+                PlayerPrefs.SetInt("Stage01Check", 1);
 
-                //SceneManager.LoadScene("Stage_01");
+                SceneManager.LoadScene("Stage_01");
+                break;
+
+             
         }
 
         Debug.Log(tutoNum);
