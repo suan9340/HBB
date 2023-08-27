@@ -53,6 +53,7 @@ public class UIManager : MonoBehaviour
     [Space(20)]
     [Header("StageEnd")]
     public GameObject stageEndObj = null;
+    public Animator stageEndObjAnim = null;
 
     [Space(20)]
     public GameObject JudgmentObj = null;
@@ -156,7 +157,16 @@ public class UIManager : MonoBehaviour
 
     public void OnClickStageEnd(bool _isTrue)
     {
-        stageEndObj.SetActive(_isTrue);
+        stageEndObj.SetActive(true);
+        stageEndObjAnim.SetTrigger("isEndRem");
+
+        //Invoke(nameof(ShowNewImage), 0.4f);
+        ShowNewImage();
+    }
+
+    private void ShowNewImage()
+    {
+        backPicture.enabled = true;
     }
 
     public void OnClickPuzzle()

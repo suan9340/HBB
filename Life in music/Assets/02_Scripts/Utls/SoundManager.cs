@@ -100,7 +100,6 @@ public class SoundManager : MonoBehaviour
 
     public void StageEndEvent()
     {
-        UIManager.Instance.backPicture.enabled = true;
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         UIManager.Instance.OnClickStageEnd(true);
         //EventManager.TriggerEvent(ConstantManager.END_CAM_SHAKE);
