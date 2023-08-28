@@ -61,6 +61,11 @@ public class RhythmManager : MonoBehaviour
     private bool isRhythm = false;
     public bool isPerfectClear = false;
 
+
+    [Space(20)]
+    [Header("--- AudioSorce ---")]
+    public BackGroundMusic backGroundMusic = null;
+
     private void Start()
     {
         if (currentStage == null)
@@ -92,6 +97,7 @@ public class RhythmManager : MonoBehaviour
 
     private void CheckNoteANDInstantiate()
     {
+
         currentTime += Time.deltaTime;
 
         if (currentTime >= 60f / (data.Bpm * data.BestPerSec))
@@ -118,10 +124,13 @@ public class RhythmManager : MonoBehaviour
 
     public void OnClickStopRhythm()
     {
+       
+
         if (GameManager.Instance.gameState == DefineManager.GameState.CantClick) return;
 
         GameManager.Instance.SettingGameState(DefineManager.GameState.CantClick);
         SoundManager.Instance.StopLoopSource();
+        
 
         StopRhythmSetting();
         NoteManager.Instance.RemoveNote();
@@ -154,6 +163,8 @@ public class RhythmManager : MonoBehaviour
 
     public bool CheckTuto(string _name)
     {
+        backGroundMusic.GetComponent<BackGroundMusic>().OffBackgroundSound();
+
         loadData = RhythmData.LoadData(_name);
         if (loadData == null)
         {
@@ -210,11 +221,13 @@ public class RhythmManager : MonoBehaviour
 
     public void StartRhythmGame()
     {
+       
         isRhythm = true;
     }
 
     public void StopRhythmSetting()
     {
+        backGroundMusic.GetComponent<BackGroundMusic>().OnBackgroundSound();
         Destroy(curRhy.gameObject);
 
         isRhythm = false;
@@ -231,6 +244,7 @@ public class RhythmManager : MonoBehaviour
 
     public void SettingCurRhythm(GameObject _obj)
     {
+
         curRhy = _obj;
     }
 
