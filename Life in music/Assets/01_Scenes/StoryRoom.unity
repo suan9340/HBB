@@ -3188,7 +3188,7 @@ MonoBehaviour:
   - {fileID: 892621893}
   IntroObj: {fileID: 960318958}
   introClip:
-  - {fileID: 8300000, guid: f922c814c4fea7944ad3335764be629d, type: 3}
+  - {fileID: 8300000, guid: bdef934aaf73e7742b18257e3ff50c06, type: 3}
   - {fileID: 8300000, guid: a2b624c3f1b51dc4b8ea9058c0cf149a, type: 3}
   mySource: {fileID: 1007207049}
   introTextnum: 0
@@ -3212,6 +3212,11 @@ MonoBehaviour:
   selecButtonText7: {fileID: 1710413285}
   selecButtonText8: {fileID: 525301676}
   introTextScript: {fileID: 238534911}
+  tmpList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &303076787
 Transform:
   m_ObjectHideFlags: 0

@@ -70,6 +70,13 @@ public class IntroCutScene : MonoBehaviour
 
     public IntroText introTextScript;
 
+
+    public List<TextMeshPro> tmpList = new List<TextMeshPro>();
+
+    private void Awake()
+    {
+        introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
+    }
     private void Start()
     {
         ShowText();
@@ -77,6 +84,7 @@ public class IntroCutScene : MonoBehaviour
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         PlayerPrefs.SetInt("CheckFirst", 1);
+
     }
 
     private void Update()
@@ -197,6 +205,15 @@ public class IntroCutScene : MonoBehaviour
     {
         switch (introTextnum)
         {
+            case 0:
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
+
+                break;
+
+            case 1:
+                introObj[1].gameObject.SetActive(false);
+                break;
+
             case 2:
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[0];
@@ -208,10 +225,11 @@ public class IntroCutScene : MonoBehaviour
                 break;
 
             case 5:
+                introObj[1].gameObject.SetActive(true);
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 FadeInIntroObj(introObj[1]);
                 break;
-
+                
             case 6:
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 FadeInIntroObj(introObj[2]);

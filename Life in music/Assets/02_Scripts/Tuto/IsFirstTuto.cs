@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -31,13 +32,15 @@ public class IsFirstTuto : MonoBehaviour
 
     private bool isTyping = false;
     public bool isShellTuto = false;
-    public Button backButton;
+    public Button backButton = null;
 
 
 
 
     [Space(20)]
     public List<string> firstTutoText = new List<string>();
+
+    public TextMeshProUGUI testText;
 
     private void Start()
     {
@@ -46,7 +49,7 @@ public class IsFirstTuto : MonoBehaviour
             Debug.LogError("CurrentSo is NULL");
         }
 
-      
+
 
         tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
@@ -54,13 +57,13 @@ public class IsFirstTuto : MonoBehaviour
 
     public void OnClickTutoNext()
     {
-        if(isTyping)
+        if (isTyping)
         {
             return;
         }
 
         CheckNum(true);
-     
+
 
     }
 
@@ -77,40 +80,39 @@ public class IsFirstTuto : MonoBehaviour
             currentSpeed = fastSpeed;
             typingAudio.pitch = 1.3f;
         }
+    }
 
-
-    }   
     private void Tuto()
     {
         switch (tutoNum)
         {
             case 1:
-                CheckCurrentGameObj(tutoObj[0], firstTutoText[0]);
+                CheckCurrentGameObj(tutoObj[0], firstTutoText[0], 3);
 
                 backButton.gameObject.SetActive(false);
                 break;
 
             case 2:
-                CheckCurrentGameObj(tutoObj[1], firstTutoText[1]);
+                CheckCurrentGameObj(tutoObj[1], firstTutoText[1], 1);
 
                 backButton.gameObject.SetActive(true);
                 break;
 
             case 3:
-                CheckCurrentGameObj(tutoObj[2], firstTutoText[2]);
+                CheckCurrentGameObj(tutoObj[2], firstTutoText[2], 0);
                 break;
 
             case 4:
                 isShellTuto = true;
-                CheckCurrentGameObj(tutoObj[3], firstTutoText[3]);
+                CheckCurrentGameObj(tutoObj[3], firstTutoText[3], 2);
                 break;
 
             case 5:
-                CheckCurrentGameObj(tutoObj[4], firstTutoText[4]);
+                CheckCurrentGameObj(tutoObj[4], firstTutoText[4], 0);
                 break;
 
             case 6:
-                CheckCurrentGameObj(tutoObj[5], firstTutoText[5]);
+                CheckCurrentGameObj(tutoObj[5], firstTutoText[5], 7);
                 break;
 
             case 7:
@@ -120,7 +122,7 @@ public class IsFirstTuto : MonoBehaviour
                 SceneManager.LoadScene("Stage_01");
                 break;
 
-             
+
         }
 
         Debug.Log(tutoNum);
@@ -150,33 +152,27 @@ public class IsFirstTuto : MonoBehaviour
         Tuto();
     }
 
-    private void CheckCurrentGameObj(GameObject _obj, string _input)
+    private void CheckCurrentGameObj(GameObject _obj, string _input, int _index)
     {
-
         if (isTyping)
         {
             return;
         }
         string _text = _input;
 
-
-        StartCoroutine(TextOutCor(_text, _input));
+        StartCoroutine(TextOutCor(_text, _index));
 
         mySource.PlayOneShot(myClip);
-        if (currentTutoObj != null)
-        {
-            currentTutoObj.SetActive(false);
-        }
 
+        //currentTutoObj.SetActive(false);
 
-
-        currentTutoObj = _obj;
-        currentTutoObj.SetActive(true);
+        //currentTutoObj = _obj;
+        //currentTutoObj.SetActive(true);
     }
 
 
 
-    private IEnumerator TextOutCor(string _input, string firstTutoText)
+    private IEnumerator TextOutCor(string _input, int _index)
     {
         tutoText.text = _input;
         typingAudio.pitch = 1f;
@@ -187,11 +183,14 @@ public class IsFirstTuto : MonoBehaviour
 
         for (int i = 0; i < _input.Length; i++)
         {
-            tutoText.text = _input.Substring(0, i + 1);
+
+            testText.text = _input.Substring(0, i + 1);
+
             yield return new WaitForSeconds(currentSpeed);
         }
 
         typingAudio.Stop();
-        isTyping = false;
+        isTyping = false;   
+        testText.SetText(_input + $" <sprite={_index}>");
     }
 }
