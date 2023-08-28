@@ -26296,7 +26296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBC14\uB2E4 \uC18D\uC758 \uCD94\uC5B5\uC744 \uB418\uCC3E\uC558\uC2B5\uB2C8\uB2E4!\n\uBC11\uC5D0
+  m_Text: "\uAD50\uC2E4 \uC18D\uC758 \uCD94\uC5B5\uC744 \uB418\uCC3E\uC558\uC2B5\uB2C8\uB2E4!\n\uBC11\uC5D0
     \uAE30\uC5B5\uC870\uAC01\uC744 \uB20C\uB7EC\uC8FC\uC138\uC694!"
 --- !u!222 &1469539454
 CanvasRenderer:
@@ -39319,7 +39319,7 @@ MonoBehaviour:
   objClear: {fileID: 0}
   perfectClearTxt: {fileID: 1147757156}
   isPerfectClear: 0
-  backGroundMusic: {fileID: 0}
+  backGroundMusic: {fileID: 1017569037}
 --- !u!4 &1988767932
 Transform:
   m_ObjectHideFlags: 0
