@@ -55,6 +55,9 @@ public static class ConstantManager
     public static string RHYTHM_SOUND_START = "RhythmSound";
     public static string END_CAM_SHAKE = "EndCameraShaking";
 
+    public static string SOUND_BGM = "SoundBgm";
+    public static string SOUND_SFX = "SoundSfx";
+
     // NoteGen
     public static string CHANGE_NOTE_GEN = "NoteGenChange";
 

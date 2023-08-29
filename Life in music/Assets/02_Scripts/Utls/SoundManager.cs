@@ -46,10 +46,13 @@ public class SoundManager : MonoBehaviour
     [Header("Boggle")]
     public AudioSource boggleSource = null;
 
+    private float maxvol = 1f;
 
     private void Start()
     {
-        PlayLoopSource(1f);
+        maxvol = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM);
+
+        PlayLoopSource();
         EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
@@ -68,7 +71,7 @@ public class SoundManager : MonoBehaviour
 
     public void GoGoSound(float _vol)
     {
-        PlayLoopSource(_vol);
+        PlayLoopSource();
     }
 
     public void CheckYOnAudio(AudioClip _clip)
@@ -150,7 +153,7 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    public void PlayLoopSource(float _vol)
+    public void PlayLoopSource()
     {
         for (int i = 0; i < num; i++)
         {
@@ -159,7 +162,7 @@ public class SoundManager : MonoBehaviour
             if (loop.isOn)
             {
                 loop.source.Play();
-                StartCoroutine(FadeInMusic(loop.source, _vol));
+                StartCoroutine(FadeInMusic(loop.source, maxvol));
             }
         }
     }

@@ -264,7 +264,7 @@ public class RhythmManager : MonoBehaviour
 
         //ChatMaanger.Instance.Text();
         ChatMaanger.Instance.FirstSetText();
-        SoundManager.Instance.PlayLoopSource(1f);
+        SoundManager.Instance.PlayLoopSource();
 
         yield return new WaitForSeconds(0.5f);
 
@@ -286,7 +286,7 @@ public class RhythmManager : MonoBehaviour
         EventManager.TriggerEvent(ConstantManager.START_RHYTHM_PANEL);
 
         TutoManager.Instance.SetActiveFalseText();
-        SoundManager.Instance.PlayLoopSource(1f);
+        SoundManager.Instance.PlayLoopSource();
         yield break;
     }
 
