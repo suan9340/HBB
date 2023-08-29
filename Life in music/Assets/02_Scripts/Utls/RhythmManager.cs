@@ -119,8 +119,6 @@ public class RhythmManager : MonoBehaviour
 
     public void OnClickStopRhythm()
     {
-
-
         if (GameManager.Instance.gameState == DefineManager.GameState.CantClick) return;
 
         GameManager.Instance.SettingGameState(DefineManager.GameState.CantClick);

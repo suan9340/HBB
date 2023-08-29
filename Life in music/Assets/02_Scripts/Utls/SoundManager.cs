@@ -169,7 +169,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayLoopSource()
     {
-        Debug.Log("Max volume is " + maxvol);
         for (int i = 0; i < num; i++)
         {
             var loop = loopStationsources[i];
@@ -230,44 +229,15 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void STOPingMusic()
-    {
-        for (int i = 0; i < num; i++)
-        {
-            var loop = loopStationsources[i];
-            loop.source.Stop();
-        }
-    }
-
-    public void VolumeRhythmSettingDown(float _vol)
-    {
-        for (int i = 0; i < num; i++)
-        {
-            var loop = loopStationsources[i];
-            loop.source.volume = _vol;
-        }
-    }
-
-    public void VolumeReturn()
-    {
-        for (int i = 0; i < num; i++)
-        {
-            var loop = loopStationsources[i];
-            loop.source.volume = 1f;
-        }
-    }
-
     public void BoggleSound(bool _isTrue)
     {
         if (_isTrue)
         {
             boggleSource.Play();
-            Debug.Log("PlayBogle");
         }
         else
         {
             boggleSource.Stop();
-            Debug.Log("StopBogle");
         }
     }
 }

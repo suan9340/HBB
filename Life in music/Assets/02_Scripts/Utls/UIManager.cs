@@ -171,6 +171,13 @@ public class UIManager : MonoBehaviour
 
     public void OnClickPuzzle()
     {
+        SoundManager.Instance.StopLoopSource();
+        stageEndObjAnim.SetTrigger("isEndReally");
+        Invoke(nameof(ChangeScne), 1.3f);
+    }
+
+    private void ChangeScne()
+    {
         SceneManager.LoadScene("Puzzle");
     }
 }
