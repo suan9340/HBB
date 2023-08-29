@@ -12,17 +12,18 @@ public class Tmp : MonoBehaviour
     public Slider BGMSlider;
     public Slider SFXSlider;
 
-    //private void Update()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Y))
-    //    {
-    //        float _a = masterMixer.GetFloat("BGM");
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+
+        }
+    }
 
     public void OnAudioBGMControl(float _vol)
     {
         masterMixer.SetFloat("BGM", Mathf.Log10(_vol) * 20);
+        //Debug.Log(Mathf.Log10(_vol) * 20);
     }
 
     public void OnAudioSFXControl(float _vol)
