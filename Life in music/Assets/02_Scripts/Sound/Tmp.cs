@@ -38,7 +38,7 @@ public class Tmp : MonoBehaviour
         masterMixer.SetFloat("SFX", Mathf.Log10(_vol) * 20);
     }
 
-    private void Remember()
+    public void Remember()
     {
         PlayerPrefs.SetFloat(ConstantManager.SOUND_BGM, remBgm);
         PlayerPrefs.SetFloat(ConstantManager.SOUND_SFX, remSfx);
@@ -49,7 +49,7 @@ public class Tmp : MonoBehaviour
         float _bb = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM, 1f);
         float _ss = PlayerPrefs.GetFloat(ConstantManager.SOUND_SFX, 1f);
 
-        Debug.Log($"{_bb},   {_ss}");
+        //Debug.Log($"{_bb},   {_ss}");
 
         OnAudioBGMControl(_bb);
         OnAudioSFXControl(_ss);

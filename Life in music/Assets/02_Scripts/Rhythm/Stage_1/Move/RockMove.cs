@@ -147,7 +147,7 @@ public class RockMove : MonoBehaviour
         if (isFirst)
         {
             RhythmManager.Instance.StartMusic();
-            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+            EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.ROCK_ADD, _obj);

@@ -52,7 +52,7 @@ public class StarFishMove : MonoBehaviour
         if (Starfish_isFirst)
         {
             RhythmManager.Instance.StartMusic();
-            EventManager<float>.TriggerEvent(ConstantManager.RHYTHM_SOUND_START, 0.5f);
+            EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             Starfish_isFirst = false;
         }
 

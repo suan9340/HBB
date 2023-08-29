@@ -50,10 +50,10 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        maxvol = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM);
+        maxvol = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM, 1f);
 
         PlayLoopSource();
-        EventManager<float>.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+        EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
     private void Update()
@@ -66,12 +66,12 @@ public class SoundManager : MonoBehaviour
 
     private void OnDisable()
     {
-        EventManager<float>.StopListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
+        EventManager.StopListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
-    public void GoGoSound(float _vol)
+    public void GoGoSound()
     {
-        PlayLoopSource();
+        PlaySmall();
     }
 
     public void CheckYOnAudio(AudioClip _clip)
@@ -152,9 +152,24 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlaySmall()
+    {
+        var _vvv = maxvol / 2;
+        for (int i = 0; i < num; i++)
+        {
+            var loop = loopStationsources[i];
+
+            if (loop.isOn)
+            {
+                loop.source.Play();
+                StartCoroutine(FadeInMusic(loop.source, _vvv));
+            }
+        }
+    }
 
     public void PlayLoopSource()
     {
+        Debug.Log("Max volume is " + maxvol);
         for (int i = 0; i < num; i++)
         {
             var loop = loopStationsources[i];
