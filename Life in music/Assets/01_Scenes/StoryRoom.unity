@@ -1551,8 +1551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingObj: {fileID: 1659885207}
   myAnim: {fileID: 1659885210}
-  mySource: {fileID: 0}
-  btnClickClip: {fileID: 0}
+  mySource: {fileID: 1181040563}
+  btnClickClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
 --- !u!4 &154863815
 Transform:
   m_ObjectHideFlags: 0
@@ -4991,7 +4991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f425c48b7afda64f8a5925def9c9c29, type: 2}
   m_sharedMaterial: {fileID: 371067610041202958, guid: 6f425c48b7afda64f8a5925def9c9c29,
@@ -11327,6 +11327,8 @@ MonoBehaviour:
   - {fileID: 1104571921}
   - {fileID: 428795176}
   boardCol: {fileID: 1159751389}
+  mySource: {fileID: 1181040563}
+  myClip: {fileID: 8300000, guid: 0949ea0c030ae354f9bf37b3c05762a3, type: 3}
 --- !u!61 &1159751389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11444,7 +11446,7 @@ GameObject:
   - component: {fileID: 1181040562}
   - component: {fileID: 1181040563}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: AudioSource (Object)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

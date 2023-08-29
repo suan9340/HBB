@@ -16,14 +16,10 @@ public class MenuControllerMOM : MonoBehaviour
 
     protected void Start()
     {
-        if (defalutObj == null)
+        if ((defalutObj == null) || (changeObj == null))
         {
             Debug.Log("defaultObj is NULL");
-        }
-
-        if (changeObj == null)
-        {
-            Debug.Log("changeObj is NULL");
+            return;
         }
 
         defalutObj.SetActive(true);

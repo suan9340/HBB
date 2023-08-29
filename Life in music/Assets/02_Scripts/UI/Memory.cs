@@ -20,6 +20,10 @@ public class Memory : MonoBehaviour
     public Image memoryImageSlider = null;
     public int maxmemoryNum = 30;
 
+    [Space(20)]
+    public AudioSource rocksAudio = null;
+    public AudioClip rokclip = null;
+
     private void Start()
     {
         coinNum = coinParent.transform.childCount;
@@ -39,6 +43,11 @@ public class Memory : MonoBehaviour
     private void Update()
     {
         memoryImageSlider.fillAmount = coinTxt / maxmemoryNum;
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ShowMemoryUI();
+        }
     }
 
     private void OnDisable()
@@ -70,6 +79,7 @@ public class Memory : MonoBehaviour
 
         for (int i = 0; i < coinNum; i++)
         {
+            
             coinParent.transform.GetChild(i).DOScale(1f, 0.3f).SetDelay(_delay)
                 .SetEase(Ease.OutBack);
 
@@ -90,6 +100,7 @@ public class Memory : MonoBehaviour
 
     private void CountCoinNum()
     {
+        rocksAudio.PlayOneShot(rokclip);
         coinTxt += 1;
         counterTxt.text = coinTxt.ToString();
     }

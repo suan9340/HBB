@@ -245,7 +245,7 @@ public class RhythmManager : MonoBehaviour
     {
         perfectClearTxt.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         perfectClearTxt.gameObject.SetActive(false);
 
         yield return GoHomeYPlayMusic();

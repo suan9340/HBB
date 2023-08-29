@@ -173,7 +173,7 @@ public class UIManager : MonoBehaviour
     {
         SoundManager.Instance.StopLoopSource();
         stageEndObjAnim.SetTrigger("isEndReally");
-        Invoke(nameof(ChangeScne), 1.3f);
+        Invoke(nameof(ChangeScne), 1.8f);
     }
 
     private void ChangeScne()

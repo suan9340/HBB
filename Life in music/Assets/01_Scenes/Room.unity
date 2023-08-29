@@ -8596,6 +8596,8 @@ MonoBehaviour:
   - {fileID: 1104571921}
   - {fileID: 428795176}
   boardCol: {fileID: 1159751389}
+  mySource: {fileID: 1181040563}
+  myClip: {fileID: 8300000, guid: 0949ea0c030ae354f9bf37b3c05762a3, type: 3}
 --- !u!61 &1159751389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8717,7 +8719,7 @@ GameObject:
   - component: {fileID: 1181040562}
   - component: {fileID: 1181040563}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: AudioSource (Objects)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

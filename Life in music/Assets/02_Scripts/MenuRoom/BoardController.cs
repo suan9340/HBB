@@ -13,6 +13,11 @@ public class BoardController : MonoBehaviour
     public List<BoxCollider2D> picCol = new List<BoxCollider2D>();
     public BoxCollider2D boardCol = null;
 
+    [Space(20)]
+    [Header("Sounds")]
+    public AudioSource mySource = null;
+    public AudioClip myClip = null;
+
     private bool isMoving = false;
 
     private void Start()
@@ -44,6 +49,7 @@ public class BoardController : MonoBehaviour
 
         isMoving = true;
 
+        mySource.PlayOneShot(myClip);
         if (isBoardZoom)
         {
             SettingPicture(false);
@@ -69,6 +75,7 @@ public class BoardController : MonoBehaviour
 
     private void SettingPicture(bool _bolen)
     {
+        
         if (picCol[0] == null || picCol[1] == null)
         {
             Debug.LogError("picCol is NULL!!");

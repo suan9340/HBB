@@ -233,13 +233,13 @@ public class IntroCutScene : MonoBehaviour
 
             case 5:
                 introObj[1].gameObject.SetActive(true);
-               introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 break;
 
             case 6:
                 emojiIndex = 3;
-               introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
-               FadeInIntroObj(introObj[2]);
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
+                FadeInIntroObj(introObj[2]);
                 break;
 
             case 8:
@@ -300,7 +300,7 @@ public class IntroCutScene : MonoBehaviour
                 emojiIndex = 7;
                 foreach (var _introObj in introObj)
                 {
-                   // _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                    // _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
                 }
                 break;
 
