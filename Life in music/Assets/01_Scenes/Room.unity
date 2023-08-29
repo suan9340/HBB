@@ -3335,6 +3335,7 @@ GameObject:
   - component: {fileID: 428795175}
   - component: {fileID: 428795176}
   - component: {fileID: 428795177}
+  - component: {fileID: 428795178}
   m_Layer: 0
   m_Name: PicObj_1
   m_TagString: Untagged
@@ -3404,6 +3405,23 @@ MonoBehaviour:
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 720507864}
   lockMessageUIObject: {fileID: 1141315922}
+  mysource: {fileID: 1181040563}
+  myClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
+--- !u!114 &428795178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428795174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2062a3960cb354c8b1274f327fbe74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizeVec: {x: 0.05, y: 0.05, z: 0.05}
+  effectAudio: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!1 &434015564
 GameObject:
   m_ObjectHideFlags: 0
@@ -7545,6 +7563,7 @@ GameObject:
   - component: {fileID: 1104571920}
   - component: {fileID: 1104571921}
   - component: {fileID: 1104571922}
+  - component: {fileID: 1104571923}
   m_Layer: 0
   m_Name: PicObj
   m_TagString: Untagged
@@ -7614,6 +7633,23 @@ MonoBehaviour:
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageSulmungUI: {fileID: 1504971815}
   lockMessageUIObject: {fileID: 1141315922}
+  mysource: {fileID: 1181040563}
+  myClip: {fileID: 8300000, guid: 7444b18ffc61c65498f064cc08d112b5, type: 3}
+--- !u!114 &1104571923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104571919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2062a3960cb354c8b1274f327fbe74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizeVec: {x: 0.05, y: 0.05, z: 0.05}
+  effectAudio: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!1 &1105692496
 GameObject:
   m_ObjectHideFlags: 0

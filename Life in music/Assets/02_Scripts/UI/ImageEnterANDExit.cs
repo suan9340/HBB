@@ -7,12 +7,22 @@ public class ImageEnterANDExit : ImageSizeInterface
     , IPointerEnterHandler
     , IPointerExitHandler
 {
-    public  void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         ImageSizeBig();
     }
 
-    public  void OnPointerExit(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        ImageSizeSmall();
+    }
+
+    public void OnMouseEnter()
+    {
+        ImageSizeBig();
+    }
+
+    public void OnMouseExit()
     {
         ImageSizeSmall();
     }

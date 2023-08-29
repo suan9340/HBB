@@ -20,6 +20,10 @@ public class PictureController : MonoBehaviour
     [Space(20)]
     public GameObject lockMessageUIObject = null;
 
+    [Space(20)]
+    public AudioSource mysource = null;
+    public AudioClip myClip = null;
+
     private int stage01Check = 0;
     private string sceneName;
     private bool isStage = false;
@@ -42,20 +46,14 @@ public class PictureController : MonoBehaviour
             return;
         }
 
+        mysource.PlayOneShot(myClip);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         stageSulmungUI.SetActive(true);
     }
 
     public void OnclickStages()
     {
-        //if (isStage == false)
-        //{
-        //    MenuManager.Instance.ShowOrHideLockMessage(true);
-        //    Invoke(nameof(ResetLockMessage), 2f);
-
-        //    return;
-        //}
-
+        mysource.PlayOneShot(myClip);
         switch (sceneNum)
         {
             case 1:
@@ -82,6 +80,7 @@ public class PictureController : MonoBehaviour
 
     public void OnclickOutStageUI()
     {
+        mysource.PlayOneShot(myClip);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         stageSulmungUI.SetActive(false);
     }
@@ -121,7 +120,7 @@ public class PictureController : MonoBehaviour
 
         if (_a == 1)
         {
-           // Debug.Log(_a);
+            // Debug.Log(_a);
             isStage = true;
             lockObj.SetActive(false);
         }
