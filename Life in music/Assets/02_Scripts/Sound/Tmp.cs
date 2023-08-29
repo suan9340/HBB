@@ -12,12 +12,20 @@ public class Tmp : MonoBehaviour
     public Slider BGMSlider;
     public Slider SFXSlider;
 
-    public void AudioCOntrol()
+    public void OnAudioBGMControl()
     {
         float _sound = BGMSlider.value;
 
         if (_sound == -40f) masterMixer.SetFloat("BGM", -80);
         else masterMixer.SetFloat("BGM", _sound);
+    }
+
+    public void OnAudioSFXControl()
+    {
+        float _so = SFXSlider.value;
+
+        if (_so == -40f) masterMixer.SetFloat("SFX", -80);
+        else masterMixer.SetFloat("SFX", _so);
     }
 
     public void ToggleAudioVolume()

@@ -43,6 +43,10 @@ public class SoundManager : MonoBehaviour
     private bool isFadeIn = false;
     private bool isFadeOut = false;
 
+    [Header("Boggle")]
+    public AudioSource boggleSource = null;
+
+
     private void Start()
     {
         PlayLoopSource(1f);
@@ -235,7 +239,19 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-
+    public void BoggleSound(bool _isTrue)
+    {
+        if (_isTrue)
+        {
+            boggleSource.Play();
+            Debug.Log("PlayBogle");
+        }
+        else
+        {
+            boggleSource.Stop();
+            Debug.Log("StopBogle");
+        }
+    }
 }
 
 [Serializable]
