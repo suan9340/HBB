@@ -34,9 +34,6 @@ public class IsFirstTuto : MonoBehaviour
     public bool isShellTuto = false;
     public Button backButton = null;
 
-
-
-
     [Space(20)]
     public List<string> firstTutoText = new List<string>();
 
@@ -48,8 +45,6 @@ public class IsFirstTuto : MonoBehaviour
         {
             Debug.LogError("CurrentSo is NULL");
         }
-
-
 
         tutoCnt = tutoObj.Count + 1;
         OnClickTutoNext();
@@ -63,8 +58,6 @@ public class IsFirstTuto : MonoBehaviour
         }
 
         CheckNum(true);
-
-
     }
 
     public void OnClickTutoBack()
@@ -121,8 +114,6 @@ public class IsFirstTuto : MonoBehaviour
 
                 SceneManager.LoadScene("Stage_01");
                 break;
-
-
         }
 
         Debug.Log(tutoNum);
@@ -163,11 +154,6 @@ public class IsFirstTuto : MonoBehaviour
         StartCoroutine(TextOutCor(_text, _index));
 
         mySource.PlayOneShot(myClip);
-
-        //currentTutoObj.SetActive(false);
-
-        //currentTutoObj = _obj;
-        //currentTutoObj.SetActive(true);
     }
 
 
