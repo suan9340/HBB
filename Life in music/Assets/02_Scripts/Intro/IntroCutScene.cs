@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEngine.PlayerLoop.PreLateUpdate;
 
 public class IntroCutScene : MonoBehaviour
 {
@@ -69,10 +70,6 @@ public class IntroCutScene : MonoBehaviour
     public TextMeshProUGUI selecButtonText8 = null;
 
     public IntroText introTextScript;
-
-
-    public List<TextMeshPro> tmpList = new List<TextMeshPro>();
-
     public TextMeshProUGUI newTutoText;
     private int emojiIndex = 3;
 
@@ -87,10 +84,9 @@ public class IntroCutScene : MonoBehaviour
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         PlayerPrefs.SetInt("CheckFirst", 1);
-
     }
 
-    private void Update()
+    void SelectTextBox()
     {
         switch (introTextnum)
         {
@@ -181,7 +177,6 @@ public class IntroCutScene : MonoBehaviour
 
     private void ShowText(int emojiIndex)
     {
-
         IntroText.Instance.TextingOut(introText[introTextnum], emojiIndex);
     }
 
@@ -202,7 +197,6 @@ public class IntroCutScene : MonoBehaviour
         var _a = introTextnum;
         backText.text = introText[_a];
 
-
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
     }
@@ -214,17 +208,16 @@ public class IntroCutScene : MonoBehaviour
         switch (introTextnum)
         {
             case 0:
-
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 emojiIndex = 4;
                 break;
 
             case 1:
                 introObj[1].gameObject.SetActive(false);
-
                 break;
 
             case 2:
+                SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[0];
                 selecButtonText2.text = selectText[1];
@@ -240,21 +233,17 @@ public class IntroCutScene : MonoBehaviour
 
             case 5:
                 introObj[1].gameObject.SetActive(true);
-                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
-                FadeInIntroObj(introObj[1]);
+               introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 break;
 
             case 6:
-                    emojiIndex = 3;
-                introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
-                FadeInIntroObj(introObj[2]);
-                break;
-
-            case 7:
-            
+                emojiIndex = 3;
+               introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
+               FadeInIntroObj(introObj[2]);
                 break;
 
             case 8:
+                SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText3.text = selectText[2];
                 selecButtonText4.text = selectText[3];
@@ -263,6 +252,7 @@ public class IntroCutScene : MonoBehaviour
                 emojiIndex = 2;
                 break;
             case 13:
+                SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText5.text = selectText[4];
                 selecButtonText6.text = selectText[5];
@@ -291,10 +281,11 @@ public class IntroCutScene : MonoBehaviour
 
             case 20:
                 FadeInIntroObj(introObj[5]);
-        
+
                 break;
 
             case 21:
+                SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText7.text = selectText[6];
                 selecButtonText8.text = selectText[7];
@@ -307,11 +298,10 @@ public class IntroCutScene : MonoBehaviour
 
             case 25:
                 emojiIndex = 7;
-                foreach (var _introOb in introObj)
+                foreach (var _introObj in introObj)
                 {
-                    _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                   // _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
                 }
-
                 break;
 
             case 27:
@@ -327,6 +317,7 @@ public class IntroCutScene : MonoBehaviour
             MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
             return;
         }
+
         introTextnum++;
         ShowText(emojiIndex);
     }
