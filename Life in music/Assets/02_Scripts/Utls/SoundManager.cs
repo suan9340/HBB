@@ -154,7 +154,6 @@ public class SoundManager : MonoBehaviour
 
             if (loop.isOn)
             {
-                //Debug.Log($"{i} 개 실행중");
                 loop.source.Play();
                 StartCoroutine(FadeInMusic(loop.source, _vol));
             }
