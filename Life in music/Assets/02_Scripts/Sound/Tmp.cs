@@ -15,7 +15,8 @@ public class Tmp : MonoBehaviour
     private float remBgm = 1f;
     private float remSfx = 1f;
 
-    private void OnEnable()
+
+    private void Awake()
     {
         SettingSound();
     }
@@ -45,8 +46,8 @@ public class Tmp : MonoBehaviour
 
     private void SettingSound()
     {
-        float _bb = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM);
-        float _ss = PlayerPrefs.GetFloat(ConstantManager.SOUND_SFX);
+        float _bb = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM, 1f);
+        float _ss = PlayerPrefs.GetFloat(ConstantManager.SOUND_SFX, 1f);
 
         Debug.Log($"{_bb},   {_ss}");
 
