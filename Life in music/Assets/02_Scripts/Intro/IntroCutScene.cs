@@ -70,13 +70,24 @@ public class IntroCutScene : MonoBehaviour
 
     public IntroText introTextScript;
 
+
+    public List<TextMeshPro> tmpList = new List<TextMeshPro>();
+
+    public TextMeshProUGUI newTutoText;
+    private int emojiIndex = 3;
+
+    private void Awake()
+    {
+        introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
+    }
     private void Start()
     {
-        ShowText();
+        ShowText(emojiIndex);
         ShowIntroObj();
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         PlayerPrefs.SetInt("CheckFirst", 1);
+
     }
 
     private void Update()
@@ -168,9 +179,10 @@ public class IntroCutScene : MonoBehaviour
         mySource.Stop();
     }
 
-    private void ShowText()
+    private void ShowText(int emojiIndex)
     {
-        IntroText.Instance.TextingOut(introText[introTextnum]);
+
+        IntroText.Instance.TextingOut(introText[introTextnum], emojiIndex);
     }
 
     private void ShowIntroObj()
@@ -189,14 +201,29 @@ public class IntroCutScene : MonoBehaviour
     {
         var _a = introTextnum;
         backText.text = introText[_a];
+
+
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
     }
 
     public void CheckNum()
     {
+        emojiIndex = 8;
+
         switch (introTextnum)
         {
+            case 0:
+
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
+                emojiIndex = 4;
+                break;
+
+            case 1:
+                introObj[1].gameObject.SetActive(false);
+
+                break;
+
             case 2:
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[0];
@@ -207,14 +234,24 @@ public class IntroCutScene : MonoBehaviour
                 mySource.Stop();
                 break;
 
+            case 4:
+                emojiIndex = 5;
+                break;
+
             case 5:
+                introObj[1].gameObject.SetActive(true);
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 FadeInIntroObj(introObj[1]);
                 break;
 
             case 6:
+                    emojiIndex = 3;
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 FadeInIntroObj(introObj[2]);
+                break;
+
+            case 7:
+            
                 break;
 
             case 8:
@@ -222,7 +259,9 @@ public class IntroCutScene : MonoBehaviour
                 selecButtonText3.text = selectText[2];
                 selecButtonText4.text = selectText[3];
                 break;
-
+            case 11:
+                emojiIndex = 2;
+                break;
             case 13:
                 CutSceneSelect(true);
                 selecButtonText5.text = selectText[4];
@@ -236,17 +275,23 @@ public class IntroCutScene : MonoBehaviour
 
             case 16:
                 FadeInIntroObj(introObj[3]);
+                emojiIndex = 6;
                 break;
 
 
             case 18:
                 FadeInIntroObj(introObj[4]);
                 mySource.PlayOneShot(introClip[1]);
+                emojiIndex = 3;
+                break;
+
+            case 19:
+                emojiIndex = 0;
                 break;
 
             case 20:
                 FadeInIntroObj(introObj[5]);
-
+        
                 break;
 
             case 21:
@@ -261,11 +306,16 @@ public class IntroCutScene : MonoBehaviour
                 break;
 
             case 25:
+                emojiIndex = 7;
                 foreach (var _introOb in introObj)
                 {
                     _introOb.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
                 }
 
+                break;
+
+            case 27:
+                emojiIndex = 1;
                 break;
             default:
                 break;
@@ -278,6 +328,6 @@ public class IntroCutScene : MonoBehaviour
             return;
         }
         introTextnum++;
-        ShowText();
+        ShowText(emojiIndex);
     }
 }

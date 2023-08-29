@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +28,7 @@ public class IntroText : MonoBehaviour
 
     #endregion
 
-    public Text tutoTxt = null;
+    public TextMeshProUGUI tutoTxt = null;
     private bool isTyping = false;
     public bool isChoice = true;
 
@@ -42,6 +43,8 @@ public class IntroText : MonoBehaviour
     public AudioSource typingAudio = null;
 
     private float currentSpeed = 0f;
+
+    public IntroCutScene introCutScene = null;
 
     private void Awake()
     {
@@ -72,17 +75,17 @@ public class IntroText : MonoBehaviour
         tutoTxt.text = " ";
     }
 
-    public void TextingOut(string _input)
+    public void TextingOut(string _input, int emojiIndex)
     {
         if (isTyping)
         {
             return;
         }
 
-        StartCoroutine(TextOutCor(_input));
+        StartCoroutine(TextOutCor(_input, emojiIndex));
     }
 
-    private IEnumerator TextOutCor(string _input)
+    private IEnumerator TextOutCor(string _input, int emojiIndex)
     {
         CheckingStart();
         typingAudio.pitch = 1f;
@@ -99,6 +102,11 @@ public class IntroText : MonoBehaviour
 
         typingAudio.Stop();
         isTyping = false;
+
+        if(emojiIndex != 8)
+        {
+            tutoTxt.SetText(_input + $" <sprite={emojiIndex}>");
+        }
     }
 
     private void CheckingStart()
