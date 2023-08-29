@@ -12,24 +12,21 @@ public class Tmp : MonoBehaviour
     public Slider BGMSlider;
     public Slider SFXSlider;
 
-    public void OnAudioBGMControl()
-    {
-        float _sound = BGMSlider.value;
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Y))
+    //    {
+    //        float _a = masterMixer.GetFloat("BGM");
+    //    }
+    //}
 
-        if (_sound == -40f) masterMixer.SetFloat("BGM", -80);
-        else masterMixer.SetFloat("BGM", _sound);
+    public void OnAudioBGMControl(float _vol)
+    {
+        masterMixer.SetFloat("BGM", Mathf.Log10(_vol) * 20);
     }
 
-    public void OnAudioSFXControl()
+    public void OnAudioSFXControl(float _vol)
     {
-        float _so = SFXSlider.value;
-
-        if (_so == -40f) masterMixer.SetFloat("SFX", -80);
-        else masterMixer.SetFloat("SFX", _so);
-    }
-
-    public void ToggleAudioVolume()
-    {
-        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
+        masterMixer.SetFloat("SFX", Mathf.Log10(_vol) * 20);
     }
 }
