@@ -69,9 +69,16 @@ public class IntroCutScene : MonoBehaviour
     public TextMeshProUGUI selecButtonText7 = null;
     public TextMeshProUGUI selecButtonText8 = null;
 
+
+    [Space(20)]
     public IntroText introTextScript;
     public TextMeshProUGUI newTutoText;
     private int emojiIndex = 3;
+
+
+    [Space(20)]
+    public AudioSource selectClickSound;
+    public AudioSource selectShowSound;
 
     private void Awake()
     {
@@ -88,6 +95,8 @@ public class IntroCutScene : MonoBehaviour
 
     void SelectTextBox()
     {
+        selectShowSound.Play();
+
         switch (introTextnum)
         {
             case 2:
@@ -187,6 +196,7 @@ public class IntroCutScene : MonoBehaviour
 
     private void AddButtonClickListener(int newIntroTextnum)
     {
+        selectClickSound.Play();
         CutSceneSelect(false);
         introTextnum = newIntroTextnum;
         CheckNum();
@@ -199,6 +209,8 @@ public class IntroCutScene : MonoBehaviour
 
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
+
+       
     }
 
     public void CheckNum()
