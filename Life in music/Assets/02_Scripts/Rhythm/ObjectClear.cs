@@ -21,14 +21,6 @@ public class ObjectClear : MonoBehaviour
         CheckingISClear();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            CompleteRhythm();
-        }
-    }
-
     private void CheckingISClear()
     {
         if (isCCC)

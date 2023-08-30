@@ -43,11 +43,6 @@ public class Memory : MonoBehaviour
     private void Update()
     {
         memoryImageSlider.fillAmount = coinTxt / maxmemoryNum;
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            ShowMemoryUI();
-        }
     }
 
     private void OnDisable()
@@ -109,11 +104,6 @@ public class Memory : MonoBehaviour
     {
         memoryImage.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
         memoryImage.transform.DOScale(new Vector3(1f, 1f, 1f), 0.05f);
-    }
-
-    private void MemorySlider()
-    {
-
     }
 
     private IEnumerator CountCoin(int _coinNum)

@@ -28,8 +28,6 @@ public class ClickInstruments : MonoBehaviour
     private void Start()
     {
         CheckAudioComponents();
-
-        //CheckCurrnetClearState();
     }
 
     private void Update()
