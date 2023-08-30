@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using static UnityEngine.PlayerLoop.PreLateUpdate;
+using System;
 
 public class IntroCutScene : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class IntroCutScene : MonoBehaviour
     public List<GameObject> introObj = new List<GameObject>();
     public GameObject IntroObj = null;
 
+    private IntroSelectSO introSelectSO = null;
+
     [Space(20)]
     public List<AudioClip> introClip = new List<AudioClip>();
     public AudioSource mySource = null;
@@ -52,22 +55,11 @@ public class IntroCutScene : MonoBehaviour
     [Space(20)]
     public Button selecButton1 = null;
     public Button selecButton2 = null;
-    public Button selecButton3 = null;
-    public Button selecButton4 = null;
-    public Button selecButton5 = null;
-    public Button selecButton6 = null;
-    public Button selecButton7 = null;
-    public Button selecButton8 = null;
+
 
     [Space(20)]
     public TextMeshProUGUI selecButtonText1 = null;
     public TextMeshProUGUI selecButtonText2 = null;
-    public TextMeshProUGUI selecButtonText3 = null;
-    public TextMeshProUGUI selecButtonText4 = null;
-    public TextMeshProUGUI selecButtonText5 = null;
-    public TextMeshProUGUI selecButtonText6 = null;
-    public TextMeshProUGUI selecButtonText7 = null;
-    public TextMeshProUGUI selecButtonText8 = null;
 
 
     [Space(20)]
@@ -91,6 +83,8 @@ public class IntroCutScene : MonoBehaviour
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         PlayerPrefs.SetInt("CheckFirst", 1);
+
+        introSelectSO = Resources.Load<IntroSelectSO>("SO/Intro/IntroSelectSO");
     }
 
     void SelectTextBox()
@@ -100,74 +94,22 @@ public class IntroCutScene : MonoBehaviour
         switch (introTextnum)
         {
             case 2:
-
-                #region SetActive
-                selecButton1.gameObject.SetActive(true);
-                selecButton2.gameObject.SetActive(true);
-                selecButton3.gameObject.SetActive(false);
-                selecButton4.gameObject.SetActive(false);
-                selecButton5.gameObject.SetActive(false);
-                selecButton6.gameObject.SetActive(false);
-                selecButton7.gameObject.SetActive(false);
-                selecButton8.gameObject.SetActive(false);
-
-                #endregion
-
-                selecButton1.onClick.AddListener(() => AddButtonClickListener(5));
-                selecButton2.onClick.AddListener(() => AddButtonClickListener(3));
+                AddListen(5, 3);
                 break;
 
             case 8:
-
-                #region SetActive
-                selecButton1.gameObject.SetActive(false);
-                selecButton2.gameObject.SetActive(false);
-                selecButton3.gameObject.SetActive(true);
-                selecButton4.gameObject.SetActive(true);
-                selecButton5.gameObject.SetActive(false);
-                selecButton6.gameObject.SetActive(false);
-                selecButton7.gameObject.SetActive(false);
-                selecButton8.gameObject.SetActive(false);
-                #endregion
-
-                selecButton3.onClick.AddListener(() => AddButtonClickListener(9));
-                selecButton4.onClick.AddListener(() => AddButtonClickListener(11));
+                RemoveListen(5, 3);
+                AddListen(9, 11);
                 break;
 
             case 13:
-
-                #region SetActive
-                selecButton1.gameObject.SetActive(false);
-                selecButton2.gameObject.SetActive(false);
-                selecButton3.gameObject.SetActive(false);
-                selecButton4.gameObject.SetActive(false);
-                selecButton5.gameObject.SetActive(true);
-                selecButton6.gameObject.SetActive(true);
-                selecButton7.gameObject.SetActive(false);
-                selecButton8.gameObject.SetActive(false);
-
-                #endregion
-
-                selecButton5.onClick.AddListener(() => AddButtonClickListener(16));
-                selecButton6.onClick.AddListener(() => AddButtonClickListener(14));
+                RemoveListen(9, 11);
+                AddListen(16, 14);
                 break;
 
             case 21:
-
-                #region SetActive
-                selecButton1.gameObject.SetActive(false);
-                selecButton2.gameObject.SetActive(false);
-                selecButton3.gameObject.SetActive(false);
-                selecButton4.gameObject.SetActive(false);
-                selecButton5.gameObject.SetActive(false);
-                selecButton6.gameObject.SetActive(false);
-                selecButton7.gameObject.SetActive(true);
-                selecButton8.gameObject.SetActive(true);
-                #endregion
-
-
-                selecButton7.onClick.AddListener(() => AddButtonClickListener(22));
-                selecButton8.onClick.AddListener(() => AddButtonClickListener(25));
+                RemoveListen(16, 14);
+                AddListen(22, 25);
                 break;
         };
     }
@@ -194,8 +136,21 @@ public class IntroCutScene : MonoBehaviour
         FadeInIntroObj(introObj[introObjNum]);
     }
 
+    private void AddListen(int _num1, int _num2)
+    {
+        selecButton1.onClick.AddListener(() => AddButtonClickListener(_num1));
+        selecButton2.onClick.AddListener(() => AddButtonClickListener(_num2));
+    }
+
+    private void RemoveListen(int _num1, int _num2)
+    {
+        selecButton1.onClick.RemoveAllListeners();
+        selecButton2.onClick.RemoveAllListeners();
+    }
+
     private void AddButtonClickListener(int newIntroTextnum)
     {
+
         selectClickSound.Play();
         CutSceneSelect(false);
         introTextnum = newIntroTextnum;
@@ -210,7 +165,7 @@ public class IntroCutScene : MonoBehaviour
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
 
-       
+
     }
 
     public void CheckNum()
@@ -257,8 +212,8 @@ public class IntroCutScene : MonoBehaviour
             case 8:
                 SelectTextBox();
                 CutSceneSelect(true);
-                selecButtonText3.text = selectText[2];
-                selecButtonText4.text = selectText[3];
+                selecButtonText1.text = selectText[2];
+                selecButtonText2.text = selectText[3];
                 break;
             case 11:
                 emojiIndex = 2;
@@ -266,8 +221,8 @@ public class IntroCutScene : MonoBehaviour
             case 13:
                 SelectTextBox();
                 CutSceneSelect(true);
-                selecButtonText5.text = selectText[4];
-                selecButtonText6.text = selectText[5];
+                selecButtonText1.text = selectText[4];
+                selecButtonText2.text = selectText[5];
                 break;
 
             case 15:
@@ -299,8 +254,8 @@ public class IntroCutScene : MonoBehaviour
             case 21:
                 SelectTextBox();
                 CutSceneSelect(true);
-                selecButtonText7.text = selectText[6];
-                selecButtonText8.text = selectText[7];
+                selecButtonText1.text = selectText[6];
+                selecButtonText2.text = selectText[7];
                 break;
 
             case 24:
@@ -321,8 +276,8 @@ public class IntroCutScene : MonoBehaviour
                         _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
                     }
 
-                   
-                    
+
+
                 }
                 break;
 
