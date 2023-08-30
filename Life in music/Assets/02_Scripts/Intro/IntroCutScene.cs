@@ -72,6 +72,7 @@ public class IntroCutScene : MonoBehaviour
     public AudioSource selectClickSound;
     public AudioSource selectShowSound;
 
+    private bool isSoTextStart = false;
     private void Awake()
     {
         introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
@@ -94,22 +95,22 @@ public class IntroCutScene : MonoBehaviour
         switch (introTextnum)
         {
             case 2:
-                AddListen(5, 3);
+                AddListen(0);
                 break;
 
             case 8:
                 RemoveListen(5, 3);
-                AddListen(9, 11);
+                AddListen(1);
                 break;
 
             case 13:
                 RemoveListen(9, 11);
-                AddListen(16, 14);
+                AddListen(2);
                 break;
 
             case 21:
                 RemoveListen(16, 14);
-                AddListen(22, 25);
+                AddListen(3);
                 break;
         };
     }
@@ -136,10 +137,14 @@ public class IntroCutScene : MonoBehaviour
         FadeInIntroObj(introObj[introObjNum]);
     }
 
-    private void AddListen(int _num1, int _num2)
+    private void AddListen(int _num1)
     {
-        selecButton1.onClick.AddListener(() => AddButtonClickListener(_num1));
-        selecButton2.onClick.AddListener(() => AddButtonClickListener(_num2));
+        var _tt = introSelectSO.textList[_num1];
+
+        //selecButton1.onClick.AddListener(() => AddButtonClickListener(_tt.first[0]));
+        //selecButton2.onClick.AddListener(() => AddButtonClickListener(_num2));
+        Debug.Log(_tt.first[0]);
+        isSoTextStart = true;
     }
 
     private void RemoveListen(int _num1, int _num2)
@@ -148,12 +153,11 @@ public class IntroCutScene : MonoBehaviour
         selecButton2.onClick.RemoveAllListeners();
     }
 
-    private void AddButtonClickListener(int newIntroTextnum)
+    private void AddButtonClickListener(List<string> _myList)
     {
-
         selectClickSound.Play();
         CutSceneSelect(false);
-        introTextnum = newIntroTextnum;
+        //introTextnum = newIntroTextnum;
         CheckNum();
     }
 
@@ -171,6 +175,14 @@ public class IntroCutScene : MonoBehaviour
     public void CheckNum()
     {
         emojiIndex = 8;
+        if (isSoTextStart)
+        {
+            Debug.Log("qwe");
+        }
+        else
+        {
+
+        }
 
         switch (introTextnum)
         {
