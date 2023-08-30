@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fishs_0
+      name: Fishs_1
       rect:
         serializedVersion: 2
-        x: 284
-        y: 10
-        width: 212
-        height: 193
+        x: 216
+        y: 11
+        width: 190
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaf0d55548020664a8c62d226f710859
-      internalID: 1217251542
+      spriteID: b943fd4be24151a41bed3410d10427a7
+      internalID: -173812223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fishs_1
+      name: Fishs_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 10
-        width: 212
-        height: 193
+        x: 7
+        y: 11
+        width: 190
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dce2175e40d8ff47a385724675e268c
-      internalID: -1481274015
+      spriteID: f62adbc393206bb4d973a95c2bccdbd3
+      internalID: 735583409
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dcbe370ab064f3047a77238a29356de7
+    spriteID: ba7c9c62bcbe6c948b13fbd048a0f31d
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fishs_0: 1217251542
-      Fishs_1: -1481274015
+      Fishs_0: 735583409
+      Fishs_1: -173812223
+      Fishs_2: 862556256
+      Fishs_3: 1549079149
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

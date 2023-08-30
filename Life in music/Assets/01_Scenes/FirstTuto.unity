@@ -233,7 +233,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2059974220, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
+  m_Sprite: {fileID: -694628372, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -317,7 +317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 569539899, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
+  m_Sprite: {fileID: -1187395832, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7101,7 +7101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f425c48b7afda64f8a5925def9c9c29, type: 2}
   m_sharedMaterial: {fileID: 371067610041202958, guid: 6f425c48b7afda64f8a5925def9c9c29,
@@ -16902,7 +16902,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.58, y: 1.45}
-    newSize: {x: 1.6454545, y: 1.5181818}
+    newSize: {x: 1.58, y: 1.45}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -16961,12 +16961,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2145741216, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
+  m_Sprite: {fileID: -337871879, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6454545, y: 1.5181818}
+  m_Size: {x: 1.58, y: 1.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -22166,7 +22166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 365131506, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
+  m_Sprite: {fileID: -1604074638, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27351,7 +27351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TEXT TEXT TEXT TEXT TEXT TEXT
+  m_Text: 
 --- !u!222 &1726918570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27729,12 +27729,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2107182029, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
+  m_Sprite: {fileID: 211988313, guid: cb00b59b1c24d8341b673c39b68f2392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.34, y: 1.69}
+  m_Size: {x: 3.47, y: 1.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

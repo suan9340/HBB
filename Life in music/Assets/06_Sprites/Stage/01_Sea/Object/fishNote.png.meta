@@ -122,8 +122,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 163
-        height: 194
+        width: 154
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03437aa1015b1354aabc3904e25b127c
-      internalID: -354992148
+      spriteID: 2a124c816af8c964e810d703818c7923
+      internalID: 1637214434
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: fishNote_1
       rect:
         serializedVersion: 2
-        x: 164
+        x: 155
         y: 0
-        width: 166
-        height: 194
+        width: 154
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfac01bba9a89b41842909fd032523f
-      internalID: -381983462
+      spriteID: 313dced4c388521409b6cedd3e8e52ce
+      internalID: -25509840
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 579c4b293056de243aff1c1df1621af7
+    spriteID: 9c98a453a5a095846bf074840d0ca7ec
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fishNote_0: -354992148
-      fishNote_1: -381983462
+      fishNote_0: 1637214434
+      fishNote_1: -25509840
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
