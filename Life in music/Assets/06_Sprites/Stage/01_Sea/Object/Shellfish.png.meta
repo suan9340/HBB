@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22bf981711e7e8b40bb21e5bba63f9c5
-      internalID: 314608952
+      spriteID: 1bc8dfc9d8cf6bd488f093821cd9f301
+      internalID: -978851943
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d2932b49d608f74184210a9a6cd300a
-      internalID: -1082703246
+      spriteID: 5bad84241d1f5c04b8a9b23232bf804a
+      internalID: 447431116
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1bca0a127d9e30f4daf6fb2131c3eed3
+    spriteID: ec77f0f4da2328944a9fc342c9296a6e
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shellfish_0: 314608952
-      Shellfish_1: -1082703246
+      Shellfish_0: -978851943
+      Shellfish_1: 447431116
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
