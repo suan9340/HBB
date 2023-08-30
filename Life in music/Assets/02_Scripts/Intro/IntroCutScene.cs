@@ -300,7 +300,17 @@ public class IntroCutScene : MonoBehaviour
                 emojiIndex = 7;
                 foreach (var _introObj in introObj)
                 {
-                   // _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                    if (_introObj == introObj[1])
+                    {
+                        _introObj.GetComponent<Animator>().SetBool("ReSleep", false);
+                    }
+                    else
+                    {
+                        _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
+                    }
+
+                   
+                    
                 }
                 break;
 
