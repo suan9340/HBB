@@ -37,7 +37,7 @@ public class IntroCutScene : MonoBehaviour
     public List<GameObject> introObj = new List<GameObject>();
     public GameObject IntroObj = null;
 
-    private IntroSelectSO introSelectSO = null;
+
 
     [Space(20)]
     public List<AudioClip> introClip = new List<AudioClip>();
@@ -74,6 +74,7 @@ public class IntroCutScene : MonoBehaviour
 
     [Space(20)]
     [Header("Select")]
+    private IntroSelectSO introSelectSO = null;
     public bool isSoTextStart = false;
     public int selectNum = 0;
     public List<string> introSelectSmallList = new List<string>();
@@ -103,17 +104,17 @@ public class IntroCutScene : MonoBehaviour
                 AddListen(0);
                 break;
 
-            case 9:
+            case 7:
                 RemoveListen(5, 3);
                 AddListen(1);
                 break;
 
-            case 14:
+            case 10:
                 RemoveListen(9, 11);
                 AddListen(2);
                 break;
 
-            case 22:
+            case 16:
                 RemoveListen(16, 14);
                 AddListen(3);
                 break;
@@ -156,6 +157,7 @@ public class IntroCutScene : MonoBehaviour
         selectClickSound.Play();
 
         var _tt = introSelectSO.textList[_idx];
+
         if (_num == 1)
         {
             introSelectSmallList = _tt.first;
@@ -165,16 +167,14 @@ public class IntroCutScene : MonoBehaviour
             introSelectSmallList = _tt.second;
         }
 
-        selectNum = 0;
         CutSceneSelect(false);
-        //introTextnum = newIntroTextnum;
         CheckNum();
     }
 
     private void CutSceneSelect(bool setActive)
     {
         var _a = introTextnum;
-        backText.text = introText[_a];
+        backText.text = introText[_a - 1];
 
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
@@ -318,7 +318,10 @@ public class IntroCutScene : MonoBehaviour
         if (selectNum >= introSelectSmallList.Count)
         {
             isSoTextStart = false;
+
             CheckNum();
+            selectNum = 0;
+            introSelectSmallList = null;
             return;
         }
 
