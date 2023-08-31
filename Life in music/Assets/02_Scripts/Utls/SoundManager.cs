@@ -56,6 +56,14 @@ public class SoundManager : MonoBehaviour
         EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StageEndEvent();
+        }
+    }
+
     private void OnDisable()
     {
         EventManager.StopListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
