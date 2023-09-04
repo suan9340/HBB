@@ -214,7 +214,6 @@ public class RhythmManager : MonoBehaviour
 
     public void StartRhythmGame()
     {
-
         isRhythm = true;
     }
 

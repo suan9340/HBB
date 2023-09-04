@@ -1,11 +1,17 @@
 
+using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BroomStickMove : MonoBehaviour
 {
     private static GameObject mom;
     public static bool isFirst = true;
+    private bool isStop = false;
 
+    private Transform myTrn;
+
+    
     public static void Add()
     {
         if (mom == null)
@@ -17,6 +23,7 @@ public class BroomStickMove : MonoBehaviour
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
+            _inst.transform.localPosition = new Vector3(-10f, -1f, 0f);
         }
     }
 
@@ -27,23 +34,38 @@ public class BroomStickMove : MonoBehaviour
 
     private Animator myAnim;
 
-
     private void Start()
     {
         myAnim = GetComponent<Animator>();
+        myTrn = GetComponent<Transform>();
 
-        AddList(gameObject);
-    }
-
-    private void AddList(GameObject _obj)
-    {
         if (isFirst)
         {
+            Debug.Log("À½¾Ç ½ÃÀÛ");
             RhythmManager.Instance.StartMusic();
             EventManager.TriggerEvent(ConstantManager.RHYTHM_SOUND_START);
             isFirst = false;
         }
+    }
 
+    private void Update()
+    {
+        if (isStop) return;
+
+        if (myTrn.position.x >= 0f)
+        {
+            isStop = true;
+            myTrn.position = new Vector2(0, -1);
+            AddList(gameObject);
+        }
+        else
+        {
+            myTrn.position += new Vector3(5, 0) * 3f * Time.deltaTime;
+        }
+    }
+
+    void AddList(GameObject _obj)
+    {
         EventManager<GameObject>.TriggerEvent(ConstantManager.BROOMSTICK_ADD, _obj);
         myAnim.SetTrigger("BroomStickShow");
     }
@@ -52,7 +74,6 @@ public class BroomStickMove : MonoBehaviour
     {
         myAnim.SetTrigger("BroomStickClick");
         BroomStickDestroy();
-        //  Invoke("BroomStickDestroy",1.2f);
     }
 
     public void BroomStickDestroy()
