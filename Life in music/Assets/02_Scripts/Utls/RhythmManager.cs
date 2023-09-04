@@ -156,7 +156,7 @@ public class RhythmManager : MonoBehaviour
 
     public bool CheckTuto(string _name)
     {
-        SoundManager.Instance.BoggleSound(false);
+        //SoundManager.Instance.BackGroundSound(false);
 
         loadData = RhythmData.LoadData(_name);
         if (loadData == null)
@@ -219,7 +219,7 @@ public class RhythmManager : MonoBehaviour
 
     public void StopRhythmSetting()
     {
-        SoundManager.Instance.BoggleSound(true);
+     //   SoundManager.Instance.BoggleSound(true);
         Destroy(curRhy.gameObject);
 
         isRhythm = false;

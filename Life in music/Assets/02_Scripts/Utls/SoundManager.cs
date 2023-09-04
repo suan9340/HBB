@@ -43,14 +43,15 @@ public class SoundManager : MonoBehaviour
     private bool isFadeIn = false;
     private bool isFadeOut = false;
 
-    [Header("Boggle")]
-    public AudioSource boggleSource = null;
+    [Header("BGS")]
+    public AudioSource backGroundSound = null;
 
     private float maxvol = 1f;
 
     private void Start()
     {
         maxvol = PlayerPrefs.GetFloat(ConstantManager.SOUND_BGM, 1f);
+        BackGroundSound(false);
 
         PlayLoopSource();
         EventManager.StartListening(ConstantManager.RHYTHM_SOUND_START, GoGoSound);
@@ -110,7 +111,9 @@ public class SoundManager : MonoBehaviour
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Playing);
         UIManager.Instance.OnClickStageEnd(true);
         //EventManager.TriggerEvent(ConstantManager.END_CAM_SHAKE);
+        BackGroundSound(true);
         Debug.Log("StageENd");
+
 
         switch (stageNum)
         {
@@ -229,15 +232,15 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void BoggleSound(bool _isTrue)
+    public void BackGroundSound(bool _isTrue)
     {
         if (_isTrue)
         {
-            boggleSource.Play();
+            backGroundSound.Play();
         }
         else
         {
-            boggleSource.Stop();
+            backGroundSound.Stop();
         }
     }
 }
