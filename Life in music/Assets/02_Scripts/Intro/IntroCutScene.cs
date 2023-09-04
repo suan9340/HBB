@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static UnityEngine.PlayerLoop.PreLateUpdate;
 using System;
 
 public class IntroCutScene : MonoBehaviour
@@ -38,7 +37,7 @@ public class IntroCutScene : MonoBehaviour
     public List<GameObject> introObj = new List<GameObject>();
     public GameObject IntroObj = null;
 
-    private IntroSelectSO introSelectSO = null;
+
 
     [Space(20)]
     public List<AudioClip> introClip = new List<AudioClip>();
@@ -72,15 +71,22 @@ public class IntroCutScene : MonoBehaviour
     public AudioSource selectClickSound;
     public AudioSource selectShowSound;
 
-    private bool isSoTextStart = false;
+
+    [Space(20)]
+    [Header("Select")]
+    private IntroSelectSO introSelectSO = null;
+    public bool isSoTextStart = false;
+    public int selectNum = 0;
+    public List<string> introSelectSmallList = new List<string>();
+
+
     private void Awake()
     {
         introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
     }
     private void Start()
     {
-        ShowText(emojiIndex);
-        ShowIntroObj();
+        CheckNum();
         mySource.PlayOneShot(introClip[0]);
         MenuManager.Instance.ChangeMenuState(DefineManager.MenuState.Clicking);
         PlayerPrefs.SetInt("CheckFirst", 1);
@@ -94,25 +100,25 @@ public class IntroCutScene : MonoBehaviour
 
         switch (introTextnum)
         {
-            case 2:
+            case 3:
                 AddListen(0);
                 break;
 
-            case 8:
+            case 7:
                 RemoveListen(5, 3);
                 AddListen(1);
                 break;
 
-            case 13:
+            case 10:
                 RemoveListen(9, 11);
                 AddListen(2);
                 break;
 
-            case 21:
+            case 16:
                 RemoveListen(16, 14);
                 AddListen(3);
                 break;
-        };
+        }
     }
 
     private void FadeInIntroObj(GameObject _obj)
@@ -132,19 +138,12 @@ public class IntroCutScene : MonoBehaviour
         IntroText.Instance.TextingOut(introText[introTextnum], emojiIndex);
     }
 
-    private void ShowIntroObj()
+    private void AddListen(int _idx)
     {
-        FadeInIntroObj(introObj[introObjNum]);
-    }
-
-    private void AddListen(int _num1)
-    {
-        var _tt = introSelectSO.textList[_num1];
-
-        //selecButton1.onClick.AddListener(() => AddButtonClickListener(_tt.first[0]));
-        //selecButton2.onClick.AddListener(() => AddButtonClickListener(_num2));
-        Debug.Log(_tt.first[0]);
         isSoTextStart = true;
+
+        selecButton1.onClick.AddListener(() => AddButtonClickListener(_idx, 1));
+        selecButton2.onClick.AddListener(() => AddButtonClickListener(_idx, 2));
     }
 
     private void RemoveListen(int _num1, int _num2)
@@ -153,129 +152,128 @@ public class IntroCutScene : MonoBehaviour
         selecButton2.onClick.RemoveAllListeners();
     }
 
-    private void AddButtonClickListener(List<string> _myList)
+    private void AddButtonClickListener(int _idx, int _num)
     {
         selectClickSound.Play();
+
+        var _tt = introSelectSO.textList[_idx];
+
+        if (_num == 1)
+        {
+            introSelectSmallList = _tt.first;
+        }
+        else
+        {
+            introSelectSmallList = _tt.second;
+        }
+
         CutSceneSelect(false);
-        //introTextnum = newIntroTextnum;
         CheckNum();
     }
 
     private void CutSceneSelect(bool setActive)
     {
         var _a = introTextnum;
-        backText.text = introText[_a];
+        backText.text = introText[_a - 1];
 
         selectUI.gameObject.SetActive(setActive);
         introTextScript.gameObject.GetComponent<IntroText>().isChoice = !setActive;
-
-
     }
 
     public void CheckNum()
     {
         emojiIndex = 8;
+
         if (isSoTextStart)
         {
-            Debug.Log("qwe");
-        }
-        else
-        {
-
+            CheckIntroNum();
+            return;
         }
 
         switch (introTextnum)
         {
             case 0:
+                FadeInIntroObj(introObj[introObjNum]);
+                break;
+
+
+            case 1:
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 emojiIndex = 4;
                 break;
 
-            case 1:
+
+            case 2:
                 introObj[1].gameObject.SetActive(false);
                 break;
 
-            case 2:
+
+            case 3:
                 SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[0];
                 selecButtonText2.text = selectText[1];
-                break;
-
-            case 3:
                 mySource.Stop();
                 break;
 
+
             case 4:
+                introObj[1].gameObject.SetActive(true);
+                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
                 emojiIndex = 5;
                 break;
 
-            case 5:
-                introObj[1].gameObject.SetActive(true);
-                introObj[1].GetComponent<Animator>().SetBool("ReSleep", true);
-                break;
 
-            case 6:
+            case 5:
                 emojiIndex = 3;
                 introObj[1].GetComponent<Animator>().SetBool("ReSleep", false);
                 FadeInIntroObj(introObj[2]);
                 break;
 
-            case 8:
+
+            case 7:
                 SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[2];
                 selecButtonText2.text = selectText[3];
                 break;
-            case 11:
-                emojiIndex = 2;
-                break;
-            case 13:
+
+
+            case 10:
                 SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[4];
                 selecButtonText2.text = selectText[5];
                 break;
 
-            case 15:
 
+            case 11:
                 mySource.PlayOneShot(introClip[1]);
                 break;
 
-            case 16:
+
+            case 12:
                 FadeInIntroObj(introObj[3]);
                 emojiIndex = 6;
                 break;
 
 
-            case 18:
+            case 14:
                 FadeInIntroObj(introObj[4]);
                 mySource.PlayOneShot(introClip[1]);
                 emojiIndex = 3;
                 break;
 
-            case 19:
-                emojiIndex = 0;
-                break;
 
-            case 20:
-                FadeInIntroObj(introObj[5]);
-
-                break;
-
-            case 21:
+            case 16:
                 SelectTextBox();
                 CutSceneSelect(true);
                 selecButtonText1.text = selectText[6];
                 selecButtonText2.text = selectText[7];
                 break;
 
-            case 24:
-                FadeInIntroObj(introObj[6]);
-                introObj[6].SetActive(true);
-                break;
 
-            case 25:
+            case 18:
                 emojiIndex = 7;
                 foreach (var _introObj in introObj)
                 {
@@ -288,17 +286,19 @@ public class IntroCutScene : MonoBehaviour
                         _introObj.GetComponent<Animator>().SetTrigger("isIntroFadeOut");
                     }
 
-
-
                 }
                 break;
 
-            case 27:
+
+            case 20:
                 emojiIndex = 1;
                 break;
+
+
             default:
                 break;
         }
+
 
         if (introTextnum >= introText.Count - 1)
         {
@@ -307,7 +307,25 @@ public class IntroCutScene : MonoBehaviour
             return;
         }
 
-        introTextnum++;
         ShowText(emojiIndex);
+        introTextnum++;
+    }
+
+    public void CheckIntroNum()
+    {
+        emojiIndex = 8;
+
+        if (selectNum >= introSelectSmallList.Count)
+        {
+            isSoTextStart = false;
+
+            CheckNum();
+            selectNum = 0;
+            introSelectSmallList = null;
+            return;
+        }
+
+        IntroText.Instance.TextingOut(introSelectSmallList[selectNum], emojiIndex);
+        selectNum++;
     }
 }

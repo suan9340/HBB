@@ -12,6 +12,8 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 mousePos = Vector3.zero;
     private Camera maincam;
 
+    [Header("Switch")]
+    public GameObject switchobj = null;
     private void Start()
     {
         maincam = Camera.main;
@@ -19,7 +21,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.gameState != DefineManager.GameState.CantClick)
         {
             if (PuzzleManager.Instance.GetPuzzleState() == DefineManager.PuzzleState.CantClick)
             {
@@ -34,7 +36,13 @@ public class DragAndDrop : MonoBehaviour
 
             if (hit.collider == null)
                 return;
-                
+
+
+            if(hit.transform.CompareTag("Switch"))
+            {
+                switchobj.SetActive(true);
+            }    
+
             if (hit.transform.CompareTag("Puzzle"))
             {
                 if (!hit.transform.GetComponent<PuzzlePieces>().inRightPos)
@@ -50,6 +58,8 @@ public class DragAndDrop : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            switchobj.SetActive(false);
+
             if (selectObj != null)
             {
                 selectObj.GetComponent<PuzzlePieces>().OnUpPuzzle();

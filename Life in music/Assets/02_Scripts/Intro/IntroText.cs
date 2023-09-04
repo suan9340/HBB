@@ -54,6 +54,11 @@ public class IntroText : MonoBehaviour
     {
         if ((Input.GetMouseButtonDown(0) || (Input.GetKeyDown(KeyCode.Space))) && isStroyStarting && isChoice)
         {
+            if (GameManager.Instance.gameState == DefineManager.GameState.CantClick)
+            {
+                return;
+            }
+
             if (isTyping)
             {
                 currentSpeed = fastSpeed;
@@ -103,7 +108,7 @@ public class IntroText : MonoBehaviour
         typingAudio.Stop();
         isTyping = false;
 
-        if(emojiIndex != 8)
+        if (emojiIndex != 8)
         {
             tutoTxt.SetText(_input + $" <sprite={emojiIndex}>");
         }
