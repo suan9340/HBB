@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6980701579456418076}
   - component: {fileID: 5816333442120450087}
   - component: {fileID: 1985407406285448327}
-  - component: {fileID: -4527479693572463645}
-  - component: {fileID: 216595924}
+  - component: {fileID: 1466716706130559932}
   m_Layer: 11
   m_Name: UmbrellaStandNote
   m_TagString: Untagged
@@ -100,20 +99,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.87}
+    oldSize: {x: 1.59, y: 2.16}
     newSize: {x: 1.5, y: 1.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.87}
+  m_Size: {x: 1.5, y: 1.8111597}
   m_EdgeRadius: 0
---- !u!114 &-4527479693572463645
+--- !u!114 &1466716706130559932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,28 +125,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5816333442120450087}
-  UmbrellaStand01sprite: {fileID: 1417071229, guid: 05479f04bbf014049880662f7585941a,
-    type: 3}
-  UmbrellaStand02Sprite: {fileID: 726857787, guid: 05479f04bbf014049880662f7585941a,
-    type: 3}
---- !u!95 &216595924
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266886941110364467}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3a5021f41a902c4a8c6c1e7f4a09be1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

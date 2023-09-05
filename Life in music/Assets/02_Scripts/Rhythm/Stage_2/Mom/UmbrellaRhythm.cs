@@ -10,7 +10,6 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     private void Awake()
     {
         NoteGen.Instance.IGenUmbrella();
-
     }
 
     private void UmbellaStandInst()
@@ -18,7 +17,6 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         var _standObj = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote");
         mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
         Instantiate(_standObj, mom.transform, false);
-        umStandMove = GameObject.Find("UmbrellaStandNote(Clone)").GetComponent<UmbrellaStandMove>();
     }
 
     protected override void Start()
@@ -91,9 +89,8 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         var _obj = noteObjList[_umonjSelect].gameObject;
 
 
-        _obj.GetComponent<UmbrellaMove>().ReMoveUmbrella();
-        umStandMove.ResetUm();
         noteObjList.Remove(_obj);
+        Destroy ( _obj );
     }
 
     public void AddNoteList(GameObject _obj)
