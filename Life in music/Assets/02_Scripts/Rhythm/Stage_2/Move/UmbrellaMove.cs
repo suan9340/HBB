@@ -36,24 +36,20 @@ public class UmbrellaMove : MonoBehaviour
 
     public float moveSpeed = 1f;
     private bool isStop = false;
-
-    private Animator noteAnimation = null;
-    private Rigidbody2D myrigid;
-    private Transform mytrn;
-
     public static bool isFirst = true;
     private static GameObject mom;
 
 
     private void Start()
     {
-        Cashing();
         Vector3 firstPos = Vector3.zero;
         Vector3 secondPos = firstPos + new Vector3(3, 1f, 0);
         Vector3 thirdPos = firstPos + new Vector3(6, -1f, 0);
 
         transform.DOPath(new[] { secondPos, firstPos + Vector3.up, secondPos + Vector3.left * 2,
             thirdPos, secondPos + Vector3.right * 2, thirdPos + Vector3.up }, 1f, PathType.CubicBezier).SetEase(Ease.Unset);
+
+      
     }
 
     private void Update()
@@ -62,11 +58,10 @@ public class UmbrellaMove : MonoBehaviour
         {
             AddList(gameObject);
         }
-        
-    }
-    private void MoveUmbrella()
-    {
-        if (isStop) return;
+        if (gameObject.transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void AddList(GameObject _obj)
@@ -79,6 +74,7 @@ public class UmbrellaMove : MonoBehaviour
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.UMBRELLA_ADD, _obj);
+       
     }
 
     private void FixedUpdate()
@@ -89,10 +85,4 @@ public class UmbrellaMove : MonoBehaviour
         }
     }
 
-    private void Cashing()
-    {
-        noteAnimation = GetComponent<Animator>();
-        myrigid = GetComponent<Rigidbody2D>();
-        mytrn = GetComponent<Transform>();
-    }
 }
