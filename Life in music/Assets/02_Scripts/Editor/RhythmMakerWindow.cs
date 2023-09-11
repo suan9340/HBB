@@ -48,12 +48,12 @@ public class RhythmMaker : EditorWindow
 
     private readonly string[] _bpmList =
     {
-        "60","90", "100","110","120","140"
+        "60","90", "100","110","120","140","150"
     };
 
     private readonly int[] _bpmIndexList =
     {
-        0, 1, 2, 3, 4, 5
+        0, 1, 2, 3, 4, 5, 6
     };
 
 

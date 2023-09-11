@@ -45,6 +45,12 @@ public static class ConstantManager
     public static string SO_STAGE02_UMBRELLA = "Stage 02_Umbrella";
     public static string SO_STAGE02_BROOMSTICK = "Stage 02_BroomStick";
 
+    public static string SO_STAGE03_GUITER = "Stage 03_Guiter";
+    public static string SO_STAGE03_PIANO = "Stage 03_Piano";
+    public static string SO_STAGE03_DRUM = "Stage 03_Drum";
+    public static string SO_STAGE03_BASS = "Stage 03_Bass";
+    public static string SO_STAGE03_SYNT = "Stage 03_Synt";
+
     // RhythmManager
     public static string BEAT = "Beat";
 
