@@ -117,4 +117,28 @@ public class NoteGen : MonoBehaviour
         igen = new BroomStickGen();
     }
 
+    public void IGenGuiter()
+    {
+
+    }
+
+    public void IGenPiano()
+    {
+
+    }
+
+    public void IGenDrum()
+    {
+
+    }
+
+    public void IGenBass()
+    {
+
+    }
+
+    public void IGenSynt()
+    {
+
+    }
 }

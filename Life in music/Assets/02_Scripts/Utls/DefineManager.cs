@@ -33,7 +33,11 @@ public static class DefineManager
 
     public enum Stage_03_Band
     {
-
+        Guiter,
+        Piano,
+        Drum,
+        Bass,
+        Synt,
     }
 
     public enum GameState

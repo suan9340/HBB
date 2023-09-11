@@ -19,3 +19,27 @@ MonoBehaviour:
     noteObj: {fileID: 0}
     noteEndObj: {fileID: 0}
     chat: []
+  - stage3: 1
+    stageRhythm: {fileID: 0}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage3: 2
+    stageRhythm: {fileID: 0}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage3: 3
+    stageRhythm: {fileID: 0}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []
+  - stage3: 4
+    stageRhythm: {fileID: 0}
+    clip: {fileID: 0}
+    noteObj: {fileID: 0}
+    noteEndObj: {fileID: 0}
+    chat: []

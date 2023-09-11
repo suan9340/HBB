@@ -129,6 +129,10 @@ public class SoundManager : MonoBehaviour
                 break;
 
 
+            case 3:
+                PlayerPrefs.SetInt(ConstantManager.STAGE_END_Y_CHECKINGPUZLLE, 3);
+                break;
+
             default:
                 Debug.Log("????Que?");
                 break;
