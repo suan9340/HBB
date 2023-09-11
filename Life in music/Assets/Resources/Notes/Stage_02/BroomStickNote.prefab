@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16adfbed56c9b1941b24e9a9eb5b9218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnim: {fileID: 8594001487571339979}
 --- !u!95 &8594001487571339979
 Animator:
   serializedVersion: 5
@@ -108,7 +107,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266886941110364467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9268bb31369fb1b48961f83ce9172f2d, type: 2}
   m_CullingMode: 0

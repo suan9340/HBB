@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,18 +8,21 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
     private static GameObject mom;
     public UmbrellaStandMove umStandMove;
 
+
+    private UmbrellaStandMove _standObj2;
+
     private void Awake()
     {
         NoteGen.Instance.IGenUmbrella();
-
     }
 
     private void UmbellaStandInst()
     {
         var _standObj = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote");
+        _standObj2 = Resources.Load<UmbrellaStandMove>("Notes/Stage_02/UmbrellaStandNote2");
         mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
         Instantiate(_standObj, mom.transform, false);
-        umStandMove = GameObject.Find("UmbrellaStandNote(Clone)").GetComponent<UmbrellaStandMove>();
+        Instantiate(_standObj2, mom.transform, false);
     }
 
     protected override void Start()
@@ -91,9 +95,8 @@ public class UmbrellaRhythm : TutoMOM, IRhythmMom
         var _obj = noteObjList[_umonjSelect].gameObject;
 
 
-        _obj.GetComponent<UmbrellaMove>().ReMoveUmbrella();
-        umStandMove.ResetUm();
         noteObjList.Remove(_obj);
+      //  Destroy(_obj);
     }
 
     public void AddNoteList(GameObject _obj)

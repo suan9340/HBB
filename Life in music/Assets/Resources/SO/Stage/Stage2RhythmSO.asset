@@ -22,7 +22,7 @@ MonoBehaviour:
     noteEndObj: {fileID: 1957958612552360812, guid: 645fd73a1fc4a144cb30461ae44700bc,
       type: 3}
     chat:
-    - "\uBCA8 \uC18C\uB9AC \uB418\uAC8C \uC798 \uC5B4\uC6B8\uB9AC\uB124,"
+    - "\uBCA8 \uC18C\uB9AC.. \uB418\uAC8C \uACBD\uCF8C\uD558\uB2E4.."
   - stage2: 1
     stageRhythm: {fileID: 5350606685092706600, guid: c5e830871c96f5849811cfd982602d18,
       type: 3}

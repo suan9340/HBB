@@ -24200,7 +24200,7 @@ MonoBehaviour:
   num: 1
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageNum: 1
-  boggleSource: {fileID: 1616098997}
+  backGroundSound: {fileID: 1616098997}
 --- !u!114 &1535050901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29670,7 +29670,7 @@ GameObject:
   - component: {fileID: 1616098998}
   - component: {fileID: 1616098997}
   m_Layer: 0
-  m_Name: AudioSource (Boggle)
+  m_Name: AudioSource (Bbogle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29689,8 +29689,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 4c5d3c40a39d1ce4984fcefeb14e02f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
-  m_Pitch: 1
+  m_Volume: 0.4
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0

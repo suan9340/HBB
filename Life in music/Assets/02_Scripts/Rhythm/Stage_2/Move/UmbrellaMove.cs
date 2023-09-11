@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class UmbrellaMove : MonoBehaviour
@@ -9,6 +10,7 @@ public class UmbrellaMove : MonoBehaviour
 
     public static void Add()
     {
+
         if (mom == null)
         {
             mom = GameObject.Find("Rhythm (Umbrella)(Clone)");
@@ -18,8 +20,7 @@ public class UmbrellaMove : MonoBehaviour
         if (_obj != null)
         {
             var _inst = Instantiate(_obj, mom.transform, false);
-            _inst.transform.localPosition = new Vector3(11f, _pos, 0f);
-            Debug.Log("qwe");
+            _inst.transform.localPosition = new Vector3(0f, _pos, 0f);
         }
         else
         {
@@ -35,51 +36,32 @@ public class UmbrellaMove : MonoBehaviour
 
     public float moveSpeed = 1f;
     private bool isStop = false;
-
-    private Animator noteAnimation = null;
-    private Rigidbody2D myrigid;
-    private Transform mytrn;
-
     public static bool isFirst = true;
     private static GameObject mom;
 
-    private void OnEnable()
-    {
-        //target = targetpos;
-    }
-
-    //private void Awake()
-    //{
-    //    transform.localPosition = new Vector3(11f, 1f, 0f);
-    //}
 
     private void Start()
     {
-        Cashing();
-        AddForceObject();
+        Vector3 firstPos = Vector3.zero;
+        Vector3 secondPos = firstPos + new Vector3(3, 1f, 0);
+        Vector3 thirdPos = firstPos + new Vector3(6, -1f, 0);
+
+        transform.DOPath(new[] { secondPos, firstPos + Vector3.up, secondPos + Vector3.left * 2,
+            thirdPos, secondPos + Vector3.right * 2, thirdPos + Vector3.up }, 1f, PathType.CubicBezier).SetEase(Ease.Unset);
+
+      
     }
 
     private void Update()
     {
-        MoveUmbrella();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        AddList(gameObject);
-        gameObject.SetActive(false);
-    }
-
-    public void ReMoveUmbrella()
-    {
-        gameObject.transform.localPosition = new Vector3(-2.5f, 0f, 0f);
-        gameObject.SetActive(true);
-        ReAddForceObject();
-    }
-
-    private void MoveUmbrella()
-    {
-        if (isStop) return;
+        if(gameObject.transform.position.x > 5)
+        {
+            AddList(gameObject);
+        }
+        if (gameObject.transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void AddList(GameObject _obj)
@@ -92,9 +74,8 @@ public class UmbrellaMove : MonoBehaviour
             isFirst = false;
         }
         EventManager<GameObject>.TriggerEvent(ConstantManager.UMBRELLA_ADD, _obj);
+       
     }
-
-
 
     private void FixedUpdate()
     {
@@ -104,20 +85,4 @@ public class UmbrellaMove : MonoBehaviour
         }
     }
 
-    private void Cashing()
-    {
-        noteAnimation = GetComponent<Animator>();
-        myrigid = GetComponent<Rigidbody2D>();
-        mytrn = GetComponent<Transform>();
-    }
-
-    private void AddForceObject()
-    {
-        myrigid.AddForce(-mytrn.position * 60f);
-    }
-
-    private void ReAddForceObject()
-    {
-        myrigid.AddForce(new Vector3(mytrn.position.x * 3, mytrn.position.y * -1f, mytrn.position.z) * 60f);
-    }
 }

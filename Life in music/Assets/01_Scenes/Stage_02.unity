@@ -12386,7 +12386,7 @@ GameObject:
   - component: {fileID: 427255924}
   - component: {fileID: 427255923}
   m_Layer: 0
-  m_Name: AudioSource (Boggle)
+  m_Name: AudioSource (Siggle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12405,8 +12405,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fa0b5a78ad2f6434791d834f810c7377, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 0.3
+  m_Volume: 0.5
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -26655,7 +26655,7 @@ MonoBehaviour:
   num: 1
   stageClearCheckSo: {fileID: 11400000, guid: aacdc8414e570d948ad7bdd38ca564f1, type: 2}
   stageNum: 2
-  boggleSource: {fileID: 427255923}
+  backGroundSound: {fileID: 427255923}
 --- !u!114 &1535050901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47025,7 +47025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 53.89, y: -83.775}
+  m_AnchoredPosition: {x: 53.89, y: -83.774994}
   m_SizeDelta: {x: 61.149, y: 83.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8978774794717504599

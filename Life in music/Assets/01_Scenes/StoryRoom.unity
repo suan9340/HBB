@@ -2842,7 +2842,7 @@ MonoBehaviour:
   IntroObj: {fileID: 960318958}
   introClip:
   - {fileID: 8300000, guid: bdef934aaf73e7742b18257e3ff50c06, type: 3}
-  - {fileID: 8300000, guid: a2b624c3f1b51dc4b8ea9058c0cf149a, type: 3}
+  - {fileID: 8300000, guid: b2daea1c24fc30a45980ac78923e8018, type: 3}
   mySource: {fileID: 1007207049}
   introTextnum: 0
   introObjNum: 0
