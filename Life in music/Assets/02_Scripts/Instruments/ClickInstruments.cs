@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -14,7 +15,6 @@ public class ClickInstruments : MonoBehaviour
 
     [Space(20)]
     public int num;
-    public int plusNum = 0;
 
     [Space(20)]
     public ObjectClear objectClear = null;
@@ -108,8 +108,16 @@ public class ClickInstruments : MonoBehaviour
 
 
             case DefineManager.StageNames.Band_03:
+                Stage03_SO _so3 = Resources.Load<Stage03_SO>("SO/Stage/Stage3RhythmSO");
+                _loadObj = _so3.infos[num].stageRhythm;
 
+                InstantiateRhythm(_instante, _loadObj);
+                ChatMaanger.Instance.SetChatting(_so3.infos[num].chat);
 
+                GameManager.Instance.SetClip(_so3.infos[num].clip);
+
+                NoteManager.Instance.SettingNoteObj(_so3.infos[num].noteObj);
+                NoteManager.Instance.SettingCenterImage(_so3.infos[num].noteEndObj);
                 break;
 
 

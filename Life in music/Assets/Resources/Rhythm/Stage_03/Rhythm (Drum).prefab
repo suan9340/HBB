@@ -108,10 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729cf8bdbda35bf4c82892ed255537cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 9397ba5b63a6c554fa84b11d33cabf10, type: 3}
   loadnum: 0
   noteObjList: []
-  tutoTxt: []
+  tutoTxt:
+  - "\uC774\uAC74 \uB4DC\uB7FC\uC774\uB2E4"
+  - "\uB9DE\uB2E4"
   tutoObj: []
   rhythmnum: 
   timingnum: 0
