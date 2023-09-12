@@ -30,6 +30,14 @@ public static class ConstantManager
     public static string UMBRELLA_ADD = "UmbrellaListAdd";
     public static string BROOMSTICK_ADD = "BroomStickListAdd";
 
+
+    // Stage_02
+    public static string BASS_ADD = "BassListAdd";
+    public static string PIANO_ADD = "PianoListAdd";
+    public static string GUITER_ADD = "GuiterListAdd";
+    public static string DRUM_ADD = "DrumListAdd";
+
+
     public static string LOCKER_RH = "Locker";
 
     // RhythmSOName
