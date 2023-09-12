@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class DrumRhythm : TutoMOM, IRhythmMom
 {
+    protected override void Start()
+    {
+        base.Start();
+
+        EventManager<GameObject>.StartListening(ConstantManager.DRUM_ADD, AddNoteList);
+        CheckingTuto();
+    }
+
+
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);

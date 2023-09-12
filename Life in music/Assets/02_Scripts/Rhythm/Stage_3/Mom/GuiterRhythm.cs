@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GuiterRhythm : TutoMOM, IRhythmMom
 {
+    protected override void Start()
+    {
+        base.Start();
+
+        EventManager<GameObject>.StartListening(ConstantManager.GUITER_ADD, AddNoteList);
+        CheckingTuto();
+    }
+
+
     public void AddNoteList(GameObject _obj)
     {
         noteObjList.Add(_obj);

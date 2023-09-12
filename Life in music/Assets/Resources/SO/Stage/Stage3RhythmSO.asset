@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e5e6acf216c1743bdd47886a0e473b, type: 3}
+  m_Name: Stage3RhythmSO
+  m_EditorClassIdentifier: 
+  infos:
+  - stage3: 0
+    stageRhythm: {fileID: 6900794854004529759, guid: 9b96bff4522378f4497a5956892ccbed,
+      type: 3}
+    clip: {fileID: 8300000, guid: c3607922821782847845f126638c2d4b, type: 3}
+    noteObj: {fileID: 5636224204309231092, guid: 49b88a996e65bf24f8ba9e2892973555,
+      type: 3}
+    noteEndObj: {fileID: 5636224204309231092, guid: 9d0b9e686442b0d4f85195153adfa133,
+      type: 3}
+    chat: []
+  - stage3: 1
+    stageRhythm: {fileID: 6900794854004529759, guid: 691f1582c4b862749aa51863df4ca2d8,
+      type: 3}
+    clip: {fileID: 8300000, guid: c3607922821782847845f126638c2d4b, type: 3}
+    noteObj: {fileID: 770666860958534204, guid: eb69bfa2319e65247a7a25cea647922e,
+      type: 3}
+    noteEndObj: {fileID: 770666860958534204, guid: 9fe446d9060da0848a6a8879d82fc82e,
+      type: 3}
+    chat: []
+  - stage3: 2
+    stageRhythm: {fileID: 6900794854004529759, guid: b1817147ee918514eabccc58e130f244,
+      type: 3}
+    clip: {fileID: 8300000, guid: c3607922821782847845f126638c2d4b, type: 3}
+    noteObj: {fileID: 1957958612552360812, guid: dd2009047bc6f324a8c8a04c5e0a81c0,
+      type: 3}
+    noteEndObj: {fileID: 1957958612552360812, guid: 34b5321e2bd030649a620289a36cd463,
+      type: 3}
+    chat: []
+  - stage3: 3
+    stageRhythm: {fileID: 6900794854004529759, guid: beb470bc7e2ab4e4cb0e561ce39745d2,
+      type: 3}
+    clip: {fileID: 8300000, guid: c3607922821782847845f126638c2d4b, type: 3}
+    noteObj: {fileID: 5839994512776588863, guid: c01151e169ad7c54d89a089e25cc1a66,
+      type: 3}
+    noteEndObj: {fileID: 5839994512776588863, guid: bada881691dc407438ba6dd133e893bb,
+      type: 3}
+    chat: []
