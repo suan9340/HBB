@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c07d4a63c9d43794d843948630b62250
+guid: ad6005c3e411e1149a1f44c2ff7a9048
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,18 +115,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Stage3_Object_Black_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 196
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0d98dad60f86f44b92522c5737d75d
+      internalID: -1057803161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage3_Object_Black_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 153
+        width: 171
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a411eb92cb08541a0fcdf203bd9c95
+      internalID: -465186582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage3_Object_Black_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 8
+        width: 195
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447dcde8bf0faa94eb279f27d947e7e3
+      internalID: 1706253380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage3_Object_Black_3
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 8
+        width: 442
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16992ba4e0b62740bd819a87dfbe31d
+      internalID: 1359712212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: e298442702edb5c4f8efe0c3d20579b4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stage3_Object_Black_0: -1057803161
+      Stage3_Object_Black_1: -465186582
+      Stage3_Object_Black_2: 1706253380
+      Stage3_Object_Black_3: 1359712212
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
