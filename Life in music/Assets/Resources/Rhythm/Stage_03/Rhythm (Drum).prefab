@@ -114,6 +114,7 @@ MonoBehaviour:
   tutoTxt:
   - "\uC774\uAC74 \uB4DC\uB7FC\uC774\uB2E4"
   - "\uB9DE\uB2E4"
+  - "\uB9DE\uB2E4"
   tutoObj: []
   rhythmnum: 
   timingnum: 0
