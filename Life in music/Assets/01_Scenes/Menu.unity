@@ -3535,7 +3535,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 215039499}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: OnClickOut
+        m_MethodName: OnClickReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4358,7 +4358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB098\uAC00\uAE30"
+  m_Text: "\uCD08\uAE30\uD654\uD558\uAE30"
 --- !u!222 &1316308225
 CanvasRenderer:
   m_ObjectHideFlags: 0

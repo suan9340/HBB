@@ -34,4 +34,9 @@ public class StartMenu : MonoBehaviour
         mySource.PlayOneShot(btnClickClip);
         Application.Quit();
     }
+
+    public void OnClickReset()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
