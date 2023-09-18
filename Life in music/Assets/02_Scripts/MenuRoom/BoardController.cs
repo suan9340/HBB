@@ -84,5 +84,6 @@ public class BoardController : MonoBehaviour
 
         picCol[0].enabled = _bolen;
         picCol[1].enabled = _bolen;
+        picCol[2].enabled = _bolen;
     }
 }

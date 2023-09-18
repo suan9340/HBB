@@ -58,20 +58,26 @@ public class PictureController : MonoBehaviour
         {
             case 1:
 
-                if (stage01Check == 0)
-                {
-                    sceneName = "FirstTuto";
-                }
-                else if (stage01Check == 1)
-                {
-                    sceneName = "Stage_01";
-                }
+                //if (stage01Check == 0)
+                //{
+                //    sceneName = "FirstTuto";
+                //}
+                //else if (stage01Check == 1)
+                //{
+                //    sceneName = "Stage_01";
+                //}
 
+                sceneName = "FirstTuto";
                 break;
 
             case 2:
                 sceneName = "Stage_02";
                 break;
+
+            case 3:
+
+                return;
+
         }
 
 
