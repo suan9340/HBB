@@ -16,15 +16,18 @@ public class StartMenu : MonoBehaviour
 
     public void OnClickStart()
     {
+        PlayerPrefs.DeleteAll();
+
         mySource.PlayOneShot(btnClickClip);
-        if (checkFirst == 0)        // First Game
-        {
-            SceneManager.LoadScene("StoryRoom");
-        }
-        else if (checkFirst == 1)
-        {
-            SceneManager.LoadScene("Room");
-        }
+        SceneManager.LoadScene("StoryRoom");
+
+        //if (checkFirst == 0)        // First Game
+        //{
+        //}
+        //else if (checkFirst == 1)
+        //{
+        //    SceneManager.LoadScene("Room");
+        //}
 
         Debug.Log(checkFirst);
     }
