@@ -9,16 +9,20 @@ public class StartMenu : MonoBehaviour
     public AudioSource mySource = null;
     public AudioClip btnClickClip = null;
 
+    private void OnEnable()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     private void Start()
     {
-        checkFirst = PlayerPrefs.GetInt("CheckFirst");
+        //checkFirst = PlayerPrefs.GetInt("CheckFirst");
     }
 
     public void OnClickStart()
     {
         //PlayerPrefs.DeleteAll();
-        PlayerPrefs.DeleteKey(ConstantManager.STAGE_02_CHECK);
-        PlayerPrefs.DeleteKey(ConstantManager.STAGE_03_CHECK);
+        //PlayerPrefs.DeleteKey(ConstantManager.STAGE_02_CHECK);
+        //PlayerPrefs.DeleteKey(ConstantManager.STAGE_03_CHECK);
 
         mySource.PlayOneShot(btnClickClip);
         SceneManager.LoadScene("StoryRoom");

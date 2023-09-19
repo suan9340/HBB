@@ -14014,7 +14014,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 428795177}
+      - m_Target: {fileID: 1011917747}
         m_TargetAssemblyTypeName: PictureController, Assembly-CSharp
         m_MethodName: OnclickOutStageUI
         m_Mode: 1

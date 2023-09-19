@@ -123,11 +123,11 @@ public class PictureController : MonoBehaviour
             lockObj.SetActive(true);
         }
 
-        if (_a == 1 || _b == 1)
-        {
-            isStage = true;
-            lockObj.SetActive(false);
-        }
+        //if (_a == 1 || _b == 1)
+        //{
+        //    isStage = true;
+        //    lockObj.SetActive(false);
+        //}
     }
 
 
