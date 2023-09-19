@@ -16,7 +16,9 @@ public class StartMenu : MonoBehaviour
 
     public void OnClickStart()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey(ConstantManager.STAGE_02_CHECK);
+        PlayerPrefs.DeleteKey(ConstantManager.STAGE_03_CHECK);
 
         mySource.PlayOneShot(btnClickClip);
         SceneManager.LoadScene("StoryRoom");
@@ -29,7 +31,7 @@ public class StartMenu : MonoBehaviour
         //    SceneManager.LoadScene("Room");
         //}
 
-        Debug.Log(checkFirst);
+        //Debug.Log(checkFirst);
     }
 
     public void OnClickOut()

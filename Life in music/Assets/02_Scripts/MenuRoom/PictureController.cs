@@ -109,7 +109,7 @@ public class PictureController : MonoBehaviour
         }
 
         var _a = PlayerPrefs.GetInt(ConstantManager.STAGE_02_CHECK);
-
+        var _b = PlayerPrefs.GetInt(ConstantManager.STAGE_03_CHECK);
 
 
         if (stageClearCheckSo.stageCheckList[sceneNum - 1].stage == true)
@@ -121,12 +121,10 @@ public class PictureController : MonoBehaviour
         {
             isStage = false;
             lockObj.SetActive(true);
-
         }
 
-        if (_a == 1)
+        if (_a == 1 || _b == 1)
         {
-            // Debug.Log(_a);
             isStage = true;
             lockObj.SetActive(false);
         }

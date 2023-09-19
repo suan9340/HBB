@@ -119,12 +119,14 @@ public class SoundManager : MonoBehaviour
         {
             case 1:
                 stageClearCheckSo.stageCheckList[1].stage = true;
-                PlayerPrefs.SetInt(ConstantManager.STAGE_02_CHECK, 1);
+                PlayerPrefs.SetInt(ConstantManager.STAGE_02_CHECK, 1);  
                 PlayerPrefs.SetInt(ConstantManager.STAGE_END_Y_CHECKINGPUZLLE, 1);
                 break;
 
 
             case 2:
+                stageClearCheckSo.stageCheckList[2].stage = true;
+                PlayerPrefs.SetInt(ConstantManager.STAGE_03_CHECK, 1);
                 PlayerPrefs.SetInt(ConstantManager.STAGE_END_Y_CHECKINGPUZLLE, 2);
                 break;
 

@@ -85,6 +85,7 @@ public static class ConstantManager
 
     // PlayerPrefabs
     public static string STAGE_02_CHECK = "Stage02CanCheck";
+    public static string STAGE_03_CHECK = "Stage03CanCheck";
 
     // PuzzlzeStart
     public static string STAGE_END_Y_CHECKINGPUZLLE = "StageYCheckPuzzle";
