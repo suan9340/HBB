@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3246945fc7385674cb3c14be9c200062
-      internalID: -992974930
+      spriteID: cb773a2261457d34ba900a7b8ed56d82
+      internalID: 1239387469
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
         x: 200
         y: 16
         width: 143
-        height: 145
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aba8abc45ce42f46bdadae379726131
-      internalID: -948807965
+      spriteID: 67ecf9a62b941144eb5865ed39e4b271
+      internalID: -616906647
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 480a595c4cf8d734e904870fb65639ba
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Starfish_0: -992974930
-      Starfish_1: -948807965
+      Starfish_0: 1239387469
+      Starfish_1: -616906647
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

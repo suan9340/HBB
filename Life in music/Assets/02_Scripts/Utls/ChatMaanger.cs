@@ -77,6 +77,7 @@ public class ChatMaanger : MonoBehaviour
                     isStoryStart = false;
                     GameManager.Instance.SettingGameState(DefineManager.GameState.Playing);
                     SoundManager.Instance.CheckStageEndMusic();
+                    Debug.Log("¹°°ÇÀ» ´­·¶¾û");
 
                     return;
                 }
