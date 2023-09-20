@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 17077
+  controlID: 3288
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17078
+  controlID: 3289
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17184
+  controlID: 3440
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17138
+  controlID: 3329
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17079
+  controlID: 3290
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -733,9 +733,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1902238, y: -0.7978938, z: 18.58771}
+    m_Target: {x: -1.406675, y: -0.872593, z: 18.117838}
     speed: 2
-    m_Value: {x: -1.1902238, y: -0.7978938, z: 18.58771}
+    m_Value: {x: -1.406675, y: -0.872593, z: 18.117838}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -786,9 +786,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.0780635
+    m_Target: 3.8945506
     speed: 2
-    m_Value: 4.0780635
+    m_Value: 3.8945506
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1040,6 +1040,8 @@ MonoBehaviour:
     - {fileID: 5705129328047343957, guid: e3373a6941c1108478b8b9af4990598c, type: 2}
     - {fileID: 1246777179905797628, guid: 325622cbaf4136d46b0f46944397c170, type: 2}
     - {fileID: 8266366747502459763, guid: a1ba8968da29bc14c897148ef8069d62, type: 2}
+    - {fileID: -3732061359664125836, guid: a4abbeed1f90f3b4389a04bcfb9d3559, type: 2}
+    - {fileID: 7420798568192362733, guid: bebe478f64b8fb9419a26285bdceaba1, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.67843133
       e01: 0
@@ -1313,11 +1315,43 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 8fb010bd808e649459ced00578917b37,
+  m_AnimatorController: {fileID: 9100000, guid: bebe478f64b8fb9419a26285bdceaba1,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 5520537387342204030, guid: 8fb010bd808e649459ced00578917b37,
+  - m_Target: {fileID: 7420798568192362733, guid: bebe478f64b8fb9419a26285bdceaba1,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -1363,7 +1397,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 170656
+  m_LastSelectedObjectID: 35754
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1397,9 +1431,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 76a50200
+      m_SelectedIDs: 947c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: d46bfdff887dfdff687efdff2681fdff3081fdffa081fdffb481fdffc681fdffe081fdffe881fdffe88dfdff3e94fdffbeadfdffceaefdffbcb5fdffa0b6fdff5ab9fdff60b9fdffa0b9fdffaab9fdffb8b9fdffcab9fdffd0b9fdfffed8fdff361afeff324cfeff8a52feff6a53feff2856feff3256feffa256feffb656feffc856feffd056feffda56feff7a7efeff8a7ffeff6c93feff7ea5feff46a6fefffca8feff00a9feff3ea9feff48a9feff56a9feff68a9feff6ea9feff84b0feff861fffff5248ffffd257ffff9a90ffff02a4ffffd4b5ffffe2d0ffffc2d1ffff80d4ffff8ad4fffffad4ffff0ed5ffff20d5ffff3ad5ffff42d5ffff52efffffc0f3ffff44f5ffff36f6ffff02fbfffff2c10000a4d0000000d1000004d2000076d30000b0f50000a6f60000e8f6000044f80000acf80000d4f9000008fb000022fb00005cfb0000ae170100161801003e190100721a010008280100248e01008c8e0100b48f0100e8900100f4e5010012e601004ce601007ee6010062090200ba090200ec090200200a0200240a0200f20a0200923a0200923e0200b24202000e4402007644020032460200d2460200
+      m_ExpandedIDs: 4096ffffcea9ffff94baffffdedeffff48e7ffff02fbffff9a8300000e870000228a0000f28d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1466,22 +1500,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/06_Sprites/Logo
+    - Assets/01_Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/06_Sprites/Logo
+  - Assets/01_Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Work\HBB\Life in music
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 303}
-    m_SelectedIDs: 00740000
-    m_LastClickedID: 29696
-    m_ExpandedIDs: 000000005a7100005c7100005e71000060710000627100006471000066710000687100006a7100006c7100006e71000070710000727100007471000076710000787100007a7100007c7100007e71000080710000827100008471000086710000f8730000047400001074000024740000242c01001a2e010000ca9a3b
+    scrollPos: {x: 0, y: 37.50128}
+    m_SelectedIDs: 9c740000
+    m_LastClickedID: 29852
+    m_ExpandedIDs: 000000005474000056740000587400005a7400005c7400005e74000060740000627400006474000066740000687400006a7400006c7400006e74000070740000727400007474000076740000787400007a7400007c7400007e7400008274000084740000887400008a7400008c74000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1509,7 +1543,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a7100005c7100005e71000060710000627100006471000066710000687100006a7100006c7100006e71000070710000727100007471000076710000787100007a7100007c7100007e71000080710000827100008471000086710000f8730000047400001074000024740000242c01001a2e010000ca9a3b
+    m_ExpandedIDs: 000000005474000056740000587400005a7400005c7400005e74000060740000627400006474000066740000687400006a7400006c7400006e74000070740000727400007474000076740000787400007a7400007c7400007e7400008274000084740000887400008a7400008c74000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
