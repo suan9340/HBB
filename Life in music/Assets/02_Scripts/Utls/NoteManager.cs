@@ -28,6 +28,7 @@ public class NoteManager : MonoBehaviour
     #endregion
     [Header("--- NoteTrnYObject ---")]
     public RectTransform noteTrn = null;
+    public RectTransform notePoolTrn = null;
 
 
     [Space(20)]
@@ -81,7 +82,17 @@ public class NoteManager : MonoBehaviour
             return;
         }
 
-        var _obj = Instantiate(noteObj, noteTrn);
+        GameObject _obj = null;
+        if (notePoolTrn.childCount == 0)
+        {
+            _obj = Instantiate(noteObj, noteTrn);
+        }
+        else
+        {
+            _obj = notePoolTrn.GetChild(0).gameObject;
+            _obj.SetActive(true);
+        }
+
         _obj.transform.SetParent(noteTrn.transform);
         _obj.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
 
@@ -118,6 +129,13 @@ public class NoteManager : MonoBehaviour
 
                     //effectRect.anchoredPosition = noteList[j].transform.position;
                     noteClickEffectObj.Play();
+
+                    var _obj = noteList[j];
+                    if (_obj != null)
+                    {
+                        _obj.SetActive(false);
+                        _obj.transform.SetParent(notePoolTrn, false);
+                    }
                     noteList.RemoveAt(j);
 
                     switch (i)
@@ -148,11 +166,6 @@ public class NoteManager : MonoBehaviour
         }
     }
 
-    public void RemovebadNote()
-    {
-
-    }
-
 
     public void RemoveNote()
     {
@@ -160,8 +173,13 @@ public class NoteManager : MonoBehaviour
         {
             Destroy(noteTrn.transform.GetChild(i).gameObject);
         }
-        noteList.Clear();
+        for (int j = 0; j < notePoolTrn.transform.childCount; j++)
+        {
+            Destroy(notePoolTrn.transform.GetChild(j).gameObject);
+        }
 
+
+        noteList.Clear();
         Destroy(noteEndImage);
     }
 

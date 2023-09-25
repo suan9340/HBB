@@ -6603,7 +6603,6 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 9397ba5b63a6c554fa84b11d33cabf10, type: 3}
   instrumetnsObj: {fileID: 797171050616133370}
   num: 1
-  plusNum: 0
   objectClear: {fileID: 215974361}
 --- !u!212 &215974359
 SpriteRenderer:
@@ -8081,6 +8080,7 @@ RectTransform:
   - {fileID: 420147827}
   - {fileID: 523850971}
   - {fileID: 1044101401}
+  - {fileID: 1007913026}
   - {fileID: 1625973262}
   - {fileID: 1759596596}
   m_Father: {fileID: 258279468}
@@ -14647,7 +14647,6 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: c3c0f3d78fb33a74492073a42d419a71, type: 3}
   instrumetnsObj: {fileID: 797171051204083096}
   num: 2
-  plusNum: 0
   objectClear: {fileID: 936502023}
 --- !u!212 &936502021
 SpriteRenderer:
@@ -15299,6 +15298,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1007913025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007913026}
+  m_Layer: 7
+  m_Name: NotePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1007913026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007913025}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 448106504}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1012325483
 GameObject:
   m_ObjectHideFlags: 0
@@ -17712,7 +17747,7 @@ RectTransform:
   m_Children:
   - {fileID: 113750011}
   m_Father: {fileID: 448106504}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -19205,7 +19240,7 @@ RectTransform:
   - {fileID: 1366690332}
   - {fileID: 480978323}
   m_Father: {fileID: 448106504}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24384,7 +24419,6 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 89d7d77e22f55ed40b917d4d88a3f552, type: 3}
   instrumetnsObj: {fileID: 0}
   num: 4
-  plusNum: 0
   objectClear: {fileID: 1824238069}
 --- !u!212 &1824238067
 SpriteRenderer:
@@ -25752,7 +25786,6 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1fd3356b4fc4f2044b2c8e2d3af06796, type: 3}
   instrumetnsObj: {fileID: 797171050928764302}
   num: 0
-  plusNum: 0
   objectClear: {fileID: 2018861979}
 --- !u!212 &2018861977
 SpriteRenderer:
@@ -26558,7 +26591,6 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 7da2d2224f69487438f7804ef6e31093, type: 3}
   instrumetnsObj: {fileID: 797171050733291734}
   num: 3
-  plusNum: 0
   objectClear: {fileID: 2114106497}
 --- !u!212 &2114106495
 SpriteRenderer:
@@ -26969,6 +27001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteTrn: {fileID: 1044101401}
+  notePoolTrn: {fileID: 1007913026}
   noteList: []
   center: {fileID: 811797825}
   timingRect:
