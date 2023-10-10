@@ -100,7 +100,7 @@ public class SoundManager : MonoBehaviour
 
     public void CheckStageEndMusic()
     {
-        if (num == 6)
+        if (num >= 6)
         {
             StageEndEvent();
         }
